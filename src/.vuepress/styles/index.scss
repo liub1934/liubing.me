@@ -1,0 +1,28 @@
+// place your custom styles here
+html[data-theme='light'] {
+  .blog-info-list {
+    .blog-type-button {
+      .icon-wrapper {
+        &.active {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.footer-wrapper {
+  .footer {
+    a {
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.article-item {
+  .page-info > span {
+    flex-shrink: 1 !important;
+  }
+}

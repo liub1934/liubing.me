@@ -1,0 +1,231 @@
+import { hopeTheme } from 'vuepress-theme-hope'
+import { blogPlugin } from 'vuepress-plugin-blog2'
+import { sidebarConfig } from './sidebar'
+import { navbarConfig } from './navbar'
+
+export default hopeTheme({
+  hostname: 'hhttps://liubing.me',
+  author: {
+    name: 'Bing🐣',
+    url: 'https://liubing.me'
+  },
+  iconAssets: 'iconfont',
+  logo: '/logo.svg',
+  repo: 'vuepress-theme-hope/vuepress-theme-hope',
+  docsDir: 'docs',
+  pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
+  navbar: navbarConfig, // navbar
+  sidebar: sidebarConfig, // sidebar
+  displayFooter: true,
+  blog: {
+    description: '基于VuePress的个人博客，记录日常开发问题。',
+    medias: {
+      GitHub: 'https://github.com/liub1934',
+      Email: 'mailto:w@liubing.me',
+      Gmail: 'mailto:liub1934@gmail.com'
+    }
+  },
+  // page meta
+  metaLocales: {
+    editLink: '在 GitHub 上编辑此页'
+  },
+  encrypt: {
+    config: {}
+  },
+  navbarLayout: {
+    left: ['Brand'],
+    center: ['Links'],
+    right: ['Repo', 'Outlook', 'Search']
+  },
+  plugins: {
+    blog: {
+      autoExcerpt: true, // 自动生成摘要
+      timeline: 'archives', // 时间轴访问路径修改成archives
+      // 过滤列表页面
+      filter: ({ filePathRelative, frontmatter }) => {
+        // 舍弃那些不是从 Markdown 文件生成的页面
+        if (!filePathRelative) return false
+        // 舍弃notes文件夹的页面
+        if (filePathRelative.startsWith('notes/')) return false
+        // 舍弃所有的README.md页面
+        if (filePathRelative.endsWith('README.md')) return false
+        // 舍弃那些没有使用默认布局的页面
+        if (frontmatter.home || frontmatter.layout) return false
+        return true
+      }
+    },
+    copyCode: {
+      showInMobile: true // 手机端显示代码复制
+    },
+    // If you don’t need comment feature, you can remove following option
+    // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
+    // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
+    comment: {
+      /**
+       * Using Giscus
+       */
+      provider: 'Giscus',
+      repo: 'vuepress-theme-hope/giscus-discussions',
+      repoId: 'R_kgDOG_Pt2A',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOG_Pt2M4COD69'
+
+      /**
+       * Using Twikoo
+       */
+      // provider: "Twikoo",
+      // envId: "https://twikoo.ccknbc.vercel.app",
+
+      /**
+       * Using Waline
+       */
+      // provider: "Waline",
+      // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
+    },
+    // Disable features you don’t want here
+    mdEnhance: {
+      align: true,
+      attrs: true,
+      chart: true,
+      codetabs: true,
+      container: true,
+      demo: true,
+      echarts: true,
+      flowchart: true,
+      gfm: true,
+      imageLazyload: true,
+      imageTitle: true,
+      imageSize: true,
+      include: true,
+      katex: true,
+      mark: true,
+      mermaid: true,
+      playground: {
+        presets: ['ts', 'vue']
+      },
+      presentation: {
+        plugins: ['highlight', 'math', 'search', 'notes', 'zoom']
+      },
+      stylize: [
+        {
+          matcher: 'Recommended',
+          replacer: ({ tag }) => {
+            if (tag === 'em')
+              return {
+                tag: 'Badge',
+                attrs: { type: 'tip' },
+                content: 'Recommended'
+              }
+          }
+        }
+      ],
+      sub: true,
+      sup: true,
+      tabs: true,
+      vPre: true,
+      vuePlayground: true
+    },
+    pwa: {
+      favicon: '/favicon.ico',
+      cacheHTML: true,
+      cachePic: true,
+      appendBase: true,
+      apple: {
+        icon: '/assets/icon/apple-icon-152.png',
+        statusBarColor: 'black'
+      },
+      msTile: {
+        image: '/assets/icon/ms-icon-144.png',
+        color: '#ffffff'
+      },
+      manifest: {
+        icons: [
+          {
+            src: '/assets/icon/chrome-mask-512.png',
+            sizes: '512x512',
+            purpose: 'maskable',
+            type: 'image/png'
+          },
+          {
+            src: '/assets/icon/chrome-mask-192.png',
+            sizes: '192x192',
+            purpose: 'maskable',
+            type: 'image/png'
+          },
+          {
+            src: '/assets/icon/chrome-512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          },
+          {
+            src: '/assets/icon/chrome-192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          }
+        ],
+        shortcuts: [
+          {
+            name: 'Demo',
+            short_name: 'Demo',
+            url: '/demo/',
+            icons: [
+              {
+                src: '/assets/icon/guide-maskable.png',
+                sizes: '192x192',
+                purpose: 'maskable',
+                type: 'image/png'
+              },
+              {
+                src: '/assets/icon/guide-monochrome.png',
+                sizes: '192x192',
+                purpose: 'monochrome',
+                type: 'image/png'
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  copyright: false,
+  footer: `
+    <div>
+      <span>CDN by</span>
+      <a href=https://www.cloudflare.com/ target=_blank>
+        <img src=https://favicon.yandex.net/favicon/cloudflare.com><b>Cloudflare</b>
+      </a>
+    </div>
+    <div>
+      <span>VPS by</span>
+      <a href=https://contabo.com target=_blank class=theme>
+        <img src=https://favicon.yandex.net/favicon/contabo.com><b>Contabo</b>
+      </a>
+    </div>
+    <div>
+      <span>Server by</span>
+      <a href="https://www.bt.cn/?invite_code=MV9senRrbW4=" target=_blank>
+        <img src=https://favicon.yandex.net/favicon/bt.cn><b>宝塔Linux面板</b>
+      </a>
+    </div>
+    <div>
+      <span>Powered by</span>
+      <a href=https://vuepress.vuejs.org target=_blank>
+        <img src=https://favicon.yandex.net/favicon/vuepress.vuejs.org><b>VuePress</b>
+      </a>
+    </div>
+    <div>
+      <span>Theme by</span>
+      <a href=https://github.com/vuepress-theme-hope/vuepress-theme-hope target=_blank>
+        <img src=https://favicon.yandex.net/favicon/vuepress-theme-hope.github.io><b>VuePress Theme Hope</b>
+      </a>
+    </div>
+    <div>版权所有 © 2019 <a href=https://liubing.me><b>Bing🐣</b></a> | 备案是不可能备案的</div>
+    <div>
+      <span>本博客已运行</span>
+      <span id=blog_running_days></span>天
+      <span id=blog_running_hours></span>小时
+      <span id=blog_running_mins></span>分
+      <span id=blog_running_secs></span>秒
+    </div>
+  `
+})
