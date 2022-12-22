@@ -11,6 +11,11 @@ export default defineUserConfig({
   head: [['script', { src: '/js/footer.js' }]],
   shouldPrefetch: false,
   theme,
+  markdown: {
+    headers: {
+      level: [2, 3, 4]
+    }
+  },
   alias: {
     '@hooks': path.resolve(__dirname, './hooks'),
     '@components': path.resolve(__dirname, './components')

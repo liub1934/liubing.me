@@ -37,6 +37,7 @@ export default hopeTheme({
     center: ['Links'],
     right: ['Repo', 'Outlook', 'Search']
   },
+  headerDepth: 3,
   plugins: {
     blog: {
       autoExcerpt: true, // 自动生成摘要
