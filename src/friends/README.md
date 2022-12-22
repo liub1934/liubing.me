@@ -19,7 +19,7 @@ desc: '网站描述'
 link: '网站链接'
 ```
 
-## 友链预览
+## 固定链接
 
 <ProjectPanel :projects="projects1" />
 
@@ -30,8 +30,7 @@ link: '网站链接'
 <script setup lang="ts">
   const projects1 = [
     {
-      // icon: 'https://cn.vuejs.org/logo.svg',
-      icon: 'project',
+      icon: 'https://cn.vuejs.org/logo.svg',
       name: 'Vue',
       desc: '渐进式 JavaScript 框架',
       link: 'https://cn.vuejs.org/'
