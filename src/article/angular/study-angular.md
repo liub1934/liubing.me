@@ -1860,4 +1860,230 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
+## 组件基础
+
+### 定义组件
+
+可以使用 `CLI` 提供的命令`ng g c [name]`来快速创建一个组件，输入命令`ng g c test --skip-tests`跳过测试文件创建一个`app-test`组件。
+
+::: tabs
+@tab test.component.html
+
+```html
+<p>test works!</p>
+```
+
+@tab test.component.ts
+
+```ts
+import { Component } from '@angular/core'
+
+@Component({
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.less']
+})
+export class TestComponent {}
+```
+
+:::
+
+### 使用组件
+
+`CLI`命令创建的组件会自动在模块文件`app.module.ts`中注册，如果是手动创建的需要在`NgModule`中的`declarations`中注册组件。
+
+```ts
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppComponent } from './app.component'
+import { TestComponent } from './test/test.component'
+
+@NgModule({
+  declarations: [AppComponent, TestComponent],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+在页面`app.component.html`中使用，此时会出现`test works!`字样。
+
+```html
+<app-test></app-test>
+```
+
+### 组件传参
+
+在`Vue`中可以通过定义组件的`props`，在`Angular`需要使用`@Input()`的装饰器来传入数据。  
+我们在`test.component.ts`中定义需要传入的参数`name`，在模版文件`test.component.html`中显示`name`，在`app.component.ts`中定义传入的值`testName`，最后在`app.component.html`中组件上绑定值。
+
+::: tabs
+
+@tab test.component.ts
+
+```ts {9}
+import { Component, Input, OnInit } from '@angular/core'
+
+@Component({
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.less']
+})
+export class TestComponent implements OnInit {
+  @Input() name!: string
+
+  ngOnInit(): void {
+    console.log(this.name)
+  }
+}
+```
+
+@tab test.component.html
+
+```html {2}
+<p>test works!</p>
+<p>Name: {{ name }}</p>
+```
+
+@tab app.component.ts
+
+```ts {8}
+import { Component } from '@angular/core'
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.less']
+})
+export class AppComponent {
+  testName = '测试名字'
+}
+```
+
+@tab app.component.html
+
+```html
+<app-test [name]="testName"></app-test>
+```
+
+:::
+
+### 监听事件
+
+`app-test`组件现在能够接受外部的数据，有时候组件本身也需要和外部组件即父级组件进行交互，比如`app-test`组件中有个按钮，点击后需要通知父级组件，在`Vue`可以直接派发`emit`事件，而在`Angular`中使用`@Output()`装饰器来引发事件，以通知父组件这一变化。为了引发事件，`@Output()` 必须是 `EventEmitter` 类型，它是 `@angular/core` 中用来发出自定义事件的类。
+
+#### 配置子组件
+
+`test.component.html`中新增一个`Update Name`的按钮，点击后会执行`updateName`的方法,`test.component.ts`中需要先引入`Output`和`EventEmitter`，通过`@Output()`定义一个往外派发的`clickEvent`事件，`updateName`中调用`clickEvent`的`emit`方法。
+
+::: tabs
+@tab test.component.html
+
+```html {3}
+<p>test works!</p>
+<p>Name: {{ name }}</p>
+<button (click)="updateName()">Update Name</button>
+```
+
+@tab test.component.ts
+
+```ts {1,10,16-18}
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+
+@Component({
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.less']
+})
+export class TestComponent implements OnInit {
+  @Input() name!: string
+  @Output() clickEvent = new EventEmitter()
+
+  ngOnInit(): void {
+    console.log(this.name)
+  }
+
+  updateName() {
+    this.clickEvent.emit()
+  }
+}
+```
+
+:::
+
+#### 配置父组件
+
+在`app.component.html`中将`clickEvent`绑定到模版中，子组件点击`Update Name`按钮会派发事件从而执行`app.component.ts`中定义的`handleClick()`方法修改`name`的值。
+
+::: tabs
+@tab app.component.html
+
+```html
+<app-test [name]="testName" (clickEvent)="handleClick()"></app-test>
+```
+
+@tab app.component.ts
+
+```ts {10-12}
+import { Component } from '@angular/core'
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.less']
+})
+export class AppComponent {
+  testName = '测试名字'
+
+  handleClick() {
+    this.testName = 'liubing.me'
+  }
+}
+```
+
+:::
+
+### 监听变化
+
+有时候我们需要知道组件中的数据是否有变化，在 Vue 中可以通过`watch`去监听想要的数据变化，`Angular`中可以通过`OnChanges`的生命周期去监听数据变化。
+
+我们在`test.component.ts`中引入`OnChanges`，在点击`Update Name`按钮的时候去会触发`ngOnChanges`，通过`changes['name']`可以取到`currentValue`新值和`previousValue`旧值。
+
+```ts {5,16,20-24}
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges
+} from '@angular/core'
+
+@Component({
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.less']
+})
+export class TestComponent implements OnChanges, OnInit {
+  @Input() name!: string
+  @Output() clickEvent = new EventEmitter()
+
+  ngOnChanges(changes: SimpleChanges): void {
+    const { currentValue, previousValue } = changes['name']
+    console.log('新值: ', currentValue)
+    console.log('旧值: ', previousValue)
+  }
+
+  ngOnInit(): void {
+    console.log(this.name)
+  }
+
+  updateName() {
+    this.clickEvent.emit()
+  }
+}
+```
+
+刷新页面后会发现初始化的时候会默认触发一次`ngOnChanges`，`previousValue`旧值为`undefined`，其实`changes['name']`中还额外提供一个字段`firstChange`表示是否是首次变化，可以通过该字段是否为`true`去判断默认初始化的时候是否需要执行相关逻辑。
+
 ## 其他待补充
