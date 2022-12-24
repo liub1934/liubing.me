@@ -1,6 +1,7 @@
 ---
 date: 2022-12-23
 category:
+  - 软件分享
   - Mac
 tag:
   - WX Backup
