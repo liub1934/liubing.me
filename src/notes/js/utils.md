@@ -32,7 +32,7 @@ function generateUUID() {
 }
 ```
 
-### 复制到剪贴板
+## 复制到剪贴板
 
 ```js
 function copyToClipboard(str) {
@@ -52,7 +52,7 @@ function copyToClipboard(str) {
 }
 ```
 
-### 获取地址栏参数
+## 获取地址栏参数
 
 ```js
 function getURLParameters(url) {
