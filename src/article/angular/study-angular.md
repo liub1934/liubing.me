@@ -2086,4 +2086,97 @@ export class TestComponent implements OnChanges, OnInit {
 
 刷新页面后会发现初始化的时候会默认触发一次`ngOnChanges`，`previousValue`旧值为`undefined`，其实`changes['name']`中还额外提供一个字段`firstChange`表示是否是首次变化，可以通过该字段是否为`true`去判断默认初始化的时候是否需要执行相关逻辑。
 
+### 插槽使用(内容投影)
+
+在`Angular`中插槽的叫法叫`内容投影`，具体可分为`单槽内容投影` `多槽内容投影` `条件内容投影`。
+
+#### 单槽内容投影
+
+使用方法和`Vue`类似，`Angular`中使用`<ng-content>`元素来指定插槽的内容。
+
+::: info
+`<ng-content>` 元素是一个占位符，它不会创建真正的 DOM 元素。`<ng-content>` 的那些自定义属性将被忽略。
+:::
+
+我接着上面的代码示例在`test.component.html`中在`Name`下方添加`<ng-content>`元素，然后在`app.component.html`就可以将插槽的内容应用到`app-test`组件中。
+
+:::tabs
+@tab test.component.html
+
+```html {3}
+<p>test works!</p>
+<p>Name: {{ name }}</p>
+<ng-content></ng-content>
+<button (click)="updateName()">Update Name</button>
+```
+
+@tab app.component.html
+
+```html {2}
+<app-test [name]="testName" (clickEvent)="handleClick()">
+  <div>我是默认插槽内容</div>
+</app-test>
+```
+
+:::
+
+#### 多插槽内容投影
+
+一个组件可以具有多个插槽。每个插槽可以指定一个 CSS 选择器，该选择器会决定将哪些内容放入该插槽。该模式称为多插槽内容投影。使用此模式，你必须指定希望投影内容出现在的位置。你可以通过使用 `<ng-content>` 的 `select` 属性来完成此任务。
+
+要创建使用多插槽内容投影的组件，请执行以下操作：
+
+1. 创建一个组件
+2. 在组件模板中，添加 `<ng-content>` 元素
+3. 将 `select` 属性添加到 `<ng-content>` 元素上。`Angular` 使用的[选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors)支持标签名、属性、CSS 类和 :not 伪类的任意组合。
+
+在`test.component.html`中新增几个示例用的插槽：
+
+- `select="[name=question1]"`指定一个`name`为`question1`的插槽。
+- `select="question2"`指定一个`question2`的插槽，可以理解为上面的简写写法。
+- `select=".test-slot"`指定一个`.test-slot`的插槽，使用`class="test-slot"`或者`class`中含有`test-slot`的元素都将显示在该插槽位置。
+- `select="#test-slot"`指定一个`#test-slot`的插槽，使用`id="test-slot"`的的元素都将显示在该插槽位置。
+
+最后在`app.component.html`中的`app-test`组件内部使用。
+
+::: tabs
+@tab test.component.html
+
+```html {2,3,7,8}
+<p>test works!</p>
+<ng-content select="[name=question1]"></ng-content>
+<ng-content select="question2"></ng-content>
+<p>Name: {{ name }}</p>
+<ng-content></ng-content>
+<button (click)="updateName()">Update Name</button>
+<ng-content select=".test-slot"></ng-content>
+<ng-content select="#test-slot"></ng-content>
+```
+
+@tab app.component.html
+
+```html {3-6}
+<app-test [name]="testName" (clickEvent)="handleClick()">
+  <div>我是默认插槽内容</div>
+  <div name="question1">我是question1插槽内容</div>
+  <div question2>我是question2插槽内容</div>
+  <div class="test-slot">.test-slot</div>
+  <div id="test-slot">#test-slot</div>
+</app-test>
+```
+
+:::
+
+#### 有条件的内容投影
+
+如果你的组件需要有条件地渲染内容或多次渲染内容，则应配置该组件以接受一个 `<ng-template>` 元素，其中包含要有条件渲染的内容。
+
+在这种情况下，不建议使用 `<ng-content>` 元素，如就算在`<ng-template>`上指定了条件`*ngIf="false"`，该插槽仍会显示内容。
+
+```html
+<ng-content *ngIf="false" select="[name=question1]"></ng-content>
+```
+
+使用 `<ng-template>` 元素，你可以让组件根据你想要的任何条件显式渲染内容，并可以进行多次渲染。在显式渲染 `<ng-template>` 元素之前，`Angular` 不会初始化该元素的内容。
+
 ## 其他待补充
