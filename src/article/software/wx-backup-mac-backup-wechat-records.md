@@ -29,6 +29,10 @@ tag:
 
 直接去[官网](http://wxbackup.imxfd.com/)点击`Mac 下载`按钮下载软件安装。安装好后如果提示无法打开的问题请参照[教程](./mac-cannot-be-opened-because-apple-cannot-check-if-it-contain-malware.md)处理。
 
+::: tip
+官网下载使用的是百度网盘，如果你讨厌百度网盘，可以使用无需登录就可以下载的蓝奏云：[点击下载](https://lbx.lanzoue.com/iDwsJ0jc8ubg)
+:::
+
 ## 备份数据
 
 软件需要读取 Iphone 的备份文件，所以老系统需要使用 iTunes 连接 iPhone，将内容备份到电脑上。请注意，不要选择”给 iPhone 备份加密“！
