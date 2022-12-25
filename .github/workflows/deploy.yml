@@ -1,0 +1,67 @@
+name: Deploy CI
+
+# 触发workflow的条件
+on:
+  push:
+    # 只有main分支发生push事件时，才会触发workflow
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+env:
+    SERVER_HOST: ${{ secrets.SERVER_HOST }} # 服务器IP地址
+    SERVER_PORT: ${{ secrets.SERVER_PORT }} # 服务器IP端口
+    USER_NAME: ${{ secrets.USER_NAME }} # 服务器用户名
+    PASSWORD: ${{ secrets.PASSWORD }} # 服务器密码
+    SERVER_TARGET: ${{ secrets.PASSWORD }} # 服务器目标路径
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    # 缓存依赖
+    - name: Cache Node Modules
+      uses: actions/cache@v1
+      env:
+          cache-name: cache-node-modules
+      with:
+          # 需要缓存的文件的路径
+          path: ./node_modules
+          # 对缓存的文件指定的唯一标识
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package.json') }} 
+          # 用于没有再找目标key的缓存的backup选项
+          restore-keys: |
+              ${{ runner.os }}-build-${{ env.cache-name }}-
+              ${{ runner.os }}-build-
+              ${{ runner.os }}-
+              
+    # 按装依赖
+    - name: Install
+      run: yarn
+      
+    # 打包
+    - name: Build
+      run: yarn docs:build
+    
+    # 发送资源到指定服务器
+    - name: Deploy to server
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.SERVER_HOST }}
+        port: ${{ secrets.SERVER_PORT }}
+        username: ${{ secrets.USER_NAME }}
+        password: ${{ secrets.PASSWORD }}
+        local-dir: src/.vuepress/dist
+        server-dir: ${{ secrets.SERVER_TARGET }}
