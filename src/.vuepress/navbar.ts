@@ -30,11 +30,6 @@ export const navbarConfig = navbar([
     ]
   },
   {
-    text: 'Github',
-    icon: 'github',
-    link: 'https://github.com/liub1934'
-  },
-  {
     text: '私有图床',
     icon: 'pic',
     link: 'https://image.liubing.me'
