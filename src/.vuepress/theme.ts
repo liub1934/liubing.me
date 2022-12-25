@@ -11,8 +11,8 @@ export default hopeTheme({
   },
   iconAssets: 'iconfont',
   logo: '/logo.svg',
-  repo: 'vuepress-theme-hope/vuepress-theme-hope',
-  docsDir: 'docs',
+  repo: 'liub1934/liubing.me',
+  docsDir: '',
   pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
   navbar: navbarConfig, // navbar
   sidebar: sidebarConfig, // sidebar
@@ -66,10 +66,10 @@ export default hopeTheme({
        * Using Giscus
        */
       provider: 'Giscus',
-      repo: 'vuepress-theme-hope/giscus-discussions',
-      repoId: 'R_kgDOG_Pt2A',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOG_Pt2M4COD69'
+      repo: 'liub1934/liubing.me',
+      repoId: 'R_kgDOIq_bDg',
+      category: 'General',
+      categoryId: 'DIC_kwDOIq_bDs4CTP9q'
 
       /**
        * Using Twikoo
