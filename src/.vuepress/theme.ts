@@ -48,6 +48,7 @@ export default hopeTheme({
         if (!filePathRelative) return false
         // 舍弃notes文件夹的页面
         if (filePathRelative.startsWith('notes/')) return false
+        if (filePathRelative.startsWith('nav/')) return false
         // 舍弃所有的README.md页面
         if (filePathRelative.endsWith('README.md')) return false
         // 舍弃那些没有使用默认布局的页面

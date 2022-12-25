@@ -26,3 +26,11 @@ html[data-theme='light'] {
     flex-shrink: 1 !important;
   }
 }
+
+.project-panel {
+  .project {
+    .image {
+      border-radius: 50%;
+    }
+  }
+}

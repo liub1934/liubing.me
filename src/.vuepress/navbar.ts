@@ -37,7 +37,7 @@ export const navbarConfig = navbar([
   {
     text: '导航',
     icon: 'link',
-    link: 'https://nav.liubing.me'
+    link: '/nav'
   },
   {
     text: '友情链接',
