@@ -13,23 +13,18 @@ env:
   SERVER_PORT: ${{ secrets.SERVER_PORT }} # 服务器IP端口
   USER_NAME: ${{ secrets.USER_NAME }} # 服务器用户名
   PASSWORD: ${{ secrets.PASSWORD }} # 服务器密码
-  SERVER_TARGET: ${{ secrets.PASSWORD }} # 服务器目标路径
+  SERVER_TARGET: ${{ secrets.SERVER_TARGET }} # 服务器目标路径
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js v14.21.1
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: v14.21.1
       # 缓存依赖
       - name: Cache Node Modules
         uses: actions/cache@v1
