@@ -38,6 +38,12 @@ export default hopeTheme({
     right: ['Repo', 'Outlook', 'Search']
   },
   headerDepth: 3,
+  // 主题色选择器
+  themeColor: {
+    red: '#f26d6d',
+    green: '#3eaf7c',
+    orange: '#fb9b5f'
+  },
   plugins: {
     blog: {
       autoExcerpt: true, // 自动生成摘要
