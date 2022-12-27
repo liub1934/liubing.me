@@ -44,6 +44,7 @@ export default hopeTheme({
     green: '#3eaf7c',
     orange: '#fb9b5f'
   },
+  // 内置插件
   plugins: {
     blog: {
       autoExcerpt: true, // 自动生成摘要
