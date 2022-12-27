@@ -1,7 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
-const __dirname = getDirname(import.meta.url)
 import theme from './theme'
+const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
   base: '/',
