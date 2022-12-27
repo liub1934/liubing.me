@@ -34,3 +34,10 @@ html[data-theme='light'] {
     }
   }
 }
+
+.nav-container {
+  --content-width: 1200px;
+  .page-info {
+    display: none;
+  }
+}

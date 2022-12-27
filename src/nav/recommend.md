@@ -1,6 +1,7 @@
 ---
 toc: false
 order: 1
+containerClass: nav-container
 projects:
   - icon: https://image.liubing.me/2020/12/14/e901ed92f095e.png
     name: Github
