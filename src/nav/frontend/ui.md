@@ -1,6 +1,7 @@
 ---
 toc: false
 order: 1
+containerClass: nav-container
 projects:
   - icon: https://image.liubing.me/2022/12/25/75272dc92a967.png
     name: Element Plus
