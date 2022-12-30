@@ -1,5 +1,4 @@
 ---
-icon: ui
 toc: false
 order: 1
 containerClass: nav-container
@@ -13,6 +12,11 @@ projects:
     name: Element
     desc: 一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库。
     link: https://element.eleme.cn/
+
+  - icon: https://image.liubing.me/2022/12/30/beb19d3c526de.png
+    name: Ant Design
+    desc: 基于 Ant Design 设计体系的 React UI 组件库。
+    link: https://ant.design/
 
   - icon: https://image.liubing.me/2022/12/25/5a4b4bcc739b1.jpg
     name: Ant Design Vue

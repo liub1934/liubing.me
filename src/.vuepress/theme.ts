@@ -8,7 +8,7 @@ export default hopeTheme({
   author: {
     name: 'Bing🐣'
   },
-  iconAssets: 'https://at.alicdn.com/t/c/font_3842071_0wst30fvfl2l.css',
+  iconAssets: 'https://at.alicdn.com/t/c/font_3842071_cfq9qhwa62j.css',
   logo: '/logo.svg',
   repo: 'liub1934/liubing.me',
   docsDir: '',
