@@ -30,18 +30,18 @@ export const navbarConfig = navbar([
     ]
   },
   {
-    text: '私有图床',
-    icon: 'pic',
-    link: 'https://image.liubing.me'
-  },
-  {
     text: '导航',
-    icon: 'link',
+    icon: 'nav',
     link: '/nav'
   },
   {
     text: '友情链接',
     icon: 'link',
     link: '/friends'
+  },
+  {
+    text: '私有图床',
+    icon: 'pic',
+    link: 'https://image.liubing.me'
   }
 ])

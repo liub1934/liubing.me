@@ -4,18 +4,17 @@ import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
 
 export default hopeTheme({
-  hostname: 'hhttps://liubing.me',
+  hostname: 'https://liubing.me',
   author: {
-    name: 'Bing🐣',
-    url: 'https://liubing.me'
+    name: 'Bing🐣'
   },
-  iconAssets: 'iconfont',
+  iconAssets: 'https://at.alicdn.com/t/c/font_3842071_0wst30fvfl2l.css',
   logo: '/logo.svg',
   repo: 'liub1934/liubing.me',
   docsDir: '',
   pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
-  navbar: navbarConfig, // navbar
-  sidebar: sidebarConfig, // sidebar
+  navbar: navbarConfig, // 导航栏
+  sidebar: sidebarConfig, // 侧边栏
   displayFooter: true,
   blog: {
     description: '基于VuePress的个人博客，记录日常开发问题。',
@@ -46,6 +45,7 @@ export default hopeTheme({
   },
   // 内置插件
   plugins: {
+    // 博客插件配置
     blog: {
       autoExcerpt: true, // 自动生成摘要
       timeline: 'archives', // 时间轴访问路径修改成archives
@@ -63,12 +63,14 @@ export default hopeTheme({
         return true
       }
     },
+    // 复制代码插件配置
     copyCode: {
       showInMobile: true // 手机端显示代码复制
     },
     // If you don’t need comment feature, you can remove following option
     // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
     // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
+    // 评论插件配置
     comment: {
       /**
        * Using Giscus
@@ -92,6 +94,7 @@ export default hopeTheme({
       // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
     },
     // Disable features you don’t want here
+    // Markdown 增强插件配置
     mdEnhance: {
       align: true,
       attrs: true,
@@ -134,6 +137,7 @@ export default hopeTheme({
       vPre: true,
       vuePlayground: true
     },
+    // PWA插件配置
     pwa: {
       favicon: '/favicon.ico',
       cacheHTML: true,
@@ -196,7 +200,9 @@ export default hopeTheme({
       }
     }
   },
+  // 版权信息是否显示
   copyright: false,
+  // 自定义页脚
   footer: `
     <div>
       <span>CDN by</span>
