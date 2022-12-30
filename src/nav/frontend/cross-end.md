@@ -1,4 +1,5 @@
 ---
+icon: cross-platform
 toc: false
 order: 3
 containerClass: nav-container
