@@ -1,5 +1,4 @@
 ---
-icon: mobile
 toc: false
 order: 2
 containerClass: nav-container
