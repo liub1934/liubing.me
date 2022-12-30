@@ -1,4 +1,5 @@
 ---
+icon: ui
 toc: false
 order: 1
 containerClass: nav-container

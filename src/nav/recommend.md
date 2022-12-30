@@ -1,4 +1,5 @@
 ---
+icon: recommend
 toc: false
 order: 1
 containerClass: nav-container

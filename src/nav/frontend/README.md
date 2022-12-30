@@ -1,4 +1,5 @@
 ---
+icon: web
 index: false
 toc: false
 containerClass: nav-container
