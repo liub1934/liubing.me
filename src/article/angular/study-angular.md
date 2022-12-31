@@ -2167,16 +2167,4 @@ export class TestComponent implements OnChanges, OnInit {
 
 :::
 
-#### 有条件的内容投影
-
-如果你的组件需要有条件地渲染内容或多次渲染内容，则应配置该组件以接受一个 `<ng-template>` 元素，其中包含要有条件渲染的内容。
-
-在这种情况下，不建议使用 `<ng-content>` 元素，如就算在`<ng-template>`上指定了条件`*ngIf="false"`，该插槽仍会显示内容。
-
-```html
-<ng-content *ngIf="false" select="[name=question1]"></ng-content>
-```
-
-使用 `<ng-template>` 元素，你可以让组件根据你想要的任何条件显式渲染内容，并可以进行多次渲染。在显式渲染 `<ng-template>` 元素之前，`Angular` 不会初始化该元素的内容。
-
 ## 其他待补充
