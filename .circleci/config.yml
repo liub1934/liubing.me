@@ -32,15 +32,7 @@ jobs:
           command: yarn docs:build
       - run:
           name: Deploy By FTP
-          command: |
-            sudo apt-get update
-            sudo apt-get -qq install git-ftp
-            git config git-ftp.url "${FTP_LOCATION}"
-            git config git-ftp.user "${USER_NAME}"
-            git config git-ftp.password "${PASSWORD}"
-            git config git-ftp.syncroot "/src/.vuepress/dist"
-            git ftp init
-            git ftp push
+          command: node .circleci/deploy.js
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
