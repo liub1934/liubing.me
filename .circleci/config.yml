@@ -38,7 +38,7 @@ jobs:
             git config git-ftp.url "${FTP_LOCATION}"
             git config git-ftp.user "${USER_NAME}"
             git config git-ftp.password "${PASSWORD}"
-            git config git-ftp.syncroot "../src/.vuepress/dist"
+            git config git-ftp.syncroot "/src/.vuepress/dist"
             git ftp init
             git ftp push
 
