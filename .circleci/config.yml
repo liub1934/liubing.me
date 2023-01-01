@@ -9,27 +9,24 @@ jobs:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:14.21.1
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - node/install:
-          install-yarn: true
-          node-version: '14.21.1'
-      - run: node --version
       - restore_cache:
-          # See the configuration reference documentation for more details on using restore_cache and save_cache steps
-          # https://circleci.com/docs/2.0/configuration-reference/?section=reference#save_cache
+          name: Restore Yarn Package Cache
           keys:
-            - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-          name: install packages
-          command: yarn install
+          name: Install Dependencies
+          command: yarn install --immutable
       - save_cache:
-          key: node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.npm
+            - .yarn/cache
+            - .yarn/unplugged
       - run:
           name: build vuepress
           command: yarn docs:build
