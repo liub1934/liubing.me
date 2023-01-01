@@ -28,8 +28,14 @@ jobs:
             - .yarn/cache
             - .yarn/unplugged
       - run:
-          name: build vuepress
+          name: Build VuePress
           command: yarn docs:build
+      - run:
+          name: Deploy By FTP
+          command: |
+            sudo apt-get update
+            sudo apt-get -qq install git-ftp
+            git ftp push --user "${USER_NAME}" --passwd "${PASSWORD}" ${FTP_LOCATION}
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
