@@ -1,7 +1,9 @@
 ---
-title: 友情链接
 toc: false
+pageInfo: false
 ---
+
+# 友情链接
 
 ```
 站点名称：Bing🐣
@@ -46,6 +48,12 @@ link: '网站链接'
       name: 'VuePress Theme Hope',
       desc: '一个具有强大功能的 vuepress 主题✨',
       link: 'https://vuepress-theme-hope.github.io/v2/zh/'
+    },
+    {
+      icon: 'https://image.liubing.me/2022/12/30/c827badf9fa7a.jpg',
+      name: 'iconfont',
+      desc: '阿里巴巴矢量图标库。',
+      link: 'https://www.iconfont.cn/'
     }
   ]
   const projects2 =  []
