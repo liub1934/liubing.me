@@ -1,5 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import theme from './theme'
 const __dirname = getDirname(import.meta.url)
 
@@ -17,7 +18,11 @@ export default defineUserConfig({
     }
   },
   alias: {
-    '@hooks': path.resolve(__dirname, './hooks'),
     '@components': path.resolve(__dirname, './components')
-  }
+  },
+  plugins: [
+    googleAnalyticsPlugin({
+      id: 'G-GBZBT89WGJ'
+    })
+  ]
 })

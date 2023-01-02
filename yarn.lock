@@ -990,6 +990,14 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
+"@mdit-vue/plugin-component@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-component/-/plugin-component-0.11.2.tgz#3b7b6aef7368bb1a4b006c8430f0e9b7d4044b5b"
+  integrity sha512-ucFiEULCkLcCG1Tf1MfG5u5PS4BIXWIeKGHRGsXxz1ix2GbZWKFVgWEdNEckBu8s75Fv1WJLIOiAYZyri2f1nw==
+  dependencies:
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
 "@mdit-vue/plugin-frontmatter@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-frontmatter/-/plugin-frontmatter-0.11.1.tgz#4e4e013bf151fa54525f4e9c7c0a829912364ccb"
@@ -1006,6 +1014,16 @@
   integrity sha512-eBUonsEkXP2Uf2MIXSWZGCcLCIMSA1XfThJwhzSAosoa7fO5aw52LKCweddmn7zLQvgQh7p7382sFAhCc2KXog==
   dependencies:
     "@mdit-vue/shared" "0.11.0"
+    "@mdit-vue/types" "0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
+"@mdit-vue/plugin-headers@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-headers/-/plugin-headers-0.11.2.tgz#dd7ca7d00a6b2e28d516ba83718c6e336995d125"
+  integrity sha512-hH2zm4m+2tWe7dya/nxbbpB95pa9RjwYxl++kyZuRrqyhNTtsi2HWojX02peQ1nQMKKIWPDHtpeAHGP7dOLKFw==
+  dependencies:
+    "@mdit-vue/shared" "0.11.2"
     "@mdit-vue/types" "0.11.0"
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1029,6 +1047,16 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
+"@mdit-vue/plugin-title@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-title/-/plugin-title-0.11.2.tgz#8fc030ef1ef835872ce8a184a6941242c8bdc10e"
+  integrity sha512-R91WCN16CePWRT2bSXaDJGXvj0MuaCz4m2GbYqUbQxd+dqf18uuGPdbhr1rwhIqCvy7GD/g7hSgOFi3DNDAIzA==
+  dependencies:
+    "@mdit-vue/shared" "0.11.2"
+    "@mdit-vue/types" "0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
 "@mdit-vue/plugin-toc@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-toc/-/plugin-toc-0.11.1.tgz#81394518fd48e54a94e6c41d804270c2b37761bf"
@@ -1039,10 +1067,29 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
+"@mdit-vue/plugin-toc@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-toc/-/plugin-toc-0.11.2.tgz#ed508ec23fd7ea2b6a7263ac4c1b98a4bbdc0853"
+  integrity sha512-0OcGG4TnYIZJ6SLZtk24Nj0oP2vcLn0FyMTao/nB/2Z17/fP3whoo6dVV+0G4Oi8HZ+MMDi661lvS2b4b/glYA==
+  dependencies:
+    "@mdit-vue/shared" "0.11.2"
+    "@mdit-vue/types" "0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
 "@mdit-vue/shared@0.11.0", "@mdit-vue/shared@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@mdit-vue/shared/-/shared-0.11.0.tgz#c4b2554795fd1924302fe7f7fee2b5fb412aa578"
   integrity sha512-eiGe42y7UYpjO6/8Lg6OpAtzZrRU9k8dhpX1e/kJMTcL+tn+XkqRMJJ8I2pdrOQMSkgvIva5FNAriykqFzkdGg==
+  dependencies:
+    "@mdit-vue/types" "0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
+"@mdit-vue/shared@0.11.2", "@mdit-vue/shared@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/shared/-/shared-0.11.2.tgz#ef575b9b6b4697858b9e391dcae7307b503bd9ad"
+  integrity sha512-Z/GS/v9DURZE13Hv41meKzdnprMwenVJoM3t82OE5HIGvtE6QovsZ+mMF/rMvLgaLLMDjT3EwvrrBmemWkHYTQ==
   dependencies:
     "@mdit-vue/types" "0.11.0"
     "@types/markdown-it" "^12.2.3"
@@ -1389,6 +1436,16 @@
     vue "^3.2.45"
     vue-router "^4.1.6"
 
+"@vuepress/client@2.0.0-beta.60":
+  version "2.0.0-beta.60"
+  resolved "https://registry.yarnpkg.com/@vuepress/client/-/client-2.0.0-beta.60.tgz#978fa040e43b8dd4663d07e2b8dbbff7ff822f4d"
+  integrity sha512-WU5VGeDp41A2dVXqp18YBggflIjTq68mA+s5TCz93wk+7elAmPAkWKcobQBYQgvsuwHyg9nWulZAfMN6OEygKQ==
+  dependencies:
+    "@vue/devtools-api" "^6.4.5"
+    "@vuepress/shared" "2.0.0-beta.60"
+    vue "^3.2.45"
+    vue-router "^4.1.6"
+
 "@vuepress/core@2.0.0-beta.53":
   version "2.0.0-beta.53"
   resolved "https://registry.yarnpkg.com/@vuepress/core/-/core-2.0.0-beta.53.tgz#600da932f6ece8699580ecaf9937bc6bf6e7a71d"
@@ -1409,6 +1466,17 @@
     "@vuepress/markdown" "2.0.0-beta.59"
     "@vuepress/shared" "2.0.0-beta.59"
     "@vuepress/utils" "2.0.0-beta.59"
+    vue "^3.2.45"
+
+"@vuepress/core@2.0.0-beta.60":
+  version "2.0.0-beta.60"
+  resolved "https://registry.yarnpkg.com/@vuepress/core/-/core-2.0.0-beta.60.tgz#9a35102fef1aff15ce6bf0b725c54d055032e854"
+  integrity sha512-HkUkqBnBI7GMVZGxdzV4C/iyFwPo215sVLYvZVEWpQIaLk/47WkK0sHtz/1i00ujwJC3uGOH1+f0IHkxzqjUmg==
+  dependencies:
+    "@vuepress/client" "2.0.0-beta.60"
+    "@vuepress/markdown" "2.0.0-beta.60"
+    "@vuepress/shared" "2.0.0-beta.60"
+    "@vuepress/utils" "2.0.0-beta.60"
     vue "^3.2.45"
 
 "@vuepress/markdown@2.0.0-beta.53":
@@ -1452,6 +1520,28 @@
     "@vuepress/utils" "2.0.0-beta.59"
     markdown-it "^13.0.1"
     markdown-it-anchor "^8.6.5"
+    markdown-it-emoji "^2.0.2"
+    mdurl "^1.0.1"
+
+"@vuepress/markdown@2.0.0-beta.60":
+  version "2.0.0-beta.60"
+  resolved "https://registry.yarnpkg.com/@vuepress/markdown/-/markdown-2.0.0-beta.60.tgz#12222cde5ab41395f8c3bf7b2ef512935814f45b"
+  integrity sha512-97AT4aZr1k1VrJZoUvzbrX6nU/TwxlFpLNi8KNtWK3TMZT6+hAU0aCg6TwuwirShvey8mr9GaMNSssAdpSK4mg==
+  dependencies:
+    "@mdit-vue/plugin-component" "^0.11.2"
+    "@mdit-vue/plugin-frontmatter" "^0.11.1"
+    "@mdit-vue/plugin-headers" "^0.11.2"
+    "@mdit-vue/plugin-sfc" "^0.11.1"
+    "@mdit-vue/plugin-title" "^0.11.2"
+    "@mdit-vue/plugin-toc" "^0.11.2"
+    "@mdit-vue/shared" "^0.11.2"
+    "@mdit-vue/types" "^0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    "@types/markdown-it-emoji" "^2.0.2"
+    "@vuepress/shared" "2.0.0-beta.60"
+    "@vuepress/utils" "2.0.0-beta.60"
+    markdown-it "^13.0.1"
+    markdown-it-anchor "^8.6.6"
     markdown-it-emoji "^2.0.2"
     mdurl "^1.0.1"
 
@@ -1511,6 +1601,15 @@
     "@vuepress/core" "2.0.0-beta.53"
     "@vuepress/utils" "2.0.0-beta.53"
     execa "^6.1.0"
+
+"@vuepress/plugin-google-analytics@^2.0.0-beta.60":
+  version "2.0.0-beta.60"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-2.0.0-beta.60.tgz#63607c276de87634b72fc12af6ba4ea986befd32"
+  integrity sha512-Uq8UiYh2O3pGG7CR+Me6DldumcIA8xnr6hPqjFdqpi4heQifepxxSY1VQcjGrhu1F/8m16O5MryKMaNtg12BqA==
+  dependencies:
+    "@vuepress/client" "2.0.0-beta.60"
+    "@vuepress/core" "2.0.0-beta.60"
+    "@vuepress/utils" "2.0.0-beta.60"
 
 "@vuepress/plugin-medium-zoom@2.0.0-beta.53":
   version "2.0.0-beta.53"
@@ -1588,6 +1687,14 @@
     "@mdit-vue/types" "^0.11.0"
     "@vue/shared" "^3.2.45"
 
+"@vuepress/shared@2.0.0-beta.60":
+  version "2.0.0-beta.60"
+  resolved "https://registry.yarnpkg.com/@vuepress/shared/-/shared-2.0.0-beta.60.tgz#5c5c682dedd2e1ef0e821f08321f74b787558113"
+  integrity sha512-bwFksEtSQpbyAGJZkvRK9Z2zGmS144nv759vOzbRUZPPlGffeauzrPw9w7wxqp3gTJvIE/4Ufqt0AZTuSP/F/g==
+  dependencies:
+    "@mdit-vue/types" "^0.11.0"
+    "@vue/shared" "^3.2.45"
+
 "@vuepress/theme-default@2.0.0-beta.53":
   version "2.0.0-beta.53"
   resolved "https://registry.yarnpkg.com/@vuepress/theme-default/-/theme-default-2.0.0-beta.53.tgz#0891d380360a4f4cd07b54953582cafb4ad174d0"
@@ -1638,6 +1745,23 @@
     "@types/fs-extra" "^9.0.13"
     "@types/hash-sum" "^1.0.0"
     "@vuepress/shared" "2.0.0-beta.59"
+    debug "^4.3.4"
+    fs-extra "^11.1.0"
+    globby "^13.1.3"
+    hash-sum "^2.0.0"
+    ora "^6.1.2"
+    picocolors "^1.0.0"
+    upath "^2.0.1"
+
+"@vuepress/utils@2.0.0-beta.60":
+  version "2.0.0-beta.60"
+  resolved "https://registry.yarnpkg.com/@vuepress/utils/-/utils-2.0.0-beta.60.tgz#dfb31c66df708ffc6a9362242eb16b05047c2903"
+  integrity sha512-R5m5/AtKWAnlH+Su2yxoHQNp2JdJZ7gHV5531RbFySq9FTlKHtvE5RFceeppc0/UpzPE6KggRdaRqyjc77vg4g==
+  dependencies:
+    "@types/debug" "^4.1.7"
+    "@types/fs-extra" "^9.0.13"
+    "@types/hash-sum" "^1.0.0"
+    "@vuepress/shared" "2.0.0-beta.60"
     debug "^4.3.4"
     fs-extra "^11.1.0"
     globby "^13.1.3"
@@ -3430,6 +3554,11 @@ markdown-it-anchor@^8.6.5:
   version "8.6.5"
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.5.tgz#30c4bc5bbff327f15ce3c429010ec7ba75e7b5f8"
   integrity sha512-PI1qEHHkTNWT+X6Ip9w+paonfIQ+QZP9sCeMYi47oqhH+EsW8CrJ8J7CzV19QVOj6il8ATGbK2nTECj22ZHGvQ==
+
+markdown-it-anchor@^8.6.6:
+  version "8.6.6"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.6.tgz#4a12e358c9c2167ee28cb7a5f10e29d6f1ffd7ca"
+  integrity sha512-jRW30YGywD2ESXDc+l17AiritL0uVaSnWsb26f+68qaW9zgbIIr1f4v2Nsvc0+s0Z2N3uX6t/yAw7BwCQ1wMsA==
 
 markdown-it-container@^3.0.0:
   version "3.0.0"
