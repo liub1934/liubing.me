@@ -29,7 +29,7 @@ projects:
     link: https://www.v2ex.com/
 
   - icon: https://image.liubing.me/2022/12/25/1c4906bab647d.jpg
-    name: V2EX
+    name: CNode
     desc: Node.js专业中文社区。
     link: https://cnodejs.org/
 ---
