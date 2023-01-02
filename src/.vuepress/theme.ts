@@ -47,7 +47,6 @@ export default hopeTheme({
   plugins: {
     // 博客插件配置
     blog: {
-      autoExcerpt: true, // 自动生成摘要
       timeline: 'archives', // 时间轴访问路径修改成archives
       // 过滤列表页面
       filter: ({ filePathRelative, frontmatter }) => {
@@ -55,6 +54,7 @@ export default hopeTheme({
         if (!filePathRelative) return false
         // 舍弃notes文件夹的页面
         if (filePathRelative.startsWith('notes/')) return false
+        // 舍弃nav文件夹的页面
         if (filePathRelative.startsWith('nav/')) return false
         // 舍弃所有的README.md页面
         if (filePathRelative.endsWith('README.md')) return false
