@@ -1,6 +1,7 @@
 ---
 date: 2023-01-02
 category:
+  - Vue
   - VuePress
   - Buddy
 tag:
