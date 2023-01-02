@@ -128,6 +128,10 @@ tag:
 
 ![image](https://image.liubing.me/2019/12/26/ade284c78181e.png)
 
+::: warning
+看到此处下面的不用看了，下面的教程方法已失效过期，请参考新的教程：[点击查看](./v2ray-websocket-tl-nginx-cloudflare-x-ui.md)
+:::
+
 ## 安装 v2ray.fun 面板
 
 ::: warning
