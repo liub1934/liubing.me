@@ -224,17 +224,17 @@ export default hopeTheme({
     </div>
     <div>
       <span>Powered by</span>
-      <a href=https://vuepress.vuejs.org target=_blank>
-        <img src=https://favicon.yandex.net/favicon/vuepress.vuejs.org><b>VuePress</b>
+      <a href="https://vuepress.vuejs.org" target=_blank>
+        <img src="https://favicon.yandex.net/favicon/vuepress.vuejs.org"><b>VuePress</b>
       </a>
     </div>
     <div>
       <span>Theme by</span>
-      <a href=https://github.com/vuepress-theme-hope/vuepress-theme-hope target=_blank>
-        <img src=https://favicon.yandex.net/favicon/vuepress-theme-hope.github.io><b>VuePress Theme Hope</b>
+      <a href="https://theme-hope.vuejs.press/zh/" target=_blank>
+        <img src="https://favicon.yandex.net/favicon/vuepress-theme-hope.github.io"><b>VuePress Theme Hope</b>
       </a>
     </div>
-    <div>版权所有 © 2019 <a href=https://liubing.me><b>Bing🐣</b></a> | 备案是不可能备案的</div>
+    <div>版权所有 © 2019 <a href="https://liubing.me"><b>Bing🐣</b></a> | 备案是不可能备案的</div>
     <div>
       <span>本博客已运行</span>
       <span id=blog_running_days></span>天
