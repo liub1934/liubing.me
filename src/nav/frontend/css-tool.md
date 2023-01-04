@@ -12,6 +12,11 @@ projects:
     name: 贝塞尔曲线
     desc: 拖拽方式生成贝塞尔曲线参数。
     link: https://cubic-bezier.com/
+
+  - icon: https://image.liubing.me/2023/01/04/ebcb58f00916d.png
+    name: 缓动函数速查表
+    desc: 缓动函数速查表。
+    link: https://cubic-bezier.com/
 ---
 
 # CSS 工具
