@@ -6,10 +6,10 @@ import {
   FriendIcon,
   LinkIcon,
   ProjectIcon
-} from '@theme-hope/modules/blog/components/icons/index.js'
-import { useNavigate, usePure } from '@theme-hope/composables/index.js'
+} from '@theme-hope/modules/blog/components/icons/index'
+import { useNavigate, usePure } from '@theme-hope/composables/index'
 import { Project } from './interface'
-import Icon from '@theme-hope/components/Icon.js'
+import Icon from '@theme-hope/components/Icon'
 const AVAILABLE_PROJECT_TYPES = ['link', 'article', 'book', 'project', 'friend']
 
 export default defineComponent({

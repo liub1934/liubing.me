@@ -1,6 +1,6 @@
 ---
 home: true
-layout: Blog
+layout: BlogHome
 icon: home
 title: 首页
 description: 基于VuePress的个人博客，记录日常开发问题。
