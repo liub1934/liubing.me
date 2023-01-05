@@ -9,6 +9,8 @@ category:
 ECharts 中`label`都支持`formatter`和`rich`，`label`可能会有多个属性组合而成，
 如下图所示，访问来源就是一个通过`formatter`和`rich`自定义的一个`label`。
 
+<!-- more -->
+
 ![image](https://image.liubing.me/2019/12/26/28fa875b06fe0.png)
 
 部分代码如下所示：

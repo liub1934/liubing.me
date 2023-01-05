@@ -9,7 +9,9 @@ tag:
 
 # 基于宝塔 Docker 自建 Bitwarden 密码管理服务
 
-[Bitwarden](https://bitwarden.com)是一个跨平台的密码管理软件，类似于 1Password、EnPass、LastPass 等。Bitwarden 是免费开源的，可以将服务端部署在自己的服务器上，比如群晖，并且支持 Docker 部署。但官方的镜像要求至少 2G 以上内存，要求比较高。有人用 Rust 实现了 Bitwarden 服务器，项目叫~~[bitwarden_rs](https://github.com/dani-garcia/bitwarden_rs)~~，现在已经更新为[vaultwarden](https://github.com/dani-garcia/vaultwarden)，并且提供了 Docker 镜像，这个实现更进一步降低了对机器配置的要求，并且 Docker 镜像体积很小，部署非常方便。
+[Bitwarden](https://bitwarden.com)是一个跨平台的密码管理软件，类似于 1Password、EnPass、LastPass 等。Bitwarden 是免费开源的，可以将服务端部署在自己的服务器上，比如群晖，并且支持 Docker 部署。但官方的镜像要求至少 2G 以上内存，要求比较高。有人用 Rust 实现了 Bitwarden 服务器，项目叫[~~bitwarden_rs~~](https://github.com/dani-garcia/bitwarden_rs)，现在已经更新为[vaultwarden](https://github.com/dani-garcia/vaultwarden)，并且提供了 Docker 镜像，这个实现更进一步降低了对机器配置的要求，并且 Docker 镜像体积很小，部署非常方便。
+
+<!-- more -->
 
 ## 宝塔安装 Docker
 

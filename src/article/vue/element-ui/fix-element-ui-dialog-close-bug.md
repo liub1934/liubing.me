@@ -12,6 +12,8 @@ tag:
 在 Dialog 弹窗中鼠标左键按住后移动到弹窗的遮罩层松开后弹窗会被关闭，很怪异的一个问题，经常碰到复制弹窗文字的时候鼠标不小心移动到了遮罩层后弹窗莫名其妙的就被关闭了。  
 网上找了个类似的[issues](https://github.com/ElemeFE/element/issues/15000)，如下图所示：
 
+<!-- more -->
+
 ![image](https://image.liubing.me/2021/05/30/20813bc7e4aa5.gif)
 
 ## 解决方法一

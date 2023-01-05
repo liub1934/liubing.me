@@ -12,6 +12,8 @@ tag:
 由于项目中频繁用到表格组件，所以自己基于 Element Table 进行二次封装的一个 Table 组件，
 方便日常使用，无缝支持 Element Table 的所有功能参数及事件，欢迎体验！
 
+<!-- more -->
+
 ## Github
 
 [点击前往](https://github.com/liub1934/lb-element-table)

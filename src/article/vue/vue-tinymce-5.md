@@ -12,7 +12,9 @@ tag:
 ![image](https://image.liubing.me/2019/12/26/8373ab26138dc.png)
 
 基于 Vue CLI 3 脚手架搭建的项目整合 tinymce 5 富文本编辑器，vue cli 2 版本及 tinymce 4 版本参考：[https://blog.csdn.net/liub37/article/details/83310879](https://blog.csdn.net/liub37/article/details/83310879)
-做了些小修改，详情见 github
+做了些小修改，详情见 github。
+
+<!-- more -->
 
 > Github:[https://github.com/liub1934/vue-use-tinymce](https://github.com/liub1934/vue-use-tinymce 'https://github.com/liub1934/vue-use-tinymce')
 

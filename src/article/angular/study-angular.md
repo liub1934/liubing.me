@@ -6,6 +6,10 @@ category:
 
 # 重度 Vue 使用者重学 Angular
 
+记录下重学 Angular 的记录。
+
+<!-- more -->
+
 ## 创建一个应用
 
 ### 安装 Angular CLI

@@ -14,6 +14,8 @@ tag:
 
 之前看着别人的教程写过一篇拯救搬瓦工被 Q 的文章，用的是`v2ray.fun` 的面板，后面因为某些原因脚本失效了，后面就换成了`v2-ui`的可视化面板，之后发现该面板在 Github 上的项目也因为某些原因项目不存在了，后来又发现新的面板`x-ui`，页面长的基本一样，不知道是不是同一个作者。接下来记录下具体的`x-ui`面板的安装和使用。
 
+<!-- more -->
+
 ::: warning
 前置教程请参考之前写过的已废弃的文章：[点击前往](/article/v2ray/v2ray-websocket-tl-nginx-cloudflare-bandwagonhost.md)。只需要看到`宝塔面板相关设置`，将上述教程 `Cloudflare` 中`Proxy status`变灰的云朵重新弄成点亮状态。
 :::

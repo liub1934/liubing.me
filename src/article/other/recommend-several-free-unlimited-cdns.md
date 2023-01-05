@@ -10,8 +10,9 @@ tag:
 
 # 推荐几款免费且不限流量的全球 CDN
 
-推荐几个免费的且不限流量的 CDN，包括`jsDelivr` `Statically` `GitHack` 全球通用，  
-可以存储些网站的静态资源，然后引用 CDN 地址，优化网站的访问速度。
+推荐几个免费的且不限流量的 CDN，包括`jsDelivr` `Statically` `GitHack` 全球通用，可以存储些网站的静态资源，然后引用 CDN 地址，优化网站的访问速度。
+
+<!-- more -->
 
 ## jsDelivr
 
