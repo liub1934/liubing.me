@@ -10,6 +10,8 @@ tag:
 
 从 [vue@2.6.x](https://github.com/vuejs/vue/releases/tag/v2.6.0) 开始，Vue 为具名和范围插槽引入了一个全新的语法，即我们今天要讲的主角：`v-slot` 指令。目的就是想统一 `slot` 和 `scope-slot` 语法，使代码更加规范和清晰。既然有新的语法上位，很明显，`slot` 和 `scope-slot` 也将会在 `vue@3.0.x` 中彻底的跟我们说拜拜了。而从 `vue@2.6.0` 开始，官方推荐我们使用 `v-slot` 来替代后两者。
 
+<!-- more -->
+
 ## 具名插槽
 
 > 在 2.6.0+ 中已弃用

@@ -13,6 +13,8 @@ tag:
 总结下使用 uni-app 开发微信小程序过程中引入及使用 Vant Weapp 的方法及问题。  
 GitHub：[https://github.com/liub1934/uniapp-use-vant](https://github.com/liub1934/uniapp-use-vant)
 
+<!-- more -->
+
 ## 下载 Vant Weapp
 
 下载有 2 种方法：

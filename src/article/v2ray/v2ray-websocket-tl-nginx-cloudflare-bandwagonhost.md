@@ -18,6 +18,8 @@ tag:
 在搜索的过程中无意间看到了 V2Ray，于是搜索了下 V2Ray 搬瓦工关键词，果然找到了相应的教程。
 下面开始大概讲下教程，如果你有装宝塔面板的话就更简单了，配合 V2Ray+WebSocket(ws)+TLS+Nginx+Cloudflare 即可拯救你的 VPS。
 
+<!-- more -->
+
 ## 准备一个域名
 
 事先得准备一个可用的域名，自己买也好，还是免费注册一个都行，这里推荐一个免费注册域名的地方：[freenom](https://www.freenom.com)

@@ -13,6 +13,8 @@ tag:
 OpenLayers 地图加载高德地图数据的时候，在初始化的时候地图贴片被拉伸，
 下图可以很明显的看到底图被拉伸了，可以配合高德加载的块图片比较下。
 
+<!-- more -->
+
 [http://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x=1711&y=831&z=11](http://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x=1711&y=831&z=11)
 
 ![image](https://image.liubing.me/2019/12/26/28de90461c4b2.png)

@@ -10,6 +10,8 @@ tag:
 
 欣赏下精美的 UI 设计动画特效
 
+<!-- more -->
+
 ![image](https://image.liubing.me/2019/12/26/bbdfa1a041c2f.gif)
 
 ![image](https://image.liubing.me/2019/12/26/8cdcc421d8a28.gif)

@@ -8,6 +8,8 @@ category:
 
 无意间从 CSDN 上看的，觉得挺搞笑的就拿过来了。
 
+<!-- more -->
+
 ## 加一个功能吧，不麻烦的
 
 ![image](https://image.liubing.me/2019/12/26/b2098c2db993f.png)
