@@ -56,5 +56,12 @@ link: '网站链接'
       link: 'https://www.iconfont.cn/'
     }
   ]
-  const projects2 =  []
+  const projects2 =  [
+    {
+      icon: 'https://file.mo7.cc/static/lxh_gif/lxh_71.gif',
+      name: '墨七',
+      desc: '简单快乐，理应如此。',
+      link: 'https://blog.mo7.cc/'
+    }
+  ]
 </script>
