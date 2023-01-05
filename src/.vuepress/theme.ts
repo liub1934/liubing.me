@@ -1,5 +1,4 @@
 import { hopeTheme } from 'vuepress-theme-hope'
-import { blogPlugin } from 'vuepress-plugin-blog2'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
 
@@ -11,7 +10,7 @@ export default hopeTheme({
   iconAssets: 'https://at.alicdn.com/t/c/font_3842071_cfq9qhwa62j.css',
   logo: '/logo.svg',
   repo: 'liub1934/liubing.me',
-  docsDir: '',
+  docsDir: 'src',
   pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
   navbar: navbarConfig, // 导航栏
   sidebar: sidebarConfig, // 侧边栏
@@ -103,11 +102,11 @@ export default hopeTheme({
       container: true,
       demo: true,
       echarts: true,
+      figure: false,
       flowchart: true,
       gfm: true,
-      imageLazyload: true,
-      imageTitle: true,
-      imageSize: true,
+      imgLazyload: true,
+      imgSize: true,
       include: true,
       katex: true,
       mark: true,
