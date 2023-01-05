@@ -197,6 +197,11 @@ export default hopeTheme({
           }
         ]
       }
+    },
+    components: {
+      rootComponents: {
+        addThis: 'ra-63b2a01c69dc0a28'
+      }
     }
   },
   // 版权信息是否显示
