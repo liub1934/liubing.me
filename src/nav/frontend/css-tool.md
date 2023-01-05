@@ -3,6 +3,26 @@ toc: false
 order: 4
 containerClass: nav-container
 projects:
+  - icon: https://image.liubing.me/2023/01/05/9f30bacd83862.jpg
+    name: Sass
+    desc: Sass 是成熟、稳定、强大的 CSS 扩展语言。
+    link: https://sass.bootcss.com/documentation
+
+  - icon: https://image.liubing.me/2023/01/05/c4f96f6d0ace8.ico
+    name: Less
+    desc: Less（Leaner Style Sheets 的缩写）是一门向后兼容的 CSS 扩展语言。
+    link: https://less.bootcss.com/
+
+  - icon: https://image.liubing.me/2023/01/05/7216c0ccf6cfb.png
+    name: Stylus
+    desc: 富于表现力、动态的、健壮的 CSS。
+    link: https://stylus-lang.com/
+
+  - icon: https://image.liubing.me/2023/01/05/c3bdfba94b2b4.png
+    name: CSS-Tricks
+    desc: 一个关于运用CSS技术进行网络开发和设计的小技巧的交流网站。
+    link: https://css-tricks.com/
+
   - icon: https://image.liubing.me/2020/12/30/b0e506432300b.gif
     name: CSS三角形生成器
     desc: 定义几个参数很方便的生成纯css代码的各种三角形。
