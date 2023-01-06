@@ -1,6 +1,7 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
+import { Description, Repo } from './constant'
 
 export default hopeTheme({
   hostname: 'https://liubing.me',
@@ -9,14 +10,14 @@ export default hopeTheme({
   },
   iconAssets: 'https://at.alicdn.com/t/c/font_3842071_cfq9qhwa62j.css',
   logo: '/logo.svg',
-  repo: 'liub1934/liubing.me',
+  repo: Repo,
   docsDir: 'src',
   pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
   navbar: navbarConfig, // 导航栏
   sidebar: sidebarConfig, // 侧边栏
   displayFooter: true,
   blog: {
-    description: '基于VuePress的个人博客，记录日常开发问题。',
+    description: Description,
     medias: {
       GitHub: 'https://github.com/liub1934',
       Email: 'mailto:w@liubing.me',
@@ -75,7 +76,7 @@ export default hopeTheme({
        * Using Giscus
        */
       provider: 'Giscus',
-      repo: 'liub1934/liubing.me',
+      repo: Repo,
       repoId: 'R_kgDOIq_bDg',
       category: 'General',
       categoryId: 'DIC_kwDOIq_bDs4CTP9q'
@@ -241,10 +242,7 @@ export default hopeTheme({
     <div>版权所有 © 2019 <a href="https://liubing.me"><b>Bing🐣</b></a> | 备案是不可能备案的</div>
     <div>
       <span>本博客已运行</span>
-      <span id=blog_running_days></span>天
-      <span id=blog_running_hours></span>小时
-      <span id=blog_running_mins></span>分
-      <span id=blog_running_secs></span>秒
+      <span id="blog-duration"></span>
     </div>
   `
 })

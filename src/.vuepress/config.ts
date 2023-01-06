@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { Description } from './constant'
 import theme from './theme'
 const __dirname = getDirname(import.meta.url)
 
@@ -8,8 +9,7 @@ export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
   title: 'Bing🐣',
-  description: '基于VuePress的个人博客，记录日常开发问题。',
-  head: [['script', { src: '/js/footer.js' }]],
+  description: Description,
   shouldPrefetch: false,
   theme,
   markdown: {
@@ -18,7 +18,8 @@ export default defineUserConfig({
     }
   },
   alias: {
-    '@components': path.resolve(__dirname, './components')
+    '@components': path.resolve(__dirname, './components'),
+    '@theme-hope/components/PageFooter': '@components/PageFooter/index.vue'
   },
   plugins: [
     googleAnalyticsPlugin({
