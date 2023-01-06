@@ -28,6 +28,11 @@ html[data-theme='light'] {
 }
 
 .project-panel {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
   .project {
     .image {
       border-radius: 50%;

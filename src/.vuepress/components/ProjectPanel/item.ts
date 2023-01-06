@@ -8,7 +8,7 @@ import {
   ProjectIcon
 } from '@theme-hope/modules/blog/components/icons/index'
 import { useNavigate, usePure } from '@theme-hope/composables/index'
-import { Project } from './interface'
+import { Project, RenderTag } from './interface'
 import Icon from '@theme-hope/components/Icon'
 const AVAILABLE_PROJECT_TYPES = ['link', 'article', 'book', 'project', 'friend']
 
@@ -19,7 +19,8 @@ export default defineComponent({
       type: Object as PropType<Project>,
       required: true
     },
-    index: Number
+    index: Number,
+    panelRenderTag: String as PropType<RenderTag>
   },
   components: { ArticleIcon, BookIcon, FriendIcon, LinkIcon, ProjectIcon },
   setup(props) {
@@ -43,14 +44,21 @@ export default defineComponent({
     const { icon, link, name, desc } = props.project
     return () =>
       h(
-        'div',
+        props.panelRenderTag || RenderTag.Box,
         {
           class: [
             'project',
             // TODO: magic number 9 is tricky here
             { [`project${index % 9}`]: !pure.value }
           ],
-          onClick: () => navigate(link)
+          ...(props.panelRenderTag === RenderTag.Link
+            ? {
+                href: link,
+                target: '_blank'
+              }
+            : {
+                onClick: () => navigate(link)
+              })
         },
         [
           renderIcon(icon, name),

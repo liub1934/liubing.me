@@ -1,6 +1,6 @@
 import { usePageFrontmatter } from '@vuepress/client'
 import { defineComponent, h, PropType } from 'vue'
-import { Project } from './interface'
+import { Project, RenderTag } from './interface'
 import ProjectPanelItem from './item'
 
 export default defineComponent({
@@ -8,11 +8,14 @@ export default defineComponent({
   props: {
     projects: {
       type: Array as PropType<Array<Project>>
-    }
+    },
+    panelRenderTag: String as PropType<RenderTag>
   },
   setup(props) {
     const frontmatter = usePageFrontmatter()
     const projects = (props.projects || frontmatter.value.projects) as Project[]
+    const panelRenderTag: RenderTag = (props.panelRenderTag ||
+      frontmatter.value.panelRenderTag) as RenderTag
     return () =>
       projects?.length
         ? h(
@@ -21,7 +24,8 @@ export default defineComponent({
             projects.map((project, index) =>
               h(ProjectPanelItem, {
                 project,
-                index
+                index,
+                panelRenderTag
               })
             )
           )

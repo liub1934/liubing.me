@@ -4,3 +4,8 @@ export interface Project {
   desc: string
   link: string
 }
+
+export enum RenderTag {
+  Box = 'div',
+  Link = 'a'
+}
