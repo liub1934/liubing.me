@@ -1,6 +1,7 @@
 ---
 toc: false
 pageInfo: false
+panelRenderTag: 'a'
 ---
 
 # 友情链接
