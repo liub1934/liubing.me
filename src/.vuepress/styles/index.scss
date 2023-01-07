@@ -51,3 +51,10 @@ html[data-theme='light'] {
 figcaption {
   display: none !important;
 }
+
+.blog-hero {
+  .mask {
+    background: url(https://file.mo7.cc/api/public/bz) center center / cover
+      no-repeat !important;
+  }
+}
