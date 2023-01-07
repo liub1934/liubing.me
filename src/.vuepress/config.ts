@@ -19,7 +19,10 @@ export default defineUserConfig({
   },
   alias: {
     '@components': path.resolve(__dirname, './components'),
-    '@theme-hope/components/PageFooter': '@components/PageFooter/index.vue'
+    '@theme-hope/components/PageFooter': path.resolve(
+      __dirname,
+      './components/PageFooter/index.vue'
+    )
   },
   plugins: [
     googleAnalyticsPlugin({
