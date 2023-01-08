@@ -1,14 +1,15 @@
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { Description } from './constant'
+import { redirectPlugin } from 'vuepress-plugin-redirect'
+import { authorName, Description } from './constant'
 import theme from './theme'
 const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
-  title: 'Bing🐣',
+  title: authorName,
   description: Description,
   shouldPrefetch: false,
   theme,
@@ -25,8 +26,11 @@ export default defineUserConfig({
     )
   },
   plugins: [
+    // 谷歌统计差价
     googleAnalyticsPlugin({
       id: 'G-GBZBT89WGJ'
-    })
+    }),
+    // 重定向插件
+    redirectPlugin()
   ]
 })
