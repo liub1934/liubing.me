@@ -4725,6 +4725,18 @@ vuepress-plugin-reading-time2@2.0.0-beta.152:
   dependencies:
     vuepress-shared "2.0.0-beta.152"
 
+vuepress-plugin-redirect@^2.0.0-beta.152:
+  version "2.0.0-beta.152"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-redirect/-/vuepress-plugin-redirect-2.0.0-beta.152.tgz#eb829b65023faedd5db0d807551d920def0d43ce"
+  integrity sha512-UJYQXBPqEVoa9MPo/RW8ezof7OJ7WwfqqavtZRM0jLjhCytte0891jx4dCu8LhXnm9YpTQeJXvc51ZPb34YEhA==
+  dependencies:
+    "@vuepress/cli" "2.0.0-beta.60"
+    "@vuepress/core" "2.0.0-beta.60"
+    "@vuepress/shared" "2.0.0-beta.60"
+    "@vuepress/utils" "2.0.0-beta.60"
+    cac "^6.7.14"
+    vuepress-shared "2.0.0-beta.152"
+
 vuepress-plugin-sass-palette@2.0.0-beta.152:
   version "2.0.0-beta.152"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-beta.152.tgz#7ebc2e12435f1dac9ded8984b0548023ef8628e3"
