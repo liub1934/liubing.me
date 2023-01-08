@@ -45,10 +45,10 @@ link: '网站链接'
       link: 'https://v2.vuepress.vuejs.org/zh/'
     },
     {
-      icon: 'https://vuepress-theme-hope.github.io/v2/assets/icon/ms-icon-144.png',
+      icon: 'https://theme-hope.vuejs.press/logo.png',
       name: 'VuePress Theme Hope',
       desc: '一个具有强大功能的 vuepress 主题✨',
-      link: 'https://vuepress-theme-hope.github.io/v2/zh/'
+      link: 'https://theme-hope.vuejs.press/zh/'
     },
     {
       icon: 'https://image.liubing.me/2022/12/30/c827badf9fa7a.jpg',
