@@ -32,7 +32,7 @@ export const navbarConfig = navbar([
   {
     text: '导航',
     icon: 'nav',
-    link: '/nav'
+    link: '/nav/'
   },
   {
     text: '友情链接',
