@@ -28,6 +28,16 @@ projects:
     desc: 定义几个参数很方便的生成纯css代码的各种三角形。
     link: http://apps.eky.hk/css-triangle-generator/zh-hant
 
+  - icon: https://image.liubing.me/2023/01/07/4e591a2c4d9b5.ico
+    name: Customize Border
+    desc: 自定义 CSS Border 边框。
+    link: https://kovart.github.io/dashed-border-generator/
+
+  - icon: https://image.liubing.me/2023/01/07/3b08cf8322185.png
+    name: FANCY-BORDER-RADIUS
+    desc: 生成花里胡哨的Border圆角样式。
+    link: https://9elements.github.io/fancy-border-radius/
+
   - icon: https://image.liubing.me/2020/12/30/b4caf17a41803.png
     name: 贝塞尔曲线
     desc: 拖拽方式生成贝塞尔曲线参数。
