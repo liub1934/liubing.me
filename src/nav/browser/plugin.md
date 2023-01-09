@@ -1,6 +1,6 @@
 ---
 toc: false
-order: 6
+order: 2
 containerClass: nav-container
 projects:
   - icon: https://image.liubing.me/2022/12/30/77f13b10ba6dc.jpg
@@ -52,8 +52,28 @@ projects:
     name: Octotree
     desc: GitHub code tree。
     link: https://www.octotree.io/
+
+  - icon: https://image.liubing.me/2023/01/09/6fd1f0348eba6.ico
+    name: Little Star
+    desc: 结合浏览器插件，高效方便地管理你的Github Star。
+    link: https://www.littlestarcloud.com
+
+  - icon: https://image.liubing.me/2023/01/09/2cf5f675b6ad8.png
+    name: User-Agent Switcher
+    desc: 可以快速切换浏览器的User-Agent。
+    link: https://chrome.google.com/webstore/detail/djflhoibgkdhkhhcedjiklpkjnoahfmg
+
+  - icon: https://image.liubing.me/2023/01/09/ff1c35d7f3bfa.png
+    name: Random User-Agent
+    desc: 按时自动更改浏览器的User-Agent，隐藏您的真实身份。
+    link: https://chrome.google.com/webstore/detail/einpaelgookohagofgnnkcfjbkkgepnp
+
+  - icon: https://image.liubing.me/2023/01/09/927e1f3bdc794.png
+    name: Web Maker
+    desc: 浏览器中可离线的运行的代码编辑器。
+    link: https://webmaker.app/
 ---
 
-# Chrome 插件
+# 常用插件
 
 <ProjectPanel />
