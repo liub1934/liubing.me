@@ -37,6 +37,16 @@ projects:
     name: Greasy Fork
     desc: 下载油猴各种脚本，必备收藏。
     link: https://greasyfork.org/zh-CN
+
+  - icon: https://image.liubing.me/2023/01/04/cf74579e59ae6.png
+    name: TinyPng
+    desc: 智能WebP、PNG和JPEG压缩。
+    link: https://tinypng.com/
+
+  - icon: https://image.liubing.me/2023/01/09/577d1a7ee8f47.png
+    name: Convertio
+    desc: 文件转换器，将您的文件转换成任意格式。
+    link: https://convertio.co/zh/
 ---
 
 # 常用推荐
