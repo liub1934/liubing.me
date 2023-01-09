@@ -15,4 +15,4 @@ yarn docs:dev # 启动服务
 
 ## 打包构建
 
-由于需要发布到自己的服务器，加上 Github Action 被封了，不得已利用 Buddy，相关教程参考：[点击前往](http://localhost:8080/article/vue/vuepress-automatically-deploys-to-own-servers-with-buddy.html)
+由于需要发布到自己的服务器，加上 Github Action 被封了，不得已利用 Buddy，相关教程参考：[点击前往](https://liubing.me/article/vue/vuepress-automatically-deploys-to-own-servers-with-buddy.html)
