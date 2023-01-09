@@ -33,7 +33,7 @@ projects:
     link: https://cdnjs.com/
 
   - icon: https://image.liubing.me/2023/01/09/69e1741f186dc.png
-    name: 75CDN
+    name: cloudimage
     desc: 图像 CDN，用于提供压缩、像素完美和响应迅速的图像。
     link: https://www.cloudimage.io/
 
