@@ -1,6 +1,6 @@
 ---
 toc: false
-order: 7
+order: 3
 containerClass: nav-container
 projects:
   - icon: https://image.liubing.me/2023/01/04/1c4f5839c3516.png
@@ -54,7 +54,7 @@ projects:
     link: https://huajiakeji.com/
 ---
 
-# Chrome 应用商店
+# 应用商店
 
 ::: tip
 鉴于国内白嫖环境，第三方应用商店基本上都需要关注微信公众号才能下载，推荐使用`CrxDL` `插件小屋`，如有其他站点可在下方评论区评论。
