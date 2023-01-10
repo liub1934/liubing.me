@@ -32,6 +32,11 @@ projects:
     name: Mand Mobile
     desc: 滴滴打造的一款面向金融场景的 Vue 移动端 UI 组件库。
     link: https://didi.github.io/mand-mobile/#/zh-CN/home
+
+  - icon: https://image.liubing.me/2023/01/10/4da557840f1d6.png
+    name: Quark Design
+    desc: 一款基于 Web Components 的跨框架 UI 组件库。
+    link: https://quark-design.hellobike.com/
 ---
 
 # 移动端 UI 框架
