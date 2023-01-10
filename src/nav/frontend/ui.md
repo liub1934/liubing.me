@@ -32,6 +32,11 @@ projects:
     name: Naive UI
     desc: 一个 Vue 3 组件库，使用 TypeScript，快，有点意思。
     link: https://www.naiveui.com/
+
+  - icon: https://image.liubing.me/2023/01/10/2b02fbf0c867b.ico
+    name: LuLu UI
+    desc: 阅文集团荣誉出品的前端 UI 组件库。
+    link: https://l-ui.com/
 ---
 
 # UI 框架
