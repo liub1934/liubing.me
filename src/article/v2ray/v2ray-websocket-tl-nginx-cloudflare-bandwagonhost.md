@@ -3,11 +3,13 @@ date: 2019-10-13
 category:
   - V2Ray
 tag:
+  - V2Ray
   - WebSocket
   - TLS
   - Nginx
   - Cloudflare
   - 搬瓦工
+  - bandwagonhost
 ---
 
 # V2Ray+WebSocket(ws)+TLS+Nginx+Cloudflare 拯救搬瓦工被封 IP 的 VPS

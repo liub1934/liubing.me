@@ -3,7 +3,9 @@ date: 2019-03-25
 category:
   - Element UI
   - Vue
+  - Web
 tag:
+  - Vue
   - Table
 ---
 

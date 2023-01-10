@@ -5,6 +5,7 @@ category:
   - Vue
 tag:
   - 选择器
+  - uni-app
   - lb-picker
 ---
 

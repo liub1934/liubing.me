@@ -2,7 +2,9 @@
 date: 2019-03-08
 category:
   - Vue
+  - Web
 tag:
+  - Vue
   - Vue Router
 ---
 

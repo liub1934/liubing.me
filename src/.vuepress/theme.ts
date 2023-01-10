@@ -143,6 +143,8 @@ export default hopeTheme({
       cacheHTML: true,
       cachePic: true,
       appendBase: true,
+      themeColor: '#2f54eb',
+      update: 'hint',
       apple: {
         icon: '/assets/icon/apple-icon-152.png',
         statusBarColor: 'black'
@@ -175,33 +177,7 @@ export default hopeTheme({
             sizes: '192x192',
             type: 'image/png'
           }
-        ],
-        shortcuts: [
-          {
-            name: 'Demo',
-            short_name: 'Demo',
-            url: '/demo/',
-            icons: [
-              {
-                src: '/assets/icon/guide-maskable.png',
-                sizes: '192x192',
-                purpose: 'maskable',
-                type: 'image/png'
-              },
-              {
-                src: '/assets/icon/guide-monochrome.png',
-                sizes: '192x192',
-                purpose: 'monochrome',
-                type: 'image/png'
-              }
-            ]
-          }
         ]
-      }
-    },
-    components: {
-      rootComponents: {
-        addThis: 'ra-63b2a01c69dc0a28'
       }
     }
   },

@@ -6,6 +6,8 @@ tag:
   - jsDelivr
   - Statically
   - GitHack
+  - Staticaly
+  - CDN
 ---
 
 # 推荐几款免费且不限流量的全球 CDN

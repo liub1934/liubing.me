@@ -5,6 +5,7 @@ category:
   - Docker
 tag:
   - Bitwarden
+  - Docker
 ---
 
 # 基于宝塔 Docker 自建 Bitwarden 密码管理服务

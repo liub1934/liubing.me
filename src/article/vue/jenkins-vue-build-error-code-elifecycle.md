@@ -4,6 +4,7 @@ category:
   - Vue
   - 其他
 tag:
+  - Vue
   - Jenkins
 ---
 
