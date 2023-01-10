@@ -17,6 +17,11 @@ projects:
     desc: 稳定、快速、免费的前端开源项目 CDN 加速服务。
     link: https://www.bootcdn.cn/
 
+  - icon: https://image.liubing.me/2023/01/10/d501952d11966.png
+    name: Staticfile CDN
+    desc: 七牛云提供，技术社区掘金支持的免费、快速、开放的 CDN 服务。
+    link: https://www.bootcdn.cn/
+
   - icon: https://image.liubing.me/2023/01/09/ca9dcd871d3f5.png
     name: raw.githack.com
     desc: 为你的源码提供 CDN 加速服务。
