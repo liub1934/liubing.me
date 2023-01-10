@@ -52,9 +52,15 @@ figcaption {
   display: none !important;
 }
 
-.blog-hero {
-  .mask {
-    background: url(https://file.mo7.cc/api/public/bz) center center / cover
-      no-repeat !important;
+// .blog-hero {
+//   .mask {
+//     background: url(https://file.mo7.cc/api/public/bz) center center / cover
+//       no-repeat !important;
+//   }
+// }
+
+.page.blog {
+  .blog-home {
+    margin-top: 12px;
   }
 }

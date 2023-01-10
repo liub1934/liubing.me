@@ -8,10 +8,11 @@ head:
   - - meta
     - name: keywords
       content: LB,LB博客,Bing🐣,前端开发,VuePress博客,vue,element-ui,uni-app,vscode,javascript,css,css3,html5
-heroImage: /logo.svg
-heroText: Bing🐣
-heroFullScreen: true
-tagline: 鱼跃此时海 花开彼岸天
+hero: false
+# heroImage: /logo.svg
+# heroText: Bing🐣
+# heroFullScreen: true
+# tagline: 鱼跃此时海 花开彼岸天
 # projects:
 #   - icon: project
 #     name: 项目名称
