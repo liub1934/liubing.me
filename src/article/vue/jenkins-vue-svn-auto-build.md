@@ -3,6 +3,7 @@ date: 2019-05-02
 category:
   - 其他
 tag:
+  - Vue
   - Jenkins
   - SVN
   - 自动构建

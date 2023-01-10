@@ -2,9 +2,12 @@
 date: 2019-04-06
 category:
   - Vue
+  - Web
 tag:
+  - Vue
   - TinyMCE
   - 富文本编辑器
+  - TinyMCE-Vue
 ---
 
 # Vue CLI 3 TinyMCE 5 富文本编辑器整合

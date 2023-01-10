@@ -5,6 +5,9 @@ category:
   - Vue
   - Vant
 tag:
+  - uni-app
+  - Vue
+  - Vant
   - 微信小程序
 ---
 

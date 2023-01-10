@@ -3,6 +3,7 @@ date: 2022-12-26
 category:
   - V2Ray
 tag:
+  - V2Ray
   - WebSocket
   - TLS
   - Nginx

@@ -1,6 +1,5 @@
 ---
 toc: false
-order: 5
 containerClass: nav-container
 projects:
   - icon: https://image.liubing.me/2022/12/30/c827badf9fa7a.jpg

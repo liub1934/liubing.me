@@ -2,8 +2,10 @@
 date: 2019-08-19
 category:
   - Vue
+  - Web
   - OpenLayers
 tag:
+  - Vue
   - 地图
   - 高德地图
 ---

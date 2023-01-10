@@ -2,7 +2,9 @@
 date: 2019-03-12
 category:
   - Vue
+  - Web
 tag:
+  - Vue
   - webpack
   - require.context
 ---

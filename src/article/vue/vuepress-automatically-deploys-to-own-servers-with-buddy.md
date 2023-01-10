@@ -5,6 +5,7 @@ category:
   - VuePress
   - Buddy
 tag:
+  - Vue
   - 打包
   - 部署
   - 构建

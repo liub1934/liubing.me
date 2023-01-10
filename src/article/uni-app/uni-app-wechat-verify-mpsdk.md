@@ -5,7 +5,10 @@ category:
   - Vue
 tag:
   - 微信小程序
+  - WeChat
   - 人脸核身
+  - sdk
+  - uni-app
 ---
 
 # uni-app 微信小程序接入人脸核身 SDK
