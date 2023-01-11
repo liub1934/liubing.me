@@ -66,5 +66,3 @@ onBeforeUnmount(() => {
   clearInterval(timer)
 })
 </script>
-
-<style lang="less" scoped></style>
