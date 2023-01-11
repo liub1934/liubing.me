@@ -1,6 +1,5 @@
 ---
 toc: false
-order: 1
 containerClass: nav-container
 projects:
   - icon: https://image.liubing.me/2023/01/04/cf74579e59ae6.png
@@ -17,18 +16,8 @@ projects:
     name: Convertio
     desc: 文件转换器，将您的文件转换成任意格式。
     link: https://convertio.co/zh/
-
-  - icon: https://image.liubing.me/2023/01/04/67c039e594979.png
-    name: DownGit
-    desc: 创建GitHub资源下载链接。
-    link: https://minhaskamal.github.io/DownGit
-
-  - icon: https://image.liubing.me/2023/01/04/a99ec6f9a101b.ico
-    name: DataV.GeoAtlas
-    desc: DataV.GeoAtlas地理小工具，可快速获取地图数据。
-    link: https://datav.aliyun.com/portal/school/atlas/area_selector
 ---
 
-# 常用推荐
+# 图片处理
 
 <ProjectPanel />
