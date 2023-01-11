@@ -47,6 +47,11 @@ projects:
     name: 缓动函数速查表
     desc: 缓动函数速查表。
     link: https://cubic-bezier.com/
+
+  - icon: https://image.liubing.me/2023/01/11/4b809ab8771f2.jpg
+    name: Animista
+    desc: 一个可自定义的 CSS 动画库工具
+    link: https://animista.net/
 ---
 
 # CSS 工具

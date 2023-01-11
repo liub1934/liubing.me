@@ -186,32 +186,32 @@ export default hopeTheme({
   // 自定义页脚
   footer: `
     <div>
-      <span>CDN by</span>
-      <a href=https://www.cloudflare.com/ target=_blank>
-        <img src=https://favicon.yandex.net/favicon/cloudflare.com><b>Cloudflare</b>
+      <span>CDN By</span>
+      <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://favicon.yandex.net/favicon/cloudflare.com"><b>Cloudflare</b>
       </a>
     </div>
     <div>
-      <span>VPS by</span>
-      <a href=https://contabo.com target=_blank class=theme>
-        <img src=https://favicon.yandex.net/favicon/contabo.com><b>Contabo</b>
+      <span>VPS By</span>
+      <a href="https://contabo.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://favicon.yandex.net/favicon/contabo.com"><b>Contabo</b>
       </a>
     </div>
     <div>
       <span>Server by</span>
-      <a href="https://www.bt.cn/?invite_code=MV9senRrbW4=" target=_blank>
-        <img src=https://favicon.yandex.net/favicon/bt.cn><b>宝塔Linux面板</b>
+      <a href="https://www.bt.cn/?invite_code=MV9senRrbW4=" target="_blank" rel="noopener noreferrer">
+        <img src="https://favicon.yandex.net/favicon/bt.cn"><b>宝塔Linux面板</b>
       </a>
     </div>
     <div>
-      <span>Powered by</span>
-      <a href="https://vuepress.vuejs.org" target=_blank>
+      <span>Powered By</span>
+      <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
         <img src="https://favicon.yandex.net/favicon/vuepress.vuejs.org"><b>VuePress</b>
       </a>
     </div>
     <div>
-      <span>Theme by</span>
-      <a href="https://theme-hope.vuejs.press/zh/" target=_blank>
+      <span>Theme By</span>
+      <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">
         <img src="https://favicon.yandex.net/favicon/vuepress-theme-hope.github.io"><b>VuePress Theme Hope</b>
       </a>
     </div>

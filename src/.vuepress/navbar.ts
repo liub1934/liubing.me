@@ -42,6 +42,7 @@ export const navbarConfig = navbar([
   {
     text: '私有图床',
     icon: 'pic',
+    rel: ' ',
     link: 'https://image.liubing.me'
   }
 ])
