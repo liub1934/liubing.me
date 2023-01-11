@@ -1,10 +1,10 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
-import { authorName, Description, Repo } from './constant'
+import { authorName, Description, HostName, Repo } from './constant'
 
 export default hopeTheme({
-  hostname: 'https://liubing.me',
+  hostname: HostName,
   author: {
     name: authorName
   },
@@ -215,7 +215,7 @@ export default hopeTheme({
         <img src="https://favicon.yandex.net/favicon/vuepress-theme-hope.github.io"><b>VuePress Theme Hope</b>
       </a>
     </div>
-    <div>版权所有 © 2019 <a href="https://liubing.me"><b>${authorName}</b></a> | 备案是不可能备案的</div>
+    <div>版权所有 © 2019 <a href="${HostName}"><b>${authorName}</b></a> | 备案是不可能备案的</div>
     <div>
       <span>本博客已运行</span>
       <span id="blog-duration"></span>
