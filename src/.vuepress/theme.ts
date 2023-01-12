@@ -2,6 +2,9 @@ import { hopeTheme } from 'vuepress-theme-hope'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
 import { authorName, Description, HostName, Repo } from './constant'
+import packageData from '../../package.json' assert { type: 'json' }
+const devDependencies = packageData.devDependencies
+const ThemeVersion = devDependencies['vuepress-theme-hope'].replace('^', 'v')
 
 export default hopeTheme({
   hostname: HostName,
@@ -213,6 +216,12 @@ export default hopeTheme({
       <span>Theme By</span>
       <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">
         <img src="https://favicon.yandex.net/favicon/vuepress-theme-hope.github.io"><b>VuePress Theme Hope</b>
+      </a>
+    </div>
+    <div>
+      <span>Theme Version</span>
+      <a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/releases/tag/${ThemeVersion}" target="_blank" rel="noopener noreferrer">
+        <b>${ThemeVersion}</b>
       </a>
     </div>
     <div>版权所有 © 2019 <a href="${HostName}"><b>${authorName}</b></a> | 备案是不可能备案的</div>
