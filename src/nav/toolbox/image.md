@@ -5,7 +5,7 @@ projects:
   - icon: https://image.liubing.me/2023/01/04/cf74579e59ae6.png
     name: TinyPng
     desc: 智能WebP、PNG和JPEG压缩。
-    link: https://tinypng.com/
+    link: https://tinify.cn/
 
   - icon: https://image.liubing.me/2023/01/04/62096cc658d2a.png
     name: SVG to PNG
@@ -21,6 +21,11 @@ projects:
     name: remove bg
     desc: AI在线抠图，轻松自动去除图片背景。
     link: https://www.remove.bg/zh
+
+  - icon: https://image.liubing.me/2023/01/13/626fdb2c2fd39.png
+    name: iLoveIMG
+    desc: 一款可以在线编辑图片的简便应用程序。
+    link: https://www.iloveimg.com/zh-cn
 ---
 
 # 图片处理
