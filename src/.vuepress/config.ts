@@ -20,6 +20,7 @@ export default defineUserConfig({
   },
   alias: {
     '@components': path.resolve(__dirname, './components'),
+    '@friends': path.resolve(__dirname, '../friends'),
     '@theme-hope/components/PageFooter': path.resolve(
       __dirname,
       './components/PageFooter/index.vue'

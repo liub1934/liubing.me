@@ -31,6 +31,6 @@ link: '网站链接'
 <ProjectPanel :projects="friendLinks" />
 
 <script setup lang="ts">
-  import fixedLinks from './fixedLinks'
-  import friendLinks from './fixedLinks'
+  import fixedLinks from '@friends/fixedLinks'
+  import friendLinks from '@friends/friendLinks'
 </script>
