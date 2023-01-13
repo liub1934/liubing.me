@@ -16,6 +16,11 @@ projects:
     name: Convertio
     desc: 文件转换器，将您的文件转换成任意格式。
     link: https://convertio.co/zh/
+
+  - icon: https://image.liubing.me/2021/11/02/b502f14843b68.png
+    name: remove bg
+    desc: AI在线抠图，轻松自动去除图片背景。
+    link: https://www.remove.bg/zh
 ---
 
 # 图片处理
