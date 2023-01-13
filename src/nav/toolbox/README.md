@@ -7,3 +7,5 @@ containerClass: nav-container
 ---
 
 # 工具箱
+
+<Catalog />

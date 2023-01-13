@@ -1,8 +1,7 @@
 ---
-index: false
 toc: false
 ---
 
-# Vue
+# Element UI
 
 <Catalog />

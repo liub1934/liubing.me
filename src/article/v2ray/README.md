@@ -1,8 +1,7 @@
 ---
-index: false
 toc: false
 ---
 
-# Vue
+# v2Ray
 
 <Catalog />
