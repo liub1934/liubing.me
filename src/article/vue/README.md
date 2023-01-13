@@ -1,5 +1,4 @@
 ---
-index: false
 toc: false
 ---
 

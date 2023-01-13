@@ -5,3 +5,5 @@ containerClass: nav-container
 ---
 
 # 浏览器
+
+<Catalog />
