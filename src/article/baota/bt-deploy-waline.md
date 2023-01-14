@@ -296,3 +296,9 @@ Token 可以[点击链接](https://github.com/settings/tokens)去申请。
 ![image](https://image.liubing.me/2023/01/14/2c0adaa8bfb98.png)
 
 ![image](https://image.liubing.me/2023/01/14/f41a048d0fcbd.png)
+
+最后将部署好的服务接入自己的博客，测试评论及邮件通知是否正常。
+
+![image](https://image.liubing.me/2023/01/14/5fd4bb570de40.png)
+
+![image](https://image.liubing.me/2023/01/14/ce4d9556a6b9e.png)
