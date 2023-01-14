@@ -78,11 +78,11 @@ export default hopeTheme({
       /**
        * Using Giscus
        */
-      provider: 'Giscus',
-      repo: Repo,
-      repoId: 'R_kgDOIq_bDg',
-      category: 'General',
-      categoryId: 'DIC_kwDOIq_bDs4CTP9q'
+      // provider: 'Giscus',
+      // repo: Repo,
+      // repoId: 'R_kgDOIq_bDg',
+      // category: 'General',
+      // categoryId: 'DIC_kwDOIq_bDs4CTP9q'
 
       /**
        * Using Twikoo
@@ -93,8 +93,9 @@ export default hopeTheme({
       /**
        * Using Waline
        */
-      // provider: "Waline",
-      // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
+      provider: 'Waline',
+      serverURL: 'https://waline.liubing.me',
+      search: false
     },
     // Disable features you don’t want here
     // Markdown 增强插件配置
