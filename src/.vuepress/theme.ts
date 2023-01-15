@@ -1,7 +1,7 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
-import { authorName, Description, HostName, Repo } from './constant'
+import { AuthorName, Description, HostName, Repo } from './constant'
 import packageData from '../../package.json' assert { type: 'json' }
 const devDependencies = packageData.devDependencies
 const ThemeVersion = devDependencies['vuepress-theme-hope'].replace('^', 'v')
@@ -9,7 +9,7 @@ const ThemeVersion = devDependencies['vuepress-theme-hope'].replace('^', 'v')
 export default hopeTheme({
   hostname: HostName,
   author: {
-    name: authorName
+    name: AuthorName
   },
   iconAssets: 'https://at.alicdn.com/t/c/font_3842071_cfq9qhwa62j.css',
   logo: '/logo.svg',
@@ -226,7 +226,7 @@ export default hopeTheme({
         <b>${ThemeVersion}</b>
       </a>
     </div>
-    <div>版权所有 © 2019 <a href="${HostName}"><b>${authorName}</b></a> | 备案是不可能备案的</div>
+    <div>版权所有 © 2019 <a href="${HostName}"><b>${AuthorName}</b></a> | 备案是不可能备案的</div>
     <div>
       <span>本博客已运行</span>
       <span id="blog-duration"></span>
