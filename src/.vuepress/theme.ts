@@ -74,7 +74,7 @@ export default hopeTheme({
     <div>
       <span>Powered By</span>
       <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
-        <img src="https://favicon.yandex.net/favicon/vuepress.vuejs.org"><b>VuePress</b>
+        <img src="https://vuepress.vuejs.org/icons/msapplication-icon-144x144.png"><b>VuePress</b>
       </a>
     </div>
     <div>
