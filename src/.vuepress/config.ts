@@ -2,14 +2,14 @@ import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { redirectPlugin } from 'vuepress-plugin-redirect'
-import { authorName, Description } from './constant'
+import { AuthorName, Description } from './constant'
 import theme from './theme'
 const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
-  title: authorName,
+  title: AuthorName,
   description: Description,
   shouldPrefetch: false,
   theme,
