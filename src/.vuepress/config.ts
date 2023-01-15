@@ -1,8 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { redirectPlugin } from 'vuepress-plugin-redirect'
 import { AuthorName, Description } from './constant'
+import { configPlugins } from './plugins'
 import theme from './theme'
 const __dirname = getDirname(import.meta.url)
 
@@ -26,12 +25,5 @@ export default defineUserConfig({
       './components/PageFooter/index.vue'
     )
   },
-  plugins: [
-    // 谷歌统计差价
-    googleAnalyticsPlugin({
-      id: 'G-GBZBT89WGJ'
-    }),
-    // 重定向插件
-    redirectPlugin()
-  ]
+  plugins: configPlugins
 })
