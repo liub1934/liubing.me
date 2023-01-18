@@ -18,6 +18,6 @@ projects:
     link: https://iconpark.oceanengine.com/
 ---
 
-# Icon 图标库
+# 字体图标
 
 <ProjectPanel />
