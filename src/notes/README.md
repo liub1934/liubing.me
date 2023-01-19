@@ -3,6 +3,6 @@ index: false
 toc: false
 ---
 
-# JavaScript
+# 代码笔记
 
 <Catalog />
