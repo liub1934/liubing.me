@@ -2,6 +2,7 @@ import { PluginConfig } from 'vuepress'
 import { redirectPlugin } from 'vuepress-plugin-redirect'
 import { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -10,7 +11,13 @@ export const configPlugins: PluginConfig = [
     id: 'G-GBZBT89WGJ'
   }),
   // 重定向插件
-  redirectPlugin()
+  redirectPlugin(),
+  // DocSearch搜索插件
+  docsearchPlugin({
+    appId: '02W4F4F52Z',
+    apiKey: '445d0a05d84c6c764afb537087dc5afc',
+    indexName: 'liubing.me'
+  })
 ]
 
 // 主题内置插件配置
