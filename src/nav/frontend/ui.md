@@ -39,6 +39,6 @@ projects:
     link: https://l-ui.com/
 ---
 
-# UI 框架
+# UI 组件库
 
 <ProjectPanel />

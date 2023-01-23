@@ -2,6 +2,7 @@ import { PluginConfig } from 'vuepress'
 import { redirectPlugin } from 'vuepress-plugin-redirect'
 import { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -10,7 +11,13 @@ export const configPlugins: PluginConfig = [
     id: 'G-GBZBT89WGJ'
   }),
   // 重定向插件
-  redirectPlugin()
+  redirectPlugin(),
+  // DocSearch搜索插件
+  docsearchPlugin({
+    appId: '02W4F4F52Z',
+    apiKey: '445d0a05d84c6c764afb537087dc5afc',
+    indexName: 'liubing.me'
+  })
 ]
 
 // 主题内置插件配置
@@ -112,47 +119,47 @@ export const themePlugins: PluginsOptions = {
     vuePlayground: true
   },
   // PWA插件配置
-  pwa: false // 暂时关闭PWA功能
-  // pwa: {
-  //   favicon: '/favicon.ico',
-  //   cacheHTML: true,
-  //   cachePic: true,
-  //   appendBase: true,
-  //   themeColor: '#2f54eb',
-  //   update: 'hint',
-  //   apple: {
-  //     icon: '/assets/icon/apple-icon-152.png',
-  //     statusBarColor: 'black'
-  //   },
-  //   msTile: {
-  //     image: '/assets/icon/ms-icon-144.png',
-  //     color: '#ffffff'
-  //   },
-  //   manifest: {
-  //     icons: [
-  //       {
-  //         src: '/assets/icon/chrome-mask-512.png',
-  //         sizes: '512x512',
-  //         purpose: 'maskable',
-  //         type: 'image/png'
-  //       },
-  //       {
-  //         src: '/assets/icon/chrome-mask-192.png',
-  //         sizes: '192x192',
-  //         purpose: 'maskable',
-  //         type: 'image/png'
-  //       },
-  //       {
-  //         src: '/assets/icon/chrome-512.png',
-  //         sizes: '512x512',
-  //         type: 'image/png'
-  //       },
-  //       {
-  //         src: '/assets/icon/chrome-192.png',
-  //         sizes: '192x192',
-  //         type: 'image/png'
-  //       }
-  //     ]
-  //   }
-  // }
+  // pwa: false // 暂时关闭PWA功能
+  pwa: {
+    favicon: '/favicon.ico',
+    cacheHTML: true,
+    cachePic: true,
+    appendBase: true,
+    themeColor: '#2f54eb',
+    update: 'hint',
+    apple: {
+      icon: '/assets/icon/apple-icon-152.png',
+      statusBarColor: 'black'
+    },
+    msTile: {
+      image: '/assets/icon/ms-icon-144.png',
+      color: '#ffffff'
+    },
+    manifest: {
+      icons: [
+        {
+          src: '/assets/icon/chrome-mask-512.png',
+          sizes: '512x512',
+          purpose: 'maskable',
+          type: 'image/png'
+        },
+        {
+          src: '/assets/icon/chrome-mask-192.png',
+          sizes: '192x192',
+          purpose: 'maskable',
+          type: 'image/png'
+        },
+        {
+          src: '/assets/icon/chrome-512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        },
+        {
+          src: '/assets/icon/chrome-192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        }
+      ]
+    }
+  }
 }

@@ -39,6 +39,6 @@ projects:
     link: https://quark-design.hellobike.com/
 ---
 
-# 移动端 UI 框架
+# 移动端 UI 组件库
 
 <ProjectPanel />

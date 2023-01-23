@@ -89,6 +89,12 @@ export default hopeTheme({
         <b>${ThemeVersion}</b>
       </a>
     </div>
+    <div>
+      <span>Deploys By</span>
+      <a href="https://buddy.works" target="_blank" rel="noopener noreferrer">
+        <img src="https://favicon.yandex.net/favicon/buddy.works"><b>Buddy</b>
+      </a>
+    </div>
     <div>版权所有 © 2019 <a href="${HostName}"><b>${AuthorName}</b></a> | 备案是不可能备案的</div>
     <div>
       <span>本博客已运行</span>
