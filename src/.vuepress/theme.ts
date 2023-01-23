@@ -36,9 +36,9 @@ export default hopeTheme({
     config: {}
   },
   navbarLayout: {
-    left: ['Brand'],
+    start: ['Brand'],
     center: ['Links'],
-    right: ['Repo', 'Outlook', 'Search']
+    end: ['Repo', 'Outlook', 'Search']
   },
   headerDepth: 3,
   // 主题色选择器
