@@ -2,7 +2,9 @@ import { PluginConfig } from 'vuepress'
 import { redirectPlugin } from 'vuepress-plugin-redirect'
 import { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { containerPlugin } from '@vuepress/plugin-container'
+import { searchProPlugin } from 'vuepress-plugin-search-pro'
+import { renderProjects } from '../utils'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -12,11 +14,16 @@ export const configPlugins: PluginConfig = [
   }),
   // 重定向插件
   redirectPlugin(),
-  // DocSearch搜索插件
-  docsearchPlugin({
-    appId: '02W4F4F52Z',
-    apiKey: '445d0a05d84c6c764afb537087dc5afc',
-    indexName: 'liubing.me'
+  // 搜索插件
+  searchProPlugin({
+    indexContent: true
+  }),
+  // 自定义容器插件
+  containerPlugin({
+    type: 'projects',
+    render: (tokens, idx) => {
+      return renderProjects(tokens, idx)
+    }
   })
 ]
 
@@ -71,7 +78,6 @@ export const themePlugins: PluginsOptions = {
     serverURL: 'https://waline.liubing.me',
     requiredMeta: ['nick', 'mail'],
     wordLimit: 5,
-    imageUploader: false,
     search: false
   },
   // Disable features you don’t want here

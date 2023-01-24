@@ -3,3 +3,4 @@ export const Description = '基于VuePress的个人博客，记录日常开发�
 export const Repo = 'liub1934/liubing.me'
 export const AuthorName = 'Bing🐣'
 export const HostName = 'https://liubing.me'
+export const Base = '/'
