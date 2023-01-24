@@ -1,12 +1,12 @@
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
-import { AuthorName, Description } from './constant'
-import { configPlugins } from './plugins'
-import theme from './theme'
+import { AuthorName, Base, Description } from './constant'
+import { configPlugins } from './config/plugins'
+import theme from './config/theme'
 const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
-  base: '/',
+  base: Base,
   lang: 'zh-CN',
   title: AuthorName,
   description: Description,
