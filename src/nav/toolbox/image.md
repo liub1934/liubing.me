@@ -32,6 +32,16 @@ containerClass: nav-container
   name: iLoveIMG
   desc: 一款可以在线编辑图片的简便应用程序。
   link: https://www.iloveimg.com/zh-cn
+
+- icon: https://image.liubing.me/2023/01/24/ec73af540a9cf.png
+  name: PRELOADERS
+  desc: 加载、等待、旋转动画 Gif 生成。
+  link: https://icons8.com/preloaders/
+
+- icon: https://image.liubing.me/2023/01/24/709a4b3e413aa.ico
+  name: 踢踢零动图
+  desc: 多图合成GIF，轻松制作精彩的动图。
+  link: https://tt0.top/
 ```
 
 :::
