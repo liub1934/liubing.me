@@ -58,6 +58,21 @@ containerClass: nav-container
   name: Animista
   desc: 一个可自定义的 CSS 动画库工具
   link: https://animista.net/
+
+- icon: https://image.liubing.me/2023/01/24/76ed03c67c0c3.ico
+  name: CSS Load
+  desc: 纯 CSS 生成各种 Loading 加载动画。
+  link: https://cssload.net/
+
+- icon: https://image.liubing.me/2023/01/24/7c02e5ae7e16c.ico
+  name: Grabient
+  desc: CSS 代码渐变颜色生成工具。
+  link: https://www.grabient.com/
+
+- icon: https://image.liubing.me/2023/01/24/7c02e5ae7e16c.ico
+  name: Fresh Background Gradients
+  desc: CSS 个性渐变背景集合。
+  link: https://webgradients.com/
 ```
 
 :::
