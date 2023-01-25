@@ -5,6 +5,10 @@ containerClass: nav-container
 
 # 免费 CDN
 
+::: tip 温馨提示
+由于是免费的，切勿用于生产环境！！！
+:::
+
 ::: projects
 
 ```yaml

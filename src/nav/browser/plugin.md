@@ -78,6 +78,11 @@ containerClass: nav-container
   name: Web Maker
   desc: 浏览器中可离线的运行的代码编辑器。
   link: https://webmaker.app/
+
+- icon: https://image.liubing.me/2023/01/25/30faa81bd2b74.png
+  name: 网页更新提醒
+  desc: 监控网页变化并自动发送微信通知的免费浏览器插件工具。
+  link: https://courier.toptopn.com/
 ```
 
 :::
