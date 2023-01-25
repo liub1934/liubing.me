@@ -69,7 +69,7 @@ containerClass: nav-container
   desc: CSS 代码渐变颜色生成工具。
   link: https://www.grabient.com/
 
-- icon: https://image.liubing.me/2023/01/24/7c02e5ae7e16c.ico
+- icon: https://image.liubing.me/2023/01/25/9d578aac0f807.png
   name: Fresh Background Gradients
   desc: CSS 个性渐变背景集合。
   link: https://webgradients.com/
