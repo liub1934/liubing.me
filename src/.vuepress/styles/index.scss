@@ -20,6 +20,9 @@ html[data-theme='light'] {
       }
     }
   }
+  .copyright {
+    display: none;
+  }
 }
 
 .article-item {
@@ -67,4 +70,8 @@ figcaption {
   .blog-home {
     margin-top: 6px;
   }
+}
+
+.back-to-top {
+  z-index: 999;
 }
