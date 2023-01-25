@@ -49,8 +49,6 @@ export default hopeTheme({
   },
   // 内置插件
   plugins: themePlugins,
-  // 版权信息是否显示
-  copyright: false,
   // 自定义页脚
   footer: `
     <div>
