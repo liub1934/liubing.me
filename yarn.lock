@@ -1576,6 +1576,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.45.tgz#2c0fafd78705e7a18b7906b5201a522719dc5190"
   integrity sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==
 
+"@types/raphael@2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/raphael/-/raphael-2.3.3.tgz#d264b148bc100ef401a5e13159fd97861cd69e17"
+  integrity sha512-Rhvq0q6wzyvipejki/9w87/pgapyE+s3gO66tdl1oD3qDrow+ek+4vVYAbRkeL58HCCK9EOZKwyjqYJ/TFkmtQ==
+
 "@types/resolve@1.17.1":
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-1.17.1.tgz#3afd6ad8967c77e4376c598a82ddd58f46ec45d6"
@@ -1965,7 +1970,7 @@
     "@vueuse/shared" "9.10.0"
     vue-demi "*"
 
-"@vueuse/core@^9.11.0":
+"@vueuse/core@^9.11.0", "@vueuse/core@^9.11.1":
   version "9.11.1"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-9.11.1.tgz#1552aef67144220da7e6b797372a194a9c7ff52e"
   integrity sha512-E/cizD1w9ILkq4axYjZrXLkKaBfzloaby2n3NMjUfd6yI/jkfTVgc6iwy/Cw2e++Ld4LphGbO+3MhzizvwUslQ==
@@ -3073,12 +3078,14 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-flowchart.js@^1.17.1:
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/flowchart.js/-/flowchart.js-1.17.1.tgz#3908ce3778a44b0af5cba1ab31cb61e12dc384a1"
-  integrity sha512-zphTaxdyqvHHu+8Cdf6HvamhArXpq9SyNe1zQ61maCIfTenaj3cMvjS1e/0gfPj7QTLTx3HroSzVqDXpL8naoQ==
+flowchart.ts@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/flowchart.ts/-/flowchart.ts-0.1.2.tgz#81c230f4527a38b54db503b341481b132832cf82"
+  integrity sha512-4N8U2gXTkWUYh57SkCYwnSBM2B9Djia+JjClx/rLA13m0xz2S5BZht/9DvTZH5yXGZkmk7NGxGB15tnbUSI6mg==
   dependencies:
+    "@types/raphael" "2.3.3"
     raphael "2.3.0"
+    tslib "2.4.1"
 
 fraction.js@^4.2.0:
   version "4.2.0"
@@ -4571,6 +4578,11 @@ tslib@2.3.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
 
+tslib@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
+  integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
+
 twikoo@^1.6.8:
   version "1.6.8"
   resolved "https://registry.yarnpkg.com/twikoo/-/twikoo-1.6.8.tgz#a7ad7dd52d9abf5478dd277c2ef1d5adc0e3a223"
@@ -4711,24 +4723,24 @@ vue@3.2.45, vue@^3.2.45:
     "@vue/server-renderer" "3.2.45"
     "@vue/shared" "3.2.45"
 
-vuepress-plugin-auto-catalog@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-auto-catalog/-/vuepress-plugin-auto-catalog-2.0.0-beta.165.tgz#9f9ba437c5fc88565b9012a554efa5c247dc4301"
-  integrity sha512-YKFpwJH0D3sBk2YN3exUvUTaXOgjComtJrrRhcKpqqsdMEVaXsu35dtIOGSqXUwdpE8FX6ZXCxQ1WqS30Ytq5Q==
+vuepress-plugin-auto-catalog@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-auto-catalog/-/vuepress-plugin-auto-catalog-2.0.0-beta.166.tgz#742543f43f0d3482dd57c2265e05294be9a03528"
+  integrity sha512-Rd0NKqZhhMTbTBHE3C9a84gmAOdJv/LIBjBQxGS9XPqWNjusJb8jwU5kOrvb8IjlnFYTx9AYo0qRkhM/ivG78w==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/core" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
     vue "3.2.45"
-    vuepress-plugin-components "2.0.0-beta.165"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-components "2.0.0-beta.166"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-blog2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-blog2/-/vuepress-plugin-blog2-2.0.0-beta.165.tgz#4b6b86e9be2ab815a19e2e28104e795c2f81f383"
-  integrity sha512-O4nau0aDOEYKN+PFvJPIluhvTKFYcS2JLOPxalENtb3k7jej5zZGEj0Iacq7tyPPzPwgbE9ia+lEcQMLYyEwUQ==
+vuepress-plugin-blog2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-blog2/-/vuepress-plugin-blog2-2.0.0-beta.166.tgz#a7c03a8fde144b5e510197b7881f134fea106531"
+  integrity sha512-7n1lJTBXwAA+HQsHl60L773bvLe80S9i/cjyjuMaquy6diY9zH14arClL4wC+mgkd4ml2oKblUO9qnsG4E+kfg==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/core" "2.0.0-beta.60"
@@ -4737,32 +4749,33 @@ vuepress-plugin-blog2@2.0.0-beta.165:
     chokidar "^3.5.3"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-comment2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-comment2/-/vuepress-plugin-comment2-2.0.0-beta.165.tgz#44b65a53e3a94b64031d76dcb35113908610c318"
-  integrity sha512-08V+YzppbWuVEUdA95g7TmSpbrMch4se5lYpX8GMwQWwIvZ9HS8dHcITvq2vDuQuOpu/H8BiXb0nylCDh3iCDg==
+vuepress-plugin-comment2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-comment2/-/vuepress-plugin-comment2-2.0.0-beta.166.tgz#45b25732073394c728aeec5ff5b2dd416bf29632"
+  integrity sha512-EWWlRbD6a2hJcoI0Pf/Vyea6wqBHRvHS8RRi+jtly5WhxutmxhQA0Byy2qfrTb6sKpuQ0HqK9eIgTdn3KJBZRA==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
+    "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
     "@waline/client" "^2.14.7"
     giscus "^1.2.6"
     twikoo "^1.6.8"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-components@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-components/-/vuepress-plugin-components-2.0.0-beta.165.tgz#fe784e69cf5b5442f1be0ac34ec2f62ceb82d295"
-  integrity sha512-DYTI3epVmZ86Yrk2wg7PdTz1r7pLho+tbRcGeBVY4g1zQdFRmtetUEN269c8ZOZC5Iyv2wsxVWvZlbmtaggoiQ==
+vuepress-plugin-components@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-components/-/vuepress-plugin-components-2.0.0-beta.166.tgz#24330e378fd7aa67857b3d563173878a6b01bbe9"
+  integrity sha512-Lrpd8Qoc3vVAWiz1/NJbJSIPoyyLUJWai4yUNSS9X5RVoas+sPvDf2hZzV6g/IDt6dRVO+ulAVxuqWMafanwDA==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
-    "@vueuse/core" "^9.11.0"
+    "@vueuse/core" "^9.11.1"
     artplayer "^4.6.1"
     balloon-css "^1.2.0"
     dashjs "^4.5.2"
@@ -4771,14 +4784,14 @@ vuepress-plugin-components@2.0.0-beta.165:
     plyr "^3.7.3"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-plugin-reading-time2 "2.0.0-beta.165"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-reading-time2 "2.0.0-beta.166"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-copy-code2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-copy-code2/-/vuepress-plugin-copy-code2-2.0.0-beta.165.tgz#0a015555225770cd502147fd277edc5303891af2"
-  integrity sha512-/KaFxYn8tHx+O8NUm/v2v9UjgIlJRuoZjcw33etangvPa1Msrkc1//5HzoHTenTl8j+3dq4hidEGz8i16+I8+Q==
+vuepress-plugin-copy-code2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-copy-code2/-/vuepress-plugin-copy-code2-2.0.0-beta.166.tgz#d366651d7b488d2efc647ecaccf4d8796e9b5327"
+  integrity sha512-tThaS41FY6GwnyU2bwk9u+kGR7NZq4OODvpvaD1kFXFbUi4iBrxg8DOMgUhx+ct0B8e1w4PHDXlHA1cJsOoLjw==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
@@ -4786,37 +4799,37 @@ vuepress-plugin-copy-code2@2.0.0-beta.165:
     balloon-css "^1.2.0"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-copyright2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-copyright2/-/vuepress-plugin-copyright2-2.0.0-beta.165.tgz#4119c387d7b51143c4ccff608f6ef5dd2f5831bd"
-  integrity sha512-1dbkyCmnqXkiwZwGRXFlopGq5iJTeiGXGJHHYrJ4kx0PQqGEp8q/BwhYFdpMlRGPuYZodInkT5NzNSE2xynyuA==
+vuepress-plugin-copyright2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-copyright2/-/vuepress-plugin-copyright2-2.0.0-beta.166.tgz#a4ae3ffdba46f852f197e1e714c2667bf1135a00"
+  integrity sha512-+RToRmizs2nsWlR6CsljgTC7fRUSDn2D2aILmslDm8M9MHAE5nqdaraYiFyODb3Dr9GrydNdpZoOA+GBmVf0/Q==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
-    "@vueuse/core" "^9.11.0"
+    "@vueuse/core" "^9.11.1"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-feed2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-feed2/-/vuepress-plugin-feed2-2.0.0-beta.165.tgz#2ab95e2e96273f9afe4d4000fc46c32b2ec65c34"
-  integrity sha512-jMIg6wbSOsBwheotx3V5gtrDB9i+RfygXGAepcnIXByulcLK5ZbzVAlU0xW24NQh5RgSsL+zeK25ff/qhnKrzw==
+vuepress-plugin-feed2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-feed2/-/vuepress-plugin-feed2-2.0.0-beta.166.tgz#5e906f9e91a5e5b7c4f316a8de9be239f1214800"
+  integrity sha512-IUapO2ge0ZkwK6W+akKvNlG3d3OXoGa7n/Ty6CKMBdmDp4z/35zPux71tw68L/bNqg+WDAKCRHeJxrzJ0dqFbg==
   dependencies:
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
     cheerio "1.0.0-rc.12"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-shared "2.0.0-beta.166"
     xml-js "^1.6.11"
 
-vuepress-plugin-md-enhance@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-md-enhance/-/vuepress-plugin-md-enhance-2.0.0-beta.165.tgz#58abb710a75b4672f2a8596918e3c70ba0569171"
-  integrity sha512-xZQqNUADHANZ4Bw+gXkRo3D2em1CPJnQifRuirGIgb0LqdrCZ2/Q9NYwBfltB24/zSZ8BPEwk/99/Hn2XpsJww==
+vuepress-plugin-md-enhance@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-md-enhance/-/vuepress-plugin-md-enhance-2.0.0-beta.166.tgz#f6fb961a11d85c26eb66e86a77c365c30b4a934e"
+  integrity sha512-t9tKfLR8c83y11CeUOjiSpl82ZdLgspDQKENHU0StHSsbNloG2VcvuO9zerebgYbA+59aCKlJS870qG+ajkNFg==
   dependencies:
     "@babel/core" "^7.20.12"
     "@mdit/plugin-align" "^0.2.3"
@@ -4844,58 +4857,58 @@ vuepress-plugin-md-enhance@2.0.0-beta.165:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
-    "@vueuse/core" "^9.11.0"
+    "@vueuse/core" "^9.11.1"
     balloon-css "^1.2.0"
     chart.js "^4.2.0"
     echarts "^5.4.1"
-    flowchart.js "^1.17.1"
+    flowchart.ts "^0.1.2"
     katex "^0.16.4"
     markdown-it "^13.0.1"
     mermaid "^9.3.0"
     reveal.js "^4.4.0"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-photo-swipe@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-photo-swipe/-/vuepress-plugin-photo-swipe-2.0.0-beta.165.tgz#582d1d60a8e1e7165a252565e7eefe0e0d750235"
-  integrity sha512-7+TU+Xk3jqGPfU14EMKDH0gVHJSLI/vqxAqz/w9JPIKXz7d9RZFg/zF7fuMFF3VGZBfeCXAcqGzavy54/I5WAQ==
+vuepress-plugin-photo-swipe@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-photo-swipe/-/vuepress-plugin-photo-swipe-2.0.0-beta.166.tgz#672b96bc88a2d2424625a18288f549828f44db52"
+  integrity sha512-xMMk7q1ug9HMcKtsyoffxF8XEx9vtOkvQ5ZBHPaClPaBqUCVVnLfikT5FPadrqaxdMLHAeQKjeO4SAHp7RzOqg==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
-    "@vueuse/core" "^9.11.0"
+    "@vueuse/core" "^9.11.1"
     photoswipe "^5.3.4"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-pwa2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-pwa2/-/vuepress-plugin-pwa2-2.0.0-beta.165.tgz#f4bbefeb77a1e79efa4b41ad925d008749dcb277"
-  integrity sha512-O8QNOHKGUxHzJnOoYEgKg12EW2yPy7kzd4nl8cd7VDOpXOfjbnBcqP5S/x+5F01f145S0wgL+4sCzaDcIWxp5A==
+vuepress-plugin-pwa2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-pwa2/-/vuepress-plugin-pwa2-2.0.0-beta.166.tgz#52709fc58a13fd405aac508837a732f832ab6105"
+  integrity sha512-UydP1vy4DTYvx9VGlp6eN9p5I2/2QDPjACFysYD1NnmJpv2Uj0HHDpbO+JDeVGcIghWNtoNsCanfC4WEu8iQRg==
   dependencies:
     "@vuepress/client" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
-    "@vueuse/core" "^9.11.0"
+    "@vueuse/core" "^9.11.1"
     mitt "^3.0.0"
     register-service-worker "^1.7.2"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
     workbox-build "^6.5.4"
 
-vuepress-plugin-reading-time2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-time2/-/vuepress-plugin-reading-time2-2.0.0-beta.165.tgz#6022c318314cdc804a325b33671a8b51e9862015"
-  integrity sha512-tbEsR+4b58ZY26D7uDFKlzO1PiUrW3qGPkxz5kPhWygZDaOhKPYqu4VYk/VOYpbw+UwkzX/enU53J5+NzpPG4w==
+vuepress-plugin-reading-time2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-time2/-/vuepress-plugin-reading-time2-2.0.0-beta.166.tgz#0a0c9ecd176219dc33ad842dd6e829e7e23b51f1"
+  integrity sha512-Nw3J9QaHVrz5NXPxByPgD6OzyUY+S+5yo3BMc/4TT5JggV+nLseKqhvqaMul86QMejuJMAcmqc4wRy8s+HJsrA==
   dependencies:
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-shared "2.0.0-beta.166"
 
 vuepress-plugin-redirect@^2.0.0-beta.152:
   version "2.0.0-beta.152"
@@ -4920,6 +4933,17 @@ vuepress-plugin-sass-palette@2.0.0-beta.165:
     sass "^1.57.1"
     vuepress-shared "2.0.0-beta.165"
 
+vuepress-plugin-sass-palette@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-beta.166.tgz#7ab786c90f165607d327ddb0bfb293723f5c3e29"
+  integrity sha512-sO8s0tbGMFHIKzeblDX29Ba/qHzyNbWtJqoKu+aTcMObc4uc1yVqmjrNTnvFDAmFaM4LmgxZ51iQqm0SZnfvSw==
+  dependencies:
+    "@vuepress/shared" "2.0.0-beta.60"
+    "@vuepress/utils" "2.0.0-beta.60"
+    chokidar "^3.5.3"
+    sass "^1.57.1"
+    vuepress-shared "2.0.0-beta.166"
+
 vuepress-plugin-search-pro@^2.0.0-beta.165:
   version "2.0.0-beta.165"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-search-pro/-/vuepress-plugin-search-pro-2.0.0-beta.165.tgz#c785e5aff7bb6f478822b4b0f2d8ee3e9602f989"
@@ -4937,24 +4961,24 @@ vuepress-plugin-search-pro@^2.0.0-beta.165:
     vuepress-plugin-sass-palette "2.0.0-beta.165"
     vuepress-shared "2.0.0-beta.165"
 
-vuepress-plugin-seo2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-seo2/-/vuepress-plugin-seo2-2.0.0-beta.165.tgz#3f75c62efe52e4e77bc44ceba6f126ee51657e05"
-  integrity sha512-HRYvpwLcDcpx6G8JdZFcnnfaH06PpKP6xXem4HZq13s/pUJ2pGj8Ykgk+mXJmTPgV5BEXme6+NYU4mInx64C4g==
+vuepress-plugin-seo2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-seo2/-/vuepress-plugin-seo2-2.0.0-beta.166.tgz#290bbf7b813beddfd2c6e0decda47e13c863a920"
+  integrity sha512-+jC17xWqyEBMgbvWmGud6mzDmAHE7IaOY/S34izeq3ZTVm4hhW1KxjFRyv6tIhA/GMXq/yBWSqEx9NUI9oVg0g==
   dependencies:
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-shared "2.0.0-beta.166"
 
-vuepress-plugin-sitemap2@2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-sitemap2/-/vuepress-plugin-sitemap2-2.0.0-beta.165.tgz#0c848077968ebca2cb618d261eda3ec8ed72effa"
-  integrity sha512-Kc0qgZAocgzMA0zUY9ZpMidCvlSR3p5FQzQXzYUVbogRoEDXV7Hcqga7ToMiXVzK1w1lzi8e3GGSN6+qyS61xg==
+vuepress-plugin-sitemap2@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-sitemap2/-/vuepress-plugin-sitemap2-2.0.0-beta.166.tgz#4f6b8faa593e0f3239915ccaec101c86d4b29011"
+  integrity sha512-mVruZNQYPuIA95C9AC73MCBoOqG4A87XbhpEA6hXgIDrPeJ8B5P8xD2OPbQ4yZx93o0hMyD8/L4huwpPSPFdAA==
   dependencies:
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
     sitemap "^7.1.1"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-shared "2.0.0-beta.166"
 
 vuepress-shared@2.0.0-beta.152:
   version "2.0.0-beta.152"
@@ -4990,10 +5014,27 @@ vuepress-shared@2.0.0-beta.165:
     vue "^3.2.45"
     vue-router "^4.1.6"
 
-vuepress-theme-hope@^2.0.0-beta.165:
-  version "2.0.0-beta.165"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-hope/-/vuepress-theme-hope-2.0.0-beta.165.tgz#6b675985a8d046d9cf50d6ea850a299738e3b084"
-  integrity sha512-epDQoJvWbCBSXykl+WtPOXop/RxNt7giaSM9e9/KS6kBpNzb9OnsbKA10diOMkuNUiPXMqpXFdtGcMGI4f/13Q==
+vuepress-shared@2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-shared/-/vuepress-shared-2.0.0-beta.166.tgz#7d1c0732ced53903485e959d41d2587eb3ab2e35"
+  integrity sha512-lfDVG2I5RbXrBGIVeF6WjcAzR8IT3nyWFMPtsmQVoO88v3ygQu4UxLla+apB0Wr4csR4M8PaBzhTVReJmeaAjQ==
+  dependencies:
+    "@vuepress/client" "2.0.0-beta.60"
+    "@vuepress/shared" "2.0.0-beta.60"
+    "@vuepress/utils" "2.0.0-beta.60"
+    cheerio "1.0.0-rc.12"
+    dayjs "^1.11.7"
+    execa "^6.1.0"
+    fflate "^0.7.4"
+    gray-matter "^4.0.3"
+    striptags "^3.2.0"
+    vue "^3.2.45"
+    vue-router "^4.1.6"
+
+vuepress-theme-hope@^2.0.0-beta.166:
+  version "2.0.0-beta.166"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-hope/-/vuepress-theme-hope-2.0.0-beta.166.tgz#028be65958caf52f9100232b3d9af345bd63a1ad"
+  integrity sha512-10Yu9WsmmfCzF2ytQ6e1XN0VUFeyyOc+vUYs3Jm9EfUyL9FczNiJdyKrg5L5FCppoUrvggU4RSpdxldjzEgqKA==
   dependencies:
     "@types/body-scroll-lock" "^3.1.0"
     "@vuepress/cli" "2.0.0-beta.60"
@@ -5009,7 +5050,7 @@ vuepress-theme-hope@^2.0.0-beta.165:
     "@vuepress/plugin-theme-data" "2.0.0-beta.60"
     "@vuepress/shared" "2.0.0-beta.60"
     "@vuepress/utils" "2.0.0-beta.60"
-    "@vueuse/core" "^9.11.0"
+    "@vueuse/core" "^9.11.1"
     balloon-css "^1.2.0"
     bcrypt-ts "^3.0.0"
     body-scroll-lock "^3.1.5"
@@ -5018,21 +5059,21 @@ vuepress-theme-hope@^2.0.0-beta.165:
     gray-matter "^4.0.3"
     vue "^3.2.45"
     vue-router "^4.1.6"
-    vuepress-plugin-auto-catalog "2.0.0-beta.165"
-    vuepress-plugin-blog2 "2.0.0-beta.165"
-    vuepress-plugin-comment2 "2.0.0-beta.165"
-    vuepress-plugin-components "2.0.0-beta.165"
-    vuepress-plugin-copy-code2 "2.0.0-beta.165"
-    vuepress-plugin-copyright2 "2.0.0-beta.165"
-    vuepress-plugin-feed2 "2.0.0-beta.165"
-    vuepress-plugin-md-enhance "2.0.0-beta.165"
-    vuepress-plugin-photo-swipe "2.0.0-beta.165"
-    vuepress-plugin-pwa2 "2.0.0-beta.165"
-    vuepress-plugin-reading-time2 "2.0.0-beta.165"
-    vuepress-plugin-sass-palette "2.0.0-beta.165"
-    vuepress-plugin-seo2 "2.0.0-beta.165"
-    vuepress-plugin-sitemap2 "2.0.0-beta.165"
-    vuepress-shared "2.0.0-beta.165"
+    vuepress-plugin-auto-catalog "2.0.0-beta.166"
+    vuepress-plugin-blog2 "2.0.0-beta.166"
+    vuepress-plugin-comment2 "2.0.0-beta.166"
+    vuepress-plugin-components "2.0.0-beta.166"
+    vuepress-plugin-copy-code2 "2.0.0-beta.166"
+    vuepress-plugin-copyright2 "2.0.0-beta.166"
+    vuepress-plugin-feed2 "2.0.0-beta.166"
+    vuepress-plugin-md-enhance "2.0.0-beta.166"
+    vuepress-plugin-photo-swipe "2.0.0-beta.166"
+    vuepress-plugin-pwa2 "2.0.0-beta.166"
+    vuepress-plugin-reading-time2 "2.0.0-beta.166"
+    vuepress-plugin-sass-palette "2.0.0-beta.166"
+    vuepress-plugin-seo2 "2.0.0-beta.166"
+    vuepress-plugin-sitemap2 "2.0.0-beta.166"
+    vuepress-shared "2.0.0-beta.166"
 
 vuepress-vite@2.0.0-beta.60:
   version "2.0.0-beta.60"
