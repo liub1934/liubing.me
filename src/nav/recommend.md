@@ -19,6 +19,11 @@ containerClass: nav-container
   desc: 30秒代码片段，针对所有开发需求的短代码片段。
   link: https://www.30secondsofcode.org/
 
+- icon: https://image.liubing.me/2023/01/25/4ccf6725b8245.png
+  name: Codeimg
+  desc: 将代码片段转换成图片。
+  link: https://codeimg.io/
+
 - icon: https://image.liubing.me/2020/12/14/1bd94664726ac.png
   name: 掘金
   desc: 面向全球中文开发者的技术内容分享与交流平台。
@@ -53,6 +58,11 @@ containerClass: nav-container
   name: Convertio
   desc: 文件转换器，将您的文件转换成任意格式。
   link: https://convertio.co/zh/
+
+- icon: https://image.liubing.me/2023/01/25/330fec3172bac.png
+  name: 亲戚关系计算器
+  desc: 逢年过节遇到三姑六婆，拒绝叫不出口的尴尬！轻松搞定亲戚关系。
+  link: https://passer-by.com/relationship/
 ```
 
 :::
