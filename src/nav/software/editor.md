@@ -52,11 +52,6 @@ containerClass: nav-container
   name: RIME
   desc: 开源跨平台流畅纯净无广告/拼音/五笔。
   link: https://rime.im/
-
-- icon: https://image.liubing.me/2023/01/26/25926157bef72.png
-  name: MWeb Pro
-  desc: Mac上专业的 Markdown 写作、记笔记、静态博客生成软件
-  link: https://zh.mweb.im/index.html
 ```
 
 :::
