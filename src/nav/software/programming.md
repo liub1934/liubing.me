@@ -30,6 +30,11 @@ containerClass: nav-container
   desc: 开源免费轻量级的文本编辑器。
   link: https://notepad-plus-plus.org/
 
+- icon: https://image.liubing.me/2023/01/28/1bc96f17a594d.png
+  name: Vim
+  desc: 文本/代码编辑器之中最为优秀经典的上古神器。
+  link: https://www.vim.org/
+
 - icon: https://image.liubing.me/2023/01/26/9ffa72673a32d.png
   name: Komodo IDE
   desc: 一个免费的开源代码编辑器。

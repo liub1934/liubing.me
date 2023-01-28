@@ -20,6 +20,11 @@ containerClass: nav-container
   desc: Mac上专业的 Markdown 写作、记笔记、静态博客生成软件。
   link: https://zh.mweb.im/index.html
 
+- icon: https://image.liubing.me/2023/01/28/e3209a42564fa.png
+  name: VNote
+  desc: 更适合程序员使用的跨平台免费开源 Markdown 笔记工具。
+  link: https://app.vnote.fun/
+
 - icon: https://image.liubing.me/2023/01/26/6b6f7df5e5614.png
   name: 马克飞象
   desc: 一款专为印象笔记（Evernote）打造的Markdown编辑器。
