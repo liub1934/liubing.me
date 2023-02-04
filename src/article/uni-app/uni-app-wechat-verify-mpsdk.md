@@ -9,6 +9,7 @@ tag:
   - 人脸核身
   - sdk
   - uni-app
+containerClass: article-container
 ---
 
 # uni-app 微信小程序接入人脸核身 SDK

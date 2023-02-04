@@ -34,10 +34,20 @@ containerClass: nav-container
   desc: 苹果内置浏览器，风驰电掣，数据密不透风。
   link: https://www.apple.com.cn/safari/
 
+- icon: https://image.liubing.me/2023/01/28/dc65715aa3a21.png
+  name: Vivaldi
+  desc: Opera 开发商出品新的浏览器。
+  link: https://vivaldi.com/
+
 - icon: https://image.liubing.me/2023/01/09/d7e6add2fdccd.png
   name: Tor 洋葱
   desc: 私密浏览，自由探索，防范跟踪监视，突破网络审查。
   link: https://www.torproject.org/zh-CN/
+
+- icon: https://image.liubing.me/2023/01/28/16469411f4194.png
+  name: Brave
+  desc: 最佳在线隐私，让您不受 Google 和其他科技巨头的威胁。
+  link: https://brave.com/zh/
 ```
 
 :::

@@ -8,6 +8,7 @@ tag:
   - Vue
   - 地图
   - 高德地图
+containerClass: article-container
 ---
 
 # 解决 OpenLayers 初始化地图贴片被拉伸问题

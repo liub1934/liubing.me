@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
 import { AuthorName, Base, Description } from './constant'
 import { configPlugins } from './config/plugins'
+import { viteBundler } from '@vuepress/bundler-vite'
 import theme from './config/theme'
 const __dirname = getDirname(import.meta.url)
 
@@ -25,5 +26,9 @@ export default defineUserConfig({
       './components/PageFooter/index.vue'
     )
   },
-  plugins: configPlugins
+  plugins: configPlugins,
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {}
+  })
 })

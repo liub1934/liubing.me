@@ -9,6 +9,7 @@ tag:
   - Vue
   - Vant
   - 微信小程序
+containerClass: article-container
 ---
 
 # uni-app 微信小程序引入 vant weapp

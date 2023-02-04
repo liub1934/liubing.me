@@ -7,6 +7,8 @@ category:
 tag:
   - Vue
   - Table
+  - 表格
+containerClass: article-container
 ---
 
 # lb-element-table 基于 Element UI Tabel 封装的表格组件

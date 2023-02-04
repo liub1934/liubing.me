@@ -6,9 +6,10 @@ category:
   - Buddy
 tag:
   - Vue
-  - 打包
-  - 部署
-  - 构建
+  - 自动打包
+  - 自动部署
+  - 自动构建
+containerClass: article-container
 ---
 
 # VuePress 借助 Buddy 自动构建打包部署到自己的服务器

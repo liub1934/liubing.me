@@ -7,6 +7,7 @@ tag:
   - Vue
   - webpack
   - require.context
+containerClass: article-container
 ---
 
 # 优雅管理 Vue 全局组件和插件

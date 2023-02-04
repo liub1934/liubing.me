@@ -6,6 +6,7 @@ category:
 tag:
   - Vue
   - Vue Router
+containerClass: article-container
 ---
 
 # vue 未登录跳转登录页面及登录完成后回跳那么点事

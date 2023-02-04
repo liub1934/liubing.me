@@ -5,6 +5,8 @@ category:
   - Mac
 tag:
   - WX Backup
+  - 微信备份
+containerClass: article-container
 ---
 
 # WX Backup - Mac 上备份微信聊天记录神器
