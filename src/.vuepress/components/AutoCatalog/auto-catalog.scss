@@ -1,0 +1,29 @@
+.auto-catalog {
+  .catalog-item {
+    .child-title {
+      font-size: 1.3rem;
+      a {
+        color: var(--text-color);
+        font-weight: inherit;
+        line-height: inherit;
+      }
+      &:hover {
+        a {
+          color: var(--theme-color);
+        }
+        .header-anchor {
+          opacity: 1;
+        }
+      }
+    }
+    .child-catalog-wrapper {
+      padding-left: 22px;
+    }
+  }
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

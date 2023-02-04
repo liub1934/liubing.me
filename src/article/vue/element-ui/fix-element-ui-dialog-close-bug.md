@@ -7,6 +7,8 @@ category:
 tag:
   - Vue
   - Dialog
+  - 弹窗
+containerClass: article-container no-sidebar
 ---
 
 # 解决 Element UI Dialog 弹窗鼠标在遮罩层松开后导致弹窗关闭问题

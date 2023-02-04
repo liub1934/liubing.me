@@ -6,6 +6,7 @@ category:
 tag:
   - Vue
   - Jenkins
+containerClass: article-container no-sidebar
 ---
 
 # 记录线上环境 Jenkins Vue 打包失败 error code ELIFECYCLE

@@ -9,6 +9,7 @@ tag:
   - Nginx
   - Cloudflare
   - x-ui
+containerClass: article-container no-sidebar
 ---
 
 # V2Ray+WebSocket(ws)+TLS+Nginx+Cloudflare+x-ui 拯救被墙的 VPS
