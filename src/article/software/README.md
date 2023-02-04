@@ -1,9 +1,9 @@
 ---
 index: false
 toc: false
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # 软件相关
 
-<Catalog />
+<AutoCatalog />

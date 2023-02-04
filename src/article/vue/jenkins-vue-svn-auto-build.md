@@ -9,7 +9,7 @@ tag:
   - 自动构建
   - 自动部署
   - 自动打包
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # Jenkins+Vue+SVN 实现自动打包构建及部署

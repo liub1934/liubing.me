@@ -2,7 +2,7 @@
 date: 2019-05-14
 category:
   - 其他
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # 程序员最讨厌的 9 句话，你可有补充？[转]

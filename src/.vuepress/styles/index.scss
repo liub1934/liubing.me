@@ -71,12 +71,3 @@ figcaption {
     margin-top: 6px;
   }
 }
-
-.article-container {
-  --sidebar-width: 0;
-  --sidebar-space: 0;
-  .toggle-sidebar-wrapper,
-  .sidebar {
-    display: none !important;
-  }
-}

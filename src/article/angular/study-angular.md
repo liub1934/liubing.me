@@ -2,7 +2,7 @@
 date: 2022-12-19
 category:
   - Angular
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # 重度 Vue 使用者重学 Angular

@@ -6,7 +6,7 @@ category:
 tag:
   - 宝塔面板
   - Waline
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # 宝塔面板独立部署 Waline 评论系统

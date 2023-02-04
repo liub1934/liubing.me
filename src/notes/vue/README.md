@@ -5,4 +5,4 @@ toc: false
 
 # Vue
 
-<Catalog />
+<AutoCatalog />
