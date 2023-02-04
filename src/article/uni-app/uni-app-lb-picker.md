@@ -12,30 +12,6 @@ containerClass: article-container
 
 # uni-app lb-picker 选择器
 
-<p align="center">
-  <a href="https://github.com/liub1934/uni-lb-picker">
-    <img src="https://img.shields.io/github/stars/liub1934/uni-lb-picker">
-  </a>
-  <a href="https://github.com/liub1934/uni-lb-picker/fork">
-    <img src="https://img.shields.io/github/forks/liub1934/uni-lb-picker">
-  </a>
-  <a href="https://github.com/liub1934/uni-lb-picker/issues">
-    <img src="https://img.shields.io/github/issues/liub1934/uni-lb-picker">
-  </a>
-  <a href="https://www.npmjs.com/package/uni-lb-picker">
-    <img src="https://img.shields.io/npm/v/uni-lb-picker">
-  </a>
-  <a href="https://npmcharts.com/compare/uni-lb-picker?minimal=true">
-    <img src="https://img.shields.io/npm/dm/uni-lb-picker">
-  </a>
-  <a href="https://standardjs.com">
-    <img src="https://img.shields.io/badge/code%20style-standard-brightgreen">
-  </a>
-  <a href="https://github.com/liub1934/uni-lb-picker/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/liub1934/uni-lb-picker">
-  </a>
-</p>
-
 插件市场里面的 picker 选择器不满足自己的需求，所以自己写了一个简单的 picker 选择器，可扩展、可自定义，一般满足日常需要。
 
 <!-- more -->
@@ -44,10 +20,16 @@ Github：[点击前往](https://github.com/liub1934/uni-lb-picker)
 插件市场：[点击前往](https://ext.dcloud.net.cn/plugin?id=1111)  
 H5 Demo：[点击预览](https://github.liubing.me/uni-lb-picker)
 
-> 如果问题最好去 github 反馈，插件市场评论区留下五星好评即可， [点我去反馈](https://github.com/liub1934/uni-lb-picker/issues/new)  
-> 最好提供一下使用的什么端，数据结构及大概的代码，我好复现找问题，不要直接提`怎么xxx报错了`等没意义的问题，神仙也不知道你为啥报错了。
+::: tip
 
-> **由于之前`cancel`拼写失误，写成了`cancle`，`v1.08`现已修正，如果之前版本有使用`cancel`事件的，更新后请及时修正。**
+如果问题最好去 Github 反馈，插件市场评论区留下五星好评即可， [点我去反馈](https://github.com/liub1934/uni-lb-picker/issues/new)
+
+最好提供一下使用的什么端，数据结构及大概的代码，我好复现找问题，不要直接提`怎么xxx报错了`等没意义的问题，神仙也不知道你为啥报错了。
+:::
+
+::: warning
+由于之前`cancel`拼写失误，写成了`cancle`，`v1.08`现已修正，如果之前版本有使用`cancel`事件的，更新后请及时修正。
+:::
 
 ## 兼容性
 
