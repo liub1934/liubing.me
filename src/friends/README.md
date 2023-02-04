@@ -63,6 +63,11 @@ link: '网站链接'
   name: 叉叉白
   desc: MonoLogueChi
   link: https://blog.xxwhite.com/
+
+- icon: https://img.sherry4869.com/Blog/public/logo.svg
+  name: MW
+  desc: 过往不恋 未来不迎
+  link: https://blog.sherry4869.com/
 ```
 
 :::
