@@ -4,6 +4,7 @@ category:
   - 其他
 tag:
   - Chrome
+containerClass: article-container no-sidebar
 ---
 
 # 手动制作 Chrome 浏览器多版本共存，可快速切换各个版本

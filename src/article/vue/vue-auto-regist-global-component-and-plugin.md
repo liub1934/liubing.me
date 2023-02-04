@@ -7,6 +7,7 @@ tag:
   - Vue
   - webpack
   - require.context
+containerClass: article-container no-sidebar
 ---
 
 # 优雅管理 Vue 全局组件和插件

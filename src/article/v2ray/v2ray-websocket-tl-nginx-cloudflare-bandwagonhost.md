@@ -10,6 +10,7 @@ tag:
   - Cloudflare
   - 搬瓦工
   - bandwagonhost
+containerClass: article-container no-sidebar
 ---
 
 # V2Ray+WebSocket(ws)+TLS+Nginx+Cloudflare 拯救搬瓦工被封 IP 的 VPS

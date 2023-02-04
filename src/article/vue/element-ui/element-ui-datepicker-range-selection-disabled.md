@@ -1,5 +1,6 @@
 ---
 date: 2019-03-12
+toc: false
 category:
   - Element UI
   - Vue
@@ -7,6 +8,8 @@ category:
 tag:
   - Vue
   - DatePicker
+  - 日期选择
+containerClass: article-container no-sidebar
 ---
 
 # Element UI DatePicker 日期范围选择动态设置禁选日期

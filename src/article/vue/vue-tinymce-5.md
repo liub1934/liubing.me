@@ -8,6 +8,7 @@ tag:
   - TinyMCE
   - 富文本编辑器
   - TinyMCE-Vue
+containerClass: article-container no-sidebar
 ---
 
 # Vue CLI 3 TinyMCE 5 富文本编辑器整合

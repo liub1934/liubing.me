@@ -6,6 +6,7 @@ category:
 tag:
   - Vue
   - v-slot
+containerClass: article-container no-sidebar
 ---
 
 # Vue.js 你需要知道的 v-slot[转]
