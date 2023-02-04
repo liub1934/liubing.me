@@ -9,7 +9,7 @@ tag:
   - Vue
   - DatePicker
   - 日期选择
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # Element UI DatePicker 日期范围选择动态设置禁选日期

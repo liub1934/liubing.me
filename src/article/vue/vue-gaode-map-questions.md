@@ -7,7 +7,7 @@ tag:
   - Vue
   - 地图
   - 高德地图
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # vue+高德地图开发采坑持续记录[2019-06-25]

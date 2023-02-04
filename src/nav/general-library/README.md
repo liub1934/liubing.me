@@ -6,4 +6,4 @@ containerClass: nav-container
 
 # 通用类库
 
-<Catalog />
+<AutoCatalog />

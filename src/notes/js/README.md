@@ -5,4 +5,4 @@ toc: false
 
 # JavaScript
 
-<Catalog />
+<AutoCatalog />

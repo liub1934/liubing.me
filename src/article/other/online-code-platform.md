@@ -15,7 +15,7 @@ tag:
   - JSRUN
   - WebMaker
   - JShare
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # 2022 可用在线代码编辑平台整理

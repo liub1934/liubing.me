@@ -7,7 +7,7 @@ tag:
   - 选择器
   - uni-app
   - lb-picker
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # uni-app lb-picker 选择器

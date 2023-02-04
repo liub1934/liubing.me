@@ -6,7 +6,7 @@ tag:
   - ECharts
   - rich
   - 图表
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # ECharts 巧用富文本标签 rich 实现 label 中文字自定义 color、backgroundColor 等属性

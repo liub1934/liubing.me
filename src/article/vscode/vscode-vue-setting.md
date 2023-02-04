@@ -5,7 +5,7 @@ category:
   - Vue
 tag:
   - VsCode
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # VsCode 从零开始配置一个属于自己的 Vue 开发环境

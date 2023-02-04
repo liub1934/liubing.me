@@ -8,4 +8,4 @@ containerClass: nav-container
 
 # 前端领域
 
-<Catalog />
+<AutoCatalog />

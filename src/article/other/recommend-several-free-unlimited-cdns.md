@@ -8,7 +8,7 @@ tag:
   - GitHack
   - Staticaly
   - CDN
-containerClass: article-container no-sidebar
+containerClass: article-container
 ---
 
 # 推荐几款免费且不限流量的全球 CDN
