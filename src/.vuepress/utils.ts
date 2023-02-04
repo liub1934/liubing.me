@@ -103,7 +103,7 @@ export function treeFind<T>(
   for (const item of tree) {
     if (func(item)) return item
     if (item[childrenName]) {
-      const res: T | null = treeFind(item[childrenName], func)
+      const res: T | null = treeFind(item[childrenName], func, childrenName)
       if (res) return res
     }
   }
