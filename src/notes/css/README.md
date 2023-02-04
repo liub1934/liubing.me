@@ -5,4 +5,4 @@ toc: false
 
 # CSS
 
-<Catalog />
+<AutoCatalog />

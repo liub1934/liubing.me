@@ -4,4 +4,4 @@ index: false
 
 # Html
 
-<Catalog />
+<AutoCatalog />

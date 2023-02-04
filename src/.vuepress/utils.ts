@@ -19,7 +19,12 @@ export interface Project {
   link: string
 }
 
-// 渲染容器列表
+/**
+ * 渲染容器列表
+ * @param tokens
+ * @param idx
+ * @returns
+ */
 export const renderProjects = (tokens: Token[], idx: number) => {
   const { nesting: tokenNesting, info: tokenInfo } = tokens[idx]
   // 渲染开头的 ':::' 标记
@@ -81,4 +86,26 @@ export const renderProjects = (tokens: Token[], idx: number) => {
     return '</div>'
   }
   return ''
+}
+
+/**
+ * Tree数据查找
+ * @param tree tree数据
+ * @param func 查找方法
+ * @param childrenName 子集字段名
+ * @returns
+ */
+export function treeFind<T>(
+  tree: T[],
+  func: (item: T) => boolean,
+  childrenName = 'children'
+): T | null {
+  for (const item of tree) {
+    if (func(item)) return item
+    if (item[childrenName]) {
+      const res: T | null = treeFind(item[childrenName], func, childrenName)
+      if (res) return res
+    }
+  }
+  return null
 }
