@@ -27,6 +27,16 @@ containerClass: nav-container
   name: Icons8
   desc: 图标、插图、照片、音乐和设计工具。
   link: https://icons8.com/
+
+- icon: https://image.liubing.me/2023/02/05/c53650a2abbeb.png
+  name: Flaticon
+  desc: 超过 920 万个矢量图标和贴纸。
+  link: https://www.flaticon.com/
+
+- icon: https://image.liubing.me/2023/02/05/3e6685da5089e.ico
+  name: Lordicon
+  desc: 一个强大的精心制作的动画图标库，支持8,900+动画图标。
+  link: https://lordicon.com/
 ```
 
 :::
