@@ -28,6 +28,11 @@ containerClass: nav-container
   desc: 下一代的前端工具链，为开发提供极速响应。
   link: https://cn.vitejs.dev/
 
+- icon: https://image.liubing.me/2023/02/05/7006bfdd9068d.png
+  name: Turbo
+  desc: 基于Rust的增量打包器和构建系统，针对 JavaScript 和 TypeScript 进行了优化。
+  link: https://turbo.build/
+
 - icon: https://image.liubing.me/2023/01/18/088f83f1c18f5.png
   name: Babel
   desc: 使用最新的规范来编写 JavaScript。
