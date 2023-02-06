@@ -25,11 +25,9 @@ containerClass: article-container
 
 打开 docker 管理器，点击获取镜像，输入 Bitwarden_rs 的官方镜像`bitwardenrs/server`后点击获取镜像。
 
-> 原项目已经变更名称，故官方镜像名称也变成了`vaultwarden/server`，所以教程里面的`bitwardenrs/server`均需替换成新的镜像名称 vaultwarden/server`
-
-> 原项目已经变更名称，故官方镜像名称也变成了`vaultwarden/server`，所以教程里面的`bitwardenrs/server`均需替换成新的镜像名称`vaultwarden/server`
-
-> 原项目已经变更名称，故官方镜像名称也变成了`vaultwarden/server`，所以教程里面的`bitwardenrs/server`均需替换成新的镜像名称`vaultwarden/server`
+::: tip
+原项目已经变更名称，故官方镜像名称也变成了`vaultwarden/server`，所以教程里面的`bitwardenrs/server`均需替换成新的镜像名称 `vaultwarden/server`
+:::
 
 ![image](https://image.liubing.me/2019/12/26/c14a8df9528d3.png)
 
@@ -37,9 +35,9 @@ containerClass: article-container
 
 1.点击创建容器按钮 2.填写端口映射中的`容器端口`：`80`,`服务端口`：`6666`(6666 可以自定义) 3.填写目录映射中的`服务器目录`：`/www/wwwroot/bitwarden.liubing.me`(该目录可以自定义，我习惯用网址作为目录)，`容器目录`：`/data` 4.填写内存配额，根据自己服务器的配置按需填写 5.提交创建容器 6.点击容器名称，修改容器名称为`Bitwarden`以方便辨认
 
-> 端口映射和目录映射填写完成后一定要点击+号进行添加
-> 端口映射和目录映射填写完成后一定要点击+号进行添加
-> 端口映射和目录映射填写完成后一定要点击+号进行添加
+::: tip
+端口映射和目录映射填写完成后一定要点击 + 号进行添加
+:::
 
 ![image](https://image.liubing.me/2019/12/26/49d59861f5edf.png)
 

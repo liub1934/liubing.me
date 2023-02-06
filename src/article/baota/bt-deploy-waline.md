@@ -222,9 +222,10 @@ require('@waline/vercel/vanilla.js')
 
 ### 初始化仓库
 
-在 Github 上新建一个`Private`的私人仓库，注意不要使用`Public`公开的仓库，因为环境变量涉及到一些私密参数，这些参数不已公开。如我自己在 Github 上的的仓库是：https://github.com/liub1934/waline-server。
+在 Github 上新建一个`Private`的私人仓库，注意不要使用`Public`公开的仓库，因为环境变量涉及到一些私密参数，这些参数不已公开。如我自己在 Github 上的的仓库是：[https://github.com/liub1934/waline-server](https://github.com/liub1934/waline-server)。
 
 然后添加`.gitignore`文件用于忽略上传`node_modules`，内容如下所示。
+
 ::: tabs
 @tab .gitignore
 
