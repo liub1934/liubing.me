@@ -28,11 +28,6 @@ containerClass: nav-container
   desc: 优秀的网络密码帐号管理工具 (自动登录/同步/跨平台/浏览器插件)
   link: https://www.lastpass.com/
 
-- icon: https://image.liubing.me/2023/01/26/67a90c0b5fc1c.ico
-  name: LastPass
-  desc: 优秀的网络密码帐号管理工具 (自动登录/同步/跨平台/浏览器插件)
-  link: https://www.lastpass.com/
-
 - icon: https://image.liubing.me/2023/01/26/9d6d7b8eb2a4c.png
   name: Spectre
   desc: 不记录密码不用联网的跨平台密码管理器/生成器
