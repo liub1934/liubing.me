@@ -61,7 +61,7 @@ bottomVisible() // true
 
 ## 判断是否含有某个 class
 
-```j s
+```js
 export function hasClass(ele, cls) {
   cls = cls || ''
   if (cls.replace(/\s/g, '').length === 0) return false // 当cls没有参数时，返回false
