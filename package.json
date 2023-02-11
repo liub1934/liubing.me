@@ -19,7 +19,7 @@
     "vuepress": "^2.0.0-beta.60",
     "vuepress-plugin-redirect": "^2.0.0-beta.152",
     "vuepress-plugin-search-pro": "^2.0.0-beta.165",
-    "vuepress-theme-hope": "^2.0.0-beta.172"
+    "vuepress-theme-hope": "^2.0.0-beta.173"
   },
   "dependencies": {
     "dayjs": "^1.11.7"
