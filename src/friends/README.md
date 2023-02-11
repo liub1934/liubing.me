@@ -54,6 +54,11 @@ link: '网站链接'
 ::: projects friends
 
 ```yaml
+- icon: https://mrhope.site/logo.svg
+  name: Mr.Hope
+  desc: VuePress Theme Hope 主题作者。
+  link: https://blog.sherry4869.com/
+
 - icon: https://file.mo7.cc/static/lxh_gif/lxh_71.gif
   name: 墨七
   desc: 简单快乐，理应如此。
