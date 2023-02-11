@@ -31,10 +31,10 @@ link: '网站链接'
   desc: 渐进式 JavaScript 框架
   link: https://cn.vuejs.org/
 
-- icon: https://v2.vuepress.vuejs.org/images/hero.png
+- icon: https://vuepress.vuejs.org/hero.png
   name: VuePress
-  desc: Vue 驱动的静态网站生成器
-  link: https://v2.vuepress.vuejs.org/zh/
+  desc: Vue 驱动的静态网站生成器。
+  link: https://vuepress.vuejs.org/zh/
 
 - icon: https://theme-hope.vuejs.press/logo.png
   name: VuePress Theme Hope
