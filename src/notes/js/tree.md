@@ -43,12 +43,12 @@ let tree = [
 ### 广度优先遍历
 
 ```js
-function treeForeach(tree, func) {
+function treeForeach(tree, func, childrenName = 'children') {
   let node,
     list = [...tree]
   while ((node = list.shift())) {
     func(node)
-    node.children && list.push(...node.children)
+    node[childrenName] && list.push(...node[childrenName])
   }
 }
 ```

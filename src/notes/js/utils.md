@@ -35,10 +35,41 @@ function generateUUID() {
 
 ## 复制到剪贴板
 
+::: tabs
+@tab js
+
 ```js
-function copyToClipboard(str) {
+function copyToClipboard(str, success, failure) {
   if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
-    return navigator.clipboard.writeText(str)
+    navigator.clipboard.writeText(str).then(success).catch(failure)
+  } else {
+    var el = document.createElement('textarea')
+    el.value = str
+    el.setAttribute('readonly', '')
+    el.style.position = 'absolute'
+    el.style.left = '-9999px'
+    document.body.appendChild(el)
+    el.select()
+    if (document.execCommand('copy')) {
+      success()
+    } else {
+      failure()
+    }
+    document.body.removeChild(el)
+  }
+}
+```
+
+@tab ts
+
+```ts
+function copyToClipboard(
+  str: string,
+  success: () => void,
+  failure: () => void
+): void {
+  if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(str).then(success).catch(failure)
   } else {
     const el = document.createElement('textarea')
     el.value = str
@@ -47,25 +78,54 @@ function copyToClipboard(str) {
     el.style.left = '-9999px'
     document.body.appendChild(el)
     el.select()
-    document.execCommand('copy')
+    if (document.execCommand('copy')) {
+      success()
+    } else {
+      failure()
+    }
     document.body.removeChild(el)
   }
 }
 ```
 
+:::
+
 ## 获取地址栏参数
 
+::: tabs
+@tab js
+
 ```js
-function getURLParameters(url) {
-  const newUrl = url || window.location.href
-  return (newUrl.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
-    (a, v) => (
-      (a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a
-    ),
-    {}
-  )
+function getUrlParams(url) {
+  url = url || window.location.search
+  var params = {}
+  var pairs = url.match(/[^&?]+=[^&]+/g) || []
+  pairs.reduce(function (acc, pair) {
+    var kv = pair.split('=')
+    acc[kv[0]] = decodeURIComponent(kv[1])
+    return acc
+  }, params)
+  return params
 }
 ```
+
+@tab ts
+
+```ts
+function getUrlParams(url?: string): { [key: string]: string } {
+  url = url || window.location.search
+  let params: { [key: string]: string } = {}
+  let pairs = url.match(/[^&?]+=[^&]+/g) || []
+  pairs.reduce(function (acc, pair) {
+    let kv = pair.split('=')
+    acc[kv[0]] = decodeURIComponent(kv[1])
+    return acc
+  }, params)
+  return params
+}
+```
+
+:::
 
 ## 睡眠 Sleep
 
@@ -100,24 +160,66 @@ const printNums = async () => {
 
 ## 深度合并对象
 
+::: tabs
+@tab js
+
 ```js
-function deepMerge(a, b, fn) {
-  return [...new Set([...Object.keys(a), ...Object.keys(b)])].reduce(
-    (acc, key) => ({ ...acc, [key]: fn(key, a[key], b[key]) }),
-    {}
-  )
+function deepMerge(target, ...sources) {
+  if (!sources.length) return target
+  const source = sources.shift()
+
+  if (isObject(target) && isObject(source)) {
+    for (const key in source) {
+      if (isObject(source[key])) {
+        if (!target[key]) Object.assign(target, { [key]: {} })
+        deepMerge(target[key], source[key])
+      } else {
+        Object.assign(target, { [key]: source[key] })
+      }
+    }
+  }
+
+  return deepMerge(target, ...sources)
 }
 
-// 例子🌰
-deepMerge(
-  { a: true, b: { c: [1, 2, 3] } },
-  { a: false, b: { d: [1, 2, 3] } },
-  (key, a, b) => (key === 'a' ? a && b : Object.assign({}, a, b))
-)
-// { a: false, b: { c: [ 1, 2, 3 ], d: [ 1, 2, 3 ] } }
+// 举个🌰
+const obj1 = { a: 1, b: { c: 2 } }
+const obj2 = { b: { d: 3 }, e: 4 }
+
+const result = deepMerge(obj1, obj2)
+console.log(result) // { a: 1, b: { c: 2, d: 3 }, e: 4 }
 ```
 
+@tab ts
+
+```ts
+function deepMerge<T, U>(target: T, source: U): T & U {
+  for (const key in source) {
+    if (isObject(source[key])) {
+      if (!target[key]) Object.assign(target, { [key]: {} })
+      deepMerge(target[key], source[key])
+    } else {
+      Object.assign(target, { [key]: source[key] })
+    }
+  }
+
+  return target as T & U
+}
+
+// 举个🌰
+const obj1 = { a: 1, b: { c: 2 } }
+const obj2 = { b: { d: 3 }, e: 4 }
+
+const result = deepMerge(obj1, obj2)
+console.log(result) // { a: 1, b: { c: 2, d: 3 }, e: 4 }
+```
+
+:::
+
 ## 重命名键
+
+::: tabs
+@tab js
 
 ```js
 function renameKeys(keysMap, obj) {
@@ -130,58 +232,106 @@ function renameKeys(keysMap, obj) {
   )
 }
 
-// 例子🌰
+// 举个🌰
 const obj = { name: 'Bobo', job: 'Front-End Master', shoeSize: 100 }
 renameKeys({ name: 'firstName', job: 'passion' }, obj)
 // { firstName: 'Bobo', passion: 'Front-End Master', shoeSize: 100 }
 ```
 
+@tab ts
+
+```ts
+function renameKeys(
+  keysMap: Record<string, string>,
+  obj: Record<string, any>
+): Record<string, any> {
+  return Object.keys(obj).reduce(
+    (acc, key) => ({
+      ...acc,
+      ...{ [keysMap[key] || key]: obj[key] }
+    }),
+    {}
+  )
+}
+// 举个🌰
+const obj = { name: 'Bobo', job: 'Front-End Master', shoeSize: 100 }
+renameKeys({ name: 'firstName', job: 'passion' }, obj)
+// { firstName: 'Bobo', passion: 'Front-End Master', shoeSize: 100 }
+```
+
+:::
+
 ## 解析 Cookie
 
-```js
-export const parseCookie = (str) =>
-  str
-    .split(';')
-    .map((v) => v.split('='))
-    .reduce((acc, v) => {
-      acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim())
-      return acc
-    }, {})
+::: tabs
+@tab js
 
-// 例子🌰
+```js
+function parseCookie(cookie) {
+  if (!cookie) return {}
+
+  return cookie.split(';').reduce((cookies, cookie) => {
+    let [key, value] = cookie.split('=')
+    cookies[decodeURIComponent(key.trim())] = decodeURIComponent(value.trim())
+    return cookies
+  }, {})
+}
+
+// 举个🌰
 parseCookie('foo=bar; equation=E%3Dmc%5E2')
 // { foo: 'bar', equation: 'E=mc^2' }
 ```
 
-## 序列化 Form
+@tab ts
 
-```js
-export const serializeForm = (form) =>
-  Array.from(new FormData(form), (field) =>
-    field.map(encodeURIComponent).join('=')
-  ).join('&')
+```ts
+function parseCookie(cookie: string): { [key: string]: string } {
+  if (!cookie) return {}
 
-// 例子🌰
-serializeForm(document.querySelector('#form'))
-// email=test%40email.com&name=Test%20Name
+  return cookie
+    .split(';')
+    .reduce((cookies: { [key: string]: string }, cookie) => {
+      let [key, value] = cookie.split('=')
+      cookies[decodeURIComponent(key.trim())] = decodeURIComponent(value.trim())
+      return cookies
+    }, {})
+}
+
+// 举个🌰
+parseCookie('foo=bar; equation=E%3Dmc%5E2')
+// { foo: 'bar', equation: 'E=mc^2' }
 ```
 
-## Form 转 Object
+:::
+
+## FormData 转 Object
+
+::: tabs
+@tab js
 
 ```js
-export const formToObject = (form) =>
-  Array.from(new FormData(form)).reduce(
-    (acc, [key, value]) => ({
-      ...acc,
-      [key]: value
-    }),
-    {}
-  )
-
-// 例子
-formToObject(document.querySelector('#form'))
-// { email: 'test@email.com', name: 'Test Name' }
+function formToObject(formData) {
+  let object = {}
+  for (const [key, value] of formData.entries()) {
+    object[key] = value
+  }
+  return object
+}
 ```
+
+@tab ts
+
+```ts
+function formToObject<T>(formData: FormData): T {
+  let object: T = {} as T
+  for (const [key, value] of formData.entries()) {
+    ;(object as any)[key] = value
+  }
+  return object
+}
+```
+
+:::
 
 ## 是否是浏览器环境
 
@@ -208,27 +358,22 @@ isAbsoluteURL('/foo/bar') // false
 ## 检测当前用户的首选语言
 
 ```js
-export const detectLanguage = (defaultLang = 'en-US') =>
-  navigator.language ||
-  (Array.isArray(navigator.languages) && navigator.languages[0]) ||
-  defaultLang
-
-// 例子
-detectLanguage() // 'zh-CN'
+function getPreferredLanguage() {
+  return navigator.languages
+    ? navigator.languages[0]
+    : navigator.language || navigator.userLanguage
+}
 ```
 
 ## 检测用户设备类型
 
 ```js
-export const detectDeviceType = () =>
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+function detectDevice() {
+  const isMobile = /(iphone|ipod|ipad|android|blackberry|windows phone)/i.test(
     navigator.userAgent
   )
-    ? 'Mobile'
-    : 'Desktop'
-
-// 例子
-detectDeviceType() // 'Mobile' or 'Desktop'
+  return isMobile ? 'mobile' : 'desktop'
+}
 ```
 
 ## 检查是否启用 localStorage
@@ -276,8 +421,11 @@ supportsTouchEvents() // true
 
 ## 深度对象比较
 
+::: tabs
+@tab js
+
 ```js
-export const deepEquals = (a, b) => {
+function deepEquals(a, b) {
   if (a === b) return true
   if (a instanceof Date && b instanceof Date) return a.getTime() === b.getTime()
   if (!a || !b || (typeof a !== 'object' && typeof b !== 'object'))
@@ -285,35 +433,71 @@ export const deepEquals = (a, b) => {
   if (a.prototype !== b.prototype) return false
   const keys = Object.keys(a)
   if (keys.length !== Object.keys(b).length) return false
-  return keys.every((k) => equals(a[k], b[k]))
+  return keys.every((k) => deepEquals(a[k], b[k]))
 }
 
 // 例子
 const a = { name: 'John', age: 26 }
 const b = { name: 'John', age: 26 }
 
-equals(a, b) // true
+deepEquals(a, b) // true
 
 const c = { name: 'John' }
 const d = { name: 'John', age: undefined }
 
-equals(c, d) // false
+deepEquals(c, d) // false
 ```
+
+@tab ts
+
+```ts
+function deepEquals(a: any, b: any): boolean {
+  if (a === b) return true
+  if (a instanceof Date && b instanceof Date) return a.getTime() === b.getTime()
+  if (!a || !b || (typeof a !== 'object' && typeof b !== 'object'))
+    return a === b
+  if (a.prototype !== b.prototype) return false
+  const keys = Object.keys(a)
+  if (keys.length !== Object.keys(b).length) return false
+  return keys.every((k) => deepEquals(a[k], b[k]))
+}
+```
+
+:::
 
 ## 数组转嵌套对象
 
+::: tabs
+@tab js
+
 ```js
-export const setValueToField = (fields, value) => {
-  const reducer = (acc, item, index, arr) => ({
-    [item]: index + 1 < arr.length ? acc : value
-  })
-  return fields.reduceRight(reducer, {})
+function arrayToObject(array, value) {
+  return array.reverse().reduce((acc, curr) => {
+    const obj = {}
+    obj[curr] = acc
+    return obj
+  }, value)
 }
 
-// 例子
-const targetObject = setValueToField(['one', 'two', 'three'], 'nice')
-console.log(targetObject) // Output: { one: { two: { three: 'nice' } } }
+const inputArray = ['one', 'two', 'three']
+const inputValue = 'nice'
+const output = arrayToObject(inputArray, inputValue)
+// output: { one: { two: { three: 'nice' } } }
 ```
+
+@tab ts
+
+```ts
+function arrayToObject(array: string[], value: any): any {
+  return array.reverse().reduce((acc, curr) => {
+    const obj: any = {}
+    obj[curr] = acc
+    return obj
+  }, value)
+}
+```
+
+:::
 
 ## 获取 min-max 之前的随机数
 

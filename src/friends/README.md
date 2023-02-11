@@ -31,10 +31,10 @@ link: '网站链接'
   desc: 渐进式 JavaScript 框架
   link: https://cn.vuejs.org/
 
-- icon: https://v2.vuepress.vuejs.org/images/hero.png
+- icon: https://vuepress.vuejs.org/hero.png
   name: VuePress
-  desc: Vue 驱动的静态网站生成器
-  link: https://v2.vuepress.vuejs.org/zh/
+  desc: Vue 驱动的静态网站生成器。
+  link: https://vuepress.vuejs.org/zh/
 
 - icon: https://theme-hope.vuejs.press/logo.png
   name: VuePress Theme Hope
@@ -54,6 +54,11 @@ link: '网站链接'
 ::: projects friends
 
 ```yaml
+- icon: https://mrhope.site/logo.svg
+  name: Mr.Hope
+  desc: VuePress Theme Hope 主题作者。
+  link: https://blog.sherry4869.com/
+
 - icon: https://file.mo7.cc/static/lxh_gif/lxh_71.gif
   name: 墨七
   desc: 简单快乐，理应如此。
@@ -64,7 +69,7 @@ link: '网站链接'
   desc: MonoLogueChi
   link: https://blog.xxwhite.com/
 
-- icon: https://img.sherry4869.com/Blog/public/logo.svg
+- icon: https://blog.sherry4869.com/logo.svg
   name: MW
   desc: 过往不恋 未来不迎
   link: https://blog.sherry4869.com/
