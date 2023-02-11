@@ -43,6 +43,21 @@ containerClass: nav-container
   desc: 一个 JavaScript 模块打包工具。
   link: https://rollupjs.org/
 
+- icon: https://image.liubing.me/2023/02/11/9daa3b35f5323.png
+  name: SWC
+  desc: 一个可扩展的基于 Rust 的平台，用于下一代快速开发工具。
+  link: https://swc.rs/
+
+- icon: https://image.liubing.me/2023/02/11/17fb956b43057.png
+  name: Nx
+  desc: 智能，快速，可扩展的构建系统。
+  link: https://nx.dev/
+
+- icon: https://image.liubing.me/2023/02/11/2fd6534f9408e.ico
+  name: Rome
+  desc: 一个完整的 JavaScript 工具链，集代码检测、打包、编译、测试等功能于一身。
+  link: https://www.romejs.cn/
+
 - icon: https://image.liubing.me/2023/01/18/3117a5e3c532d.ico
   name: Parcel
   desc: 极速零配置Web应用打包工具。
