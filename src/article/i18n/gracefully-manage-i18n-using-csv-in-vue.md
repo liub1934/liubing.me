@@ -6,8 +6,8 @@ category:
 tag:
   - Vue
   - Vite
-  - Vue-i18n
-  - 多语言
+  - i18n
+  - Vue I18n
 containerClass: article-container
 ---
 
