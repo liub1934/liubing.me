@@ -55,8 +55,11 @@ export default hopeTheme({
       <div>
         版权所有 © 2019 <a href="${HostName}"><b>${AuthorName}</b></a> | 
         <a href="/about/site.html">关于本站</a> | 
+      </div>
+      <div>
+        <span>Theme Version </span>
         <a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/releases/tag/${ThemeVersion}" target="_blank" rel="noopener noreferrer">
-        Theme Version ${ThemeVersion}
+          ${ThemeVersion}
         </a>
       </div>
       <div>
