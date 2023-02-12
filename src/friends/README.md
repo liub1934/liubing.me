@@ -73,6 +73,11 @@ link: '网站链接'
   name: MW
   desc: 过往不恋 未来不迎
   link: https://blog.sherry4869.com/
+
+- icon: https://wiki.eryajf.net/img/logo.png
+  name: 二丫讲梵
+  desc: 💻学习📝记录🔗分享
+  link: https://wiki.eryajf.net/
 ```
 
 :::
