@@ -12,6 +12,11 @@ containerClass: nav-container
   name: HandBrake
   desc: 跨平台开源免费视频格式转换/压缩转码压制工具。
   link: https://handbrake.fr/
+
+- icon: https://image.liubing.me/i/2023/02/13/63e9941ce894d.png
+  name: Kodi
+  desc: 跨平台开源神级媒体中心播放器。
+  link: https://kodi.tv/
 ```
 
 :::
