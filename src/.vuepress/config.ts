@@ -6,6 +6,9 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import theme from './config/theme'
 const __dirname = getDirname(import.meta.url)
 
+const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
+const PageFooter = path.resolve(__dirname, './components/PageFooter/index.vue')
+
 export default defineUserConfig({
   base: Base,
   lang: 'zh-CN',
@@ -21,10 +24,8 @@ export default defineUserConfig({
   alias: {
     '@components': path.resolve(__dirname, './components'),
     '@friends': path.resolve(__dirname, '../friends'),
-    '@theme-hope/components/PageFooter': path.resolve(
-      __dirname,
-      './components/PageFooter/index.vue'
-    )
+    '@theme-hope/components/PageFooter': PageFooter,
+    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel
   },
   plugins: configPlugins,
   bundler: viteBundler({
