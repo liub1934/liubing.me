@@ -54,7 +54,7 @@ export default hopeTheme({
     <div>
       <div>
         版权所有 © 2019 <a href="${HostName}"><b>${AuthorName}</b></a> | 
-        <a href="/about/site.html">关于本站</a> | 
+        <a href="/about/site.html">关于本站</a>
       </div>
       <div>
         <span>Theme Version </span>
