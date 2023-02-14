@@ -40,12 +40,13 @@ jobs:
           name: Compress dist
           command: |
             cd src/.vuepress
-            tar -czvf dist.tar.gz dist
+            tar -zcvf dist.tar.gz dist
 
       # 推送dist压缩包到服务器指定位置
       - run:
           name: Deploy to FTP server
           command: |
+            cd src/.vuepress
             lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R dist.tar.gz $FTP_PATH"
 
       # 服务器解压压缩包
