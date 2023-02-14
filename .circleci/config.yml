@@ -39,6 +39,7 @@ jobs:
       - run:
           name: Compress dist
           command: |
+            ls -alh /root/repo/src/.vuepress/
             zip dist.zip src/.vuepress/dist
             ls -alh /root/repo/src/.vuepress/
 
