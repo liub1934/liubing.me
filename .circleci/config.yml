@@ -12,7 +12,7 @@ jobs:
           name: Install dependencies
           command: |
             apt-get update
-            apt-get install -y lftp sshpass
+            apt-get install -y lftp sshpass zip
 
       # 缓存中使用依赖
       - restore_cache:
