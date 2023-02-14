@@ -1,0 +1,64 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: node:14.21.1
+
+    steps:
+      - checkout
+
+      # 缓存中使用依赖
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+      # 安装依赖
+      - run:
+          name: Install Dependencies
+          command: yarn install
+
+      # 保存缓存
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+
+      # Build打包
+      - run:
+          name: Build project
+          command: yarn docs:build
+
+      # 将dist打成压缩包
+      - run:
+          name: Compress dist
+          command: tar -czvf dist.tar.gz src/.vuepress/dist
+
+      # 推送dist压缩包到服务器指定位置
+      - run:
+          name: Deploy to FTP server
+          command: |
+            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R dist.tar.gz $FTP_PATH"
+
+      # 服务器解压压缩包
+      - run:
+          name: Decompress dist.tar.gz on the server
+          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $FTP_PATH/dist.tar.gz -C $FTP_PATH"
+
+      # 推送dist至GitHub
+      - run:
+          name: Deploy to GitHub
+          command: |
+            cd src/.vuepress/dist
+            git init
+            git config user.name "liub1934"
+            git config user.email "liub1934@gmail.com"
+            git add .
+            git commit -m "Push Dist"
+            git push --force --quiet "https://${GITHUB_TOKEN}@github.com/https://github.com/liub1934/liubing.me.git" master:dist
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
