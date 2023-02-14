@@ -8,6 +8,12 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Install dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y lftp
+
       # 缓存中使用依赖
       - restore_cache:
           keys:
@@ -43,7 +49,7 @@ jobs:
       # 服务器解压压缩包
       - run:
           name: Decompress dist.tar.gz on the server
-          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $FTP_PATH/dist.tar.gz -C $FTP_PATH"
+          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $FTP_PATH/dist.tar.gz -C $FTP_PATH; rm -f $FTP_PATH/dist.tar.gz"
 
       # 推送dist至GitHub
       - run:
