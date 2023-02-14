@@ -36,18 +36,18 @@ jobs:
           command: yarn docs:build
 
       # 将dist打成压缩包
-      - run:
-          name: Compress dist
-          command: |
-            ls -alh /root/repo/src/.vuepress/
-            zip dist.zip src/.vuepress/dist
-            ls -alh /root/repo/src/.vuepress/
+      # - run:
+      #     name: Compress dist
+      #     command: |
+      #       ls -alh /root/repo/src/.vuepress/
+      #       zip dist.zip src/.vuepress/dist
+      #       ls -alh /root/repo/src/.vuepress/
 
       # 推送dist压缩包到服务器指定位置
-      # - run:
-      #     name: Deploy to FTP server
-      #     command: |
-      #       lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R src/.vuepress/dist.tar.gz $FTP_PATH"
+      - run:
+          name: Deploy to FTP server
+          command: |
+            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R src/.vuepress/dist $FTP_PATH"
 
       # 服务器解压压缩包
       # - run:
@@ -55,16 +55,16 @@ jobs:
       #     command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $FTP_PATH/dist.tar.gz -C $FTP_PATH; rm -rf $FTP_PATH/dist.tar.gz"
 
       # 推送dist至GitHub
-      # - run:
-      #     name: Deploy to GitHub
-      #     command: |
-      #       cd src/.vuepress/dist
-      #       git init
-      #       git config user.name "liub1934"
-      #       git config user.email "liub1934@gmail.com"
-      #       git add .
-      #       git commit -m "Push Dist"
-      #       git push --force --quiet "https://${GITHUB_TOKEN}@github.com/https://github.com/liub1934/liubing.me.git" master:dist
+      - run:
+          name: Deploy to GitHub
+          command: |
+            cd src/.vuepress/dist
+            git init
+            git config user.name "liub1934"
+            git config user.email "liub1934@gmail.com"
+            git add .
+            git commit -m "Push Dist"
+            git push --force --quiet "https://${GITHUB_TOKEN}@github.com/https://github.com/liub1934/liubing.me.git" master:dist
 
 workflows:
   version: 2
