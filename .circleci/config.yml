@@ -12,7 +12,7 @@ jobs:
           name: Install dependencies
           command: |
             apt-get update
-            apt-get install -y lftp sshpass zip
+            apt-get install -y lftp sshpass
 
       # 缓存中使用依赖
       - restore_cache:
@@ -36,23 +36,22 @@ jobs:
           command: yarn docs:build
 
       # 将dist打成压缩包
-      # - run:
-      #     name: Compress dist
-      #     command: |
-      #       ls -alh /root/repo/src/.vuepress/
-      #       zip dist.zip src/.vuepress/dist
-      #       ls -alh /root/repo/src/.vuepress/
+      - run:
+          name: Compress dist
+          command: |
+            tar -zcvf dist.tar.gz src/.vuepress/dist
+            ls -alh /root/repo/src/.vuepress/
 
       # 推送dist压缩包到服务器指定位置
       - run:
           name: Deploy to FTP server
           command: |
-            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R src/.vuepress/dist /vuepress/test"
+            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R src/.vuepress/dist.tar.gz /vuepress/test"
 
       # 服务器解压压缩包
-      # - run:
-      #     name: Decompress dist.tar.gz on the server
-      #     command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $FTP_PATH/dist.tar.gz -C $FTP_PATH; rm -rf $FTP_PATH/dist.tar.gz"
+      - run:
+          name: Decompress dist.tar.gz on the server
+          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $FTP_PATH/dist.tar.gz -C $FTP_PATH; rm -rf $FTP_PATH/dist.tar.gz"
 
       # 推送dist至GitHub
       - run:
