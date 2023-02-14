@@ -38,7 +38,9 @@ jobs:
       # 将dist打成压缩包
       - run:
           name: Compress dist
-          command: tar -zcvf dist.tar.gz src/.vuepress/dist
+          command: |
+            set -x
+            tar -zcvf dist.tar.gz src/.vuepress/dist
 
       # 推送dist压缩包到服务器指定位置
       - run:
