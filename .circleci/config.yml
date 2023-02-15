@@ -39,18 +39,20 @@ jobs:
       - run:
           name: Compress dist
           command: |
-            tar -zcvf dist.tar.gz src/.vuepress/dist/*
+            cd src/.vuepress
+            tar -zcvf dist.tar.gz dist
+            ls -alh /root/repo/src/.vuepress/
 
       # 推送dist压缩包到服务器指定位置
       - run:
           name: Deploy to FTP server
           command: |
-            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; cd vuepress; put dist.tar.gz"
+            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; cd vuepress; put src/.vuepress/dist.tar.gz"
 
       # 服务器解压压缩包
       - run:
           name: Decompress dist.tar.gz on the server
-          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $SSH_PATH/dist.tar.gz -C $SSH_PATH; rm -rf $SSH_PATH/dist.tar.gz"
+          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "cd $SSH_PATH && tar -zxvf dist.tar.gz && rm -rf dist.tar.gz"
 
       # 推送dist至GitHub
       - run:
