@@ -39,8 +39,7 @@ jobs:
       - run:
           name: Compress dist
           command: |
-            tar -zcvf dist.tar.gz src/.vuepress/dist
-            ls -alh /root/repo/
+            tar -zcvf dist.tar.gz src/.vuepress/dist/*
 
       # 推送dist压缩包到服务器指定位置
       - run:
