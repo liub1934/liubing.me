@@ -46,7 +46,7 @@ jobs:
       - run:
           name: Deploy to FTP server
           command: |
-            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no;cd test put dist.tar.gz"
+            lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; cd vuepress/test; put dist.tar.gz"
 
       # 服务器解压压缩包
       # - run:
