@@ -52,7 +52,7 @@ jobs:
       # 服务器解压压缩包
       - run:
           name: Decompress dist.tar.gz on the server
-          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "cd $SSH_PATH && rm -rf dist && tar -zxvf dist.tar.gz && rm -rf dist.tar.gz"
+          command: sshpass -p $SSH_PASS ssh -o StrictHostKeyChecking=no $SSH_USER@$FTP_HOST "cd $SSH_PATH && rm -rf dist && tar -zxvf dist.tar.gz && rm -rf dist.tar.gz"
 
       # 推送dist至GitHub
       - run:
