@@ -49,21 +49,21 @@ jobs:
             lftp -c "open -u $FTP_USER,$FTP_PASS ftp://$FTP_HOST; set ssl:verify-certificate no; set ftp:ssl-allow no; cd vuepress/test; put dist.tar.gz"
 
       # 服务器解压压缩包
-      # - run:
-      #     name: Decompress dist.tar.gz on the server
-      #     command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $FTP_PATH/dist.tar.gz -C $FTP_PATH; rm -rf $FTP_PATH/dist.tar.gz"
+      - run:
+          name: Decompress dist.tar.gz on the server
+          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $SSH_PATH/dist.tar.gz -C $SSH_PATH; rm -rf $SSH_PATH/dist.tar.gz"
 
       # 推送dist至GitHub
-      # - run:
-      #     name: Deploy to GitHub
-      #     command: |
-      #       cd src/.vuepress/dist
-      #       git init
-      #       git config user.name "liub1934"
-      #       git config user.email "liub1934@gmail.com"
-      #       git add .
-      #       git commit -m "Push Dist"
-      #       git push --force --quiet "https://${GITHUB_TOKEN}@github.com/https://github.com/liub1934/liubing.me.git" master:dist
+      - run:
+          name: Deploy to GitHub
+          command: |
+            cd src/.vuepress/dist
+            git init
+            git config user.name "liub1934"
+            git config user.email "liub1934@gmail.com"
+            git add .
+            git commit -m "Push Dist"
+            git push --force --quiet "https://${GITHUB_TOKEN}@github.com/https://github.com/liub1934/liubing.me.git" master:dist
 
 workflows:
   version: 2
