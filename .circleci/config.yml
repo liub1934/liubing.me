@@ -64,7 +64,7 @@ jobs:
             git config user.email "liub1934@gmail.com"
             git add .
             git commit -m "Push Dist"
-            git push --force --quiet "https://${GITHUB_TOKEN}@github.com/https://github.com/liub1934/liubing.me.git" master:dist
+            git push -f https://$GITHUB_TOKEN@github.com/liub1934/liubing.me.git master:dist
 
 workflows:
   version: 2
