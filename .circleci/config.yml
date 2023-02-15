@@ -51,7 +51,7 @@ jobs:
       # 服务器解压压缩包
       - run:
           name: Decompress dist.tar.gz on the server
-          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "cd $FTP_PATH/vuepress; tar -zxvf dist.tar.gz; rm -rf dist.tar.gz"
+          command: sshpass -p $SSH_PASS ssh $SSH_USER@$FTP_HOST "tar -xzvf $SSH_PATH/dist.tar.gz -C $SSH_PATH; rm -rf $SSH_PATH/dist.tar.gz"
 
       # 推送dist至GitHub
       - run:
