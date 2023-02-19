@@ -20,7 +20,7 @@ jobs:
       # 恢复缓存
       - restore_cache:
           keys:
-            - v1-cache-{{ checksum "apt-get.packages" }}-{{ checksum "yarn.lock" }}
+            - v1-dependencies-{{ checksum "yarn.lock" }}
 
       # 安装依赖
       - run:
@@ -31,7 +31,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-cache-{{ checksum "apt-get.packages" }}-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       # Build打包
       - run:
