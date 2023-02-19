@@ -16,7 +16,7 @@ containerClass: article-container
 
 <!-- more -->
 
-::: tabs
+::: code-tabs
 @tab variables.scss
 
 ```scss
