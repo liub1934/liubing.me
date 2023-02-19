@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/liubing.me
     docker:
       - image: node:14.21.1
 
@@ -10,7 +10,7 @@ jobs:
       # 拉取代码
       - checkout
 
-      # 安装lftp sshpass工具包
+      # 安装lftp sshpass 工具包
       - run:
           name: Install dependencies
           command: |
@@ -20,8 +20,7 @@ jobs:
       # 恢复缓存
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
-            - v1-dependencies-
+            - v1-cache-{{ checksum "apt-get.packages" }}-{{ checksum "yarn.lock" }}
 
       # 安装依赖
       - run:
@@ -32,7 +31,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+          key: v1-cache-{{ checksum "apt-get.packages" }}-{{ checksum "yarn.lock" }}
 
       # Build打包
       - run:
@@ -45,7 +44,6 @@ jobs:
           command: |
             cd src/.vuepress
             tar -zcvf dist.tar.gz dist
-            ls -alh /root/repo/src/.vuepress/
 
       # 推送dist压缩包到服务器指定位置
       - run:
