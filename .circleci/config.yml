@@ -5,20 +5,24 @@ jobs:
     docker:
       - image: node:14.21.1
 
+    # 步骤定义
     steps:
+      # 拉取代码
       - checkout
 
+      # 安装lftp sshpass工具包
       - run:
           name: Install dependencies
           command: |
             apt-get update
             apt-get install -y lftp sshpass
 
-      # 缓存中使用依赖
+      # 恢复缓存
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
             - v1-dependencies-
+
       # 安装依赖
       - run:
           name: Install Dependencies
@@ -74,4 +78,3 @@ workflows:
           filters:
             branches:
               only: main
-      - build
