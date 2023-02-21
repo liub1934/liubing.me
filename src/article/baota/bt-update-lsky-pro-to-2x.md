@@ -75,6 +75,7 @@ containerClass: article-container
 ![image](https://image.liubing.me/i/2023/02/12/63e8af7c468f6.png)
 
 扩展和禁用函数有更改的时候需要重启下 PHP 服务
+
 ![image](https://image.liubing.me/i/2023/02/12/63e8b01b67cf2.png)
 
 ## 安装程序
