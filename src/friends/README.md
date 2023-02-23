@@ -57,7 +57,7 @@ link: '网站链接'
 - icon: https://mrhope.site/logo.svg
   name: Mr.Hope
   desc: VuePress Theme Hope 主题作者。
-  link: https://blog.sherry4869.com/
+  link: https://mrhope.site/
 
 - icon: https://file.mo7.cc/static/lxh_gif/lxh_71.gif
   name: 墨七
