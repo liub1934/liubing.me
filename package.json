@@ -8,19 +8,20 @@
     "docs:build": "vuepress build src",
     "docs:clean-dev": "vuepress dev src --clean-cache",
     "docs:dev": "vuepress dev src",
-    "update:theme": "yarn upgrade vuepress-theme-hope@latest vuepress-plugin-redirect@latest vuepress-plugin-search-pro@latest"
+    "update:theme": "yarn upgrade vuepress-theme-hope@latest vuepress-plugin-redirect@latest vuepress-plugin-search-pro@latest",
+    "update:vuepress": "yarn upgrade vuepress@next @vuepress/client@next @vuepress/plugin-google-analytics@next @vuepress/plugin-register-components@next"
   },
   "devDependencies": {
-    "@vuepress/client": "^2.0.0-beta.60",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.60",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.60",
+    "@vuepress/client": "^2.0.0-beta.61",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.61",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.61",
     "git-cz": "^4.9.0",
     "js-yaml": "^4.1.0",
     "vue": "^3.2.45",
-    "vuepress": "^2.0.0-beta.60",
-    "vuepress-plugin-redirect": "^2.0.0-beta.182",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.182",
-    "vuepress-theme-hope": "^2.0.0-beta.182"
+    "vuepress": "^2.0.0-beta.61",
+    "vuepress-plugin-redirect": "^2.0.0-beta.185",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.185",
+    "vuepress-theme-hope": "^2.0.0-beta.185"
   },
   "dependencies": {
     "dayjs": "^1.11.7"
