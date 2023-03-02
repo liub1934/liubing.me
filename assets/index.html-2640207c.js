@@ -1,0 +1,1 @@
+import{_ as t,G as o,S as n,V as c,U as e,a1 as r,C as s}from"./framework-ad037d56.js";const _={},d=e("h1",{id:"uni-app",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#uni-app","aria-hidden":"true"},"#"),r(" uni-app")],-1);function i(l,p){const a=s("AutoCatalog");return o(),n("div",null,[d,c(a)])}const h=t(_,[["render",i],["__file","index.html.vue"]]);export{h as default};

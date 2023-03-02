@@ -1,0 +1,1 @@
+import{_ as t,G as o,S as n,V as c,U as e,a1 as r,C as s}from"./framework-ad037d56.js";const _={},d=e("h1",{id:"软件世界",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#软件世界","aria-hidden":"true"},"#"),r(" 软件世界")],-1);function l(i,h){const a=s("AutoCatalog");return o(),n("div",null,[d,c(a)])}const m=t(_,[["render",l],["__file","index.html.vue"]]);export{m as default};
