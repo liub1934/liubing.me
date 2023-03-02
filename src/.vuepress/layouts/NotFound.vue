@@ -44,5 +44,3 @@ function DOMLoaded() {
   )
 }
 </script>
-
-<style lang="less" scoped></style>
