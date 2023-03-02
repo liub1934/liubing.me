@@ -24,7 +24,8 @@
     "vuepress-theme-hope": "^2.0.0-beta.185"
   },
   "dependencies": {
-    "dayjs": "^1.11.7"
+    "dayjs": "^1.11.7",
+    "lottie-web": "^5.10.2"
   },
   "config": {
     "commitizen": {
