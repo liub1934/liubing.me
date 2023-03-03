@@ -4,7 +4,7 @@ import { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
-import { renderProjects } from '../utils'
+import { renderProjects } from '../containers/projects'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
