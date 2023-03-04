@@ -1,4 +1,6 @@
 // place your custom styles here
+@import './site-info.scss';
+
 html[data-theme='light'] {
   .blog-info-list {
     .blog-type-button {
@@ -31,7 +33,8 @@ html[data-theme='light'] {
   }
 }
 
-.project-panel {
+.project-panel,
+.site-info-list {
   a {
     &:hover {
       text-decoration: none;
@@ -69,5 +72,11 @@ figcaption {
 .page.blog {
   .blog-home {
     margin-top: 6px;
+  }
+}
+
+.site-info-list {
+  .site-info-logo {
+    border-radius: 50%;
   }
 }

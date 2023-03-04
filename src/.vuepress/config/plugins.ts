@@ -5,6 +5,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
 import { renderProjects } from '../containers/projects'
+import { renderSiteInfos } from '../containers/siteInfos'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -23,6 +24,12 @@ export const configPlugins: PluginConfig = [
     type: 'projects',
     render: (tokens, idx) => {
       return renderProjects(tokens, idx)
+    }
+  }),
+  containerPlugin({
+    type: 'siteInfos',
+    render: (tokens, idx) => {
+      return renderSiteInfos(tokens, idx)
     }
   })
 ]
