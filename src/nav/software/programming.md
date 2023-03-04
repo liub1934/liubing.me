@@ -5,6 +5,17 @@ containerClass: nav-container
 
 # 编程开发
 
+::: projects
+
+```yaml
+- icon: https://image.liubing.me/i/2023/03/04/6402b7bd80cf6.ico
+  name: He3
+  desc: 一款超级工具箱，内置200多种实用免费小工具合集。
+  link: https://he3.app/
+```
+
+:::
+
 ## 编辑器
 
 ::: projects
