@@ -23,6 +23,11 @@ containerClass: nav-container
   desc: 文件转换器，将您的文件转换成任意格式。
   link: https://convertio.co/zh/
 
+- icon: https://image.liubing.me/i/2023/03/10/640afbc2d69aa.png
+  name: CloudConvert
+  desc: 文件转换器，将您的文件转换成任意格式。
+  link: https://cloudconvert.com/
+
 - icon: https://image.liubing.me/2021/11/02/b502f14843b68.png
   name: remove bg
   desc: AI在线抠图，轻松自动去除图片背景。
@@ -42,6 +47,11 @@ containerClass: nav-container
   name: 踢踢零动图
   desc: 多图合成GIF，轻松制作精彩的动图。
   link: https://tt0.top/
+
+- icon: https://image.liubing.me/2020/12/14/e901ed92f095e.png
+  name: image-conversion
+  desc: 一个开源库Demo，纯本地图片压缩。
+  link: https://demo.wangyulue.com/image-conversion/
 ```
 
 :::
