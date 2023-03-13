@@ -18,12 +18,12 @@
 
 <script lang="ts" setup>
 import NotFound from 'vuepress-theme-hope/layouts/NotFound'
-import LottieWeb from '../components/LottieWeb/index.vue'
+import LottieWeb from '../../components/LottieWeb/index.vue'
 import { ref } from 'vue'
 
 const showLottieWeb = ref(false)
 const options = ref({
-  path: new URL('./NotFound.json', import.meta.url).href
+  path: new URL('./data.json', import.meta.url).href
 })
 
 function DOMLoaded() {

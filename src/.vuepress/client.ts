@@ -1,4 +1,4 @@
-import NotFound from './layouts/NotFound.vue'
+import NotFound from './layouts/NotFound/index.vue'
 import { defineClientConfig } from '@vuepress/client'
 
 export default defineClientConfig({
