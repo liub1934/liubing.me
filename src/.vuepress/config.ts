@@ -1,9 +1,9 @@
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from '@vuepress/utils'
 import { AuthorName, Base, Description } from './constant'
-import { configPlugins } from './config/plugins'
+import { configPlugins } from './configs/plugins'
 import { viteBundler } from '@vuepress/bundler-vite'
-import theme from './config/theme'
+import theme from './configs/theme'
 const __dirname = getDirname(import.meta.url)
 
 const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
