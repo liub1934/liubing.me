@@ -17,7 +17,7 @@ containerClass: nav-container
 - icon: https://image.liubing.me/2023/01/18/63bdde27e37e5.png
   name: VitePress
   desc: VuePress的孪生兄弟。
-  link: https://vuepress.vuejs.org/zh/
+  link: https://vitepress.dev/
 
 - icon: https://image.liubing.me/i/2023/03/16/64126a9dd5673.png
   name: Gridsome
