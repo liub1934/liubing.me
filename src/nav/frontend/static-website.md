@@ -14,6 +14,11 @@ containerClass: nav-container
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
 
+- icon: https://image.liubing.me/i/2023/03/16/64126a9dd5673.png
+  name: Gridsome
+  desc: Vue.js的 Jamstack 框架。
+  link: https://gridsome.org/
+
 - icon: https://image.liubing.me/2023/02/11/26bff0f750be0.png
   name: Docusaurus
   desc: React、MDX驱动的静态网站生成器。
