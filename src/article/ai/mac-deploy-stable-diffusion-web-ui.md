@@ -1,7 +1,9 @@
 ---
 date: 2023-02-26
+sticky: 1
 category:
   - AI绘画
+  - Mac
 tag:
   - AI
   - stable-diffusion-webui
