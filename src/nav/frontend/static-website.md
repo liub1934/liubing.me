@@ -1,5 +1,6 @@
 ---
 toc: false
+order: 70
 containerClass: nav-container
 ---
 
@@ -12,6 +13,16 @@ containerClass: nav-container
   name: VuePress
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
+
+- icon: https://image.liubing.me/2023/01/18/63bdde27e37e5.png
+  name: VitePress
+  desc: VuePress的孪生兄弟。
+  link: https://vitepress.dev/
+
+- icon: https://image.liubing.me/i/2023/03/16/64126a9dd5673.png
+  name: Gridsome
+  desc: Vue.js的 Jamstack 框架。
+  link: https://gridsome.org/
 
 - icon: https://image.liubing.me/2023/02/11/26bff0f750be0.png
   name: Docusaurus

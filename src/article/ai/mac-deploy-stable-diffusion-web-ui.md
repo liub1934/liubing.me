@@ -1,7 +1,9 @@
 ---
 date: 2023-02-26
+sticky: 1
 category:
   - AI绘画
+  - Mac
 tag:
   - AI
   - stable-diffusion-webui
@@ -15,7 +17,7 @@ containerClass: article-container
 <!-- more -->
 
 ::: tip
-如果你懒得搭建也可以使用[在线服务](https://getimg.ai/ref/4BPOzb5hx)，需要谷歌账号登录，初次登录会有 100 个点的额度，每生成一张图消耗一个点额度，每个月会重置。当然你可以发挥钞能力获取获取更多的额度。
+如果你懒得搭建也可以使用[在线服务](https://getimg.ai/ref/4BPOzb5hx)，需要谷歌账号登录，初次登录会有 100 个点的额度，每生成一张图消耗一个点额度，每个月会重置。当然你可以发挥钞能力获取更多的额度。
 :::
 
 ## 安装 Homebrew

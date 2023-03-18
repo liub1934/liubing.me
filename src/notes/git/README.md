@@ -2,10 +2,9 @@
 index: false
 toc: false
 dir:
-  order: 70
-containerClass: nav-container
+  order: 6
 ---
 
-# 工具箱
+# Git
 
 <AutoCatalog />

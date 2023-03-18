@@ -1,6 +1,6 @@
 ---
 toc: false
-order: 1
+order: 20
 containerClass: nav-container
 ---
 
@@ -52,7 +52,12 @@ containerClass: nav-container
 - icon: https://image.liubing.me/2023/01/04/cf74579e59ae6.png
   name: TinyPng
   desc: 智能WebP、PNG和JPEG压缩。
-  link: https://tinypng.com/
+  link: https://tinify.cn/
+
+- icon: https://image.liubing.me/2020/12/14/e901ed92f095e.png
+  name: image-conversion
+  desc: 一个开源库Demo，纯本地图片压缩。
+  link: https://demo.wangyulue.com/image-conversion/
 
 - icon: https://image.liubing.me/2023/01/09/577d1a7ee8f47.png
   name: Convertio

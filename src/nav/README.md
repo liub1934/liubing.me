@@ -1,6 +1,8 @@
 ---
 toc: false
 containerClass: nav-container
+dir:
+  order: 10
 ---
 
 # 导航

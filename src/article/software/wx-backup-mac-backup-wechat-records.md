@@ -15,8 +15,6 @@ containerClass: article-container
 
 <!-- more -->
 
-![image](https://image.liubing.me/2022/12/23/4c4006bdc0cf9.PNG)
-
 想要将微信卸载重装，但是又舍不得微信里面的部分联系人的聊天记录，就在网上搜索下看有没有可以备份微信聊天记录的软件，直到发现`WX Backup`这块神器。
 
 ## 介绍
