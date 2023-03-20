@@ -24,6 +24,11 @@ containerClass: nav-container
   desc: Font Awesome 是一款很流行的字体图标工具。
   link: https://iconpark.oceanengine.com/
 
+- icon: https://image.liubing.me/i/2023/03/20/6418243446099.png
+  name: Iconify
+  desc: 免费开源的图标库，超过150k+图标自由选择。
+  link: https://iconify.design/
+
 - icon: https://image.liubing.me/2023/01/24/5b265d4997247.png
   name: Icons8
   desc: 图标、插图、照片、音乐和设计工具。
