@@ -11,11 +11,9 @@ containerClass: article-container
 
 # 使用 Lottie 动画装饰一下你的 404 页面
 
-自己博客的 404 页面太单调无趣了，由于之前项目使用过[Lottie-Web](https://github.com/airbnb/lottie-web)做过动画，想着给 404 页面加上一个有趣的动画。然后就去 [LottieFiles](https://lottiefiles.com/featured)动画库搜索了下`404`，发现一个和谷歌浏览器断网小恐龙游戏类似的的 404 [动画效果](https://lottiefiles.com/84918-404-error-doodle-animation)，感觉很有趣，就它了，最终的效果大家可以通过 [404 页面](https://liubing.me/404.html)查看。
+自己博客的 404 页面太单调无趣了，由于之前项目使用过[Lottie-Web](https://github.com/airbnb/lottie-web)做过动画，想着给 404 页面加上一个有趣的动画。然后就去 [LottieFiles](https://lottiefiles.com/featured)动画库搜索了下`404`，发现一个和谷歌浏览器断网小恐龙游戏类似的的 404 [动画效果](https://lottiefiles.com/84918-404-error-doodle-animation)，感觉很有趣，那就用它了，最终的效果大家可以通过访问 [404 页面](https://liubing.me/404.html)查看。
 
 <!-- more -->
-
-![image](https://image.liubing.me/i/2023/03/21/641975fc0a086.gif)
 
 ## 下载动画 JSON
 
@@ -27,7 +25,7 @@ containerClass: article-container
 
 ![image](https://image.liubing.me/i/2023/03/21/641976e944b26.png)
 
-下载完成后会得到一个`84918-404-error-doodle-animation.json`json 文件。
+下载完成后会得到一个 json 文件。
 
 ## 修改默认颜色
 
@@ -136,7 +134,9 @@ onBeforeUnmount(() => {
 
 可以参照 Vuepress 的[继承文档说明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/extending.html)替换默认的 404 页面。博客主题使用的是[Mr.Hope](https://mrhope.site/)大佬写的[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)主题，好在大佬贴心的给[NotFound](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/src/client/layouts/NotFound.ts#L29)布局提供了一个默认的内容插槽，所以我们只需要引用内置的`NotFound`，将动画内容放到里面即可。
 
-在`src/.vuepress/layouts`下面新建一个新的 NotFound 布局。
+在`src/.vuepress/layouts`下面新建一个新的 NotFound 布局，将上面下载的 json 数据放到同级目录下并通过`new URL('./data.json', import.meta.url).href`形式传入 path。
+
+新的 NotFound 布局写好后在`src/.vuepress/client.ts`中的`layouts`中引入即可。
 
 ::: code-tabs
 @tab NotFound/index.vue
@@ -188,6 +188,19 @@ function DOMLoaded() {
 </style>
 ```
 
+@tab client.ts
+
+```ts
+import NotFound from './layouts/NotFound/index.vue'
+import { defineClientConfig } from '@vuepress/client'
+
+export default defineClientConfig({
+  layouts: {
+    NotFound
+  }
+})
+```
+
 :::
 
 ## 适配暗黑模式
@@ -197,3 +210,15 @@ function DOMLoaded() {
 我们可以在生成的动画 SVG 中找到背景的元素`rect`元素，通过`document.querySelectorAll('.lottie-web rect[fill="#ffffff"]')`定位到该元素，使用`setAttribute`修改该背景的`fill`为`transparent`透明色。
 
 ![image](https://image.liubing.me/i/2023/03/21/64198551ec250.png)
+
+此时在暗黑模式下刷新页面的时候会存在白色背景一闪的情况，如下图所示：
+
+![image](https://image.liubing.me/i/2023/03/21/6419b12dad4ae.gif)
+
+为了解决这个可以在动画组件上加个`style`样式`opacity`默认为 0，这样初始的时候不可见，通过`showLottieWeb`变量控制最终的显示，在样式替换完成后将动画组件显示可见，这样有一个缓冲就不会出现上述的现象了。
+
+![image](https://image.liubing.me/i/2023/03/21/641975fc0a086.gif)
+
+## 效果预览
+
+![image](https://image.liubing.me/i/2023/03/21/6419b40fb3016.gif)
