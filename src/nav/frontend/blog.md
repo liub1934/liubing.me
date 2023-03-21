@@ -28,6 +28,11 @@ containerClass: nav-container
   name: YUX.DESIGN
   desc: 阅文集团体验设计部门户网站。
   link: https://blog.yux.team/
+
+- icon: https://image.liubing.me/i/2023/03/19/6416855a4c39a.png
+  name: Anthony Fu
+  desc: Vue、Vite核心大佬成员之一。
+  link: https://antfu.me/
 ```
 
 :::
