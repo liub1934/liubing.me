@@ -88,6 +88,11 @@ containerClass: nav-container
   name: Hoppscotch
   desc: 高颜值开源 API 开发生态系统。
   link: https://hoppscotch.io/
+
+- icon: https://image.liubing.me/i/2023/03/21/64196c932c9a9.png
+  name: Postcat
+  desc: 一个可扩展的开源 API 工具平台。
+  link: https://www.postcat.com/
 ```
 
 :::
