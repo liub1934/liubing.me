@@ -217,8 +217,6 @@ export default defineClientConfig({
 
 为了解决这个可以在动画组件上加个`style`样式`opacity`默认为 0，这样初始的时候不可见，通过`showLottieWeb`变量控制最终的显示，在样式替换完成后将动画组件显示可见，这样有一个缓冲就不会出现上述的现象了。
 
-![image](https://image.liubing.me/i/2023/03/21/641975fc0a086.gif)
-
 ## 效果预览
 
 ![image](https://image.liubing.me/i/2023/03/21/6419b40fb3016.gif)
