@@ -23,13 +23,18 @@ export default defineUserConfig({
   },
   alias: {
     '@components': path.resolve(__dirname, './components'),
+    '@websites': path.resolve(__dirname, './public/assets/websites'),
     '@friends': path.resolve(__dirname, '../friends'),
     '@theme-hope/components/PageFooter': PageFooter,
     '@theme-hope/modules/blog/components/InfoPanel': InfoPanel
   },
   plugins: configPlugins,
   bundler: viteBundler({
-    viteOptions: {},
+    viteOptions: {
+      build: {
+        assetsInlineLimit: 0 // 设置为0禁止图片转base64
+      }
+    },
     vuePluginOptions: {}
   })
 })

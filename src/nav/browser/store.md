@@ -13,52 +13,52 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: https://image.liubing.me/2023/01/04/1c4f5839c3516.png
+- icon: '@websites/chrome-webstore.png'
   name: Chrome应用商店
   desc: Chrome官方的应用商店。
   link: https://chrome.google.com/webstore/
 
-- icon: https://image.liubing.me/2023/01/04/9c1c638a23865.ico
+- icon: '@websites/crxdl.ico'
   name: CrxDL
   desc: 根据插件ID或者插件名下载Chrome扩展插件Crx离线安装包。
   link: https://crxdl.com/
 
-- icon: https://image.liubing.me/2023/01/04/9595db09dab4e.ico
+- icon: '@websites/crx4chrome.ico'
   name: Crx4Chrome
   desc: 国外第三方Chrome应用商店。
   link: https://www.crx4chrome.com/
 
-- icon: https://image.liubing.me/2023/01/04/d62f044732e74.ico
+- icon: '@websites/chrome-webstore.png'
   name: 插件小屋
   desc: 第三方Chrome应用商店，方便国内用户下载插件。
   link: https://www.chajianxw.com/
 
-- icon: https://image.liubing.me/2023/01/04/d62f044732e74.ico
+- icon: '@websites/chrome-webstore.png'
   name: 极简插件
   desc: 第三方Chrome应用商店，方便国内用户下载插件。
   link: https://crxdl.com/
 
-- icon: https://image.liubing.me/2023/01/04/ca4cdd8919b14.jpg
+- icon: '@websites/extfans.jpg'
   name: Extfans
   desc: 第三方Chrome应用商店，方便国内用户下载插件。
   link: https://www.extfans.com/
 
-- icon: https://image.liubing.me/2023/01/04/d86f5fcd38fe3.ico
+- icon: '@websites/chrome-pictureknow.ico'
   name: 收藏猫插件
   desc: 第三方Chrome应用商店，方便国内用户下载插件。
-  link: https://crxdl.com/
+  link: https://chrome.pictureknow.com/
 
-- icon: https://image.liubing.me/2023/01/04/2fe3c972b49c1.ico
+- icon: '@websites/gugeapps.ico'
   name: 咕哥扩展下载
   desc: 第三方Chrome应用商店，方便国内用户下载插件。
   link: https://www.gugeapps.net/
 
-- icon: https://image.liubing.me/2023/01/04/74d8f314413a1.ico
+- icon: '@websites/chrome-webstore.png'
   name: Chrome插件网
   desc: 第三方Chrome应用商店，方便国内用户下载插件。
   link: https://www.cnplugins.com/
 
-- icon: https://image.liubing.me/2023/01/04/44fecde2897b0.ico
+- icon: '@websites/huajiakeji.ico'
   name: 画夹插件网
   desc: 第三方Chrome应用商店，方便国内用户下载插件。
   link: https://huajiakeji.com/
