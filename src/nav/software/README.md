@@ -6,6 +6,6 @@ dir:
 containerClass: nav-container
 ---
 
-# 软件世界
+# 软件收藏
 
 <AutoCatalog />
