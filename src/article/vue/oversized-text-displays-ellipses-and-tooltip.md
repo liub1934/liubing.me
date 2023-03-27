@@ -411,7 +411,7 @@ export default {
     visibleChange(visible) {
       this.tooltipVisible = this.disabledTooltip ? false : visible
       if (!this.disabledTooltip) {
-        this.emits('visibleChange', this.tooltipVisible)
+        this.emit('visibleChange', this.tooltipVisible)
       }
     }
   }
