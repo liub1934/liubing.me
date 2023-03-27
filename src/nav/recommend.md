@@ -68,6 +68,11 @@ containerClass: nav-container
   name: 亲戚关系计算器
   desc: 逢年过节遇到三姑六婆，拒绝叫不出口的尴尬！轻松搞定亲戚关系。
   link: https://passer-by.com/relationship/
+
+- icon: '@websites/diffing-tool.png'
+  name: 文本对比
+  desc: 超级实用的在线文本对比工具。
+  link: https://csacademy.com/app/diffing_tool/
 ```
 
 :::
