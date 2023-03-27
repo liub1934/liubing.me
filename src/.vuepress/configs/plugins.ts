@@ -81,7 +81,7 @@ export const themePlugins: PluginsOptions = {
     provider: 'Waline',
     serverURL: 'https://waline.liubing.me',
     requiredMeta: ['nick', 'mail'],
-    wordLimit: 5,
+    wordLimit: 200,
     search: false
   },
   // Disable features you don’t want here
