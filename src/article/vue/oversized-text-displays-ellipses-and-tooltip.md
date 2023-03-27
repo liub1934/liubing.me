@@ -394,7 +394,7 @@ export default {
   },
   methods: {
     setTooltipDisabled() {
-      const $trigger = this.$$refs.triggerRef
+      const $trigger = this.$refs.triggerRef
       if ($trigger) {
         if (this.lineClamp) {
           this.disabledTooltip = $trigger.scrollHeight <= $trigger.offsetHeight
