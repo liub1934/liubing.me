@@ -394,7 +394,7 @@ export default {
   },
   methods: {
     setTooltipDisabled() {
-      const $trigger = this.$$refs.triggerRef
+      const $trigger = this.$refs.triggerRef
       if ($trigger) {
         if (this.lineClamp) {
           this.disabledTooltip = $trigger.scrollHeight <= $trigger.offsetHeight
@@ -411,7 +411,7 @@ export default {
     visibleChange(visible) {
       this.tooltipVisible = this.disabledTooltip ? false : visible
       if (!this.disabledTooltip) {
-        this.emits('visibleChange', this.tooltipVisible)
+        this.$emit('visibleChange', this.tooltipVisible)
       }
     }
   }

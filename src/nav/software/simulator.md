@@ -8,7 +8,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: https://image.liubing.me/2023/01/25/b0cf2a41527ad.ico
+- icon: '@websites/virtualbox.ico'
   name: VirtualBox
   desc: 免费开源跨平台虚拟机软件。
   link: https://www.virtualbox.org/
