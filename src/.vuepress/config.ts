@@ -3,6 +3,7 @@ import { getDirname, path } from '@vuepress/utils'
 import { AuthorName, Base, Description } from './constant'
 import { configPlugins } from './configs/plugins'
 import { viteBundler } from '@vuepress/bundler-vite'
+import viteOptions from './configs/vite.config'
 import theme from './configs/theme'
 const __dirname = getDirname(import.meta.url)
 
@@ -30,11 +31,6 @@ export default defineUserConfig({
   },
   plugins: configPlugins,
   bundler: viteBundler({
-    viteOptions: {
-      build: {
-        assetsInlineLimit: 0 // 设置为0禁止图片转base64
-      }
-    },
-    vuePluginOptions: {}
+    viteOptions
   })
 })
