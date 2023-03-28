@@ -79,9 +79,9 @@ link: 网站链接
   desc: 💻学习📝记录🔗分享
   link: https://wiki.eryajf.net/
 
-- icon: https://oragekk.me/logo.svg,
-  name: 上冬十二,
-  desc: 到最后，竟庆幸于夕阳仍留在身上,
+- icon: https://oragekk.me/logo.svg
+  name: 上冬十二
+  desc: 到最后，竟庆幸于夕阳仍留在身上
   link: https://oragekk.me/
 ```
 
