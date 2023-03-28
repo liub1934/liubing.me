@@ -25,7 +25,7 @@ containerClass: nav-container
 
 - icon: '@websites/bootcdn.png'
   name: BootCDN
-  desc: 稳定、快速、免费的前端开源项目 CDN 加速服务。
+  desc: 极兔云联合 Bootstrap 中文网共同支持并维护的前端开源项目免费 CDN 服务。
   link: https://www.bootcdn.cn/
 
 - icon: '@websites/staticfile.png'
@@ -40,7 +40,7 @@ containerClass: nav-container
 
 - icon: '@websites/75cdn.png'
   name: 75CDN
-  desc: 前端静态资源库，首个支持 HTTP/2 的 CDN 服务。
+  desc: 由 360 奇舞团支持并维护的开源项目免费 CDN 服务。
   link: https://cdn.baomitu.com/
 
 - icon: '@websites/cdnjs.png'
