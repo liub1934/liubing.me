@@ -84,9 +84,7 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
 ![image](https://image.liubing.me/i/2023/02/26/63fb2ae71c2e0.png)
 
-我们找一个下载量最高的模型[ChilloutMix](https://civitai.com/models/6424/chilloutmix)进行下载。
-
-点击页面上的`Download Latest`按钮进行下载。
+我们找一个下载量最高的模型[ChilloutMix](https://civitai.com/models/6424/chilloutmix)进行下载，抖音 AI 小姐姐大多数都是基于这个模型生成的。点击页面上的`Download Latest`按钮进行下载。
 
 ![image](https://image.liubing.me/i/2023/02/26/63fb2b86d1154.png)
 
