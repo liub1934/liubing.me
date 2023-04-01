@@ -38,7 +38,7 @@ containerClass: nav-container
   desc: 不仅能帮你快速记录，还能帮你更好回顾。
   link: https://flomoapp.com/
 
-- icon: '@websites/notion.ico'
+- icon: '@websites/notion.png'
   name: Notion
   desc: 大名鼎鼎的笔记软件。
   link: https://www.notion.so/
