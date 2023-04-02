@@ -34,6 +34,11 @@ containerClass: nav-container
   desc: 一款神奇的AI艺术工具。
   link: https://getimg.ai/
 
+- icon: '@websites/draft.ico'
+  name: Draft
+  desc: 一个低门槛AI绘画社区，轻松上手。
+  link: https://draft.art/1931899
+
 - icon: '@websites/leonardo.ai.png'
   name: Leonardo.Ai
   desc: 以人工智能驱动的AI绘画工具。

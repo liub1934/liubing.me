@@ -27,7 +27,7 @@ containerClass: nav-container
 - icon: '@websites/getimg.ai.ico'
   name: Getimg.Ai
   desc: 一款神奇的AI艺术工具。
-  link: https://getimg.ai/
+  link: https://getimg.ai/ref/4BPOzb5hx
 
 - icon: '@websites/leonardo.ai.png'
   name: Leonardo.Ai
@@ -50,7 +50,7 @@ containerClass: nav-container
   link: https://nijijourney.com/zh/
 
 - icon: '@websites/nijijourney.svg'
-  name: Dall.E2
+  name: DALL·E 2
   desc: OpenAI出品的绘画工具。
   link: https://openai.com/product/dall-e-2
 
@@ -94,6 +94,11 @@ containerClass: nav-container
   desc: 几秒钟就能在线抹除图片中不想要的物体。
   link: https://www.hama.app/zh
 
+- icon: '@websites/cleanup.png'
+  name: Cleanup.pictures
+  desc: 从您的图片中删除任何不需要的对象、缺陷、任务、文本。
+  link: https://cleanup.pictures/
+
 - icon: '@websites/photoroom.png'
   name: PhotoRoom
   desc: 智能AI背景生成工具。
@@ -108,6 +113,96 @@ containerClass: nav-container
   name: ARC
   desc: 腾讯旗下ARC实验室推出的AI图片处理工具。
   link: https://arc.tencent.com/zh/ai-demos/
+
+- icon: '@websites/brandmark.png'
+  name: BrandMark
+  desc: 简单3步AI智能生成Logo。
+  link: https://brandmark.io/
+
+- icon: '@websites/wujieai.ico'
+  name: 无界AI
+  desc: 提供一站式AI搜索-创作-交流-分享服务。
+  link: https://www.wujieai.com/
+
+- icon: '@websites/promeai.ico'
+  name: 神采
+  desc: 草图AI智能生成图片工具。
+  link: https://www.promeai.com/
+
+- icon: '@websites/wondershare.png'
+  name: 万兴爱画
+  desc: AI生成高品质艺术图片。
+  link: https://aigc.wondershare.cn/
+
+- icon: '@websites/toonme.png'
+  name: Toonme
+  desc: AI智能生成3D卡通头像。
+  link: https://toonme.com/
+
+- icon: '@websites/6pen.svg'
+  name: 6pen Art
+  desc: 中文体验AI绘画。
+  link: https://6pen.art/
+
+- icon: '@websites/fromston.svg'
+  name: FromSton
+  desc: 一行代码使用AI绘画能力。
+  link: https://www.fromston.com/
+
+- icon: '@websites/zcool.ico'
+  name: 站酷梦笔
+  desc: 人工智能加成，助你大开脑洞，尽情AI创作。
+  link: https://www.zcool.com.cn/ailab
+
+- icon: '@websites/zcool.ico'
+  name: 站酷梦笔
+  desc: 人工智能加成，助你大开脑洞，尽情AI创作。
+  link: https://www.zcool.com.cn/ailab
+
+- icon: '@websites/printidea.ico'
+  name: 造梦日记
+  desc: 原名盗梦师，AI 一下妙笔生画。
+  link: https://printidea.art/
+
+- icon: '@websites/rightbrain.ico'
+  name: Vega AI
+  desc: 国内专业的AI创作平台，支持文本生成图片，图片风格转换。
+  link: https://rightbrain.art/
+
+- icon: '@websites/draft.ico'
+  name: Draft
+  desc: 一个低门槛AI绘画社区，轻松上手。
+  link: https://draft.art/1931899
+
+- icon: '@websites/yjai.ico'
+  name: 意间
+  desc: 在线AI绘画工具。
+  link: http://portal.yjai.art/
+
+- icon: '@websites/booth.svg'
+  name: Booth.ai
+  desc: 使用AI创建专业品质的产品摄影。
+  link: https://www.booth.ai/
+
+- icon: '@websites/nightcafe.png'
+  name: NightCafe Creator
+  desc: 使用AI创造令人惊叹的人工智能艺术。
+  link: https://creator.nightcafe.studio/
+
+- icon: '@websites/neural.ico'
+  name: Neural.love
+  desc: 免费AI图像生成器。
+  link: https://neural.love/
+
+- icon: '@websites/waifulabs.png'
+  name: WaifuLabs
+  desc: 完全免费的最先进AI绘制自定义动漫肖像。
+  link: https://waifulabs.com/
+
+- icon: '@websites/nolibox.ico'
+  name: Nolibox
+  desc: 为个人用户和企业用户提供全链路AIGC和人工智能设计服务。
+  link: https://nolibox.com/
 ```
 
 :::

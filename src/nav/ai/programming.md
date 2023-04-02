@@ -73,6 +73,31 @@ containerClass: nav-container
   name: HeyCLI
   desc: 将自然语言智能转换为CIL终端命令。
   link: https://www.heycli.com/
+
+- icon: '@websites/safurai.png'
+  name: Safurai
+  desc: 个人免费AI编码助手。
+  link: https://www.safurai.com/
+
+- icon: '@websites/autoregex.ico'
+  name: AutoRegex
+  desc: 将英语轻松转换成正则表达式。
+  link: https://www.autoregex.xyz/
+
+- icon: '@websites/cron-ai.ico'
+  name: Cron AI
+  desc: 根据描述生成Cron表达式。
+  link: https://cron-ai.vercel.app/
+
+- icon: '@websites/raycast.png'
+  name: Raycast
+  desc: Mac上的任何位置使用ChatGPT更智能地编写代码。
+  link: https://www.raycast.com/
+
+- icon: '@websites/gitfluence.ico'
+  name: GitFluence
+  desc: AI驱动立即找到你需要的Git命令。
+  link: https://gitfluence.com/
 ```
 
 :::
