@@ -59,11 +59,6 @@ containerClass: nav-container
   desc: 百度出品的AI艺术和创意辅助平台。
   link: https://yige.baidu.com/
 
-- icon: '@websites/photoroom.png'
-  name: PhotoRoom
-  desc: 智能AI背景生成工具。
-  link: https://www.photoroom.com/
-
 - icon: '@websites/stable-diffusion-reimagine.ico'
   name: Stable Diffusion Reimagine
   desc: 上传图片AI智能生成多种同类型图片。
@@ -73,6 +68,46 @@ containerClass: nav-container
   name: Hotpot
   desc: AI图片图像处理和生成工具。
   link: https://hotpot.ai/
+
+- icon: '@websites/magicstudio.ico'
+  name: Magic Studio
+  desc: 高颜值AI处理工具，内助N多功能。
+  link: https://magicstudio.com/zh
+
+- icon: '@websites/facet.ico'
+  name: Facet
+  desc: AI图片修图和优化工具。
+  link: https://facet.ai/
+
+- icon: '@websites/remove.bg.png'
+  name: remove bg
+  desc: AI在线抠图，轻松自动去除图片背景。
+  link: https://www.remove.bg/zh
+
+- icon: '@websites/gaoding.png'
+  name: 稿定抠图
+  desc: AI自动消除背景。
+  link: https://koutu.gaoding.com/
+
+- icon: '@websites/hama.png'
+  name: Hama
+  desc: 几秒钟就能在线抹除图片中不想要的物体。
+  link: https://www.hama.app/zh
+
+- icon: '@websites/photoroom.png'
+  name: PhotoRoom
+  desc: 智能AI背景生成工具。
+  link: https://www.photoroom.com/
+
+- icon: '@websites/pixelcut.png'
+  name: Pixelcut
+  desc: 使用AI智能消除/替换背景。
+  link: https://www.pixelcut.ai/
+
+- icon: '@websites/arc.tencent.ico'
+  name: ARC
+  desc: 腾讯旗下ARC实验室推出的AI图片处理工具。
+  link: https://arc.tencent.com/zh/ai-demos/
 ```
 
 :::
