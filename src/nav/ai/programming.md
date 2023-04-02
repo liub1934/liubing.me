@@ -63,6 +63,16 @@ containerClass: nav-container
   name: Codiga
   desc: 智能AI代码分析工具。
   link: https://www.codiga.io/
+
+- icon: '@websites/ai-code-reviewer.svg'
+  name: AI Code Reviewer
+  desc: 人工智能代码Review
+  link: https://ai-code-reviewer.com/
+
+- icon: '@websites/heycli.png'
+  name: HeyCLI
+  desc: 将自然语言智能转换为CIL终端命令。
+  link: https://www.heycli.com/
 ```
 
 :::

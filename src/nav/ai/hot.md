@@ -20,9 +20,14 @@ containerClass: nav-container
   link: https://www.midjourney.com/
 
 - icon: '@websites/github.png'
-  name: Stable Diffusion web UI
-  desc: 功能强大开源可本地部署的绘画工具。
+  name: Stable Diffusion
+  desc: 最强开源AI绘画工具，支持本地部署。
   link: https://github.com/AUTOMATIC1111/stable-diffusion-webui
+
+- icon: '@websites/civitai.png'
+  name: Civitai
+  desc: 艺术共享平台，免费的Stable Diffusion模型下载。
+  link: https://civitai.com/
 
 - icon: '@websites/getimg.ai.ico'
   name: Getimg.Ai
