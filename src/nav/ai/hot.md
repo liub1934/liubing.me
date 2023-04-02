@@ -32,7 +32,7 @@ containerClass: nav-container
 - icon: '@websites/getimg.ai.ico'
   name: Getimg.Ai
   desc: 一款神奇的AI艺术工具。
-  link: https://getimg.ai/
+  link: https://getimg.ai/ref/4BPOzb5hx
 
 - icon: '@websites/draft.ico'
   name: Draft
