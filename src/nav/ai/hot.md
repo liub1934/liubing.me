@@ -14,6 +14,11 @@ containerClass: nav-container
   desc: OpenAI开发的人工智能聊天机器人程序。
   link: https://chat.openai.com/
 
+- icon: '@websites/new-bing.png'
+  name: New Bing 新必应
+  desc: 微软推出的新版结合了ChatGPT功能的新必应。
+  link: https://www.bing.com/new
+
 - icon: '@websites/midjourney.png'
   name: Midjourney
   desc: 热门AI图像和插画生成工具。
@@ -48,16 +53,6 @@ containerClass: nav-container
   name: Notion AI
   desc: Notion旗下的AI笔记和内容创作助手。
   link: https://getimg.ai/
-
-- icon: '@websites/new-bing.png'
-  name: New Bing 新必应
-  desc: 微软推出的新版结合了ChatGPT功能的新必应。
-  link: https://www.bing.com/new
-
-- icon: '@websites/chatgpt.png'
-  name: qccq.cc
-  desc: 免费的ChatGPT聊天和Stable Diffusion绘画在线服务。
-  link: https://qccq.cc/
 ```
 
 :::
