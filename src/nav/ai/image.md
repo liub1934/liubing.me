@@ -29,6 +29,11 @@ containerClass: nav-container
   desc: 一款神奇的AI艺术工具。
   link: https://getimg.ai/ref/4BPOzb5hx
 
+- icon: '@websites/askiweb.ico'
+  name: Aski
+  desc: 高效AI绘画服务，支持多种AI模型
+  link: https://askiweb.com/
+
 - icon: '@websites/leonardo.ai.png'
   name: Leonardo.Ai
   desc: 以人工智能驱动的AI绘画工具。
