@@ -26,7 +26,7 @@ containerClass: nav-container
 
 - icon: '@websites/getimg.ai.ico'
   name: Getimg.Ai
-  desc: 一款神奇的AI艺术工具。
+  desc: 一款神奇的AI绘画工具。
   link: https://getimg.ai/ref/4BPOzb5hx
 
 - icon: '@websites/askiweb.ico'
@@ -41,12 +41,27 @@ containerClass: nav-container
 
 - icon: '@websites/dreamstudio.svg'
   name: DreamStudio
-  desc: 一款神奇的AI艺术工具。
+  desc: 一款神奇的AI绘画工具。
   link: https://dreamstudio.ai/
+
+- icon: '@websites/openart.png'
+  name: OpenArt
+  desc: OpenArt绘画工具。
+  link: https://openart.ai/
+
+- icon: '@websites/playgroundai.ico'
+  name: Playground AI
+  desc: 从你的想象中创建任意图像。
+  link: https://playgroundai.com/
+
+- icon: '@websites/novelai.png'
+  name: NovelaiAI
+  desc: 一款神奇的AI绘画工具。
+  link: https://novelai.net/
 
 - icon: '@websites/nijijourney.svg'
   name: Niji・Journey
-  desc: 最先进的AI，可以绘制任何二次元风格的绘画。
+  desc: AL绘制二次元风格的绘画。
   link: https://nijijourney.com/zh/
 
 - icon: '@websites/nijijourney.svg'
@@ -85,7 +100,7 @@ containerClass: nav-container
   link: https://facet.ai/
 
 - icon: '@websites/remove.bg.png'
-  name: remove bg
+  name: Remove bg
   desc: AI在线抠图，轻松自动去除图片背景。
   link: https://www.remove.bg/zh
 
@@ -208,6 +223,16 @@ containerClass: nav-container
   name: Nolibox
   desc: 为个人用户和企业用户提供全链路AIGC和人工智能设计服务。
   link: https://nolibox.com/
+
+- icon: '@websites/lexica.ico'
+  name: Lexica
+  desc: Stable Diffusion搜索和绘画引擎。
+  link: https://lexica.art/
+
+- icon: '@websites/creativefabrica.ico'
+  name: CF Spark
+  desc: 在线AI绘画工具。
+  link: https://www.creativefabrica.com/spark/tools/art-generator/
 ```
 
 :::
