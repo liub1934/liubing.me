@@ -20,6 +20,10 @@ containerClass: article-container
 如果你懒得搭建也可以使用[在线服务](https://getimg.ai/ref/4BPOzb5hx)，需要谷歌账号登录，初次登录会有 100 个点的额度，每生成一张图消耗一个点额度，每个月会重置。当然你可以发挥钞能力获取更多的额度。
 :::
 
+::: tip
+博主自己整理了一个 AI 相关的导航、包含编程、绘画、视频等等，有兴趣的可以[点击查看](/nav/ai/hot.html)。
+:::
+
 ## 安装 Homebrew
 
 ::: tip
@@ -84,9 +88,7 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
 ![image](https://image.liubing.me/i/2023/02/26/63fb2ae71c2e0.png)
 
-我们找一个下载量最高的模型[ChilloutMix](https://civitai.com/models/6424/chilloutmix)进行下载。
-
-点击页面上的`Download Latest`按钮进行下载。
+我们找一个下载量最高的模型[ChilloutMix](https://civitai.com/models/6424/chilloutmix)进行下载，抖音 AI 小姐姐大多数都是基于这个模型生成的。点击页面上的`Download Latest`按钮进行下载。
 
 ![image](https://image.liubing.me/i/2023/02/26/63fb2b86d1154.png)
 
