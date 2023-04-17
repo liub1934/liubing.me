@@ -12,7 +12,7 @@ containerClass: nav-container
 - icon: '@websites/taro.ico'
   name: Taro
   desc: 多端统一开发解决方案，一处代码，多处运行。
-  link: https://taro.zone/
+  link: https://taro.jd.com/
 
 - icon: '@websites/uniapp.png'
   name: uni-app
