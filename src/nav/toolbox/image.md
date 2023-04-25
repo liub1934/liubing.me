@@ -53,6 +53,11 @@ containerClass: nav-container
   name: image-conversion
   desc: 一个开源库Demo，纯本地图片压缩。
   link: https://demo.wangyulue.com/image-conversion/
+
+- icon: '@websites/upscayl.png'
+  name: Upscayl
+  desc: 开源免费 AI 图片无损放大工具 (离线/跨平台)。
+  link: https://www.upscayl.org/
 ```
 
 :::
