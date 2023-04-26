@@ -18,6 +18,11 @@ containerClass: nav-container
   desc: OpenAI开发的人工智能聊天机器人程序。
   link: https://chat.openai.com/
 
+- icon: '@websites/monica.png'
+  name: Monica
+  desc: 一个浏览器插件免费使用ChatGPT AI。
+  link: https://monica.im/?c=TLSPHTIY
+
 - icon: '@websites/new-bing.png'
   name: New Bing 新必应
   desc: 微软推出的新版结合了ChatGPT功能的新必应。
