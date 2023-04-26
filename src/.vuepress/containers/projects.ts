@@ -49,7 +49,7 @@ export const renderProjects = (tokens: Token[], idx: number) => {
         ) => {
           const isFriends = type === 'friends'
           return `
-              <a class="project project${index % 9}"
+              <a class="project-card project${index % 9}"
                 href="${withBase(project.link)}"
                 ${isFriends ? '' : 'rel="noopener noreferrer"'}
                 target="_blank">
