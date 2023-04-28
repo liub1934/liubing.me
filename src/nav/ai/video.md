@@ -178,6 +178,11 @@ containerClass: nav-container
   name: FacePlay
   desc: AI一键生成换脸视频。
   link: https://www.faceplay.cc/
+
+- icon: '@websites/flexclip.webp'
+  name: FlexClip
+  desc: AI在线视频制作软件，让你轻松制作精彩的视频。
+  link: https://www.flexclip.com/cn/
 ```
 
 :::
