@@ -138,7 +138,9 @@ php start.php migrate
 
 ## 重定向配置
 
-一切都 OK 后通过`https://image.liubing.me/2023/01/14/5457a8a4d653c.png`形式访问会 404，因为新迁移后的图片访问需要在域名后面加个`i`变成`https://image.liubing.me/i/2023/01/14/5457a8a4d653c.png`即可正常访问了。
+一切都 OK 后通过`https://image.liubing.me/2023/01/14/5457a8a4d653c.png`形式访问会 404。  
+因为新迁移后的图片访问需要在域名后面加个`i`变成如下地址：  
+`https://image.liubing.me/i/2023/01/14/5457a8a4d653c.png`即可正常访问了。
 
 但是我们之前的域名地址后面是不带`i`，需要将这些地址重定向到带`i`的地址。可以通过添加以下的 nginx 配置完成匹配和重定向。
 
