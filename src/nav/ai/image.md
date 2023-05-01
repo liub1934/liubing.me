@@ -238,6 +238,12 @@ containerClass: nav-container
   name: Upscayl
   desc: 开源免费 AI 图片无损放大工具 (离线/跨平台)。
   link: https://www.upscayl.org/
+  
+  - icon: ![dtab black_98x98](https://user-images.githubusercontent.com/129741181/235449061-419759db-808e-43e0-9c8f-17a47281fcdd.png)
+  name: DoMyShoot
+  desc: DoMyShoot 是一款由人工智能驱动的产品摄影应用程序，可帮助在线卖家以更便宜、更快速的方式制作专业品质的照片。
+  link: https://www.domyshoot.com/
+  
 ```
 
 :::
