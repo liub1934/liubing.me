@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/liubing.me
     docker:
-      - image: node:14.21.1
+      - image: node:16.16.0
 
     # 步骤定义
     steps:
