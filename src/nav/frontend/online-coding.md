@@ -53,6 +53,16 @@ containerClass: nav-container
   name: TypeScript
   desc: 一个用于 TypeScript 和 JavaScript 的在线编辑器。
   link: https://www.typescriptlang.org/zh/play
+
+- icon: '@websites/components.studio.png'
+  name: Components.studio
+  desc: 组件不是应用程序，为什么我们要使用同样的工具?
+  link: https://components.studio/
+
+- icon: '@websites/webcomponents.dev.png'
+  name: WebComponents.dev
+  desc: 唯一的Web 组件在线 IDE。
+  link: https://webcomponents.dev/
 ```
 
 :::
