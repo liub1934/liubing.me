@@ -12,16 +12,16 @@
     "update:vuepress": "yarn upgrade vuepress@next @vuepress/client@next @vuepress/plugin-google-analytics@next @vuepress/plugin-register-components@next"
   },
   "devDependencies": {
-    "@vuepress/client": "^2.0.0-beta.61",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.61",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.61",
+    "@vuepress/client": "^2.0.0-beta.62",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.62",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.62",
     "git-cz": "^4.9.0",
     "js-yaml": "^4.1.0",
     "vue": "^3.2.45",
-    "vuepress": "^2.0.0-beta.61",
-    "vuepress-plugin-redirect": "^2.0.0-beta.208",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.208",
-    "vuepress-theme-hope": "^2.0.0-beta.208"
+    "vuepress": "^2.0.0-beta.62",
+    "vuepress-plugin-redirect": "^2.0.0-beta.211",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.211",
+    "vuepress-theme-hope": "^2.0.0-beta.211"
   },
   "dependencies": {
     "dayjs": "^1.11.7",
