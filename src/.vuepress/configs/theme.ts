@@ -43,12 +43,6 @@ export default hopeTheme(
       end: ['Repo', 'Outlook', 'Search']
     },
     headerDepth: 3,
-    // 主题色选择器
-    themeColor: {
-      red: '#f26d6d',
-      green: '#3eaf7c',
-      orange: '#fb9b5f'
-    },
     // 内置插件
     plugins: themePlugins,
     // 自定义页脚
