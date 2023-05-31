@@ -43,6 +43,11 @@ containerClass: nav-container
   name: Rax
   desc: 快速构建多端应用，超轻量，高性能，易上手的前端解决方案。
   link: https://rax.js.org/
+
+- icon: '@websites/mor.svg'
+  name: MorJS
+  desc: 饿了么出品的小程序多端研发框架。
+  link: https://mor.eleme.io/
 ```
 
 :::
