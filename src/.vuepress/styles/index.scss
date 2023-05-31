@@ -1,7 +1,7 @@
 // place your custom styles here
 html[data-theme='light'] {
-  .blog-info-list {
-    .blog-type-button {
+  .vp-blog-infos {
+    .vp-blog-type-button {
       .icon-wrapper {
         &.active {
           color: #fff;
@@ -31,14 +31,14 @@ html[data-theme='light'] {
   }
 }
 
-.project-panel {
+.vp-project-panel {
   a {
     &:hover {
       text-decoration: none;
     }
   }
-  .project-card {
-    .image {
+  .vp-project-card {
+    .vp-project-image {
       border-radius: 50%;
     }
   }
