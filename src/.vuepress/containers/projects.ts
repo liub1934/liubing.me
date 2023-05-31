@@ -49,14 +49,14 @@ export const renderProjects = (tokens: Token[], idx: number) => {
         ) => {
           const isFriends = type === 'friends'
           return `
-              <a class="project-card project${index % 9}"
+              <a class="vp-project-card project${index % 9}"
                 href="${withBase(project.link)}"
                 ${isFriends ? '' : 'rel="noopener noreferrer"'}
                 target="_blank">
                 <img src="${withBase(project.icon)}"
-                  alt="${project.name}" class="image" />
-                <div class="name">${project.name}</div>
-                <div class="desc">${project.desc}</div>
+                  alt="${project.name}" class="vp-project-image" />
+                <div class="vp-project-name">${project.name}</div>
+                <div class="vp-project-desc">${project.desc}</div>
               </a>
             `
         }
@@ -68,7 +68,7 @@ export const renderProjects = (tokens: Token[], idx: number) => {
           return projectsStr
         }
         const type = tokenInfo.split(' ').pop()
-        return `<div class="project-panel">${getProjects(dataList, type)}`
+        return `<div class="vp-project-panel">${getProjects(dataList, type)}`
       }
     }
   } else {
