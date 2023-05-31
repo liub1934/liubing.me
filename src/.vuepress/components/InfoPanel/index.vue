@@ -1,11 +1,11 @@
 <template>
-  <aside class="blog-info-wrapper">
+  <aside class="vp-blog-info-wrapper">
     <DropTransition>
       <BloggerInfo />
     </DropTransition>
 
     <DropTransition>
-      <div class="blog-info-box">
+      <div class="vp-blogger-info blog-clock-box">
         <BlogClock />
       </div>
     </DropTransition>
