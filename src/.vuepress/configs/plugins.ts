@@ -1,5 +1,4 @@
 import { PluginConfig } from 'vuepress'
-import { redirectPlugin } from 'vuepress-plugin-redirect'
 import { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
@@ -12,8 +11,6 @@ export const configPlugins: PluginConfig = [
   googleAnalyticsPlugin({
     id: 'G-GBZBT89WGJ'
   }),
-  // 重定向插件
-  redirectPlugin(),
   // 搜索插件
   searchProPlugin({
     indexContent: true
