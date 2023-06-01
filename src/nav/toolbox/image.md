@@ -1,6 +1,7 @@
 ---
 toc: false
 order: 30
+layout: NavLayout
 containerClass: nav-container
 ---
 
