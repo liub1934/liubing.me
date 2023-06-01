@@ -1,6 +1,7 @@
 ---
 date: 2023-02-26
 sticky: 1
+star: true
 category:
   - AI绘画
   - Mac

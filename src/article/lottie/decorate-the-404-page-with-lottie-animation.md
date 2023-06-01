@@ -205,9 +205,10 @@ export default defineClientConfig({
 
 ## 适配暗黑模式
 
-由于动画背景是白色的，在暗黑模式下还是白色的会很刺眼，所以在上述代码在`DOMLoaded`的时候做了特殊处理。
-
-我们可以在生成的动画 SVG 中找到背景的元素`rect`元素，通过`document.querySelectorAll('.lottie-web rect[fill="#ffffff"]')`定位到该元素，使用`setAttribute`修改该背景的`fill`为`transparent`透明色。
+由于动画背景是白色的，在暗黑模式下还是白色的会很刺眼，所以在上述代码在`DOMLoaded`的时候做了特殊处理。  
+我们可以在生成的动画 SVG 中找到背景的元素`rect`元素，  
+通过`document.querySelectorAll('.lottie-web rect[fill="#ffffff"]')`定位到该元素，  
+使用`setAttribute`修改该背景的`fill`为`transparent`透明色。
 
 ![image](https://image.liubing.me/i/2023/03/21/64198551ec250.png)
 
@@ -218,5 +219,7 @@ export default defineClientConfig({
 为了解决这个可以在动画组件上加个`style`样式`opacity`默认为 0，这样初始的时候不可见，通过`showLottieWeb`变量控制最终的显示，在样式替换完成后将动画组件显示可见，这样有一个缓冲就不会出现上述的现象了。
 
 ## 效果预览
+
+[点击查看](https://liubing.me/404.html)
 
 ![image](https://image.liubing.me/i/2023/03/21/6419b40fb3016.gif)
