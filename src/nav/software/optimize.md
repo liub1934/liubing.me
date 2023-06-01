@@ -1,5 +1,6 @@
 ---
 toc: false
+layout: NavLayout
 containerClass: nav-container
 ---
 

@@ -25,19 +25,16 @@ html[data-theme='light'] {
   }
 }
 
-// .article-item {
-//   .page-info > span {
-//     flex-shrink: 1 !important;
-//   }
-// }
-
 .vp-project-panel {
+  margin-left: -16px;
+  margin-top: -6px;
   a {
     &:hover {
       text-decoration: none;
     }
   }
   .vp-project-card {
+    margin: 6px 0 6px 16px;
     .vp-project-image {
       border-radius: 50%;
     }
@@ -59,15 +56,14 @@ figcaption {
   display: none !important;
 }
 
-// .blog-hero {
-//   .mask {
-//     background: url(https://file.mo7.cc/api/public/bz) center center / cover
-//       no-repeat !important;
-//   }
-// }
-
 .vp-page.vp-page {
   .vp-blog-main {
     margin-top: 6px;
+  }
+}
+
+.theme-hope-content {
+  &.custom-content-before {
+    padding-bottom: 0;
   }
 }

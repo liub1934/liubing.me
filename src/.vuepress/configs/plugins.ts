@@ -28,6 +28,7 @@ export const configPlugins: PluginConfig = [
 export const themePlugins: PluginsOptions = {
   // 博客插件配置
   blog: {
+    hotReload: true, // 启用热更新
     timeline: 'archives', // 时间轴访问路径修改成archives
     // 过滤列表页面
     filter: ({ filePathRelative, frontmatter }) => {
