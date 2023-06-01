@@ -11,8 +11,8 @@ html[data-theme='light'] {
   }
 }
 
-.footer-wrapper {
-  .footer {
+.vp-footer-wrapper {
+  .vp-footer {
     a {
       img {
         vertical-align: middle;
@@ -20,16 +20,16 @@ html[data-theme='light'] {
       }
     }
   }
-  .copyright {
+  .vp-copyright {
     display: none;
   }
 }
 
-.article-item {
-  .page-info > span {
-    flex-shrink: 1 !important;
-  }
-}
+// .article-item {
+//   .page-info > span {
+//     flex-shrink: 1 !important;
+//   }
+// }
 
 .vp-project-panel {
   a {
@@ -66,8 +66,8 @@ figcaption {
 //   }
 // }
 
-.page.blog {
-  .blog-home {
+.vp-page.vp-page {
+  .vp-blog-main {
     margin-top: 6px;
   }
 }
