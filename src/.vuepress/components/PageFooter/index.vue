@@ -7,7 +7,7 @@ import PageFooter from 'vuepress-theme-hope/components/PageFooter'
 import dayjs from 'dayjs'
 import duration, { DurationUnitType } from 'dayjs/plugin/duration'
 import { onBeforeUnmount, onMounted } from 'vue'
-import { BlogStartDate } from '../../constant'
+import { BlogStartDate } from '../../utils/constant'
 dayjs.extend(duration)
 
 let timer

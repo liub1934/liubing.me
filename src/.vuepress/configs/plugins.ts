@@ -1,5 +1,4 @@
 import { PluginConfig } from 'vuepress'
-import { redirectPlugin } from 'vuepress-plugin-redirect'
 import { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
@@ -12,8 +11,6 @@ export const configPlugins: PluginConfig = [
   googleAnalyticsPlugin({
     id: 'G-GBZBT89WGJ'
   }),
-  // 重定向插件
-  redirectPlugin(),
   // 搜索插件
   searchProPlugin({
     indexContent: true
@@ -31,6 +28,7 @@ export const configPlugins: PluginConfig = [
 export const themePlugins: PluginsOptions = {
   // 博客插件配置
   blog: {
+    hotReload: true, // 启用热更新
     timeline: 'archives', // 时间轴访问路径修改成archives
     // 过滤列表页面
     filter: ({ filePathRelative, frontmatter }) => {

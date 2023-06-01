@@ -1,14 +1,11 @@
 ---
 toc: false
 order: 10
+layout: NavLayout
 containerClass: nav-container
 ---
 
 # 热门 AI
-
-::: tip
-欢迎 👏👏 通过 PR 或者评论的形式提供其他未收集的 AI 站点。
-:::
 
 ::: projects
 
