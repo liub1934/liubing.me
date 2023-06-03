@@ -11,7 +11,7 @@
 import { onBeforeUnmount, onMounted } from 'vue'
 import './blog-clock.scss'
 
-let clockInterval
+let clockInterval: ReturnType<typeof setInterval> | null
 
 onMounted(() => {
   const deg: number = 6
@@ -36,7 +36,9 @@ onMounted(() => {
   clockInterval = setInterval(setClock, 1000)
 })
 onBeforeUnmount(() => {
-  clearInterval(clockInterval)
+  if (clockInterval) {
+    clearInterval(clockInterval)
+  }
   clockInterval = null
 })
 </script>
