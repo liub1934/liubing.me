@@ -36,8 +36,6 @@ export const renderProjects = (tokens: Token[], idx: number) => {
         // 正确解析出数据对象
         if (Array.isArray(dataObj)) {
           dataList = dataObj
-        } else {
-          dataList = dataObj.data
         }
       }
       // 判断是否有数据

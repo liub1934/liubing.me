@@ -5,7 +5,8 @@ import { AuthorName, Description, HostName, Repo } from '../utils/constant'
 import { themePlugins } from './plugins'
 import packageData from '../../../package.json' assert { type: 'json' }
 const devDependencies = packageData.devDependencies
-const ThemeVersion = devDependencies['vuepress-theme-hope'].replace('^', 'v')
+const ThemeVersion =
+  'v' + devDependencies['vuepress-theme-hope'].replace('^', '')
 
 export default hopeTheme(
   // 主题选项

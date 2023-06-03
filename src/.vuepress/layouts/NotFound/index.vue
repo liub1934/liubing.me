@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import NotFound from 'vuepress-theme-hope/layouts/NotFound'
+import NotFound from '@theme-hope/layouts/NotFound'
 import LottieWeb from '../../components/LottieWeb/index.vue'
 import { ref } from 'vue'
 
