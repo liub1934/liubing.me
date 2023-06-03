@@ -8,7 +8,6 @@ import theme from './configs/theme'
 const __dirname = getDirname(import.meta.url)
 
 const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
-// const PageFooter = path.resolve(__dirname, './components/PageFooter/index.vue')
 
 export default defineUserConfig({
   base: Base,
