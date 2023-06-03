@@ -30,7 +30,6 @@ export default defineUserConfig({
       __dirname,
       '../../node_modules/vuepress-theme-hope/lib/client'
     ),
-    // '@theme-hope/components/PageFooter': PageFooter,
     '@theme-hope/modules/blog/components/InfoPanel': InfoPanel
   },
   plugins: configPlugins,
