@@ -26,6 +26,10 @@ export default defineUserConfig({
     '@components': path.resolve(__dirname, './components'),
     '@websites': path.resolve(__dirname, './public/assets/websites'),
     '@friends': path.resolve(__dirname, '../friends'),
+    '@theme-hope': path.resolve(
+      __dirname,
+      '../../node_modules/vuepress-theme-hope/lib/client'
+    ),
     '@theme-hope/components/PageFooter': PageFooter,
     '@theme-hope/modules/blog/components/InfoPanel': InfoPanel
   },

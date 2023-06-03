@@ -10,7 +10,7 @@ import { onBeforeUnmount, onMounted } from 'vue'
 import { BlogStartDate } from '../../utils/constant'
 dayjs.extend(duration)
 
-let timer
+let timer: ReturnType<typeof setInterval> | null
 const blogStartDate = dayjs(BlogStartDate)
 function setDurationTime() {
   const $el = document.getElementById('blog-duration')
@@ -63,6 +63,7 @@ onMounted(() => {
   }, 1000)
 })
 onBeforeUnmount(() => {
-  clearInterval(timer)
+  if (timer) clearInterval(timer)
+  timer = null
 })
 </script>
