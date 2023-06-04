@@ -28,6 +28,16 @@ containerClass: nav-container
   name: Downie
   desc: Mac 上最简单省心的万能在线视频下载器。
   link: https://software.charliemonroe.net/downie/
+
+- icon: '@websites/qbittorrent.ico'
+  name: qBittorrent
+  desc: 一个替代 μTorrent 的开源软件。
+  link: https://www.qbittorrent.org/
+
+- icon: '@websites/transmissionbt.ico'
+  name: Transmission
+  desc: 免费的 BitTorrent 客户端。
+  link: https://transmissionbt.com/
 ```
 
 :::
