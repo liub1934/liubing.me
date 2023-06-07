@@ -1,18 +1,18 @@
 <template>
-  <div class="mac-keybord">
+  <div class="mac-keyboard">
     <div
-      class="keybord"
+      class="keyboard"
       v-for="key in props.keys"
       :class="{
         [getKeyboardSize(key)]: true,
-        'keybord-multiline': getTop(key) && getBottom(key),
+        'keyboard-multiline': getTop(key) && getBottom(key),
         'align-bottom': getBottom(key) && !getTop(key)
       }"
     >
-      <div v-if="key !== 'space'" class="keybord-inner">
+      <div v-if="key !== 'space'" class="keyboard-inner">
         <template v-if="getTop(key)">
           <div
-            class="keybord-top"
+            class="keyboard-top"
             :class="{
             [`align-${getTopAlign(key)}`]: true,
             'top-multiple': getTop(key)!.length > 1
@@ -21,12 +21,12 @@
             <span v-for="top in getTop(key)">{{ top }}</span>
           </div>
         </template>
-        <div v-if="getCenter(key)" class="keybord-center">
+        <div v-if="getCenter(key)" class="keyboard-center">
           {{ getCenter(key) }}
         </div>
         <div
           v-if="getBottom(key)"
-          class="keybord-bottom"
+          class="keyboard-bottom"
           :class="{
             [`align-${getBottomAlign(key)}`]: true,
             'bottom-multiple': getBottom(key)!.length > 1
@@ -184,7 +184,7 @@ function getBottomAlign(key: string): string {
 </script>
 
 <style lang="scss" scoped>
-.mac-keybord {
+.mac-keyboard {
   margin-left: -10px;
   margin-top: -10px;
   font-size: 20px;
@@ -192,7 +192,7 @@ function getBottomAlign(key: string): string {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  .keybord {
+  .keyboard {
     width: 60px;
     height: 60px;
     margin-left: 10px;
@@ -222,28 +222,28 @@ function getBottomAlign(key: string): string {
     &.kw-space {
       width: 300px;
     }
-    &.keybord-multiline {
-      .keybord-inner {
+    &.keyboard-multiline {
+      .keyboard-inner {
         flex-direction: column;
         justify-content: space-between;
-        .keybord-bottom {
+        .keyboard-bottom {
           font-size: 16px;
         }
       }
     }
     &.align-bottom {
       align-items: flex-end;
-      .keybord-inner,
-      .keybord-bottom {
+      .keyboard-inner,
+      .keyboard-bottom {
         width: 100%;
       }
     }
-    .keybord-inner {
+    .keyboard-inner {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .keybord-top {
+    .keyboard-top {
       width: 100%;
       display: flex;
       &.top-multiple {
@@ -252,7 +252,7 @@ function getBottomAlign(key: string): string {
       }
     }
 
-    .keybord-bottom {
+    .keyboard-bottom {
       display: flex;
       align-items: center;
       line-height: 24px;
