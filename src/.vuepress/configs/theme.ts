@@ -7,6 +7,7 @@ import packageData from '../../../package.json' assert { type: 'json' }
 const devDependencies = packageData.devDependencies
 const ThemeVersion =
   'v' + devDependencies['vuepress-theme-hope'].replace('^', '')
+const year = new Date().getFullYear()
 
 export default hopeTheme(
   // 主题选项
@@ -50,7 +51,7 @@ export default hopeTheme(
     footer: `
     <div>
       <div>
-        版权所有 © 2019 <a href="${HostName}"><b>${AuthorName}</b></a> | 
+        版权所有 © ${year} <a href="${HostName}"><b>${AuthorName}</b></a> | 
         <a href="/about/site.html">关于本站</a>
       </div>
       <div>
