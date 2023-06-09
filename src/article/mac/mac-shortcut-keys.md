@@ -426,10 +426,10 @@ Option ⌥ + Shift ⇧ + Command ⌘ + Delete
 
 <MacKeyboard :keys="['option','shift', 'command', 'delete']" />
 
-## 其他快捷键
-
-### 锁定屏幕
+## 锁定屏幕
 
 Control ⌃ + Command ⌘ + Q
 
 <MacKeyboard :keys="['control', 'command', 'Q']" />
+
+## 未完待补充
