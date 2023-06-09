@@ -9,9 +9,9 @@ tag:
 containerClass: article-container
 ---
 
-# 都 2023 年了是该放弃 Vuex 使用大菠萝 Pinia 了
+# Vue3 状态管理是时候放弃 Vuex 使用大菠萝 Pinia 了
 
-之前的时候我们通常使用`Vuex`进行状态管理，Vue3 的时候[组合式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html)大火，[Pinia](https://pinia.vuejs.org/zh/) 因此诞生，其目的是设计一个拥有组合式 API 的 Vue 状态管理库，特点简单易用好上手。
+之前的时候我们通常使用`Vuex`进行状态管理，Vue3 的时候[组合式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html)大火，[Pinia](https://pinia.vuejs.org/zh/) 因此诞生，其目的是设计一个拥有组合式 API 的 Vue 状态管理库，特点简单易用好上手。由于 Vuex 现在处于维护模式，新的应用官方更推荐使用 Pinia：[详情](https://cn.vuejs.org/guide/scaling-up/state-management.html#pinia)。
 
 ## Pinia 是什么
 
@@ -476,3 +476,5 @@ function reset() {
 ```
 
 :::
+
+## 未完待补充
