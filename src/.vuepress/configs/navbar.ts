@@ -37,7 +37,7 @@ export const navbarConfig = navbar([
   {
     text: '友情链接',
     icon: 'link',
-    link: '/friends'
+    link: '/friends/'
   },
   {
     text: '私有图床',
