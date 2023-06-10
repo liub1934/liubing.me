@@ -2,6 +2,7 @@
 date: 2019-05-02
 category:
   - 其他
+  - Jenkins
 tag:
   - Vue
   - Jenkins
