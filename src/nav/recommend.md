@@ -79,6 +79,11 @@ containerClass: nav-container
   name: Snippet Generator
   desc: 代码片段生成器，支持VSCode、Sublime Text、Atom。
   link: https://snippet-generator.app/
+
+- icon: '@websites/emojiall.png'
+  name: EMOJI中文网
+  desc: 非常方便的查询各种Emoji表情🤪。
+  link: https://www.emojiall.com/zh-hans
 ```
 
 :::
