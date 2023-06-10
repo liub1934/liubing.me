@@ -44,6 +44,11 @@ containerClass: nav-container
   name: LuLu UI
   desc: 阅文集团荣誉出品的前端 UI 组件库。
   link: https://l-ui.com/
+
+- icon: '@websites/primevue.ico'
+  name: PrimeVue
+  desc: 一套丰富的 Vue 开源 UI 组件库。
+  link: https://primevue.org/
 ```
 
 :::
