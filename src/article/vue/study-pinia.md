@@ -248,6 +248,38 @@ app.mount('#app')
 
 这时候再调用 Store 的`$reset()`方法后就能正常工作了。
 
+### 变更 state
+
+除了使用`counterStore.count++`的形式修改单个数据外，Pinia 还提供了`$patch()`方法允许同时修改 state 中多个字段数据。
+
+```ts
+counterStore.$patch({
+  count: counterStore.count++,
+  age: 120,
+  name: 'DIO'
+})
+```
+
+当有修改集合的操作（如向数组中追加，删除等操作）的时候，除了直接替换整个集合外，`$patch`方法也支持传入一个函数的形式通过操作 state 来实现。
+
+```ts
+counterStore.$patch((state) => {
+  state.count = state.count++
+  state.list.push({ name: 'liubing.me' })
+})
+```
+
+### 替换 state
+
+不能直接将`$state`直接重新赋值，这样会破坏其响应性，但是可以通过`$patch`进行整体赋值。
+
+```ts
+// 这实际上并没有替换`$state`
+counterStore.$state = { count: 24 }
+// 在它内部调用 `$patch()`：
+counterStore.$patch({ count: 24 })
+```
+
 ## Getter
 
 Getter 完全等同于 store 的 state 的计算值。
@@ -476,5 +508,3 @@ function reset() {
 ```
 
 :::
-
-## 未完待补充
