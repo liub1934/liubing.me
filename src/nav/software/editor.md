@@ -45,6 +45,16 @@ containerClass: nav-container
   name: WizNoteLite
   desc: 为知笔记出品的实时预览 Markdown 编辑器。
   link: https://www.wiz.cn/zh-cn/wiznote-lite
+
+- icon: '@websites/effie.co.ico'
+  name: Effie
+  desc: 轻量级 Markdown 写作软件，支持大纲笔记和思维导图。
+  link: https://www.effie.co/
+
+- icon: '@websites/yu-writer.png'
+  name: Yu Writer
+  desc: 一款能找到写作乐趣的 Markdown 文本编辑器。
+  link: https://ivarptr.github.io/yu-writer.site/
 ```
 
 :::
