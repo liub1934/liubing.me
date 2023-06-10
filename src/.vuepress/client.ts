@@ -1,6 +1,7 @@
 import NotFound from './layouts/NotFound/index.vue'
 import NavLayout from './layouts/NavLayout/index.vue'
 import MacKeyboard from './components/MacKeyboard/index.vue'
+import 'vuepress-theme-hope/presets/bounce-icon.scss'
 import { defineClientConfig } from '@vuepress/client'
 import { onBeforeUnmount, onMounted } from 'vue'
 import { setDurationTime } from './utils'
