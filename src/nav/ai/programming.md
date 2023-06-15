@@ -99,6 +99,11 @@ containerClass: nav-container
   name: GitFluence
   desc: AI驱动立即找到你需要的Git命令。
   link: https://gitfluence.com/
+
+- icon: '@websites/bito.ai.png'
+  name: Bito
+  desc: AI助力编程，比ChatGPT快10倍。
+  link: https://bito.ai/
 ```
 
 :::
