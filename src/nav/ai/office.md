@@ -34,6 +34,11 @@ containerClass: nav-container
   name: MindShow
   desc: 输入内容，AI 自动生成演示，不再烦恼排版。
   link: https://www.mindshow.fun/
+
+- icon: '@websites/motion.ico'
+  name: Motion Go
+  desc: 命令式智能对话一键生成PPT，让PPT文档表达更加快速、高效。
+  link: https://motion.yoo-ai.com/
 ```
 
 :::

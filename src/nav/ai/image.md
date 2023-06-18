@@ -25,6 +25,11 @@ containerClass: nav-container
   desc: 艺术共享平台，免费的Stable Diffusion模型下载。
   link: https://civitai.com/
 
+- icon: '@websites/liblibai.ico'
+  name: 哩布哩布AI
+  desc: 中国领先原创AI模型分享社区。
+  link: https://www.liblibai.com/
+
 - icon: '@websites/getimg.ai.ico'
   name: Getimg.Ai
   desc: 一款神奇的AI绘画工具。
@@ -239,6 +244,11 @@ containerClass: nav-container
   name: Upscayl
   desc: 开源免费 AI 图片无损放大工具 (离线/跨平台)。
   link: https://www.upscayl.org/
+
+- icon: '@websites/pixfix.png'
+  name: PIX FIX
+  desc: AI一键清理被噪声和过度 JPEG 压缩损坏的图像。。
+  link: https://zh.pixfix.com/
 ```
 
 :::
