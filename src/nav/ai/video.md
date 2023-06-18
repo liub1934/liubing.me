@@ -184,6 +184,11 @@ containerClass: nav-container
   name: FlexClip
   desc: AI在线视频制作软件，让你轻松制作精彩的视频。
   link: https://www.flexclip.com/cn/
+
+- icon: '@websites/bigmp4.ico'
+  name: bigmp4
+  desc: 强大人工智能AI视频无损放大。
+  link: https://bigmp4.com/
 ```
 
 :::
