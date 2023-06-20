@@ -7,6 +7,7 @@ category:
 tag:
   - Vue
   - Jenkins
+layout: ArticleLayout
 containerClass: article-container
 ---
 

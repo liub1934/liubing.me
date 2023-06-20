@@ -6,6 +6,7 @@ tag:
   - ECharts
   - rich
   - 图表
+layout: ArticleLayout
 containerClass: article-container
 ---
 

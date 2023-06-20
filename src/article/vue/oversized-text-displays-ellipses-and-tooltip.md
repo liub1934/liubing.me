@@ -9,6 +9,7 @@ tag:
   - Element UI
   - Ant Design Vue
   - ToolTip
+layout: ArticleLayout
 containerClass: article-container
 ---
 

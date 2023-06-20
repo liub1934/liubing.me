@@ -6,6 +6,7 @@ category:
 tag:
   - WX Backup
   - 微信备份
+layout: ArticleLayout
 containerClass: article-container
 ---
 

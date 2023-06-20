@@ -6,6 +6,7 @@ tag:
   - Vue
   - Pinia
   - Vuex
+layout: ArticleLayout
 containerClass: article-container
 ---
 

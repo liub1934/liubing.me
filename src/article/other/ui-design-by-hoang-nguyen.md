@@ -5,6 +5,7 @@ category:
   - 其他
 tag:
   - UI
+layout: ArticleLayout
 containerClass: article-container
 ---
 

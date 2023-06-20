@@ -7,6 +7,7 @@ tag:
   - Vue
   - webpack
   - require.context
+layout: ArticleLayout
 containerClass: article-container
 ---
 
