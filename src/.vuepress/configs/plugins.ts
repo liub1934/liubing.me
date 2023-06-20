@@ -43,7 +43,12 @@ export const themePlugins: PluginsOptions = {
       // 舍弃所有的README.md页面
       if (filePathRelative.endsWith('README.md')) return false
       // 舍弃那些没有使用默认布局的页面
-      if (frontmatter.home) return false
+      const excludeLayouts = ['ArticleLayout']
+      if (
+        frontmatter.home ||
+        (frontmatter.layout && !excludeLayouts.includes(frontmatter.layout))
+      )
+        return false
       return true
     }
   },
