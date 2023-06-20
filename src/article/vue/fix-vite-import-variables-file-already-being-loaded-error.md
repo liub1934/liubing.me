@@ -7,6 +7,7 @@ tag:
   - Vue
   - Vite
   - Scss
+layout: ArticleLayout
 containerClass: article-container
 ---
 

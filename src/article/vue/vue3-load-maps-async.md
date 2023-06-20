@@ -9,6 +9,7 @@ tag:
   - 地图
   - 百度地图
   - 高德地图
+layout: ArticleLayout
 containerClass: article-container
 ---
 

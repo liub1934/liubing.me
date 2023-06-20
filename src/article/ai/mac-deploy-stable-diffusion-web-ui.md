@@ -8,6 +8,7 @@ category:
 tag:
   - AI
   - stable-diffusion-webui
+layout: ArticleLayout
 containerClass: article-container
 ---
 

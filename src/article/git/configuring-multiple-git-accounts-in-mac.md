@@ -7,6 +7,7 @@ tag:
   - Github
   - Gitlab
   - Gitee
+layout: ArticleLayout
 containerClass: article-container
 ---
 

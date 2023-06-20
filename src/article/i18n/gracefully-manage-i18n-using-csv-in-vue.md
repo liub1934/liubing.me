@@ -8,6 +8,7 @@ tag:
   - Vite
   - i18n
   - Vue I18n
+layout: ArticleLayout
 containerClass: article-container
 ---
 

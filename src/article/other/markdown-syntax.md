@@ -5,6 +5,7 @@ category:
 tag:
   - Markdown
 star: true
+layout: ArticleLayout
 containerClass: article-container
 ---
 

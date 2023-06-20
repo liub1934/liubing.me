@@ -2,6 +2,7 @@
 date: 2022-12-19
 category:
   - Angular
+layout: ArticleLayout
 containerClass: article-container
 ---
 

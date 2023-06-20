@@ -6,6 +6,7 @@ category:
 tag:
   - 宝塔面板
   - Waline
+layout: ArticleLayout
 containerClass: article-container
 ---
 

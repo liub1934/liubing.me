@@ -7,6 +7,7 @@ tag:
   - Lsky Pro
   - 宝塔面板
   - 图床
+layout: ArticleLayout
 containerClass: article-container
 ---
 

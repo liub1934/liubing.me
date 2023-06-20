@@ -5,6 +5,7 @@ category:
   - Vue
 tag:
   - VsCode
+layout: ArticleLayout
 containerClass: article-container
 ---
 

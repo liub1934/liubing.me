@@ -8,6 +8,7 @@ tag:
   - TinyMCE
   - 富文本编辑器
   - TinyMCE-Vue
+layout: ArticleLayout
 containerClass: article-container
 ---
 

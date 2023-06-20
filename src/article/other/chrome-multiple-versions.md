@@ -4,6 +4,7 @@ category:
   - 其他
 tag:
   - Chrome
+layout: ArticleLayout
 containerClass: article-container
 ---
 

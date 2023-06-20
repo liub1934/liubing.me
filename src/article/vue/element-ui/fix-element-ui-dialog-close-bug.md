@@ -8,6 +8,7 @@ tag:
   - Vue
   - Dialog
   - 弹窗
+layout: ArticleLayout
 containerClass: article-container
 ---
 

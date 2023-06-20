@@ -10,6 +10,7 @@ tag:
   - Cloudflare
   - 搬瓦工
   - bandwagonhost
+layout: ArticleLayout
 containerClass: article-container
 ---
 
