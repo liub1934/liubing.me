@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeMount, onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { Application } from '@splinetool/runtime'
 
 let spline: Application | null = null
