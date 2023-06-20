@@ -6,6 +6,7 @@ category:
 tag:
   - Vue
   - Vue Router
+layout: ArticleLayout
 containerClass: article-container
 ---
 

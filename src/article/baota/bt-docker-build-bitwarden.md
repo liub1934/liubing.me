@@ -6,6 +6,7 @@ category:
 tag:
   - Bitwarden
   - Docker
+layout: ArticleLayout
 containerClass: article-container
 ---
 

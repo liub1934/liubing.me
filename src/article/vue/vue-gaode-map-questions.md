@@ -7,6 +7,7 @@ tag:
   - Vue
   - 地图
   - 高德地图
+layout: ArticleLayout
 containerClass: article-container
 ---
 

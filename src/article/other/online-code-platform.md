@@ -15,6 +15,7 @@ tag:
   - JSRUN
   - WebMaker
   - JShare
+layout: ArticleLayout
 containerClass: article-container
 ---
 

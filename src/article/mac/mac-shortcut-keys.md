@@ -5,6 +5,7 @@ category:
   - Mac
 tag:
   - 快捷键
+layout: ArticleLayout
 containerClass: article-container
 ---
 

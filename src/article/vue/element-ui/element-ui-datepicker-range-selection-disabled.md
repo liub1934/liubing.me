@@ -9,6 +9,7 @@ tag:
   - Vue
   - DatePicker
   - 日期选择
+layout: ArticleLayout
 containerClass: article-container
 ---
 

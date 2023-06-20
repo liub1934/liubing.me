@@ -9,6 +9,7 @@ tag:
   - Nginx
   - Cloudflare
   - x-ui
+layout: ArticleLayout
 containerClass: article-container
 ---
 

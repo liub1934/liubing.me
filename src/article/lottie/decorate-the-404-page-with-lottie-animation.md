@@ -6,6 +6,7 @@ category:
 tag:
   - Lottie-Web
   - LottieFiles
+layout: ArticleLayout
 containerClass: article-container
 ---
 

@@ -10,6 +10,7 @@ tag:
   - 自动构建
   - 自动部署
   - 自动打包
+layout: ArticleLayout
 containerClass: article-container
 ---
 

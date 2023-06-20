@@ -8,6 +8,7 @@ tag:
   - Ant Design Vue
   - Ant Vue
   - 一键换肤
+layout: ArticleLayout
 containerClass: article-container
 ---
 
