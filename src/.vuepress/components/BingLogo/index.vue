@@ -5,18 +5,26 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
+import { onBeforeMount, onBeforeUnmount, onMounted, ref } from 'vue'
 import { Application } from '@splinetool/runtime'
 
+let spline: Application | null = null
 const canvas = ref<HTMLCanvasElement | null>(null)
 onMounted(() => {
-  const spline = new Application(canvas.value!)
+  spline = new Application(canvas.value!)
   spline.load('/assets/model/scene.splinecode').then(() => {
     const $avatar = document.querySelector('.vp-blogger-avatar') as HTMLElement
     if ($avatar) {
       $avatar.style.visibility = 'hidden'
     }
   })
+})
+
+onBeforeUnmount(() => {
+  if (spline) {
+    spline.stop()
+    spline = null
+  }
 })
 </script>
 
