@@ -11,7 +11,8 @@ containerClass: article-container
 # 手动制作 Chrome 浏览器多版本共存，可快速切换各个版本
 
 由于某些原因需要切换 Chrome 的版本做些测试性的工作，如果重新下载旧版本安装的话，本机的新版本就被会覆盖。
-这不是我想要的，上古时代做些 IE 兼容性的工作的时候往往会下载一个 IETester，可以切换各个版本的 IE，而且和本机的 IE 互相不冲突。所以去 google 了一下，有没有类似的 Chrome 多版本共存的软件，找了一圈不怎么理想，然后找到一篇关于自己动手制作多版本 Chrome 共存的文章。自己尝试了下，觉得很不错，留存记录下，参考文章：[https://www.cnblogs.com/xiangyuecn/p/10583788.html](https://www.cnblogs.com/xiangyuecn/p/10583788.html)
+这不是我想要的，上古时代做些 IE 兼容性的工作的时候往往会下载一个 IETester，可以切换各个版本的 IE，而且和本机的 IE 互相不冲突。所以去 google 了一下，有没有类似的 Chrome 多版本共存的软件，找了一圈不怎么理想，然后找到一篇关于自己动手制作多版本 Chrome 共存的文章。
+自己尝试了下，觉得很不错，留存记录下，参考文章：[点击查看](https://www.cnblogs.com/xiangyuecn/p/10583788.html)
 
 <!-- more -->
 
