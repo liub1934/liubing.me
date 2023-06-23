@@ -39,6 +39,11 @@ containerClass: nav-container
   name: Motion Go
   desc: 命令式智能对话一键生成PPT，让PPT文档表达更加快速、高效。
   link: https://motion.yoo-ai.com/
+
+- icon: '@websites/js.design.ico'
+  name: 即时AI
+  desc: 由文本描述生成可编辑的原型设计稿。
+  link: https://js.design/ai
 ```
 
 :::
