@@ -254,6 +254,11 @@ containerClass: nav-container
   name: 即时AI
   desc: 一键AI生成令人惊叹的艺术作品。
   link: https://js.design/ai-muses/create
+
+- icon: '@websites/domyshoot.jpg'
+  name: DoMyShoot
+  desc: 一款由人工智能驱动的产品摄影应用程序，可帮助在线卖家以更便宜、更快速的方式制作专业品质的照片。
+  link: https://www.domyshoot.com/
 ```
 
 :::
