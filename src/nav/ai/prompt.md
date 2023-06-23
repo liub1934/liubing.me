@@ -20,6 +20,11 @@ containerClass: nav-container
   desc: AI绘画提示词市场。
   link: https://promptbase.com/
 
+- icon: '@websites/prompthero.png'
+  name: PromptHero
+  desc: 通过 Stable Diffusion、Midjourney 等模型搜索数百万张 AI 艺术图像。
+  link: https://prompthero.com/
+
 - icon: '@websites/arthub.ico'
   name: Arthub
   desc: AI绘画提示词市场。
@@ -48,7 +53,7 @@ containerClass: nav-container
 - icon: '@websites/openart.png'
   name: OpenArt
   desc: 根据喜欢的图片复制提示词。
-  link: https://openart.ai/
+  link: https://openart.ai/discovery
 
 - icon: '@websites/search.krea.ico'
   name: KREA
@@ -64,6 +69,11 @@ containerClass: nav-container
   name: promptoMANIA
   desc: 免费的提示生成器。
   link: https://promptomania.com/prompt-builder/
+
+- icon: '@websites/kalos.png'
+  name: KALOS
+  desc: 强大的人工智能艺术展示和市场。
+  link: https://kalos.art/
 ```
 
 :::
