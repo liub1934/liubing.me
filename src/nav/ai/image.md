@@ -249,6 +249,11 @@ containerClass: nav-container
   name: PIX FIX
   desc: AI一键清理被噪声和过度 JPEG 压缩损坏的图像。。
   link: https://zh.pixfix.com/
+
+- icon: '@websites/js.design.ico'
+  name: 即时AI
+  desc: 一键AI生成令人惊叹的艺术作品。
+  link: https://js.design/ai-muses/create
 ```
 
 :::
