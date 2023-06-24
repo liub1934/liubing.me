@@ -29,6 +29,11 @@ containerClass: nav-container
   name: Zan Design System
   desc: 有赞出品的企业级设计系统。
   link: https://design.youzan.com/index.html
+
+- icon: '@websites/devui.ico'
+  name: DevUI Design
+  desc: 基于Angular框架，面向企业中后台产品的开源前端解决方案。
+  link: https://devui.design/
 ```
 
 :::
