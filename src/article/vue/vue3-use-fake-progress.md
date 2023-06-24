@@ -224,6 +224,10 @@ export function useFakeProgress(
     setTimerInterval()
   }
 
+  onBeforeUnmount(() => {
+    clearTimerInterval()
+  })
+
   function start() {
     if (!percentage.value || percentage.value === 100) {
       fake.start()
