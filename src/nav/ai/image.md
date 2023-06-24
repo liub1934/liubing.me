@@ -30,6 +30,11 @@ containerClass: nav-container
   desc: 中国领先原创AI模型分享社区。
   link: https://www.liblibai.com/
 
+- icon: '@websites/tusi.art.ico'
+  name: 吐司 Tusi.Art
+  desc: 可在线生图的模型分享社区，还是免费的！
+  link: https://tusi.art/
+
 - icon: '@websites/getimg.ai.ico'
   name: Getimg.Ai
   desc: 一款神奇的AI绘画工具。
