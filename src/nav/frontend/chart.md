@@ -54,6 +54,11 @@ containerClass: nav-container
   name: Frappe Charts
   desc: 一个易于使用和定制的SVG图表库。
   link: https://frappe.io/charts
+
+- icon: '@websites/vizzuhq.svg'
+  name: Vizzu
+  desc: 一个利用通用的 dataviz 引擎生成多种类型的图表并在它们之间无缝动画。
+  link: https://lib.vizzuhq.com/
 ```
 
 :::

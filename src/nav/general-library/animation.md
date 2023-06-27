@@ -58,6 +58,11 @@ containerClass: nav-container
   name: Css-Loaders
   desc: 纯 CSS 动画加载 Loading 集合。
   link: https://github.com/lukehaas/css-loaders
+
+- icon: '@websites/github.png'
+  name: Whirl
+  desc: 创建各样的 CSS 加载动画。
+  link: https://github.com/jh3y/whirl
 ```
 
 :::
