@@ -74,6 +74,16 @@ containerClass: nav-container
   name: Fresh Background Gradients
   desc: CSS 个性渐变背景集合。
   link: https://webgradients.com/
+
+- icon: '@websites/whirl.ico'
+  name: Fresh Background Gradients
+  desc: 创建各样的 CSS 加载动画。
+  link: https://whirl.netlify.app/
+
+- icon: '@websites/codemyui.webp'
+  name: Codemyui
+  desc: 非常酷的网站，有一堆很酷的 CSS、HTML 和 Javascript 片段。
+  link: https://codemyui.com/
 ```
 
 :::
