@@ -49,6 +49,11 @@ containerClass: nav-container
   desc: 一项简单快速可靠免费的开源 CDN 服务。
   link: https://cdnjs.com/
 
+- icon: '@websites/bytedance.png'
+  name: Bytedance
+  desc: 字节跳动静态资源公共库。
+  link: https://cdn.bytedance.com/
+
 - icon: '@websites/cloudimage.png'
   name: CloudImage
   desc: 图像 CDN，用于提供压缩、像素完美和响应迅速的图像。
