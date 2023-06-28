@@ -59,6 +59,11 @@ containerClass: nav-container
   name: Notion AI
   desc: Notion旗下的AI笔记和内容创作助手。
   link: https://getimg.ai/
+
+- icon: '@websites/216.png'
+  name: Domyshoot AI
+  desc: Domyshoot图像背景去除器
+  link: https://www.domyshoot.com/
 ```
 
 :::
