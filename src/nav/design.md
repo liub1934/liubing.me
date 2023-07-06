@@ -16,7 +16,7 @@ containerClass: nav-container
   link: https://ant.design/index-cn
 
 - icon: '@websites/arco.design.ico'
-  name: Ant Design
+  name: Arco Design
   desc: 字节跳动出品的企业级设计系统。
   link: https://arco.design/
 
