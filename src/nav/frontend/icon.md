@@ -44,6 +44,11 @@ containerClass: nav-container
   name: Lordicon
   desc: 一个强大的精心制作的动画图标库，支持8,900+动画图标。
   link: https://lordicon.com/
+
+- icon: '@websites/xicons.svg'
+  name: xicons
+  desc: 整合了N多组件库的Icon图标，提供Vue/React组件。
+  link: https://xicons.org/#/zh-CN
 ```
 
 :::
