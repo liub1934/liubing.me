@@ -61,12 +61,13 @@ jobs:
           name: Deploy to GitHub
           command: |
             cd src/.vuepress/dist
+            git config --global init.defaultBranch main
             git init
             git config user.name "liub1934"
             git config user.email "liub1934@gmail.com"
             git add .
             git commit -m "Push Dist"
-            git push -f https://$GITHUB_TOKEN@github.com/liub1934/liubing.me.git master:dist
+            git push -f https://$GITHUB_TOKEN@github.com/liub1934/liubing.me.git main:dist
 
 workflows:
   version: 2
