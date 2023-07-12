@@ -21,19 +21,19 @@ containerClass: article-container
 
 自定义换肤一般都优先查看文档中的[调整主题](https://www.naiveui.com/zh-CN/light/docs/customize-theme)，文档说明可以通过设定 `n-config-provider` 的 `theme-overrides` 来调整主题变量，如下所示：
 
-```ts
+```vue
 <script lang="ts">
-  import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
+import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
 
-  const themeOverrides: GlobalThemeOverrides = {
-    common: {
-      primaryColor: '#FF0000'
-    },
-    Button: {
-      textColor: '#FF0000'
-    }
+const themeOverrides: GlobalThemeOverrides = {
+  common: {
+    primaryColor: '#FF0000'
+  },
+  Button: {
+    textColor: '#FF0000'
   }
-  // ...
+}
+// ...
 </script>
 
 <template>
@@ -237,7 +237,10 @@ const primaryColorPressed = colors[6] // 比主色深一档，取第7个颜色
         <n-form inline>
           <n-col :span="4">
             <n-form-item label="Primary Color">
-              <n-color-picker v-model:value="mainColor" :show-alpha="false" />
+              <n-color-picker
+                v-model:value="primaryColor"
+                :show-alpha="false"
+              />
             </n-form-item>
           </n-col>
         </n-form>
@@ -267,7 +270,7 @@ import { generate } from '@ant-design/colors'
 import { type GlobalThemeOverrides } from 'naive-ui'
 
 // 定义一个主色
-const mainColor = ref('#52c41a')
+const primaryColor = ref('#52c41a')
 // theme-overrides
 const themeOverrides = ref<GlobalThemeOverrides>({})
 // generate生成的颜色
@@ -277,7 +280,7 @@ setThemeOverrides()
 
 // 设置theme-overrides
 function setThemeOverrides() {
-  generateColors.value = generate(mainColor.value)
+  generateColors.value = generate(primaryColor.value)
   const commonColors = {
     primaryColor: generateColors.value[5],
     primaryColorHover: generateColors.value[4],
@@ -288,7 +291,7 @@ function setThemeOverrides() {
 }
 
 // 监听主色变化
-watch(mainColor, () => {
+watch(primaryColor, () => {
   setThemeOverrides()
 })
 </script>
@@ -310,7 +313,10 @@ Naive UI 是支持暗黑模式的，所以换肤后也是需要进行暗黑模�
         <n-form inline>
           <n-col :span="4">
             <n-form-item label="Primary Color">
-              <n-color-picker v-model:value="mainColor" :show-alpha="false" />
+              <n-color-picker
+                v-model:value="primaryColor"
+                :show-alpha="false"
+              />
             </n-form-item>
           </n-col>
         </n-form>
@@ -351,7 +357,7 @@ import {
 // 主题，null为亮色，darkTheme为暗色
 const theme = ref<GlobalTheme | null>(null)
 // 定义一个主色
-const mainColor = ref('#52c41a')
+const primaryColor = ref('#52c41a')
 // theme-overrides
 const themeOverrides = ref<GlobalThemeOverrides>({})
 // generate生成的颜色
@@ -362,13 +368,13 @@ setThemeOverrides()
 // 设置theme-overrides
 function setThemeOverrides() {
   generateColors.value = theme.value
-    ? generate(mainColor.value, {
+    ? generate(primaryColor.value, {
         // generate支持传入theme为dark生成暗黑色系
         theme: 'dark',
         // 暗黑色系生成的背景色，这里可以传入主题暗黑模式下的背景色
         backgroundColor: commonDark.bodyColor
       })
-    : generate(mainColor.value)
+    : generate(primaryColor.value)
 
   const commonColors = {
     primaryColor: generateColors.value[5],
@@ -379,8 +385,8 @@ function setThemeOverrides() {
   themeOverrides.value.common = commonColors
 }
 
-// 监听mainColor和theme
-watch([mainColor, theme], () => {
+// 监听primaryColor和theme
+watch([primaryColor, theme], () => {
   setThemeOverrides()
 })
 </script>
@@ -412,3 +418,125 @@ themeOverrides.value.Button = {
 ## 优化封装
 
 以上只是针对主色进行换肤，还需要额外支持下`info`、`error`、`warning`、`success`的颜色自定义换肤，按通用颜色区分分别是`蓝色`，`红色`、`橘黄色`、`绿色`，为了更好的调用，我们可以通过`Pinia`去维护管理。
+
+## ThemeStore
+
+我们创建一个简单的`ThemeStore`，定义一些需要的变量和方法，下面都有注释很好理解，重点是`getThemeOverrides`方法的实现，上面的 Demo 我们只是实现了一个传入`primaryColor`实现动态换肤，`getThemeOverrides`需要传入一个颜色配置`themeConfig`，里面包含了`primary` `info` `success` `warning` `error`这几个类型的颜色，具体实现这里不多说了，思路和上面是一样的，代码可以参考最后的源码。
+
+```ts
+import { ref, computed } from 'vue'
+import { defineStore } from 'pinia'
+import { getThemeOverrides, type ThemeConfig } from './utils'
+import { darkTheme } from 'naive-ui'
+
+export const useThemeStore = defineStore('theme', () => {
+  /** 暗黑模式 */
+  const darkMode = ref(false)
+
+  /** 主题配置 */
+  const themeConfig = ref<ThemeConfig>({
+    primary: '#18a058',
+    info: '#2080f0',
+    success: '#18a058',
+    warning: '#f0a020',
+    error: '#d03050'
+  })
+
+  /** 主题 */
+  const theme = computed(() => (darkMode.value ? darkTheme : null))
+
+  /** 主题theme-overrides */
+  const themeOverrides = computed(() => {
+    // 返回主题需要的ThemeOverrides，getThemeOverrides方法需要我们自己去实现
+    return getThemeOverrides(themeConfig.value, darkMode.value)
+  })
+
+  /** 暗黑模式切换 */
+  function toggleDarkMode() {
+    darkMode.value = !darkMode.value
+  }
+
+  /** 手动设置主题 */
+  function setThemeConfig(config: ThemeConfig) {
+    themeConfig.value = {
+      ...themeConfig.value,
+      ...config
+    }
+  }
+
+  return {
+    darkMode,
+    themeConfig,
+    theme,
+    themeOverrides,
+    toggleDarkMode,
+    setThemeConfig
+  }
+})
+```
+
+## 适配跟随系统
+
+借助[VueUse](https://vueuse.org/)工具提供的[useColorMode](https://vueuse.org/core/useColorMode/#usecolormode)方法可以轻松实现。稍微改造下上面的内容。暗黑模式切换使用`useCycleList`提供的内置方法`next()`，依次在`dark` `light` `auto`循环切换，变化的值可以通过`state`获取到，可以将`state`做为`modeState`导出，方便其他地方使用。
+
+```ts {1,5,8-34,41}
+import { ref, computed, watch } from 'vue'
+import { defineStore } from 'pinia'
+import { getThemeOverrides, type ThemeConfig } from './utils'
+import { darkTheme } from 'naive-ui'
+import { useColorMode, useCycleList, type BasicColorSchema } from '@vueuse/core'
+
+export const useThemeStore = defineStore('theme', () => {
+  const colorMode = useColorMode({
+    emitAuto: true
+  })
+  const { state, next } = useCycleList(['dark', 'light', 'auto'], {
+    initialValue: colorMode
+  })
+  watch(
+    state,
+    () => {
+      colorMode.value = state.value as BasicColorSchema
+    },
+    { immediate: true }
+  )
+
+  /** 暗黑模式 */
+  const darkMode = computed(() => {
+    const { system, store } = colorMode
+    if (state.value === 'auto') {
+      return system.value === 'dark'
+    }
+    return store.value === 'dark'
+  })
+
+  /** 暗黑模式切换 */
+  function toggleDarkMode() {
+    next()
+  }
+
+  return {
+    darkMode,
+    themeConfig,
+    theme,
+    themeOverrides,
+    modeState: state,
+    toggleDarkMode,
+    setThemeConfig
+  }
+})
+```
+
+## 完整示例代码
+
+<https://github.com/liub1934/naive-ui-change-theme>
+
+## 在线预览
+
+<https://github.liubing.me/naive-ui-change-theme>
+
+## 最终效果预览
+
+![image](https://image.liubing.me/i/2023/07/12/64aeac3cd7296.png)
+
+![image](https://image.liubing.me/i/2023/07/12/64aeac1a37e64.png)
