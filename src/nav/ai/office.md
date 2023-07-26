@@ -44,6 +44,11 @@ containerClass: nav-container
   name: 即时AI
   desc: 由文本描述生成可编辑的原型设计稿。
   link: https://js.design/ai
+
+- icon: '@websites/shutu.png'
+  name: TreeMind树图
+  desc: 新一代“AI人工智能”思维导图
+  link: https://shutu.cn/
 ```
 
 :::

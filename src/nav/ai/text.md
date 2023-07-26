@@ -74,6 +74,11 @@ containerClass: nav-container
   name: 思默问答
   desc: 功能一应俱全、简单好用的AI工具。
   link: https://www.sitesmo.com/
+
+- icon: '@websites/ibiling.ico'
+  name: 笔灵AI
+  desc: 全能型 AI创作 工具。
+  link: https://ibiling.cn/
 ```
 
 :::

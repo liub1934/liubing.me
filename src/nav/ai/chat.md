@@ -54,6 +54,11 @@ containerClass: nav-container
   name: ChatGLM
   desc: 千亿对话模型，旨在推动大模型的科学研究。
   link: https://chatglm.cn/
+
+- icon: '@websites/ibiling.ico'
+  name: 笔灵AI
+  desc: 全能型 AI创作 工具。
+  link: https://ibiling.cn/
 ```
 
 :::
