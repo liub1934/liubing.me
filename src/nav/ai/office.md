@@ -49,6 +49,11 @@ containerClass: nav-container
   name: TreeMind树图
   desc: 新一代“AI人工智能”思维导图
   link: https://shutu.cn/
+
+- icon: '@websites/tome.ico'
+  name: Tome
+  desc: AI智能生成PPT。
+  link: https://tome.app/
 ```
 
 :::

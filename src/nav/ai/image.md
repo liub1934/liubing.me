@@ -90,10 +90,15 @@ containerClass: nav-container
   desc: 百度出品的AI艺术和创意辅助平台。
   link: https://yige.baidu.com/
 
-- icon: '@websites/stable-diffusion-reimagine.ico'
+- icon: '@websites/clipdrop.ico'
   name: Stable Diffusion Reimagine
   desc: 上传图片AI智能生成多种同类型图片。
   link: https://clipdrop.co/stable-diffusion-reimagine
+
+- icon: '@websites/clipdrop.ico'
+  name: Stable Doodle
+  desc: 几秒钟内把你的涂鸦变成真实的图像。
+  link: https://clipdrop.co/stable-doodle
 
 - icon: '@websites/hotpot.ico'
   name: Hotpot
@@ -264,6 +269,16 @@ containerClass: nav-container
   name: DoMyShoot
   desc: 一款由人工智能驱动的产品摄影应用程序，可帮助在线卖家以更便宜、更快速的方式制作专业品质的照片。
   link: https://www.domyshoot.com/
+
+- icon: '@websites/artbreeder.png'
+  name: Artbreeder
+  desc: 前所未有的创造，AI图片智能融合工具。
+  link: https://www.artbreeder.com/
+
+- icon: '@websites/d.design.png'
+  name: 堆友
+  desc: 零门槛免费AI绘画功能AI反应堆。
+  link: https://d.design/ai
 ```
 
 :::

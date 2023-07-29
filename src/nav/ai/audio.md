@@ -219,6 +219,11 @@ containerClass: nav-container
   name: WellSaid
   desc: 顶级的人工智能语音平台，AI实时文字转语音。
   link: https://wellsaidlabs.com/
+
+- icon: '@websites/github.png'
+  name: Retrieval-based-Voice-Conversion-WebUI
+  desc: 一个基于VITS的简单易用的语音转换（变声器）开源框架
+  link: https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI
 ```
 
 :::

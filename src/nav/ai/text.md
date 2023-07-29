@@ -79,6 +79,16 @@ containerClass: nav-container
   name: 笔灵AI
   desc: 全能型 AI创作 工具。
   link: https://ibiling.cn/
+
+- icon: '@websites/wingly.webp'
+  name: 灵羽助手
+  desc: 基于 ChatGPT 的桌面端智能助手
+  link: https://www.wingly.ai/
+
+- icon: '@websites/monica.png'
+  name: Monica
+  desc: 一个浏览器插件免费使用ChatGPT AI。
+  link: https://monica.im/?c=TLSPHTIY
 ```
 
 :::
