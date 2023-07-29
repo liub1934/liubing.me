@@ -540,3 +540,80 @@ export const useThemeStore = defineStore('theme', () => {
 ![image](https://image.liubing.me/i/2023/07/12/64aeac3cd7296.png)
 
 ![image](https://image.liubing.me/i/2023/07/12/64aeac1a37e64.png)
+
+## 搭配 UnoCSS
+
+为了配合 UnoCSS 使用，这里特意通过[addCssVarsToHtml](https://github.com/liub1934/naive-ui-change-theme/blob/main/src/utils/theme.ts#L184)方法将生成的所有变量都添加到了 Html 上。
+
+![image](https://image.liubing.me/i/2023/07/29/64c49152d038e.png)
+
+### 自定义 Rules
+
+可以利用 UnoCSS 提供的自定义[rules](https://unocss.dev/config/rules)功能，在我们输入相应的颜色 class 的时候，自动生成相应的 css，比如输入`color-primary`，文字颜色就会变成主色，输入`bg-primary`，背景色就会变成主色，输入`color-primary-2`，文字颜色就会变成色系里面的第二个颜色，按照此规律以此类推。
+
+```ts
+// uno.config.ts
+import { defineConfig } from 'unocss'
+import presetUno from '@unocss/preset-uno'
+
+// 正则
+const colorNameReg =
+  /^(color|bg|bg-color|border)-(primary|info|success|warning|error)(-(hover|pressed|focus|disabled|[1-9]|10))?$/
+
+// 缩写映射
+const colorNameMap = {
+  bg: 'background',
+  border: 'border-color',
+  'bg-color': 'background-color'
+}
+
+export default defineConfig({
+  presets: [presetUno()],
+  rules: [
+    [
+      colorNameReg,
+      ([_, type, color, state]) => ({
+        [colorNameMap[type] || type]: `rgba(var(--n-${color}-color${
+          state || ''
+        }), var(--un-text-opacity, 1))`
+      })
+    ]
+  ]
+})
+```
+
+### 示例
+
+支持 color、background、background-color、border-color 及透明度。
+
+```css
+/* text-primary */
+.text-primary {
+  color: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
+}
+
+/* text-primary-hover */
+.text-primary-hover {
+  color: rgba(var(--n-primary-color-hover), var(--un-text-opacity, 1));
+}
+
+/* color-primary-1 */
+.color-primary-1 {
+  color: rgba(var(--n-primary-color-1), var(--un-text-opacity, 1));
+}
+
+/* border-primary */
+.border-primary {
+  border-color: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
+}
+
+/* bg-primary */
+.bg-primary {
+  background: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
+}
+
+/* bg-color-primary */
+.bg-color-primary {
+  background-color: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
+}
+```
