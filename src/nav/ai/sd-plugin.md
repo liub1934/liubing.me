@@ -1,6 +1,6 @@
 ---
 toc: false
-order: 50
+order: 100
 layout: NavLayout
 containerClass: nav-container
 ---
@@ -49,6 +49,11 @@ containerClass: nav-container
   name: sd-webui-deforum
   desc: 好玩有趣的动画插件，能够根据关键词生成视频。
   link: https://github.com/deforum-art/sd-webui-deforum
+
+- icon: '@websites/github.png'
+  name: sd-webui-roop
+  desc: Stable Diffusion 高精度AI换脸插件。
+  link: https://github.com/s0md3v/sd-webui-roop
 ```
 
 :::

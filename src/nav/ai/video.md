@@ -189,6 +189,16 @@ containerClass: nav-container
   name: bigmp4
   desc: 强大人工智能AI视频无损放大。
   link: https://bigmp4.com/
+
+- icon: '@websites/webcammotioncapture.ico'
+  name: Webcam Motion Capture
+  desc: 一秒化身二次元的AI动作捕捉工具。
+  link: https://webcammotioncapture.info/
+
+- icon: '@websites/unboring.png'
+  name: Unboring
+  desc: 几秒内AI快速实现换脸。
+  link: https://reface.ai/unboring
 ```
 
 :::
