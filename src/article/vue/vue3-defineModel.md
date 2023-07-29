@@ -9,7 +9,7 @@ layout: ArticleLayout
 containerClass: article-container
 ---
 
-# 快去试用下 Vue3 新出的 defineModel，贼好用
+# 快去试用下 Vue3 新特性 defineModel，贼好用
 
 具体讨论可以参见该[RFC](https://github.com/vuejs/rfcs/discussions/503)，看名字可能有的人就知道可能是和`v-model`有关了，你猜的没错，新出的`defineModel`可以更加快捷的自定义组件上的`v-model`。
 
@@ -68,7 +68,7 @@ const modelValue = defineModel()
 // ^? Ref<any>
 modelValue.value = 10
 
-// 可以通过泛型的形式定义参数类型，如string
+// 支持泛型的形式定义参数类型，如string
 const modelValue = defineModel<string>()
 // ^? Ref<string | undefined>
 modelValue.value = 'hello'
