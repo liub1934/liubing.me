@@ -53,7 +53,9 @@ export const renderProjects = (tokens: Token[], idx: number) => {
                 target="_blank">
                 <img src="${withBase(project.icon)}"
                   alt="${project.name}" class="vp-project-image" />
-                <div class="vp-project-name">${project.name}</div>
+                <div class="vp-project-name ${project.desc ? '' : 'no-desc'}">
+                  ${project.name}
+                </div>
                 ${
                   project.desc
                     ? `<div class="vp-project-desc">${project.desc}</div>`
