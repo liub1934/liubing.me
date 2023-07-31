@@ -12,7 +12,7 @@ containerClass: article-container
 
 # 苹果神级应用 TrollStore 安装教程
 
-[TrollStore](https://github.com/opa334/TrollStore) 是一个可以开源永久使用的 App 安装器，可以免证书免越狱安装任意 iPA 文件，永不过期永不闪退。中文译名：巨魔商店，开发者作者：[opa334](https://github.com/opa334) 🇩🇪
+[TrollStore](https://github.com/opa334/TrollStore) 是一个开源可以永久使用的 App 安装器，可以免证书免越狱安装任意苹果 IPA 文件（你可以理解为像安卓手机随意安装 apk 文件一样），签名永不过期永不闪退，中文名又叫巨魔商店，开发者作者：[opa334](https://github.com/opa334) 🇩🇪
 
 <!-- more -->
 
@@ -73,7 +73,7 @@ A12-A15，M1(iPhoneXr 及以上)
 如果没有科学上网条件可在作者整理的[TrollStore 导航](../../nav//troll-store/)下载 IPK，应用有限，只上传了部分自用的软件，用的是[123 云盘](https://www.123pan.com/)，免登录不限速下载。
 :::
 
-这里推荐在各大有名气的电报群里面下载，里面有各种大牛提供破解应用和其他教程。推荐下自己加的几个比较活跃的电报资源分享频道和交流群组。
+有科学上网条件的这里推荐在各大有名气的[电报](https://telegram.org/)群里面下载，里面有各种大牛提供的破解应用和其他教程。推荐下自己加的几个比较活跃的电报资源分享频道和交流群组。
 
 ::: projects
 
