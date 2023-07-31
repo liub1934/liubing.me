@@ -82,6 +82,10 @@ A12-A15，M1(iPhoneXr 及以上)
   name: 巨魔商店Pro
   link: https://t.me/TrollStorePro
 
+- icon: '@websites/trollstore.webp'
+  name: 巨魔商店
+  link: https://t.me/iOS_TrollStore
+
 - icon: '@websites/crack.jpeg'
   name: 彭于晏iOS讨论交流群
   link: https://t.me/plus8889
@@ -109,6 +113,14 @@ A12-A15，M1(iPhoneXr 及以上)
 - icon: '@websites/lanmaoios.jpeg'
   name: 懒猫的群
   link: https://t.me/lanmaoios
+
+- icon: '@websites/ioskkcc.jpeg'
+  name: 小果子iOS软件破解交流群组
+  link: https://t.me/guoziapp
+
+- icon: '@websites/ioskkcc.jpeg'
+  name: 小果子｜专业iOS破解软件分享
+  link: https://t.me/ioskkcc
 ```
 
 :::
