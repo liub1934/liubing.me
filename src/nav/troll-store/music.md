@@ -12,7 +12,6 @@ containerClass: nav-container
 ```yaml
 - icon: '@websites/kuwo.jpeg'
   name: 酷我音乐
-  desc: 酷我音乐破解集合。
   link: https://www.123pan.com/s/FBM5Vv-rpVHA.html
 ```
 
