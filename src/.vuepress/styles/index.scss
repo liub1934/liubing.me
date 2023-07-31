@@ -106,3 +106,9 @@ hr {
     left: calc(99% - 1.6rem);
   }
 }
+
+.vp-project-name {
+  &.no-desc {
+    margin-top: 10px;
+  }
+}
