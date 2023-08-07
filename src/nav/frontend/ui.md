@@ -49,6 +49,11 @@ containerClass: nav-container
   name: PrimeVue
   desc: 一套丰富的 Vue 开源 UI 组件库。
   link: https://primevue.org/
+
+- icon: '@websites/tailwind-elements.ico'
+  name: Tailwind-Elements
+  desc: 一套基于Tailwind的 UI 组件库。
+  link: https://tailwind-elements.com/
 ```
 
 :::
