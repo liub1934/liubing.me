@@ -291,7 +291,7 @@ function (slotProps) {
 
 > 2.6.0+ 新增
 
-[动态指令参数](https://cn.vuejs.org/v2/guide/syntax.html#%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0) 也适用于 `v-slot` ，允许我们定义动态插槽名称：
+[动态指令参数](https://v2.cn.vuejs.org/v2/guide/syntax.html#%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0) 也适用于 `v-slot` ，允许我们定义动态插槽名称：
 
 ```vue
 <base-layout>
