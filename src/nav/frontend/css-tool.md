@@ -84,6 +84,11 @@ containerClass: nav-container
   name: Codemyui
   desc: 非常酷的网站，有一堆很酷的 CSS、HTML 和 Javascript 片段。
   link: https://codemyui.com/
+
+- icon: '@websites/shadows.brumm.af.svg'
+  name: Smooth Shadow
+  desc: 一款设置漂亮阴影的工具。
+  link: https://shadows.brumm.af/
 ```
 
 :::
