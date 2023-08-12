@@ -59,6 +59,11 @@ containerClass: nav-container
   name: 笔灵AI
   desc: 全能型 AI创作 工具。
   link: https://ibiling.cn/
+
+- icon: '@websites/bard.google.svg'
+  name: Google Bard
+  desc: Google 出品的免费 AI 大模型工具。
+  link: https://bard.google.com/
 ```
 
 :::
