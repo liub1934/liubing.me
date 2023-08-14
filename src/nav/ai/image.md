@@ -279,6 +279,11 @@ containerClass: nav-container
   name: 堆友
   desc: 零门槛免费AI绘画功能AI反应堆。
   link: https://d.design/ai
+
+- icon: '@websites/stablediffusionweb.ico'
+  name: Stable Diffusion Online
+  desc: 免登录即可使用的免费强大在线Stable Diffusion。
+  link: https://stablediffusionweb.com/
 ```
 
 :::

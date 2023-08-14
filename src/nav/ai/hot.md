@@ -59,6 +59,11 @@ containerClass: nav-container
   name: Notion AI
   desc: Notion旗下的AI笔记和内容创作助手。
   link: https://getimg.ai/
+
+- icon: '@websites/stablediffusionweb.ico'
+  name: Stable Diffusion Online
+  desc: 免登录即可使用的免费强大在线Stable Diffusion。
+  link: https://stablediffusionweb.com/
 ```
 
 :::
