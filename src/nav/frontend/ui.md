@@ -54,6 +54,41 @@ containerClass: nav-container
   name: Tailwind-Elements
   desc: 一套基于Tailwind的 UI 组件库。
   link: https://tailwind-elements.com/
+
+- icon: '@websites/headlessui.png'
+  name: Headless UI
+  desc: 完全无样式、完全可访问的 UI 组件，旨在与 Tailwind CSS 完美集成。
+  link: https://headlessui.com/
+
+- icon: '@websites/nuxtlabs.ico'
+  name: Nuxt UI
+  desc: 使用 Headless UI 和 Tailwind CSS 构建。
+  link: https://ui.nuxtlabs.com/
+
+- icon: '@websites/vuetifyjs.webp'
+  name: Vuetify
+  desc: 一个不要求设计能力的Vue界面组件框架，自带了许多自行设计实现的Vue组件。
+  link: https://vuetifyjs.com/
+
+- icon: '@websites/radix-vue.png'
+  name: Radix Vue
+  desc: 无样式、可访问的组件，用于在 Vue 中构建高质量的设计系统和 Web 应用程序。
+  link: https://www.radix-vue.com/
+
+- icon: '@websites/anu-vue.svg'
+  name: Anu
+  desc: 基于 DX 实用程序的 Vue 组件库。
+  link: https://anu-vue.netlify.app/
+
+- icon: '@websites/vuestic.png'
+  name: Vuestic
+  desc: 一个基于开源 Vue 3 的 UI 框架。
+  link: https://ui.vuestic.dev/
+
+- icon: '@websites/daisyui.ico'
+  name: Daisy UI
+  desc: 最受欢迎的组件库，基于Tailwind CSS。
+  link: https://daisyui.com/
 ```
 
 :::
