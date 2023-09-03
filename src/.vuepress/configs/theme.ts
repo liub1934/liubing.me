@@ -16,7 +16,7 @@ export default hopeTheme(
     author: {
       name: AuthorName
     },
-    iconAssets: 'https://at.alicdn.com/t/c/font_3842071_gp2ohsal3b.css',
+    iconAssets: 'https://at.alicdn.com/t/c/font_3842071_35b8ibdzzy.css',
     logo: '/logo.svg',
     repo: Repo,
     docsDir: 'src',
@@ -42,7 +42,7 @@ export default hopeTheme(
     navbarLayout: {
       start: ['Brand'],
       center: ['Links'],
-      end: ['Repo', 'Outlook', 'Search']
+      end: ['Repo', 'TravellingLink', 'Outlook', 'Search']
     },
     headerDepth: 3,
     // 内置插件
