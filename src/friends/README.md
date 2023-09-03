@@ -8,7 +8,7 @@ pageInfo: false
 ```
 站点名称：Bing🐣
 站点地址：https://liubing.me
-站点描述：基于VuePress的个人博客，记录日常开发问题。
+站点描述：一个基于VuePress的个人博客。
 站点Logo：https://liubing.me/logo.png
 ```
 
