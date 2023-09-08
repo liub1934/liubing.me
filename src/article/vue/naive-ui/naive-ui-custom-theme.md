@@ -305,7 +305,7 @@ watch(primaryColor, () => {
 
 Naive UI 是支持暗黑模式的，所以换肤后也是需要进行暗黑模式的适配，我们可以参考文档中的[不同主题下调整主题变量](https://www.naiveui.com/zh-CN/light/docs/customize-theme#%E4%B8%8D%E5%90%8C%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%B0%83%E6%95%B4%E4%B8%BB%E9%A2%98%E5%8F%98%E9%87%8F)，`theme-overrides`根据`theme`的不同传入正常颜色和暗黑颜色，添加深色和浅色按钮，用于演示。
 
-```vue {2,13-16,40-41,78}
+```vue {2,16-19,43-44,50,62-69}
 <template>
   <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
     <n-card>
@@ -587,13 +587,13 @@ export default defineConfig({
 支持 color、background、background-color、border-color 及透明度。
 
 ```css
-/* text-primary */
-.text-primary {
+/* color */
+.color-primary {
   color: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
 }
 
-/* text-primary-hover */
-.text-primary-hover {
+/* color-primary-hover */
+.color-primary-hover {
   color: rgba(var(--n-primary-color-hover), var(--un-text-opacity, 1));
 }
 
