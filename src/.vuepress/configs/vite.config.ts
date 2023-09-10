@@ -15,10 +15,12 @@ const viteOptions = {
   build: {
     assetsInlineLimit: 0, // 设置为0禁止图片转base64
     rollupOptions: {
-      // 拆包处理
-      manualChunks: {
-        lottie: ['lottie-web'],
-        splinetool: ['@splinetool/runtime']
+      output: {
+        // 拆包处理
+        manualChunks: {
+          lottie: ['lottie-web'],
+          splinetool: ['@splinetool/runtime']
+        }
       }
     }
   },
