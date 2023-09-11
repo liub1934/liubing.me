@@ -13,20 +13,7 @@ const viteOptions = {
     })
   ],
   build: {
-    assetsInlineLimit: 0, // 设置为0禁止图片转base64
-    rollupOptions: {
-      output: {
-        // 拆包处理
-        manualChunks: {
-          lottie: ['lottie-web'],
-          splinetool: ['@splinetool/runtime']
-        }
-      }
-    }
-  },
-  ssr: {
-    // 取消外部化依赖
-    noExternal: ['lottie-web', '@splinetool/runtime']
+    assetsInlineLimit: 0 // 设置为0禁止图片转base64
   }
 } as InlineConfig
 
