@@ -78,6 +78,11 @@ containerClass: nav-container
   name: Zoho Notebook
   desc: 精美卡片式笔记，可用于记笔记、创建任务清单、记录语音与视频等。
   link: https://www.zoho.com/
+
+- icon: '@websites/yank-note.ico'
+  name: Yank Note
+  desc: 一款强大可扩展的 Markdown 编辑器，支持运行代码片段。
+  link: https://yank-note.com/zh-CN
 ```
 
 :::
