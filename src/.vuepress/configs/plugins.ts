@@ -138,7 +138,7 @@ export const themePlugins: PluginsOptions = {
     cacheHTML: true,
     cachePic: true,
     appendBase: true,
-    themeColor: '#2f54eb',
+    themeColor: '#009b5e',
     update: 'hint',
     apple: {
       icon: '/assets/icon/apple-icon-152.png',
