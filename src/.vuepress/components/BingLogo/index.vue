@@ -12,7 +12,7 @@ const canvas = ref<HTMLCanvasElement | null>(null)
 
 onMounted(() => {
   import('@splinetool/runtime').then((m) => {
-    const { Application } = m.default
+    const { Application } = m
     spline.value = new Application(canvas.value!)
     spline.value.load('/assets/model/scene.splinecode').then(() => {
       const $avatar = document.querySelector(
