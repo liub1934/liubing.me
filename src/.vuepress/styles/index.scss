@@ -120,3 +120,7 @@ hr {
     }
   }
 }
+
+[aria-label][data-balloon-pos]:after {
+  white-space: pre;
+}
