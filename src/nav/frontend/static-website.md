@@ -15,7 +15,7 @@ containerClass: nav-container
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
 
-- icon: '@websites/vite.png'
+- icon: '@websites/vitepress.svg'
   name: VitePress
   desc: VuePress的孪生兄弟。
   link: https://vitepress.dev/
