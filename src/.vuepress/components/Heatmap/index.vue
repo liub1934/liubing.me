@@ -14,6 +14,7 @@
             : `${item.year}-${item.month}`
         "
         :style="(getHeatmapStyle(item.counts) as CSSProperties)"
+        @click="handleClick(item)"
       ></div>
     </div>
   </div>
@@ -33,6 +34,7 @@ import { useMutationObserver } from '@vueuse/core'
 import { ArticleInfo } from 'vuepress-theme-hope/lib/shared/blog'
 import { useArticles } from '@theme-hope/modules/blog/composables/index'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useRouter } from 'vue-router'
 
 interface IHeatmap {
   year: number
@@ -40,6 +42,7 @@ interface IHeatmap {
   counts: number
 }
 
+const router = useRouter()
 const articles = useArticles()
 const { isDarkmode } = useDarkmode()
 const el = ref<HTMLHtmlElement | null>(null)
@@ -122,6 +125,16 @@ function getHeatmapStyle(counts: number) {
         background: getCountColor(counts)
       }
     : {}
+}
+
+function handleClick(item: IHeatmap) {
+  if (!item.counts) return
+  router.push({
+    path: '/heatmap',
+    query: {
+      date: `${item.year}/${item.month}`
+    }
+  })
 }
 </script>
 
