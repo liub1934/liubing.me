@@ -70,13 +70,13 @@ jobs:
             git push -f https://$GITHUB_TOKEN@github.com/liub1934/liubing.me.git main:dist
 
       # 清空Cloudflare缓存
-      - run:
-          name: Clear Cloudflare Cache
-          command: |
-            curl -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
-              -H "Authorization: Bearer ${CLOUDFLARE_API_KEY}" \
-              -H "Content-Type: application/json" \
-              --data '{"files":["https://liubing.me/*.js","https://liubing.me/*.css","https://liubing.me/*.html"]}'
+      # - run:
+      #     name: Clear Cloudflare Cache
+      #     command: |
+      #       curl -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
+      #         -H "Authorization: Bearer ${CLOUDFLARE_API_KEY}" \
+      #         -H "Content-Type: application/json" \
+      #         --data '{"files":["https://liubing.me/*.js","https://liubing.me/*.css","https://liubing.me/*.html"]}'
 
 workflows:
   version: 2
