@@ -20,7 +20,7 @@ containerClass: article-container
 
 ## 什么是 Roop
 
-Roop 是一个可以简单的使用一张人脸照片一键操作就能实现照片或者视频进行 AI 换脸，效果基本上可以以假乱真，开源仓库地址可以[点击此处](https://github.com/s0md3v/roop)进行访问，文档相关部署教程可以[Roop 文档](https://roop-ai.gitbook.io/roop/)。
+Roop 是一个可以简单的使用一张人脸照片一键操作就能实现照片或者视频进行 AI 换脸，效果基本上可以以假乱真，开源仓库地址可以[点击此处](https://github.com/s0md3v/roop)进行访问，文档相关部署教程也可以参考[Roop Wiki](https://github.com/s0md3v/roop/wiki)。
 
 ::: warning
 国内网络环境因素，以下的安装过程需要开启魔法 🪄 上网
@@ -28,7 +28,7 @@ Roop 是一个可以简单的使用一张人脸照片一键操作就能实现照
 
 ## 安装 Roop
 
-[Roop 文档](https://roop-ai.gitbook.io/roop/)提供了 Linux、MacOS、Windows 安装教程，这里已 MacOS 为例。
+[Roop Wiki](https://github.com/s0md3v/roop/wiki)提供了 Linux、MacOS、Windows 安装教程，这里已 MacOS 为例。
 
 必备的安装工具[Homebrew](https://brew.sh/index_zh-cn)，我相信用 Mac 的基本上都已经安装了，如果没有安装使用[Homebrew 文档](https://brew.sh/index_zh-cn)上的一键安装命令终端执行下。已经安装了 Homebrew 的话执行下面的命令安装 Roop 项目的前置依赖，如已安装 Python 或者 Git 可以跳过安装。
 
@@ -94,7 +94,7 @@ brew install python-tk@3.10
 
 ## 加速 Roop
 
-此时换脸生成图片和视频的速度还很慢，我们可以参考[加速文档](https://roop-ai.gitbook.io/roop/installation/acceleration)，安装一些依赖项来提供生成的速度。
+此时换脸生成图片和视频的速度还很慢，我们可以参考[加速文档](https://github.com/s0md3v/roop/wiki/2.-Acceleration)，安装一些依赖项来提供生成的速度。
 
 ```sh
 # Mac M系列
