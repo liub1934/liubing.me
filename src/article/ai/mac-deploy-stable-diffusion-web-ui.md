@@ -32,7 +32,7 @@ containerClass: article-container
 以下安装过程中最好开启魔法上网，不然有些依赖会因为网络原因无法安装或其他莫名其妙的报错问题。
 :::
 
-[Homebrew](https://brew.sh/index_zh-cn) 是 macOS（或 Linux）缺失的软件包的管理器，Mac 上经常使用 Homebrew 安装一些软件，相信用 Mac 的同学应该都装了 Homebrew，没有安装的参考官网的一键安装命令。
+[Homebrew](https://brew.sh/) 是 macOS（或 Linux）缺失的软件包的管理器，Mac 上经常使用 Homebrew 安装一些软件，相信用 Mac 的同学应该都装了 Homebrew，没有安装的参考官网的一键安装命令。
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

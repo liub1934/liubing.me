@@ -30,7 +30,7 @@ Roop 是一个可以简单的使用一张人脸照片一键操作就能实现照
 
 [Roop Wiki](https://github.com/s0md3v/roop/wiki)提供了 Linux、MacOS、Windows 安装教程，这里已 MacOS 为例。
 
-必备的安装工具[Homebrew](https://brew.sh/index_zh-cn)，我相信用 Mac 的基本上都已经安装了，如果没有安装使用[Homebrew 文档](https://brew.sh/index_zh-cn)上的一键安装命令终端执行下。已经安装了 Homebrew 的话执行下面的命令安装 Roop 项目的前置依赖，如已安装 Python 或者 Git 可以跳过安装。
+必备的安装工具[Homebrew](https://brew.sh/)，我相信用 Mac 的基本上都已经安装了，如果没有安装使用[Homebrew 文档](https://brew.sh/)上的一键安装命令终端执行下。已经安装了 Homebrew 的话执行下面的命令安装 Roop 项目的前置依赖，如已安装 Python 或者 Git 可以跳过安装。
 
 ```sh
 # Python
