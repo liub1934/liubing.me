@@ -89,6 +89,11 @@ containerClass: nav-container
   name: Smooth Shadow
   desc: 一款设置漂亮阴影的工具。
   link: https://shadows.brumm.af/
+
+- icon: '@websites/colorhunt.svg'
+  name: Color Hunt
+  desc: 非常受欢迎的配色网站，提供了大量的精选颜色方案。
+  link: https://colorhunt.co/
 ```
 
 :::
