@@ -41,8 +41,13 @@ breadcrumb: false
 
 - icon: https://image.liubing.me/2023/02/11/a7643dcbbc234.png
   name: Buddy
-  desc: 本站自动化打包构建发布工具。
+  desc: 本站自动化打包构建发布工具。(已改用Circle CI)
   link: https://buddy.works
+
+- icon: '@websites/circleci.ico'
+  name: Circle CI
+  desc: 本站自动化打包构建发布工具。
+  link: https://circleci.com/
 
 - icon: https://image.liubing.me/2023/02/05/834597e9e927e.png
   name: Waline
