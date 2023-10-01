@@ -52,9 +52,9 @@ export default defineConfig({
 
 ## Vite 集成
 
-UnoCSS 支持市面上各种框架/工具的集成，如 Vite、Webpack 等等，这里以本人常用的 Vite 为例。
+UnoCSS 支持市面上各种框架/工具的集成，如 Vite、Webpack 等等，这里以常用的 Vite 为例。
 
-### 安装
+### 安装 UnoCSS
 
 ::: code-tabs
 @tab pnpm
@@ -77,7 +77,19 @@ npm install -D unocss
 
 :::
 
-### 配置文件
+### Vite 安装插件
+
+```ts
+// vite.config.ts
+import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [UnoCSS()]
+})
+```
+
+### UnoCSS 配置文件
 
 创建一个`uno.config.ts`文件
 
