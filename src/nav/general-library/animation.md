@@ -30,6 +30,11 @@ containerClass: nav-container
   name: Mo.js
   desc: 一个javascript动态图形库，声明性 API 提供了对动画的完全控制，使其易于定制。
   link: https://github.com/mojs/mojs
+
+- icon: '@websites/github.png'
+  name: Hover effect
+  desc: 用于在悬停时绘制图像和动画图像的 Javascript 库。
+  link: https://github.com/robin-dela/hover-effect
 ```
 
 :::
