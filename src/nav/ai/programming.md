@@ -104,6 +104,11 @@ containerClass: nav-container
   name: Bito
   desc: AI助力编程，比ChatGPT快10倍。
   link: https://bito.ai/
+
+- icon: '@websites/tongyi.lingma.png'
+  name: 通义灵码
+  desc: 基于通义大模型，提供代码智能生成、研发智能问答能力。
+  link: https://tongyi.aliyun.com/lingma/
 ```
 
 :::
