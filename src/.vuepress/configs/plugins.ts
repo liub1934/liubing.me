@@ -4,6 +4,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
 import { renderProjects } from '../containers/projects'
+import { AuthorName } from '../utils/constant'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -63,29 +64,8 @@ export const themePlugins: PluginsOptions = {
   // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
   // 评论插件配置
   comment: {
-    /**
-     * Using Giscus
-     */
-    // provider: 'Giscus',
-    // repo: Repo,
-    // repoId: 'R_kgDOIq_bDg',
-    // category: 'General',
-    // categoryId: 'DIC_kwDOIq_bDs4CTP9q'
-
-    /**
-     * Using Twikoo
-     */
-    // provider: "Twikoo",
-    // envId: "https://twikoo.ccknbc.vercel.app",
-
-    /**
-     * Using Waline
-     */
-    provider: 'Waline',
-    serverURL: 'https://waline.liubing.me',
-    requiredMeta: ['nick', 'mail'],
-    wordLimit: 200,
-    search: false
+    provider: 'Artalk',
+    server: 'https://artalk.liubing.me'
   },
   // Disable features you don’t want here
   // Markdown 增强插件配置
