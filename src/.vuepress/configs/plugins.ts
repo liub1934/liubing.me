@@ -4,7 +4,6 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
 import { renderProjects } from '../containers/projects'
-import { AuthorName } from '../utils/constant'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -65,7 +64,8 @@ export const themePlugins: PluginsOptions = {
   // 评论插件配置
   comment: {
     provider: 'Artalk',
-    server: 'https://artalk.liubing.me'
+    server: 'https://artalk.liubing.me',
+    versionCheck: false
   },
   // Disable features you don’t want here
   // Markdown 增强插件配置
