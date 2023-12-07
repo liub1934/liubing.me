@@ -54,6 +54,11 @@ containerClass: nav-container
   name: Tome
   desc: AI智能生成PPT。
   link: https://tome.app/
+
+- icon: '@websites/huiyiai.ico'
+  name: 会译
+  desc: 免费好用的“AI 双语对照”网页翻译插件工具 (支持PDF/视频字幕/划词翻译等)。
+  link: https://huiyiai.net/hy_api/activity/invite?invite_code=014286953
 ```
 
 :::
