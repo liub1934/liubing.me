@@ -6,15 +6,17 @@
   "scripts": {
     "docs:build": "vuepress build src",
     "docs:clean-dev": "vuepress dev src --clean-cache",
-    "docs:dev": "vuepress dev src",
-    "docs:update-package": "npx vp-update"
+    "docs:dev": "vuepress dev src"
   },
   "devDependencies": {
     "@types/js-yaml": "4.0.5",
     "@typescript-eslint/eslint-plugin": "5.59.8",
     "@typescript-eslint/parser": "5.59.8",
-    "@vuepress/client": "2.0.0-beta.67",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.67",
+    "@vuepress/client": "2.0.0-rc.0",
+    "@vuepress/utils": "2.0.0-rc.0",
+    "@vuepress/plugin-container": "2.0.0-rc.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.0",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.0",
     "eslint": "8.42.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-vue": "9.14.1",
@@ -22,13 +24,14 @@
     "prettier": "2.8.8",
     "rollup-plugin-visualizer": "5.9.2",
     "vue": "3.3.4",
-    "vuepress": "2.0.0-beta.67",
-    "vuepress-plugin-search-pro": "2.0.0-beta.237",
-    "vuepress-theme-hope": "2.0.0-beta.237"
+    "vuepress": "2.0.0-rc.0",
+    "vuepress-plugin-search-pro": "2.0.0-rc.3",
+    "vuepress-theme-hope": "2.0.0-rc.3"
   },
   "dependencies": {
     "@ant-design/colors": "7.0.0",
     "@splinetool/runtime": "0.9.369",
+    "artalk": "2.6.4",
     "date-fns": "2.30.0",
     "js-yaml": "4.1.0",
     "lottie-web": "5.10.2"

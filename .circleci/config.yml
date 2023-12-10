@@ -20,23 +20,30 @@ jobs:
       # 恢复缓存
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+
+      # 安装pnpm
+      - run:
+          name: Install pnpm package manager
+          command: |
+            corepack enable
+            corepack prepare pnpm@8.12.0 --activate
 
       # 安装依赖
       - run:
           name: Install Dependencies
-          command: yarn install
+          command: pnpm install
 
       # 保存缓存
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
 
       # Build打包
       - run:
           name: Build project
-          command: yarn docs:build
+          command: pnpm docs:build
 
       # 将dist打成压缩包
       - run:
