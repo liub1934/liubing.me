@@ -1,17 +1,7 @@
-import { InlineConfig } from 'vite'
-import { visualizer } from 'rollup-plugin-visualizer'
+import type { InlineConfig } from 'vite'
 
 const viteOptions = {
-  plugins: [
-    // 打包分析插件要放最后面
-    visualizer({
-      filename: 'report.html',
-      open: true,
-      brotliSize: true,
-      gzipSize: true,
-      projectRoot: '/'
-    })
-  ],
+  plugins: [],
   build: {
     assetsInlineLimit: 0 // 设置为0禁止图片转base64
   }

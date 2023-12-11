@@ -1,4 +1,4 @@
-import { defineUserConfig } from 'vuepress'
+import { defineUserConfig } from '@vuepress/cli'
 import { getDirname, path } from '@vuepress/utils'
 import { AuthorName, Base, Description } from './utils/constant'
 import { configPlugins } from './configs/plugins'

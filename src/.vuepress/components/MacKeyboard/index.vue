@@ -14,9 +14,9 @@
           <div
             class="keyboard-top"
             :class="{
-            [`align-${getTopAlign(key)}`]: true,
-            'top-multiple': getTop(key)!.length > 1
-          }"
+              [`align-${getTopAlign(key)}`]: true,
+              'top-multiple': getTop(key)!.length > 1
+            }"
           >
             <span v-for="top in getTop(key)">{{ top }}</span>
           </div>
@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType } from 'vue'
+import type { PropType } from 'vue'
 
 const props = defineProps({
   keys: {

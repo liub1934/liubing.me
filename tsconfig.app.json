@@ -1,0 +1,15 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/.vuepress/**/*", "*.json"],
+  "exclude": ["node_modules", "src/.vuepress/.cache", "src/.vuepress/.temp", "src/.vuepress/dist"],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@websites/*": ["src/.vuepress/public/assets/websites/*"],
+      "@theme-hope/*": ["node_modules/vuepress-theme-hope/lib/client/*"],
+      "vuepress-plugin-blog2/*": ["node_modules/vuepress-plugin-blog2/lib/*"]
+    }
+  }
+}

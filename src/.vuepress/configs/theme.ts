@@ -1,3 +1,4 @@
+import type { Theme } from 'vuepress'
 import { hopeTheme } from 'vuepress-theme-hope'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
@@ -71,4 +72,4 @@ export default hopeTheme(
   {
     custom: true
   }
-)
+) as Theme

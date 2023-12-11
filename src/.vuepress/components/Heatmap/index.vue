@@ -13,7 +13,7 @@
             ? `${item.year}-${item.month}&#xa;Post: ${item.counts}`
             : `${item.year}-${item.month}`
         "
-        :style="(getHeatmapStyle(item.counts) as CSSProperties)"
+        :style="getHeatmapStyle(item.counts)"
         @click="handleClick(item)"
       ></div>
     </div>
@@ -21,17 +21,11 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  ref,
-  watch,
-  nextTick,
-  onBeforeUnmount,
-  onMounted,
-  CSSProperties
-} from 'vue'
+import type { CSSProperties } from 'vue'
+import type { ArticleInfo } from 'node_modules/vuepress-theme-hope/lib/shared/blog'
+import { ref, watch, nextTick, onBeforeUnmount, onMounted } from 'vue'
 import { generate } from '@ant-design/colors'
 import { useMutationObserver } from '@vueuse/core'
-import { ArticleInfo } from 'vuepress-theme-hope/lib/shared/blog'
 import { useArticles } from '@theme-hope/modules/blog/composables/index'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
 import { useRouter } from 'vue-router'
@@ -120,11 +114,12 @@ function getCountColor(counts: number) {
 }
 
 function getHeatmapStyle(counts: number) {
-  return counts
+  const styles = counts
     ? {
         background: getCountColor(counts)
       }
     : {}
+  return styles as CSSProperties
 }
 
 function handleClick(item: IHeatmap) {

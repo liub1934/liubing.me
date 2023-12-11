@@ -67,16 +67,16 @@ import CommonWrapper from '@theme-hope/components/CommonWrapper'
 import NormalPage from '@theme-hope/components/NormalPage'
 import SkipLink from '@theme-hope/components/SkipLink'
 import FadeSlideY from '@theme-hope/components/transitions/FadeSlideY'
-import { usePageData, usePageFrontmatter, useSiteData } from '@vuepress/client'
+import type { BlogPluginFrontmatter } from 'vuepress-plugin-blog2/client'
+import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { useThemeData } from '@theme-hope/composables/index'
-import { type BlogPluginFrontmatter } from 'vuepress-plugin-blog2/client'
 import { HostName } from '../../utils/constant'
 
 const page = usePageData()
 const themeData = useThemeData()
 const frontmatter = usePageFrontmatter<BlogPluginFrontmatter>()
 const title = page.value.title // 文章标题
-const author = frontmatter.value.author || themeData.value.author.name // 文章作者
+const author = frontmatter.value.author || themeData.value.author // 文章作者
 const path = HostName + page.value.path // 文章链接
 const source = frontmatter.value.source as string // 转载来源
 const sourceLink = frontmatter.value.sourceLink as string // 转载地址
