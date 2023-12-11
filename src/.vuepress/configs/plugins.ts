@@ -1,5 +1,5 @@
-import { PluginConfig } from 'vuepress'
-import { PluginsOptions } from 'vuepress-theme-hope'
+import type { PluginConfig } from 'vuepress'
+import type { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'

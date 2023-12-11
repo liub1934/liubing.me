@@ -1,6 +1,6 @@
 import { Base } from './constant'
 import { BlogStartDate } from './constant'
-import { parseISO, intervalToDuration, formatDuration } from 'date-fns'
+import { parseISO, intervalToDuration } from 'date-fns'
 
 export const withBase = (path: string) => {
   if (!path) return ''
