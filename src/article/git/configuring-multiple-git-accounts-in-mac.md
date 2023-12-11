@@ -102,6 +102,6 @@ ssh -T git@gitlab.com
 ssh -T git@gitee.com
 ```
 
-以 Github 为例，首次输入`ssh -T git@github.com`后会提示` Are you sure you want to continue connecting``，输入yes `后如果看到`successfully`字样说明就成功了，如果出现`Permission denied`说明失败，需要检查密钥是否配置以及是否复制有误。
+以 Github 为例，首次输入`ssh -T git@github.com`后会提示`Are you sure you want to continue connecting``，输入yes`后如果看到`successfully`字样说明就成功了，如果出现`Permission denied`说明失败，需要检查密钥是否配置以及是否复制有误。
 
 ![image](https://image.liubing.me/i/2023/03/17/641437b04ab61.png)
