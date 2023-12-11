@@ -14,9 +14,7 @@ export default hopeTheme(
   // 主题选项
   {
     hostname: HostName,
-    author: {
-      name: AuthorName
-    },
+    author: AuthorName,
     iconAssets: 'https://at.alicdn.com/t/c/font_3842071_35b8ibdzzy.css',
     logo: '/logo.svg',
     repo: Repo,
