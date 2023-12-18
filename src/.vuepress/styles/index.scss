@@ -124,3 +124,13 @@ hr {
 [aria-label][data-balloon-pos]:after {
   white-space: pre;
 }
+
+.artalk,
+.artalk.atk-dark-mode,
+.atk-layer-wrap,
+.atk-layer-wrap.atk-dark-mode {
+  --at-color-main: var(--theme-color);
+  --at-color-light: var(--theme-color-light);
+  --at-color-red: var(--badge-danger-color);
+  --at-color-yellow: var(--badge-warning-color);
+}
