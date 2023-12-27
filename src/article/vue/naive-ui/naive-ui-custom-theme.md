@@ -547,73 +547,123 @@ export const useThemeStore = defineStore('theme', () => {
 
 ![image](https://image.liubing.me/i/2023/07/29/64c49152d038e.png)
 
-### 自定义 Rules
+### 自定义主题
 
-可以利用 UnoCSS 提供的自定义[rules](https://unocss.dev/config/rules)功能，在我们输入相应的颜色 class 的时候，自动生成相应的 css，比如输入`color-primary`，文字颜色就会变成主色，输入`bg-primary`，背景色就会变成主色，输入`color-primary-2`，文字颜色就会变成色系里面的第二个颜色，按照此规律以此类推。
+可以利用 UnoCSS 提供的自定义[Theme](https://unocss.dev/config/theme)功能，在我们输入相应的颜色 class 的时候，自动生成相应的 css，比如输入`color-primary`，文字颜色就会变成主色，输入`bg-primary`，背景色就会变成主色，输入`color-primary-2`，文字颜色就会变成色系里面的第二个颜色，按照此规律以此类推。写法大致如下所示：
 
 ```ts
 // uno.config.ts
 import { defineConfig } from 'unocss'
 import presetUno from '@unocss/preset-uno'
 
-// 正则
-const colorNameReg =
-  /^(color|bg|bg-color|border)-(primary|info|success|warning|error)(-(hover|pressed|focus|disabled|[1-9]|10))?$/
+export default defineConfig({
+  presets: [presetUno()],
+  theme: {
+    colors: {
+      primary: 'rgba(var(--n-primary-color))',
+      'primary-1': 'rgba(var(--n-primary-color-1))',
+      'primary-2': 'rgba(var(--n-primary-color-2))',
+      'primary-3': 'rgba(var(--n-primary-color-3))',
+      // ...
+      'primary-10': 'rgba(var(--n-primary-color-10))',
+      'primary-hover': 'rgba(var(--n-primary-color-hover))',
+      'primary-pressed': 'rgba(var(--n-primary-color-pressed))',
+      'primary-focus': 'rgba(var(--n-primary-color-focus))',
+      'primary-disabled': 'rgba(var(--n-primary-color-disabled))'
+      // ...其他
+    }
+  }
+})
+```
 
-// 缩写映射
-const colorNameMap = {
-  bg: 'background',
-  border: 'border-color',
-  'bg-color': 'background-color'
+会发现需要定义的colors内容太多了，这里我们可以偷懒点，写一个方法，根据`primary` `info` `success` `warning` `error`搭配`hover` `pressed` `focus` `disabled`生成这一系列颜色。
+
+```ts
+function generateColorCombinations(): Record<string, string> {
+  const colorTypes = ['primary', 'info', 'success', 'warning', 'error']
+  const colorScenes = ['hover', 'pressed', 'focus', 'disabled']
+  const result: Record<string, string> = {}
+  for (const type of colorTypes) {
+    result[type] = `rgba(var(--n-${type}-color))`
+    for (let i = 1; i <= 10; i++) {
+      result[`${type}-${i}`] = `rgba(var(--n-${type}-color-${i}))`
+    }
+    for (const scene of colorScenes) {
+      result[`${type}-${scene}`] = `rgba(var(--n-${type}-color-${scene}))`
+    }
+  }
+  return result
+}
+```
+
+可以执行下看下输出的结果，是我们想要的变量。
+
+![image](https://image.liubing.me/i/2023/12/27/658c328cc677b.png)
+
+最后将输出的内容放到`theme.colors`里面
+
+```ts {5-19,25-30}
+// uno.config.ts
+import { defineConfig } from 'unocss'
+import presetUno from '@unocss/preset-uno'
+
+function generateColorCombinations(): Record<string, string> {
+  const colorTypes = ['primary', 'info', 'success', 'warning', 'error']
+  const colorScenes = ['hover', 'pressed', 'focus', 'disabled']
+  const result: Record<string, string> = {}
+  for (const type of colorTypes) {
+    result[type] = `rgba(var(--n-${type}-color))`
+    for (let i = 1; i <= 10; i++) {
+      result[`${type}-${i}`] = `rgba(var(--n-${type}-color-${i}))`
+    }
+    for (const scene of colorScenes) {
+      result[`${type}-${scene}`] = `rgba(var(--n-${type}-color-${scene}))`
+    }
+  }
+  return result
 }
 
 export default defineConfig({
   presets: [presetUno()],
-  rules: [
-    [
-      colorNameReg,
-      ([_, type, color, state]) => ({
-        [colorNameMap[type] || type]: `rgba(var(--n-${color}-color${
-          state || ''
-        }), var(--un-text-opacity, 1))`
-      })
-    ]
-  ]
+  theme: {
+    colors: {
+      // 生成如下颜色数据
+      // 'primary': 'rgba(var(--n-primary-color))'
+      // 'primary-1': 'rgba(var(--n-primary-color-1))',
+      // 'primary-hover': 'rgba(var(--n-primary-color-hover))',
+      // ...其他
+      ...generateColorCombinations()
+    }
+  }
 })
 ```
 
 ### 示例
 
-支持 color、background、background-color、border-color 及透明度。
+支持 color、background-color、border-color 等等及透明度。
 
-```css
-/* color */
+```html
+<div class="color-primary"></div>
+<!--
 .color-primary {
-  color: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
+  --un-text-opacity: 1;
+  color: rgba(var(--n-primary-color), var(--un-text-opacity));
 }
+-->
 
-/* color-primary-hover */
-.color-primary-hover {
-  color: rgba(var(--n-primary-color-hover), var(--un-text-opacity, 1));
-}
-
-/* color-primary-1 */
+<div class="color-primary-1"></div>
+<!-- 
 .color-primary-1 {
-  color: rgba(var(--n-primary-color-1), var(--un-text-opacity, 1));
+  --un-text-opacity: 1;
+  color: rgba(var(--n-primary-color-1), var(--un-text-opacity));
 }
+-->
 
-/* border-primary */
-.border-primary {
-  border-color: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
+<!-- 透明度支持 -->
+<div class="color-primary/50"></div>
+<!-- 
+.color-primary\/50 {
+    color: rgba(var(--n-primary-color), 0.5);
 }
-
-/* bg-primary */
-.bg-primary {
-  background: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
-}
-
-/* bg-color-primary */
-.bg-color-primary {
-  background-color: rgba(var(--n-primary-color), var(--un-text-opacity, 1));
-}
+-->
 ```
