@@ -284,6 +284,11 @@ containerClass: nav-container
   name: Stable Diffusion Online
   desc: 免登录即可使用的免费强大在线Stable Diffusion。
   link: https://stablediffusionweb.com/
+
+- icon: '@websites/imagine.meta.png'
+  name: Meta AI
+  desc: 免费无限制的 AI 绘画，Midjourney 替代品。
+  link: https://imagine.meta.com/
 ```
 
 :::
