@@ -199,6 +199,11 @@ containerClass: nav-container
   name: Unboring
   desc: 几秒内AI快速实现换脸。
   link: https://reface.ai/unboring
+
+- icon: '@websites/pika.art.ico'
+  name: Pika
+  desc: 免费AI创意视频生成工具。
+  link: https://pika.art/
 ```
 
 :::
