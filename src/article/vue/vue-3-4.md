@@ -20,6 +20,8 @@ containerClass: article-container
 
 本文章概述了 3.4 中的重点功能。有关变更的完整列表，请查阅[GitHub 上的完整更新日志](https://github.com/vuejs/core/blob/main/CHANGELOG.md#340-2023-12-28)。
 
+<!-- more -->
+
 ## 需要采取的潜在行动
 
 1. 要充分利用 3.4 中的新功能，建议在升级到 3.4 时同时更新以下依赖项：
