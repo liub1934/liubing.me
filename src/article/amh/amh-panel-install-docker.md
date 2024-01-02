@@ -64,7 +64,7 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 sudo systemctl start docker
 ```
 
-验证下 Docker 命令是否可用，在服务器终端上输入`docker`，如果能出现一下内容说明是 OK 的。
+验证下 Docker 命令是否可用，在服务器终端上输入`docker`，如果能出现以下内容说明是 OK 的。
 
 ![image](https://image.liubing.me/i/2023/12/10/65752f4c77811.png)
 

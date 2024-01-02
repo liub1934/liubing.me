@@ -61,6 +61,8 @@ containerClass: article-container
 
 ::: warning
 安装请使用纯净的系统，避免软件冲突。
+推荐使用极速安装，安装完成后再手动安装相应版本软件。
+定制安装速度很慢，如果安装过程出错很可能需要重新来。
 :::
 
 根据官网提供的[教程](https://amh.sh/install.htm?fid=45745)使用下面的命令一键进行安装，安装时间 1 至 3 分钟。
@@ -157,7 +159,7 @@ wget https://dl.amh.sh/amh.sh && bash amh.sh
 
 ![image](https://image.liubing.me/i/2023/12/09/65748b2a57c07.png)
 
-自带的`Madmin`数据库管理工具如果不喜欢用的话，可以在应用商店安装`phpMyAdmin`，不对对于一些大文件 SQL 导入还是推荐自带的`Madmin`。
+自带的`Madmin`数据库管理工具如果不喜欢用的话，可以在应用商店安装`phpMyAdmin`，不过对于一些大文件 SQL 导入还是推荐自带的`Madmin`。
 
 ![image](https://image.liubing.me/i/2023/12/09/65748c616499a.png)
 
