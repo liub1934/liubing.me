@@ -60,7 +60,7 @@ containerClass: article-container
 ## 面板安装
 
 ::: warning
-安装请使用纯净的系统，必填软件冲突。
+安装请使用纯净的系统，避免软件冲突。
 :::
 
 根据官网提供的[教程](https://amh.sh/install.htm?fid=45745)使用下面的命令一键进行安装，安装时间 1 至 3 分钟。
