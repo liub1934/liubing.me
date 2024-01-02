@@ -222,8 +222,13 @@ containerClass: nav-container
 
 - icon: '@websites/github.png'
   name: Retrieval-based-Voice-Conversion-WebUI
-  desc: 一个基于VITS的简单易用的语音转换（变声器）开源框架
+  desc: 一个基于VITS的简单易用的语音转换（变声器）开源框架。
   link: https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI
+
+- icon: '@websites/musicgenerate.png'
+  name: MusicGenerate
+  desc: 免费在线人工智能音乐生成器（文本转音乐）。
+  link: https://www.musicgenerate.com/
 ```
 
 :::
