@@ -49,6 +49,11 @@ containerClass: nav-container
   name: Hapi.js
   desc: 众多开发者信赖的最简单、安全、可靠的框架之一。
   link: https://hapi.dev/
+
+- icon: '@websites/hono.ico'
+  name: Hono
+  desc: 快速、轻量级、Web 标准，支持任何 JavaScript 运行。
+  link: https://hapi.dev/
 ```
 
 :::
