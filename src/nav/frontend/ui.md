@@ -97,6 +97,11 @@ containerClass: nav-container
   name: Daisy UI
   desc: 最受欢迎的组件库，基于Tailwind CSS。
   link: https://daisyui.com/
+
+- icon: '@websites/shadcn.png'
+  name: shadcn/ui
+  desc: 设计精美的组件，您可以将其复制并粘贴到您的应用程序中。
+  link: https://ui.shadcn.com/
 ```
 
 :::
