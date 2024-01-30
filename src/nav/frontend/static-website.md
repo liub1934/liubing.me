@@ -49,6 +49,11 @@ containerClass: nav-container
   name: Hexo
   desc: 快速、简洁且高效的博客框架。
   link: https://hexo.io/zh-cn/
+
+- icon: '@websites/quartz.png'
+  name: Quartz
+  desc: 一款快速的静态站点生成器。
+  link: https://quartz.jzhao.xyz/
 ```
 
 :::
