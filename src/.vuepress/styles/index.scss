@@ -30,7 +30,7 @@ html[data-theme='light'] {
   margin-top: -6px;
   a {
     &:hover {
-      text-decoration: none;
+      text-decoration: none !important;
     }
   }
   .vp-project-card {
