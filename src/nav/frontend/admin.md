@@ -35,6 +35,11 @@ containerClass: nav-container
   desc: 开箱即用的中台前端/设计解决方案。
   link: https://github.com/hooray/fantastic-admin
 
+- icon: '@websites/soybean.svg'
+  name: Soybean Admin
+  desc: 一个清新优雅、高颜值且功能强大的后台管理模板。
+  link: https://github.com/soybeanjs/soybean-admin
+
 - icon: '@websites/fantastic-admin.png'
   name: Fantastic Admin
   desc: 杰出的管理系统框架，开箱即用，提供舒适开发体验。
