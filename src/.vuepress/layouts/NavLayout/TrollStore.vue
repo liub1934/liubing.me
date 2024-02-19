@@ -19,7 +19,7 @@
                 或者自行Google搜索。
               </p>
             </div>
-            <div class="hint-container danger">
+            <div class="hint-container caution">
               <p class="hint-container-title">警告</p>
               <p>
                 某些修改版应用谨慎登录账号（如微信），账号被封与本站无任何关系，本站只是搬运工。
