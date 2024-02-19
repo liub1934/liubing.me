@@ -13,7 +13,7 @@ containerClass: nav-container
 - icon: '@websites/vant-ui.png'
   name: Vant
   desc: 轻量、可靠的移动端 Vue 组件库。
-  link: https://vant-ui.github.io/vant/#/zh-CN
+  link: https://vant-contrib.gitee.io/vant/#/zh-CN
 
 - icon: '@websites/vant-ui.png'
   name: Vant Weapp
@@ -44,6 +44,29 @@ containerClass: nav-container
   name: Quark Design
   desc: 一款基于 Web Components 的跨框架 UI 组件库。
   link: https://quark-design.hellobike.com/
+```
+
+:::
+
+## 小程序
+
+::: projects
+
+```yaml
+- icon: '@websites/vant-ui.png'
+  name: Vant Weapp
+  desc: 轻量、可靠的小程序 UI 组件库。
+  link: https://vant-contrib.gitee.io/vant-weapp/
+
+- icon: '@websites/mini.ant.design.svg'
+  name: Ant Design Mini
+  desc: 探索移动端小程序的极致体验。
+  link: https://mini.ant.design/
+
+- icon: '@websites/weapp-tw.png'
+  name: weapp-tailwindcss
+  desc: 小程序 使用 tailwindcss 全方面解决方案。
+  link: https://weapp-tw.icebreaker.top/
 ```
 
 :::
