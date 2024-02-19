@@ -33,6 +33,11 @@ containerClass: nav-container
   name: Rufus
   desc: 轻松创建 USB 启动盘。
   link: https://rufus.ie/zh/
+
+- icon: '@websites/cowpe.png'
+  name: CowPE
+  desc: 基于 Win11 纯净好用无捆绑的 PE 系统。
+  link: http://cowpe.myzwq.cn/
 ```
 
 :::
