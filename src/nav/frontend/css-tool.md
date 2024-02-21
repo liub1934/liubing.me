@@ -90,10 +90,30 @@ containerClass: nav-container
   desc: 一款设置漂亮阴影的工具。
   link: https://shadows.brumm.af/
 
+- icon: '@websites/box-shadow.art.png'
+  name: Box Shadow
+  desc: 提供各种阴影样式。
+  link: https://box-shadow.art/
+
 - icon: '@websites/colorhunt.svg'
   name: Color Hunt
   desc: 非常受欢迎的配色网站，提供了大量的精选颜色方案。
   link: https://colorhunt.co/
+
+- icon: '@websites/glassgenerator.png'
+  name: Glass Morphism
+  desc: 在线CSS毛玻璃风格工具。
+  link: https://glassgenerator.netlify.app/
+
+- icon: '@websites/keyframes.png'
+  name: Keyframes
+  desc: 在线动画、阴影和颜色。
+  link: https://keyframes.app/
+
+- icon: '@websites/bgjar.png'
+  name: BGJar
+  desc: 一个免费的在线背景生成器，提供了各种类型和风格的背景图像。
+  link: https://bgjar.com/
 ```
 
 :::
