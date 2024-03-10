@@ -6,7 +6,7 @@ import HeatmapLayout from './layouts/HeatmapLayout/index.vue'
 import MacKeyboard from './components/MacKeyboard/index.vue'
 import TravellingLink from './components/TravellingLink/index.vue'
 import 'vuepress-theme-hope/presets/bounce-icon.scss'
-import { defineClientConfig } from '@vuepress/client'
+import { defineClientConfig } from 'vuepress/client'
 import { onBeforeUnmount, onMounted } from 'vue'
 import { setDurationTime } from './utils'
 

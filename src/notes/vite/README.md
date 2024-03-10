@@ -7,4 +7,4 @@ dir:
 
 # Vite
 
-<AutoCatalog />
+<Catalog />

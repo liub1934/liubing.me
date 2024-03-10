@@ -7,4 +7,4 @@ dir:
 
 # Vue
 
-<AutoCatalog />
+<Catalog />

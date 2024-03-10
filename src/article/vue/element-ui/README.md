@@ -6,4 +6,4 @@ containerClass: article-container
 
 # Element UI
 
-<AutoCatalog />
+<Catalog />

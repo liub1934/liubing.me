@@ -7,4 +7,4 @@ dir:
 
 # Git
 
-<AutoCatalog />
+<Catalog />

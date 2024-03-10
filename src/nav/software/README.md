@@ -9,4 +9,4 @@ containerClass: nav-container
 
 # 软件收藏
 
-<AutoCatalog />
+<Catalog />

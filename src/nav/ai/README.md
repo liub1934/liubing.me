@@ -9,4 +9,4 @@ containerClass: nav-container
 
 # AI 创作
 
-<AutoCatalog />
+<Catalog />

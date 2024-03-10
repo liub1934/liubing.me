@@ -6,4 +6,4 @@ containerClass: article-container
 
 # 自部署
 
-<AutoCatalog />
+<Catalog />

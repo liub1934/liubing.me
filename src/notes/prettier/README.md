@@ -7,4 +7,4 @@ dir:
 
 # Prettier
 
-<AutoCatalog />
+<Catalog />

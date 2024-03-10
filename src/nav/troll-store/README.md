@@ -9,4 +9,4 @@ containerClass: nav-container
 
 # TrollStore（巨魔商店）
 
-<AutoCatalog />
+<Catalog />
