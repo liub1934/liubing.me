@@ -3,6 +3,7 @@ date: 2023-01-14
 category:
   - 宝塔面板
   - Waline
+  - 自部署
 tag:
   - 宝塔面板
   - Waline

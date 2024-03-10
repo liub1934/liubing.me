@@ -3,6 +3,7 @@ date: 2019-12-21
 category:
   - 宝塔面板
   - Docker
+  - 自部署
 tag:
   - Bitwarden
   - Docker
