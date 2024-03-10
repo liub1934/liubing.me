@@ -6,4 +6,4 @@ containerClass: article-container
 
 # uni-app
 
-<AutoCatalog />
+<Catalog />

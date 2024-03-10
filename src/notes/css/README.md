@@ -7,4 +7,4 @@ dir:
 
 # CSS
 
-<AutoCatalog />
+<Catalog />

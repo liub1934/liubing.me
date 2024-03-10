@@ -9,4 +9,4 @@ containerClass: nav-container
 
 # 浏览器
 
-<AutoCatalog />
+<Catalog />

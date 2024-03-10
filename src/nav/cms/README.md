@@ -9,4 +9,4 @@ containerClass: nav-container
 
 # CMS 管理
 
-<AutoCatalog />
+<Catalog />

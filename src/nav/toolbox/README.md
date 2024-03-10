@@ -9,4 +9,4 @@ containerClass: nav-container
 
 # 在线工具箱
 
-<AutoCatalog />
+<Catalog />

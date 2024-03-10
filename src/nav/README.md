@@ -8,4 +8,4 @@ dir:
 
 # 导航
 
-<AutoCatalog />
+<Catalog />

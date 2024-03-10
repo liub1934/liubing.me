@@ -6,4 +6,4 @@ dir:
 
 # Html
 
-<AutoCatalog />
+<Catalog />

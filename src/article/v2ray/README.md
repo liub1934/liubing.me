@@ -6,4 +6,4 @@ containerClass: article-container
 
 # v2Ray
 
-<AutoCatalog />
+<Catalog />

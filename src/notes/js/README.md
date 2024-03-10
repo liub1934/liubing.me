@@ -7,4 +7,4 @@ dir:
 
 # JavaScript
 
-<AutoCatalog />
+<Catalog />

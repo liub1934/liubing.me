@@ -6,4 +6,4 @@ containerClass: article-container
 
 # AI
 
-<AutoCatalog />
+<Catalog />
