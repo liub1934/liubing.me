@@ -3,6 +3,7 @@ date: 2023-02-12
 category:
   - 宝塔面板
   - Lsky Pro
+  - 自部署
 tag:
   - Lsky Pro
   - 宝塔面板
