@@ -67,6 +67,12 @@ export const themePlugins: PluginsOptions = {
     server: 'https://artalk.liubing.me',
     versionCheck: false
   },
+  // 自动目录配置
+  catalog: {
+    exclude: [
+      '/article/' // 排除/article/目录，防止和博客article有冲突Overriding existing page警告
+    ]
+  },
   // Disable features you don’t want here
   // Markdown 增强插件配置
   mdEnhance: {
@@ -116,7 +122,6 @@ export const themePlugins: PluginsOptions = {
   pwa: {
     favicon: '/favicon.ico',
     cacheHTML: true,
-    cachePic: true,
     appendBase: true,
     themeColor: '#009b5e',
     update: 'available',
