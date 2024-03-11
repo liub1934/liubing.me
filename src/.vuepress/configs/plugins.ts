@@ -13,7 +13,8 @@ export const configPlugins: PluginConfig = [
   }),
   // 搜索插件
   searchProPlugin({
-    indexContent: true
+    indexContent: true,
+    autoSuggestions: false
   }),
   // 自定义容器插件
   containerPlugin({
