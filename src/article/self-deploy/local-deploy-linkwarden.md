@@ -11,9 +11,9 @@ layout: ArticleLayout
 containerClass: article-container
 ---
 
-# 本地部署一个开源的书签管理器Linkwarden
+# 本地部署一个开源的书签管理器 Linkwarden
 
-为什么要自己搭建一个书签管理器，浏览器的书签管理不够用吗？之前收藏过不少的文章教程等内容，但由于不可变因素导致原网页停止服务或者文章内容被删除等等情况，导致后来我想查看的时候就很尴尬。虽然国内有成熟的产品，但是免费版本功能都有数量等限制，Google搜索了下相关的开源书签管理工具，最重要的一个要求就是可以存档当时的页面，以防页面挂掉的时候依旧可以查看。最终找到了符合要求的[Linkwarden](https://linkwarden.app/)。
+为什么要自己搭建一个书签管理器，浏览器的书签管理不够用吗？之前收藏过不少的文章教程等内容，但由于不可变因素导致原网页停止服务或者文章内容被删除等等情况，导致后来我想查看的时候就很尴尬。虽然国内有成熟的产品，但是免费版本功能都有数量等限制，Google搜索了下相关的开源书签管理工具，最重要的一个要求就是可以存档当时的页面，以防页面挂掉的时候依旧可以查看。最终找到了符合要求的 [Linkwarden](https://linkwarden.app/)。
 
 ![image](https://image.liubing.me/i/2024/03/10/65ed8240abbba.png)
 
@@ -42,12 +42,12 @@ touch .env
 
 ### 环境变量配置
 
-可以使用AMH提供的文件管理快捷编辑，XXX替换成自己随机生成的密钥和密码，更多支持的环境变量参考[Environment Variables](https://docs.linkwarden.app/self-hosting/environment-variables)。
+可以使用AMH提供的文件管理快捷编辑，XXX替换成自己随机生成的密钥和密码，更多支持的环境变量参考 [Environment Variables](https://docs.linkwarden.app/self-hosting/environment-variables)。
 
 ```env
 NEXTAUTH_SECRET=XXX
 POSTGRES_PASSWORD=XXX
-NEXTAUTH_URL=http://127.0.0.1/api/v1/auth
+NEXTAUTH_URL=http://127.0.0.1:3000/api/v1/auth
 # 用于禁止注册控制，默认先填false，部署完成注册账号后再修改成true禁止注册
 NEXT_PUBLIC_DISABLE_REGISTRATION=true
 ```
@@ -56,7 +56,7 @@ NEXT_PUBLIC_DISABLE_REGISTRATION=true
 
 ### 启动服务
 
-最后在环境变量所在的目录即`linkwarden`下面运行下面的命令启动服务。
+最后在环境变量所在的目录即 `linkwarden` 下面运行下面的命令启动服务。
 
 ```sh
 docker compose up
