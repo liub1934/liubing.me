@@ -55,16 +55,6 @@ containerClass: nav-container
   desc: 缓动函数速查表。
   link: https://easings.net/zh-cn
 
-- icon: '@websites/animista.jpg'
-  name: Animista
-  desc: 一个可自定义的 CSS 动画库工具
-  link: https://animista.net/
-
-- icon: '@websites/cssload.ico'
-  name: CSS Load
-  desc: 纯 CSS 生成各种 Loading 加载动画。
-  link: https://cssload.net/
-
 - icon: '@websites/grabient.ico'
   name: Grabient
   desc: CSS 代码渐变颜色生成工具。
@@ -114,6 +104,29 @@ containerClass: nav-container
   name: BGJar
   desc: 一个免费的在线背景生成器，提供了各种类型和风格的背景图像。
   link: https://bgjar.com/
+```
+
+:::
+
+## Loading/动画
+
+::: projects
+
+```yaml
+- icon: '@websites/animista.jpg'
+  name: Animista
+  desc: 一个可自定义的 CSS 动画库工具
+  link: https://animista.net/
+
+- icon: '@websites/cssload.ico'
+  name: CSS Load
+  desc: 纯 CSS 生成各种 Loading 加载动画。
+  link: https://cssload.net/
+
+- icon: '@websites/css-loaders.png'
+  name: CSS Loaders
+  desc: 包含 30 多个类别下的 600 多个 CSS 加载动画。
+  link: https://css-loaders.com/
 ```
 
 :::
