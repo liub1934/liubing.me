@@ -289,6 +289,16 @@ containerClass: nav-container
   name: Meta AI
   desc: 免费无限制的 AI 绘画，Midjourney 替代品。
   link: https://imagine.meta.com/
+
+- icon: '@websites/clone-ui.svg'
+  name: Clone UI
+  desc: 一个可以根据简单文本提示生成 UI 组件的 AI 工具。
+  link: https://clone-ui.design/
+
+- icon: '@websites/restorephotos.ico'
+  name: Restore Photos
+  desc: 一款开源工具，使用 AI 尝试恢复或纠正旧的、模糊的或损坏的照片。
+  link: https://www.restorephotos.io/
 ```
 
 :::

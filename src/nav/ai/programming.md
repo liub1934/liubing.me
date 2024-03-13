@@ -109,6 +109,11 @@ containerClass: nav-container
   name: 通义灵码
   desc: 基于通义大模型，提供代码智能生成、研发智能问答能力。
   link: https://tongyi.aliyun.com/lingma/
+
+- icon: '@websites/clone-ui.svg'
+  name: Clone UI
+  desc: 一个可以根据简单文本提示生成 UI 组件的 AI 工具。
+  link: https://clone-ui.design/
 ```
 
 :::
