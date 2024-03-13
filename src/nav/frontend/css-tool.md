@@ -104,6 +104,26 @@ containerClass: nav-container
   name: BGJar
   desc: 一个免费的在线背景生成器，提供了各种类型和风格的背景图像。
   link: https://bgjar.com/
+
+- icon: '@websites/magicpattern.png'
+  name: SVG Chart Generator
+  desc: 一款设计精美的图表生成器，生成基于 SVG 的折线或条形格式的图表。
+  link: https://www.magicpattern.design/tools/svg-chart-generator
+
+- icon: '@websites/ribbon-shapes.png'
+  name: Ribbon Shapes
+  desc: 一个纯 CSS 丝带的在线画廊。
+  link: https://css-generators.com/ribbon-shapes/
+
+- icon: '@websites/ribbon-shapes.png'
+  name: CSS Generators
+  desc: CSS 生成器的一个小集合。
+  link: https://css-generators.com/
+
+- icon: '@websites/venngage.png'
+  name: Accessible Color Palette Generator
+  desc: 一款调色板生成器。
+  link: https://venngage.com/tools/accessible-color-palette-generator
 ```
 
 :::
