@@ -30,7 +30,7 @@ export const themePlugins: PluginsOptions = {
   // 博客插件配置
   blog: {
     hotReload: true, // 启用热更新
-    timeline: 'archives', // 时间轴访问路径修改成archives
+    timeline: '/archives/', // 时间轴访问路径修改成archives
     // 过滤列表页面
     filter: ({ filePathRelative, frontmatter }) => {
       // 舍弃那些不是从 Markdown 文件生成的页面
