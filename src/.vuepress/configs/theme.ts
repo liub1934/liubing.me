@@ -50,14 +50,41 @@ export default hopeTheme(
     footer: `
     <div>
       <div>
-        版权所有 © ${year} <a href="${HostName}"><b>${AuthorName}</b></a> | 
-        <a href="/about/site.html">关于本站</a>
+        <span>VPS By</span>
+        <a href="https://contabo.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://image.liubing.me/i/2023/02/11/a6de6381e4ae6.png"><b>Contabo</b>
+        </a>
       </div>
       <div>
-        <span>Theme Version </span>
+        <span>CDN By</span>
+        <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">
+          <img src="https://image.liubing.me/i/2023/02/11/7f17f3cf426c3.png"><b>Cloudflare</b>
+        </a>
+      </div>
+      <div>
+        <span>Server by</span>
+        <a href="https://amh.sh/install.htm?fid=45745" target="_blank" rel="noopener noreferrer">
+          <img src="https://liubing.me/assets/amh-CsDyk4kd.ico"><b>AMH面板</b>
+        </a>
+      </div>
+      <div>
+        <span>Powered By</span>
+        <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
+          <img src="https://vuepress.vuejs.org/hero.png"><b>VuePress</b>
+        </a>
+      </div>
+      <div>
+        <span>Theme By</span>
+        <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">
+          <img src="https://theme-hope.vuejs.press/logo.png"><b>VuePress Theme Hope</b>
+        </a>
+      </div>
+      <div>
+        版权所有 © ${year} <a href="${HostName}"><b>${AuthorName}</b></a> | 
         <a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/releases/tag/${ThemeVersion}" target="_blank" rel="noopener noreferrer">
           ${ThemeVersion}
-        </a>
+        </a> |
+        <a href="/about/site.html">关于本站</a>
       </div>
       <div>
         <span>本博客已运行</span>
