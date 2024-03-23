@@ -26,6 +26,11 @@ export const navbarConfig = navbar([
         text: 'Html',
         icon: 'html',
         link: 'html/'
+      },
+      {
+        text: 'Linux',
+        icon: 'linux',
+        link: 'linux/command'
       }
     ]
   },
