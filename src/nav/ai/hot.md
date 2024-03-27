@@ -64,6 +64,11 @@ containerClass: nav-container
   name: Stable Diffusion Online
   desc: 免登录即可使用的免费强大在线Stable Diffusion。
   link: https://stablediffusionweb.com/
+
+- icon: '@websites/kimi.ico'
+  name: Kimi.ai
+  desc: Kimi 是一个有着超大“内存”的智能助手。
+  link: https://kimi.moonshot.cn/
 ```
 
 :::
