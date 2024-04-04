@@ -22,8 +22,7 @@
 
 <script lang="ts" setup>
 import type { CSSProperties } from 'vue'
-import type { ArticleInfo } from 'node_modules/vuepress-theme-hope/lib/shared/blog'
-import { ref, watch, nextTick, onBeforeUnmount, onMounted } from 'vue'
+import { ref, watch, nextTick, onBeforeUnmount, onMounted, computed } from 'vue'
 import { generate } from '@ant-design/colors'
 import { useMutationObserver } from '@vueuse/core'
 import { useArticles } from '@theme-hope/modules/blog/composables/index'
@@ -42,11 +41,25 @@ const { isDarkmode } = useDarkmode()
 const el = ref<HTMLHtmlElement | null>(null)
 const themeColor = ref('')
 const themeColors = ref<string[]>([])
-const heatmaps = ref<IHeatmap[]>([])
 const postList = articles.value.items
   .sort((a, b) => a.info.d! - b.info.d!)
   .map((item) => item.info)
-heatmaps.value = getPostsCount(postList)
+
+const heatmaps = computed(() => {
+  const minYear = new Date(postList[0].d!).getFullYear()
+  const maxYear = new Date(postList[postList.length - 1].d!).getFullYear()
+  const counts: IHeatmap[] = []
+  for (let year = minYear; year <= maxYear; year++) {
+    for (let month = 1; month <= 12; month++) {
+      const count = postList.filter((item) => {
+        const date = new Date(item.d!)
+        return date.getFullYear() === year && date.getMonth() === month - 1
+      }).length
+      counts.push({ year, month, counts: count })
+    }
+  }
+  return counts
+})
 
 const { stop } = useMutationObserver(
   el,
@@ -84,22 +97,6 @@ watch([themeColor, isDarkmode], () => {
   }
 })
 
-function getPostsCount(posts: ArticleInfo[]) {
-  const minYear = new Date(posts[0].d!).getFullYear()
-  const maxYear = new Date(posts[posts.length - 1].d!).getFullYear()
-  const counts: IHeatmap[] = []
-  for (let year = minYear; year <= maxYear; year++) {
-    for (let month = 1; month <= 12; month++) {
-      const count = posts.filter((item) => {
-        const date = new Date(item.d!)
-        return date.getFullYear() === year && date.getMonth() === month - 1
-      }).length
-      counts.push({ year, month, counts: count })
-    }
-  }
-  return counts
-}
-
 function getThemeColor() {
   const rootStyles = getComputedStyle(document.documentElement)
   return rootStyles.getPropertyValue('--theme-color')
@@ -125,7 +122,7 @@ function getHeatmapStyle(counts: number) {
 function handleClick(item: IHeatmap) {
   if (!item.counts) return
   router.push({
-    path: '/heatmap',
+    path: '/heatmap/',
     query: {
       date: `${item.year}/${item.month}`
     }
