@@ -1,6 +1,6 @@
 <template>
   <a
-    class="vp-repo-link"
+    class="vp-action-link"
     href="https://www.travellings.cn/go.html"
     rel="noopener noreferrer"
     target="_blank"
