@@ -114,6 +114,11 @@ containerClass: nav-container
   name: Clone UI
   desc: 一个可以根据简单文本提示生成 UI 组件的 AI 工具。
   link: https://clone-ui.design/
+
+- icon: '@websites/openui.png'
+  name: OpenUI
+  desc: OpenUI让您可以发挥想象力来描述并生成UI，免费且开源。
+  link: https://openui.fly.dev/
 ```
 
 :::
