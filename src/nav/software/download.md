@@ -38,6 +38,11 @@ containerClass: nav-container
   name: Transmission
   desc: 免费的 BitTorrent 客户端。
   link: https://transmissionbt.com/
+
+- icon: '@websites/gopeed.ico'
+  name: Gopeed
+  desc: 一款现代化的开源下载器，支持多协议。
+  link: https://gopeed.com/zh-CN
 ```
 
 :::
