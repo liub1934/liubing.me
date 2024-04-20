@@ -543,7 +543,7 @@ export const useThemeStore = defineStore('theme', () => {
 
 ## 搭配 UnoCSS
 
-为了配合 UnoCSS 使用，这里特意通过[addCssVarsToHtml](https://github.com/liub1934/naive-ui-change-theme/blob/main/src/utils/theme.ts#L184)方法将生成的所有变量都添加到了 Html 上。
+为了配合 UnoCSS 使用，这里特意通过[addCssVarsToHtml](https://github.com/liub1934/naive-ui-change-theme/blob/main/src/stores/modules/theme/helper.ts#L176)方法将生成的所有变量都添加到了 Html 上。
 
 ![image](https://image.liubing.me/i/2023/07/29/64c49152d038e.png)
 
