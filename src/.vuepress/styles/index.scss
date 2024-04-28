@@ -134,3 +134,7 @@ hr {
   --at-color-red: var(--badge-danger-color);
   --at-color-yellow: var(--badge-warning-color);
 }
+
+.vp-toc-wrapper.open {
+  margin-top: 0;
+}
