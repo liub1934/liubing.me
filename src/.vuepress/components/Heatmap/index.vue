@@ -28,6 +28,7 @@ import { useMutationObserver } from '@vueuse/core'
 import { useArticles } from '@theme-hope/modules/blog/composables/index'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
 import { useRouter } from 'vue-router'
+import { cloneDeep } from 'lodash-es'
 
 interface IHeatmap {
   year: number
@@ -41,8 +42,8 @@ const { isDarkmode } = useDarkmode()
 const el = ref<HTMLHtmlElement | null>(null)
 const themeColor = ref('')
 const themeColors = ref<string[]>([])
-const postList = articles.value.items
-  .sort((a, b) => a.info.d! - b.info.d!)
+const postList = cloneDeep(articles.value)
+  .items.sort((a, b) => a.info.d! - b.info.d!)
   .map((item) => item.info)
 
 const heatmaps = computed(() => {
