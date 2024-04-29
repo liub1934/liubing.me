@@ -1,64 +1,62 @@
 <template>
   <SkipLink />
   <CommonWrapper>
-    <FadeSlideY>
-      <NormalPage>
-        <template #contentAfter>
-          <div class="theme-hope-content article-content-after">
-            <hr />
-            <div class="hint-container warning">
-              <div class="article-copyright">
-                <!-- 转载信息 -->
-                <ul v-if="source">
-                  <li>
-                    <strong>转载来源：</strong>
-                    <span>{{ source }}</span>
-                  </li>
-                  <li v-if="sourceLink">
-                    <strong>原文地址：</strong>
-                    <a
-                      :href="sourceLink"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      {{ sourceLink }}
-                    </a>
-                  </li>
-                </ul>
-                <!-- 原创信息 -->
-                <ul v-else>
-                  <li class="copyright-author">
-                    <strong>本文作者：</strong>
-                    <span>{{ author }}</span>
-                  </li>
-                  <li class="copyright-link">
-                    <strong>本文链接：</strong>
-                    <a :href="path">{{ title }}</a>
-                  </li>
-                  <li class="copyright-license">
-                    <strong>版权声明：</strong>
-                    本博客所有文章除特别声明外，均采用
-                    <a
-                      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <font-icon icon="cc"></font-icon>BY-NC-SA
-                    </a>
-                    许可协议，转载请注明出处！
-                  </li>
-                </ul>
-              </div>
-              <font-icon
-                class="font-icon-bg"
-                :icon="source ? 'reship' : 'cc'"
-                size="160px"
-              ></font-icon>
+    <NormalPage>
+      <template #contentAfter>
+        <div class="theme-hope-content article-content-after">
+          <hr />
+          <div class="hint-container warning">
+            <div class="article-copyright">
+              <!-- 转载信息 -->
+              <ul v-if="source">
+                <li>
+                  <strong>转载来源：</strong>
+                  <span>{{ source }}</span>
+                </li>
+                <li v-if="sourceLink">
+                  <strong>原文地址：</strong>
+                  <a
+                    :href="sourceLink"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {{ sourceLink }}
+                  </a>
+                </li>
+              </ul>
+              <!-- 原创信息 -->
+              <ul v-else>
+                <li class="copyright-author">
+                  <strong>本文作者：</strong>
+                  <span>{{ author }}</span>
+                </li>
+                <li class="copyright-link">
+                  <strong>本文链接：</strong>
+                  <a :href="path">{{ title }}</a>
+                </li>
+                <li class="copyright-license">
+                  <strong>版权声明：</strong>
+                  本博客所有文章除特别声明外，均采用
+                  <a
+                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <font-icon icon="cc"></font-icon>BY-NC-SA
+                  </a>
+                  许可协议，转载请注明出处！
+                </li>
+              </ul>
             </div>
+            <font-icon
+              class="font-icon-bg"
+              :icon="source ? 'reship' : 'cc'"
+              size="160px"
+            ></font-icon>
           </div>
-        </template>
-      </NormalPage>
-    </FadeSlideY>
+        </div>
+      </template>
+    </NormalPage>
   </CommonWrapper>
 </template>
 
@@ -66,15 +64,19 @@
 import CommonWrapper from '@theme-hope/components/CommonWrapper'
 import NormalPage from '@theme-hope/components/NormalPage'
 import SkipLink from '@theme-hope/components/SkipLink'
-import FadeSlideY from '@theme-hope/components/transitions/FadeSlideY'
-import type { BlogPluginFrontmatter } from '@vuepress/plugin-blog/client'
 import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { useThemeData } from '@theme-hope/composables/index'
 import { HostName } from '../../utils/constant'
+import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
+
+interface PageFrontmatter extends ThemeNormalPageFrontmatter {
+  source?: string
+  sourceLink?: string
+}
 
 const page = usePageData()
 const themeData = useThemeData()
-const frontmatter = usePageFrontmatter<BlogPluginFrontmatter>()
+const frontmatter = usePageFrontmatter<PageFrontmatter>()
 const title = page.value.title // 文章标题
 const author = frontmatter.value.author || themeData.value.author // 文章作者
 const path = HostName + page.value.path // 文章链接

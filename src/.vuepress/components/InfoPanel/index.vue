@@ -1,32 +1,23 @@
 <template>
   <aside class="vp-blog-info-wrapper">
-    <DropTransition>
-      <div class="vp-blogger-info-inner">
-        <BingLogo />
-        <BloggerInfo />
-      </div>
-    </DropTransition>
+    <div class="vp-blogger-info-inner">
+      <BingLogo />
+      <BloggerInfo />
+    </div>
 
-    <DropTransition>
-      <div class="vp-blogger-info">
-        <Heatmap />
-      </div>
-    </DropTransition>
+    <div class="vp-blogger-info">
+      <Heatmap />
+    </div>
 
-    <DropTransition>
-      <div class="vp-blogger-info blog-clock-box">
-        <BlogClock />
-      </div>
-    </DropTransition>
+    <div class="vp-blogger-info blog-clock-box">
+      <BlogClock />
+    </div>
 
-    <DropTransition>
-      <InfoList />
-    </DropTransition>
+    <InfoList />
   </aside>
 </template>
 
 <script setup lang="ts">
-import DropTransition from '@theme-hope/components/transitions/DropTransition'
 import BloggerInfo from '@theme-hope/modules/blog/components/BloggerInfo'
 import InfoList from '@theme-hope/modules/blog/components/InfoList'
 import BlogClock from '../BlogClock/index.vue'
