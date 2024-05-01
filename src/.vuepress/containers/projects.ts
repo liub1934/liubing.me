@@ -1,5 +1,5 @@
 import yaml from 'js-yaml'
-import type { Token } from 'markdown-it'
+import type Token from 'markdown-it/lib/token.mjs'
 import { withBase } from '../utils/index'
 
 export interface Project {
