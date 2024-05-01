@@ -4,14 +4,17 @@
 
 <script lang="ts" setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-import type { AnimationItem } from 'lottie-web'
+import type { AnimationItem, SVGRendererConfig } from 'lottie-web'
 
-const props = defineProps({
+const props = defineProps<{
   options: {
-    type: Object,
-    required: true
+    path: string
+    loop?: number | boolean
+    autoplay?: boolean
+    animationData?: any
+    rendererSettings?: SVGRendererConfig
   }
-})
+}>()
 
 const emit = defineEmits(['DOMLoaded'])
 const animContainer = ref<Element | null>(null)

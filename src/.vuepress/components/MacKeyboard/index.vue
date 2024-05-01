@@ -47,14 +47,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { PropType } from 'vue'
-
-const props = defineProps({
-  keys: {
-    type: Array as PropType<string[]>,
-    default: () => []
-  }
-})
+const props = defineProps<{
+  keys: string[]
+}>()
 
 const keyMap: any = {
   control: {
