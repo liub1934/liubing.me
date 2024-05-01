@@ -4,37 +4,32 @@
       <p class="error-code">404</p>
       <h1 class="error-title">页面不存在</h1>
     </div>
-    <LottieWeb
-      :options="options"
+    <DotLottie
+      ref="el"
+      width="40vh"
+      height="40vh"
+      :path="lottiePath"
       :style="{
-        height: '50vh',
-        opacity: showLottieWeb ? 1 : 0,
-        'margin-top': '-60px'
+        opacity: showDotLottie ? 1 : 0
       }"
-      @DOMLoaded="DOMLoaded"
-    />
+      @load="showDotLottie = true"
+    ></DotLottie>
   </NotFound>
 </template>
 
 <script lang="ts" setup>
 import NotFound from '@theme-hope/layouts/NotFound'
-import LottieWeb from '../../components/LottieWeb/index.vue'
-import { ref } from 'vue'
+import DotLottie from '../../components/DotLottie/index.vue'
+import { computed, ref } from 'vue'
+import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
 
-const showLottieWeb = ref(false)
-const options = ref({
-  path: new URL('./data.json', import.meta.url).href
+const showDotLottie = ref(false)
+const { isDarkmode } = useDarkmode()
+const lottiePath = computed(() => {
+  return isDarkmode.value
+    ? new URL('./dark.lottie', import.meta.url).href
+    : new URL('./light.lottie', import.meta.url).href
 })
-
-function DOMLoaded() {
-  const $rectList = document.querySelectorAll(
-    '.lottie-web rect[fill="#ffffff"]'
-  )
-  $rectList.forEach((element) => {
-    element.setAttribute('fill', 'transparent')
-  })
-  showLottieWeb.value = true
-}
 </script>
 
 <style scoped lang="scss">
