@@ -1,0 +1,5 @@
+{
+  "gutterpreview.paths": {
+    "@websites": "src/.vuepress/public/assets/websites"
+  }
+}
