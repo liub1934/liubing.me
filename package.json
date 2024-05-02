@@ -43,7 +43,6 @@
     "@splinetool/runtime": "0.9.369",
     "@vueuse/core": "10.9.0",
     "artalk": "2.7.3",
-    "date-fns": "2.30.0",
     "js-yaml": "4.1.0",
     "lodash-es": "^4.17.21"
   },
