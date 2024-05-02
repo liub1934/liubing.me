@@ -2,13 +2,7 @@ import type { Theme } from 'vuepress'
 import { hopeTheme } from 'vuepress-theme-hope'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
-import {
-  ArticleInfo,
-  AuthorName,
-  Description,
-  HostName,
-  Repo
-} from '../utils/constant'
+import { ArticleInfo, AuthorName, Description, HostName, Repo } from '../utils'
 import { themePlugins } from './plugins'
 import packageData from '../../../package.json' assert { type: 'json' }
 const devDependencies = packageData.devDependencies
