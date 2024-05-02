@@ -6,7 +6,7 @@ declare const __BLOG_RUNNING_TIME_OPTIONS__: BlogRunningTimeOptions
 
 export default defineClientConfig({
   setup() {
-    let timerInterval: ReturnType<typeof setInterval> | null
+    let timerInterval: IntervalHandle | null
     onMounted(() => {
       const router = useRouter()
       setRuntime()
