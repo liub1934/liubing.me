@@ -1,4 +1,4 @@
-export const BlogStartDate = '2019-01-10 08:00:00'
+export const BlogStartDate = '2019/01/10'
 export const Description = '一个基于VuePress的个人博客。'
 export const Repo = 'liub1934/liubing.me'
 export const AuthorName = 'Bing🐣'
