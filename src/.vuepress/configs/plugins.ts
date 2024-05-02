@@ -3,7 +3,7 @@ import type { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
-import { blogRunningTimePlugin } from '../plugins/vuepress-plugin-blog-running-time'
+import { blogRunningTimePlugin } from '../plugins'
 import { renderProjects } from '../containers/projects'
 import { BlogStartDate } from '../utils/constant'
 
