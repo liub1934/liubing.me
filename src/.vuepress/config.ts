@@ -1,6 +1,6 @@
 import { defineUserConfig } from '@vuepress/cli'
 import { getDirname, path } from '@vuepress/utils'
-import { AuthorName, Base, Description } from './utils/constant'
+import { AuthorName, Base, Description } from './utils'
 import { configPlugins } from './configs/plugins'
 import { viteBundler } from '@vuepress/bundler-vite'
 import viteOptions from './configs/vite.config'

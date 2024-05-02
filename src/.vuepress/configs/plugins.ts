@@ -5,7 +5,7 @@ import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
 import { blogRunningTimePlugin } from '../plugins'
 import { renderProjects } from '../containers/projects'
-import { BlogStartDate } from '../utils/constant'
+import { BlogStartDate } from '../utils'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
