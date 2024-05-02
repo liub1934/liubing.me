@@ -88,7 +88,7 @@ export default hopeTheme(
       </div>
       <div>
         <span>本博客已运行</span>
-        <span id="blog-duration"></span>
+        <span id="running-time"></span>
       </div>
     </div>
   `
