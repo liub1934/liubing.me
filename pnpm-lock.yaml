@@ -46,6 +46,9 @@ devDependencies:
   '@types/node':
     specifier: 20.12.7
     version: 20.12.7
+  '@unocss/preset-attributify':
+    specifier: ^0.59.4
+    version: 0.59.4
   '@unocss/preset-rem-to-px':
     specifier: ^0.59.4
     version: 0.59.4

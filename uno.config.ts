@@ -4,6 +4,7 @@ import presetUno from '@unocss/preset-uno'
 import presetRemToPx from '@unocss/preset-rem-to-px'
 import transformerDirectives from '@unocss/transformer-directives'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
+import presetAttributify from '@unocss/preset-attributify'
 
 export default defineConfig({
   content: {
@@ -21,7 +22,8 @@ export default defineConfig({
     }),
     presetRemToPx({
       baseFontSize: 4
-    })
+    }),
+    presetAttributify()
   ],
   theme: {
     colors: {}
