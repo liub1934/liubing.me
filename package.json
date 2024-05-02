@@ -18,6 +18,7 @@
     "@types/lodash-es": "^4.17.12",
     "@types/markdown-it": "14.0.1",
     "@types/node": "20.12.7",
+    "@unocss/preset-attributify": "^0.59.4",
     "@unocss/preset-rem-to-px": "^0.59.4",
     "@unocss/preset-uno": "^0.59.4",
     "@unocss/transformer-directives": "^0.59.4",
