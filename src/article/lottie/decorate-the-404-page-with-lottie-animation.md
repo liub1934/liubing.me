@@ -28,6 +28,10 @@ containerClass: article-container
 
 下载完成后会得到一个 json 文件。
 
+::: tip
+目前提供[dotLottie](https://lottiefiles.notion.site/Getting-started-with-dotLottie-907cb7b157b34990a7bba7bcae8f21b0)文件下载了，体积更迷你，上面下载的100多kb的JSON文件，下载后的`dotLottie`文件只有7kb左右。集成文档参考[@lottiefiles/dotlottie-web](https://github.com/LottieFiles/dotlottie-web/tree/main/packages/web)
+:::
+
 ## 修改默认颜色
 
 由于动画内容的黑色和博客默认的黑色不太一样，所以还需要借助 LottieFiles 提供的[编辑器](https://app.lottiefiles.com/preview?source=editor)修改下颜色。

@@ -2,7 +2,7 @@ import type { Theme } from 'vuepress'
 import { hopeTheme } from 'vuepress-theme-hope'
 import { sidebarConfig } from './sidebar'
 import { navbarConfig } from './navbar'
-import { AuthorName, Description, HostName, Repo } from '../utils/constant'
+import { ArticleInfo, AuthorName, Description, HostName, Repo } from '../utils'
 import { themePlugins } from './plugins'
 import packageData from '../../../package.json' assert { type: 'json' }
 const devDependencies = packageData.devDependencies
@@ -19,7 +19,7 @@ export default hopeTheme(
     logo: '/logo.svg',
     repo: Repo,
     docsDir: 'src',
-    pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
+    pageInfo: ArticleInfo,
     navbar: navbarConfig, // 导航栏
     sidebar: sidebarConfig, // 侧边栏
     displayFooter: true,
@@ -29,7 +29,8 @@ export default hopeTheme(
         GitHub: 'https://github.com/liub1934',
         Email: 'mailto:w@liubing.me',
         Gmail: 'mailto:liub1934@gmail.com'
-      }
+      },
+      articleInfo: ArticleInfo
     },
     // page meta
     metaLocales: {
@@ -88,7 +89,7 @@ export default hopeTheme(
       </div>
       <div>
         <span>本博客已运行</span>
-        <span id="blog-duration"></span>
+        <span id="running-time"></span>
       </div>
     </div>
   `

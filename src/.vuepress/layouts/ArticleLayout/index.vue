@@ -66,7 +66,7 @@ import NormalPage from '@theme-hope/components/NormalPage'
 import SkipLink from '@theme-hope/components/SkipLink'
 import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { useThemeData } from '@theme-hope/composables/index'
-import { HostName } from '../../utils/constant'
+import { HostName } from '../../utils'
 import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
 
 interface PageFrontmatter extends ThemeNormalPageFrontmatter {
