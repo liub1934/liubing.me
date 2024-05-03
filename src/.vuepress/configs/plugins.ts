@@ -3,7 +3,7 @@ import type { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
-import { blogRunningTimePlugin } from '../plugins'
+import { blogRunningTimePlugin, themeColorPlugin } from '../plugins'
 import { renderProjects } from '../containers/projects'
 import { BlogStartDate } from '../utils'
 
@@ -22,6 +22,7 @@ export const configPlugins: PluginConfig = [
     el: '#running-time',
     startDate: BlogStartDate
   }),
+  themeColorPlugin(),
   // 自定义容器插件
   containerPlugin({
     type: 'projects',

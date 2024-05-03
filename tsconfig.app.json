@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["src/.vuepress/**/*", "types/**/*"],
+  "include": ["src/.vuepress/**/*", "types/**/*", "utils/**/*"],
   "exclude": [
     "node_modules",
     "src/.vuepress/.cache",

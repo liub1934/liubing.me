@@ -1,19 +1,31 @@
 <template>
   <div class="heatmap">
     <div
+      hidden
+      bg-primary-1
+      bg-primary-2
+      bg-primary-3
+      bg-primary-4
+      bg-primary-5
+      bg-primary-6
+      bg-primary-7
+      bg-primary-8
+      bg-primary-9
+      bg-primary-10
+    ></div>
+    <div
       class="heatmap-item"
       v-for="item in heatmaps"
       :key="`${item.year}-${item.month}`"
     >
       <div
-        class="heatmap-inner"
+        :class="`heatmap-inner ${getCountColor(item.counts)}`"
         data-balloon-pos="up"
         :aria-label="
           item.counts
             ? `${item.year}-${item.month}&#xa;Post: ${item.counts}`
             : `${item.year}-${item.month}`
         "
-        :style="getHeatmapStyle(item.counts)"
         @click="handleClick(item)"
       ></div>
     </div>
@@ -21,12 +33,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { CSSProperties } from 'vue'
-import { ref, watch, nextTick, onBeforeUnmount, onMounted, computed } from 'vue'
-import { generate } from '@ant-design/colors'
-import { useMutationObserver } from '@vueuse/core'
+import { computed } from 'vue'
 import { useArticles } from '@theme-hope/modules/blog/composables/index'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
 import { useRouter } from 'vue-router'
 import { cloneDeep } from 'lodash-es'
 
@@ -38,10 +46,6 @@ interface IHeatmap {
 
 const router = useRouter()
 const articles = useArticles()
-const { isDarkmode } = useDarkmode()
-const el = ref<HTMLHtmlElement | null>(null)
-const themeColor = ref('')
-const themeColors = ref<string[]>([])
 const postList = cloneDeep(articles.value)
   .items.sort((a, b) => a.info.d! - b.info.d!)
   .map((item) => item.info)
@@ -62,62 +66,12 @@ const heatmaps = computed(() => {
   return counts
 })
 
-const { stop } = useMutationObserver(
-  el,
-  (mutations) => {
-    const mutation = mutations[0]
-    if (mutation) {
-      themeColor.value = getThemeColor()
-    }
-  },
-  {
-    attributes: true,
-    attributeFilter: ['class']
-  }
-)
-
-onMounted(() => {
-  el.value = document.querySelector('html')
-  nextTick(() => {
-    themeColor.value = getThemeColor()
-  })
-})
-
-onBeforeUnmount(() => {
-  stop && stop()
-})
-
-watch([themeColor, isDarkmode], () => {
-  if (isDarkmode.value) {
-    themeColors.value = generate(themeColor.value, {
-      theme: 'dark',
-      backgroundColor: '#161b22'
-    })
-  } else {
-    themeColors.value = generate(themeColor.value)
-  }
-})
-
-function getThemeColor() {
-  const rootStyles = getComputedStyle(document.documentElement)
-  return rootStyles.getPropertyValue('--theme-color')
-}
-
 function getCountColor(counts: number) {
   if (counts) {
     if (counts > 10) counts = 10
-    return themeColors.value[counts - 1]
+    return `bg-primary-${counts}`
   }
-  return null
-}
-
-function getHeatmapStyle(counts: number) {
-  const styles = counts
-    ? {
-        background: getCountColor(counts)
-      }
-    : {}
-  return styles as CSSProperties
+  return ''
 }
 
 function handleClick(item: IHeatmap) {
@@ -140,7 +94,6 @@ function handleClick(item: IHeatmap) {
   flex-wrap: wrap;
   .heatmap-item {
     width: 8.333333%;
-
     position: relative;
     &::after {
       content: '';
