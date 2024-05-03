@@ -8,6 +8,7 @@ import theme from './configs/theme'
 const __dirname = getDirname(import.meta.url)
 
 const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
+const PageFooter = path.resolve(__dirname, './components/PageFooter/index.vue')
 
 export default defineUserConfig({
   base: Base,
@@ -29,7 +30,8 @@ export default defineUserConfig({
       __dirname,
       '../../node_modules/vuepress-theme-hope/lib/client'
     ),
-    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel
+    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel,
+    '@theme-hope/components/PageFooter': PageFooter
   },
   plugins: configPlugins,
   bundler: viteBundler({

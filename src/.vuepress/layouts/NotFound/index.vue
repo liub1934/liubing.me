@@ -4,18 +4,20 @@
       <p class="error-code">404</p>
       <h1 class="error-title">页面不存在</h1>
     </div>
-    <ClientOnly>
-      <DotLottie
-        ref="el"
-        width="40vh"
-        height="40vh"
-        :path="lottiePath"
-        :style="{
-          opacity: showDotLottie ? 1 : 0
-        }"
-        @load="showDotLottie = true"
-      />
-    </ClientOnly>
+    <div class="size-40vh">
+      <ClientOnly>
+        <DotLottie
+          ref="el"
+          width="40vh"
+          height="40vh"
+          :path="lottiePath"
+          :style="{
+            opacity: showDotLottie ? 1 : 0
+          }"
+          @load="showDotLottie = true"
+        />
+      </ClientOnly>
+    </div>
   </NotFound>
 </template>
 
