@@ -1,5 +1,6 @@
 import { defineConfig } from '@unocss/vite'
 import { presetIcons } from 'unocss'
+import { getThemeColors } from './utils'
 import presetUno from '@unocss/preset-uno'
 import presetRemToPx from '@unocss/preset-rem-to-px'
 import transformerDirectives from '@unocss/transformer-directives'
@@ -26,7 +27,9 @@ export default defineConfig({
     presetAttributify()
   ],
   theme: {
-    colors: {}
+    colors: {
+      ...getThemeColors()
+    }
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],
   shortcuts: {
