@@ -3,9 +3,8 @@ import type { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
-import { blogRunningTimePlugin, themeColorPlugin } from '../plugins'
+import { themeColorPlugin } from '../plugins'
 import { renderProjects } from '../containers/projects'
-import { BlogStartDate } from '../utils'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -17,10 +16,6 @@ export const configPlugins: PluginConfig = [
   searchProPlugin({
     indexContent: true,
     autoSuggestions: false
-  }),
-  blogRunningTimePlugin({
-    el: '#running-time',
-    startDate: BlogStartDate
   }),
   themeColorPlugin(),
   // 自定义容器插件
