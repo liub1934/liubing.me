@@ -69,6 +69,16 @@ containerClass: nav-container
   name: FIS3
   desc: 为你定制的前端工程构建工具。
   link: https://fex-team.github.io/fis3/
+
+- icon: '@websites/rspack.png'
+  name: Rspack
+  desc: 基于 Rust 的高性能 Web 构建工具。
+  link: https://www.rspack.dev/
+
+- icon: '@websites/bun.png'
+  name: Bun
+  desc: 一款专为提高速度而设计的一体化 JavaScript 运行时和工具包。
+  link: https://bun.sh/
 ```
 
 :::
