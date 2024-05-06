@@ -34,6 +34,11 @@ containerClass: nav-container
   name: DevUI Design
   desc: 基于Angular框架，面向企业中后台产品的开源前端解决方案。
   link: https://devui.design/
+
+- icon: '@websites/semi.design.ico'
+  name: Semi Design
+  desc: 由抖音前端与 UED 团队维护，易于定制的现代化设计系统。
+  link: https://semi.design/
 ```
 
 :::
