@@ -49,6 +49,16 @@ containerClass: nav-container
   name: Brave
   desc: 最佳在线隐私，让您不受 Google 和其他科技巨头的威胁。
   link: https://brave.com/zh/
+
+- icon: '@websites/duckduckgo.png'
+  name: DuckDuckGo
+  desc: 私密且免费的浏览器，享受更多隐私保护。
+  link: https://duckduckgo.com/
+
+- icon: '@websites/arc.png'
+  name: ARC
+  desc: 一款不仅仅满足您需求的浏览器。
+  link: https://arc.net/
 ```
 
 :::
