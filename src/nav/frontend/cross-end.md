@@ -49,6 +49,11 @@ containerClass: nav-container
   name: MorJS
   desc: 饿了么出品的小程序多端研发框架。
   link: https://mor.eleme.io/
+
+- icon: '@websites/tauri.png'
+  name: MorJS
+  desc: 构建跨平台的快速、安全、前端隔离应用。
+  link: https://tauri.app/
 ```
 
 :::
