@@ -5,6 +5,7 @@ import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
 import { themeColorPlugin } from '../plugins'
 import { renderProjects } from '../containers/projects'
+import { Repo } from '../utils'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
@@ -66,9 +67,11 @@ export const themePlugins: PluginsOptions = {
   // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
   // 评论插件配置
   comment: {
-    provider: 'Artalk',
-    server: 'https://artalk.liubing.me',
-    versionCheck: false
+    provider: 'Giscus',
+    repo: Repo,
+    repoId: 'R_kgDOIq_bDg',
+    category: 'Comments',
+    categoryId: 'DIC_kwDOIq_bDs4CfSC6'
   },
   // 自动目录配置
   catalog: {
