@@ -67,11 +67,14 @@ export const themePlugins: PluginsOptions = {
   // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
   // 评论插件配置
   comment: {
-    provider: 'Giscus',
-    repo: Repo,
-    repoId: 'R_kgDOIq_bDg',
-    category: 'Comments',
-    categoryId: 'DIC_kwDOIq_bDs4CfSC6'
+    provider: 'Artalk',
+    server: 'https://artalk.liubing.me',
+    versionCheck: false
+    // provider: 'Giscus',
+    // repo: Repo,
+    // repoId: 'R_kgDOIq_bDg',
+    // category: 'Comments',
+    // categoryId: 'DIC_kwDOIq_bDs4CfSC6'
   },
   // 自动目录配置
   catalog: {
