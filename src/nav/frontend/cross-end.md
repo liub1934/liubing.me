@@ -49,6 +49,16 @@ containerClass: nav-container
   name: MorJS
   desc: 饿了么出品的小程序多端研发框架。
   link: https://mor.eleme.io/
+
+- icon: '@websites/tauri.png'
+  name: MorJS
+  desc: 构建跨平台的快速、安全、前端隔离应用。
+  link: https://tauri.app/
+
+- icon: '@websites/quasar.png'
+  name: Quasar Framework
+  desc: 构建高性能和高质量的Vue 3组件库。
+  link: https://quasar.dev/
 ```
 
 :::
