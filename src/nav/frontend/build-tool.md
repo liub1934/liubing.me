@@ -79,6 +79,11 @@ containerClass: nav-container
   name: Bun
   desc: 一款专为提高速度而设计的一体化 JavaScript 运行时和工具包。
   link: https://bun.sh/
+
+- icon: '@websites/farmfe.ico'
+  name: Farm
+  desc: 一个基于 Rust 实现的极速构建引擎，帮助您更快地构建 Web 程序 和 JavaScript 库。
+  link: https://www.farmfe.org/
 ```
 
 :::
