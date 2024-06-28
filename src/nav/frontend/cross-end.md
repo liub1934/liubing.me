@@ -23,7 +23,7 @@ containerClass: nav-container
 - icon: '@websites/cml.png'
   name: Chameleon 变色龙
   desc: 滴滴出品跨端统一解决方案 一套代码运行多端，一端所见即多端所见。
-  link: https://cml.didi.cn/
+  link: https://cml.js.org/
 
 - icon: '@websites/hummer.png'
   name: Hummer
