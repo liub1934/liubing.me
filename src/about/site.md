@@ -29,7 +29,7 @@ breadcrumb: false
   desc: 用来管理 VPS
   link: https://amh.sh/install.htm?fid=45745
 
-- icon: https://vuepress.vuejs.org/hero.png
+- icon: '@websites/vuepress.png'
   name: VuePress
   desc: 博客驱动引擎。
   link: https://vuepress.vuejs.org/zh/

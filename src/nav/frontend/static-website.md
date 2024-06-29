@@ -54,6 +54,11 @@ containerClass: nav-container
   name: Quartz
   desc: 一款快速的静态站点生成器。
   link: https://quartz.jzhao.xyz/
+
+- icon: '@websites/docus.ico'
+  name: Docus
+  desc: 开始编写文档的最佳位置。
+  link: https://docus.dev/
 ```
 
 :::

@@ -23,7 +23,7 @@ containerClass: nav-container
 - icon: '@websites/cml.png'
   name: Chameleon 变色龙
   desc: 滴滴出品跨端统一解决方案 一套代码运行多端，一端所见即多端所见。
-  link: https://cml.didi.cn/
+  link: https://cml.js.org/
 
 - icon: '@websites/hummer.png'
   name: Hummer
@@ -48,10 +48,10 @@ containerClass: nav-container
 - icon: '@websites/mor.svg'
   name: MorJS
   desc: 饿了么出品的小程序多端研发框架。
-  link: https://mor.eleme.io/
+  link: https://mor.ele.me/
 
 - icon: '@websites/tauri.png'
-  name: MorJS
+  name: Tauri
   desc: 构建跨平台的快速、安全、前端隔离应用。
   link: https://tauri.app/
 

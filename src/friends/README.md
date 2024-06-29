@@ -31,7 +31,7 @@ link: 网站链接
   desc: 渐进式 JavaScript 框架
   link: https://cn.vuejs.org/
 
-- icon: https://vuepress.vuejs.org/hero.png
+- icon: '@websites/vuepress.png'
   name: VuePress
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
@@ -54,7 +54,7 @@ link: 网站链接
 ::: projects friends
 
 ```yaml
-- icon: https://mrhope.site/logo.svg
+- icon: '@websites/mister-hope.png'
   name: Mr.Hope
   desc: VuePress Theme Hope 主题作者。
   link: https://mrhope.site/
