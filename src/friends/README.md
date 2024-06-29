@@ -54,7 +54,7 @@ link: 网站链接
 ::: projects friends
 
 ```yaml
-- icon: https://mrhope.site/logo.svg
+- icon: '@websites/mister-hope.png'
   name: Mr.Hope
   desc: VuePress Theme Hope 主题作者。
   link: https://mrhope.site/
