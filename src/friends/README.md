@@ -31,7 +31,7 @@ link: 网站链接
   desc: 渐进式 JavaScript 框架
   link: https://cn.vuejs.org/
 
-- icon: https://vuepress.vuejs.org/hero.png
+- icon: '@websites/vuepress.png'
   name: VuePress
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
