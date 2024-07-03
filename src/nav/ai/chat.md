@@ -64,6 +64,16 @@ containerClass: nav-container
   name: Google Bard
   desc: Google 出品的免费 AI 大模型工具。
   link: https://bard.google.com/
+
+- icon: '@websites/coze.png'
+  name: 扣子
+  desc: 字节跳动出品的 AI 聊天机器人构建平台。
+  link: https://www.coze.cn/
+
+- icon: '@websites/coze.png'
+  name: Coze
+  desc: 国际版扣子
+  link: https://www.coze.cn/
 ```
 
 :::
