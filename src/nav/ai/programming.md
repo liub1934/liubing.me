@@ -119,6 +119,16 @@ containerClass: nav-container
   name: OpenUI
   desc: OpenUI让您可以发挥想象力来描述并生成UI，免费且开源。
   link: https://openui.fly.dev/
+
+- icon: '@websites/marscode.png'
+  name: 豆包MarsCode
+  desc: 豆包旗下的编程助手，提供智能补全、智能预测、智能问答等能力，节省开发时间，释放脑海中的创造力。
+  link: https://www.marscode.cn/
+
+- icon: '@websites/marscode.png'
+  name: MarsCode
+  desc: 国际版豆包MarsCode
+  link: https://www.marscode.com/
 ```
 
 :::
