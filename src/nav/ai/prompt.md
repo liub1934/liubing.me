@@ -74,6 +74,11 @@ containerClass: nav-container
   name: KALOS
   desc: 强大的人工智能艺术展示和市场。
   link: https://kalos.art/
+
+- icon: '@websites/originality.ai.png'
+  name: Originality.ai
+  desc: AI 提示词生成器。
+  link: https://originality.ai/ai-prompt-generator
 ```
 
 :::
