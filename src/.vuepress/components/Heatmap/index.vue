@@ -1,19 +1,6 @@
 <template>
   <div class="heatmap">
     <div
-      hidden
-      bg-primary-1
-      bg-primary-2
-      bg-primary-3
-      bg-primary-4
-      bg-primary-5
-      bg-primary-6
-      bg-primary-7
-      bg-primary-8
-      bg-primary-9
-      bg-primary-10
-    ></div>
-    <div
       class="heatmap-item"
       v-for="item in heatmaps"
       :key="`${item.year}-${item.month}`"
