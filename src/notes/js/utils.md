@@ -35,8 +35,8 @@ function generateUUID() {
 
 ## 复制到剪贴板
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function copyToClipboard(str, success, failure) {
@@ -60,7 +60,7 @@ function copyToClipboard(str, success, failure) {
 }
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function copyToClipboard(
@@ -92,8 +92,8 @@ function copyToClipboard(
 
 ## 获取地址栏参数
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function getUrlParams(url) {
@@ -109,7 +109,7 @@ function getUrlParams(url) {
 }
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function getUrlParams(url?: string): { [key: string]: string } {
@@ -160,8 +160,8 @@ const printNums = async () => {
 
 ## 深度合并对象
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function deepMerge(target, ...sources) {
@@ -190,7 +190,7 @@ const result = deepMerge(obj1, obj2)
 console.log(result) // { a: 1, b: { c: 2, d: 3 }, e: 4 }
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function deepMerge<T, U>(target: T, source: U): T & U {
@@ -218,8 +218,8 @@ console.log(result) // { a: 1, b: { c: 2, d: 3 }, e: 4 }
 
 ## 重命名键
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function renameKeys(keysMap, obj) {
@@ -238,7 +238,7 @@ renameKeys({ name: 'firstName', job: 'passion' }, obj)
 // { firstName: 'Bobo', passion: 'Front-End Master', shoeSize: 100 }
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function renameKeys(
@@ -263,8 +263,8 @@ renameKeys({ name: 'firstName', job: 'passion' }, obj)
 
 ## 解析 Cookie
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function parseCookie(cookie) {
@@ -282,7 +282,7 @@ parseCookie('foo=bar; equation=E%3Dmc%5E2')
 // { foo: 'bar', equation: 'E=mc^2' }
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function parseCookie(cookie: string): { [key: string]: string } {
@@ -306,8 +306,8 @@ parseCookie('foo=bar; equation=E%3Dmc%5E2')
 
 ## FormData 转 Object
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function formToObject(formData) {
@@ -319,7 +319,7 @@ function formToObject(formData) {
 }
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function formToObject<T>(formData: FormData): T {
@@ -421,8 +421,8 @@ supportsTouchEvents() // true
 
 ## 深度对象比较
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function deepEquals(a, b) {
@@ -448,7 +448,7 @@ const d = { name: 'John', age: undefined }
 deepEquals(c, d) // false
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function deepEquals(a: any, b: any): boolean {
@@ -467,8 +467,8 @@ function deepEquals(a: any, b: any): boolean {
 
 ## 数组转嵌套对象
 
-::: tabs
-@tab js
+::: code-tabs
+@tab JS
 
 ```js
 function arrayToObject(array, value) {
@@ -485,7 +485,7 @@ const output = arrayToObject(inputArray, inputValue)
 // output: { one: { two: { three: 'nice' } } }
 ```
 
-@tab ts
+@tab TS
 
 ```ts
 function arrayToObject(array: string[], value: any): any {

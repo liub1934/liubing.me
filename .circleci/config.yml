@@ -1,39 +1,49 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/liubing.me
     docker:
-      - image: node:14.21.1
+      - image: node:20.15.0
 
+    # 步骤定义
     steps:
+      # 拉取代码
       - checkout
 
+      # 安装lftp sshpass 工具包
       - run:
           name: Install dependencies
           command: |
             apt-get update
             apt-get install -y lftp sshpass
 
-      # 缓存中使用依赖
+      # 恢复缓存
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
-            - v1-dependencies-
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+
+      # 安装pnpm
+      - run:
+          name: Install pnpm package manager
+          command: |
+            corepack enable
+            corepack prepare pnpm@8.12.0 --activate
+
       # 安装依赖
       - run:
           name: Install Dependencies
-          command: yarn install
+          command: pnpm install
 
       # 保存缓存
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
 
       # Build打包
       - run:
           name: Build project
-          command: yarn docs:build
+          command: pnpm docs:build
 
       # 将dist打成压缩包
       - run:
@@ -41,7 +51,6 @@ jobs:
           command: |
             cd src/.vuepress
             tar -zcvf dist.tar.gz dist
-            ls -alh /root/repo/src/.vuepress/
 
       # 推送dist压缩包到服务器指定位置
       - run:
@@ -59,12 +68,22 @@ jobs:
           name: Deploy to GitHub
           command: |
             cd src/.vuepress/dist
+            git config --global init.defaultBranch main
             git init
             git config user.name "liub1934"
             git config user.email "liub1934@gmail.com"
             git add .
             git commit -m "Push Dist"
-            git push -f https://$GITHUB_TOKEN@github.com/liub1934/liubing.me.git master:dist
+            git push -f https://$GITHUB_TOKEN@github.com/liub1934/liubing.me.git main:dist
+
+      # 清空Cloudflare缓存
+      # - run:
+      #     name: Clear Cloudflare Cache
+      #     command: |
+      #       curl -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
+      #         -H "Authorization: Bearer ${CLOUDFLARE_API_KEY}" \
+      #         -H "Content-Type: application/json" \
+      #         --data '{"files":["https://liubing.me/*.js","https://liubing.me/*.css","https://liubing.me/*.html"]}'
 
 workflows:
   version: 2
@@ -74,4 +93,3 @@ workflows:
           filters:
             branches:
               only: main
-      - build

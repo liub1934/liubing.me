@@ -8,6 +8,7 @@ tag:
   - Vite
   - i18n
   - Vue I18n
+layout: ArticleLayout
 containerClass: article-container
 ---
 
@@ -88,7 +89,7 @@ export default i18n
 
 为了保持 Key 各个模块的唯一下，可以在 Key 前面加上模块名。如下面的`GENERAL`和`USER`
 
-::: tabs
+::: code-tabs
 @tab 通用模块
 
 ```csv

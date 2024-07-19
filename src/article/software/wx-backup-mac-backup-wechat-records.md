@@ -6,6 +6,7 @@ category:
 tag:
   - WX Backup
   - 微信备份
+layout: ArticleLayout
 containerClass: article-container
 ---
 
@@ -14,8 +15,6 @@ containerClass: article-container
 由于自己手机存储空间只有 128G，拍娃和媳妇的照片视频越来越多，导致现有的存储空间越来越小，经常性的弹窗存储空间不足，很是烦人，不得已将一些视频、音乐软件卸载重装以释放一些缓存。然后看了下自己的存储空间占用，除去相册，微信是占用空间最大的主。
 
 <!-- more -->
-
-![image](https://image.liubing.me/2022/12/23/4c4006bdc0cf9.PNG)
 
 想要将微信卸载重装，但是又舍不得微信里面的部分联系人的聊天记录，就在网上搜索下看有没有可以备份微信聊天记录的软件，直到发现`WX Backup`这块神器。
 

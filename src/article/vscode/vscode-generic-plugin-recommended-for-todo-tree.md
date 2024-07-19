@@ -6,6 +6,7 @@ tag:
   - VsCode
   - VsCode插件
   - Todo Tree
+layout: ArticleLayout
 containerClass: article-container
 ---
 

@@ -32,8 +32,8 @@ pluginOptions: {
 
 ### 插件安装
 
-::: tabs
-@tab Npm
+::: code-tabs
+@tab NPM
 
 ```sh
 npm install lodash-webpack-plugin babel-plugin-lodash -D

@@ -2,10 +2,11 @@
 index: false
 toc: false
 dir:
-  order: 8
+  order: 70
+layout: NavLayout
 containerClass: nav-container
 ---
 
-# 工具箱
+# 在线工具箱
 
-<AutoCatalog />
+<Catalog />

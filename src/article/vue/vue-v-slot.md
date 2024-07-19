@@ -6,6 +6,9 @@ category:
 tag:
   - Vue
   - v-slot
+source: 掘金
+sourceLink: https://juejin.im/post/5c64e11151882562e4726d98
+layout: ArticleLayout
 containerClass: article-container
 ---
 
@@ -21,7 +24,7 @@ containerClass: article-container
 
 先前，我们使用具名插槽来自定义模板内容，例如，一个假设的 `<base-layout>` 组件的模板如下：
 
-```Html
+```vue
 <div class="container">
   <header>
     <slot name="header"></slot>
@@ -37,7 +40,7 @@ containerClass: article-container
 
 在向具名插槽提供内容的时候，我们可以在一个父组件的 `<template>` 元素上使用 `slot` 特性：
 
-```Html
+```vue
 <base-layout>
   <template slot="header">
     <h1>Here might be a page title</h1>
@@ -52,7 +55,7 @@ containerClass: article-container
 
 或者直接用在一个普通的元素上：
 
-```Html
+```vue
 <base-layout>
   <h1 slot="header">Here might be a page title</h1>
   <p>A paragraph for the main content.</p>
@@ -63,7 +66,7 @@ containerClass: article-container
 
 上述两个示例渲染出来的 HTML 都将会是：
 
-```Html
+```vue
 <div class="container">
   <header>
     <h1>Here might be a page title</h1>
@@ -80,7 +83,7 @@ containerClass: article-container
 
 我们可以使用 `v-slot` 指令改写上面的栗子：
 
-```Html
+```vue
 <base-layout>
   <template v-slot:header>
     <h1>Here might be a page title</h1>
@@ -99,7 +102,7 @@ containerClass: article-container
 
 例如，上面的默认插槽，如果你想显示调用的话，可以这样：
 
-```Html
+```vue
 <base-layout>
   <template v-slot:header>
     <h1>Here might be a page title</h1>
@@ -116,7 +119,7 @@ containerClass: article-container
 
 无论哪种方式，上面的代码都将输出为下面代码：
 
-```Html
+```vue
 <div class="container">
   <header>
     <h1>Here might be a page title</h1>
@@ -139,15 +142,15 @@ containerClass: article-container
 
 有时候，我们想在父组件中访问子组件内部的一些可用数据。例如，假设有一个下面模板的 `<current-user>` 组件：
 
-```Html
-    <span>
-      <slot>{{ user.lastName }}</slot>
-    </span>
+```vue
+<span>
+  <slot>{{ user.lastName }}</slot>
+</span>
 ```
 
 我们可能想用用户的名字来替换掉插槽里面的姓，于是我们这样写：
 
-```Html
+```vue
 <current-user>
   {{ user.firstName }}
 </current-user>
@@ -156,7 +159,7 @@ containerClass: article-container
 很不幸，上面这段代码不能如你预期那样工作，因为当前代码的作用域环境是在父组件中，所以它访问不了 `<current-user>` 内部的数据。  
 为了解决这个， 我们可以在 `<current-user>` 内部的 `<slot>` 元素上动态绑定一个 `user` 对象属性：
 
-```Html
+```vue
 <span>
   <!-- 完整 v-bind:user 下面是简写形式 -->
   <slot :user="user">
@@ -167,7 +170,7 @@ containerClass: article-container
 
 绑定到 `<slot>` 元素上的属性我们称之为 **slot props**。现在，在父作用域中，我们可以通过 `slot-scope` 来访问 `user` 数据了：
 
-```Html
+```vue
 <current-user>
   <template slot-scope="slotProp">
     {{ slotProp.user.firstName }}
@@ -177,7 +180,7 @@ containerClass: article-container
 
 同样的，我们使用 `v-slot` 重构上面的代码：
 
-```Html
+```vue
 <current-user>
   <template v-slot:default="slotProps">
     {{ slotProps.user.firstName }}
@@ -187,7 +190,7 @@ containerClass: article-container
 
 或者直接作用在 `<current-user>` 上的写法：
 
-```Html
+```vue
 <!-- 省略默认插槽名字 -->
 <current-user v-slot="slotProp">
   {{ slotProp.user.firstName }}
@@ -204,15 +207,15 @@ containerClass: article-container
 
 在上述情况下，当且仅当提供了默认插槽内容时，我们可以使用 `v-slot` 直接作用在组件上：
 
-```Html
-    <current-user v-slot:default="slotProps">
-      {{ slotProps.user.firstName }}
-    </current-user>
+```vue
+<current-user v-slot:default="slotProps">
+  {{ slotProps.user.firstName }}
+</current-user>
 ```
 
 我们可以简化上面的的默认插槽写法：
 
-```Html
+```vue
 <current-user v-slot="slotProps">
   {{ slotProps.user.firstName }}
 </current-user>
@@ -220,7 +223,7 @@ containerClass: article-container
 
 请注意了，默认插槽的缩写语法不能与具名插槽混用：
 
-```Html
+```vue
 <!-- 控制台将报警告：-->
 <!-- To avoid scope ambiguity, the default slot should also use <template> syntax when there are other named slots. -->
 <!-- 意思就是说，为了避免作用域模糊 -->
@@ -235,7 +238,7 @@ containerClass: article-container
 
 于是，上面的代码，我们改写成：
 
-```Html
+```vue
 <current-user>
   <!-- 两种写法均可 -->
   <!--<template v-slot="slotProps">
@@ -262,7 +265,7 @@ function (slotProps) {
 
 这也就意味着 `v-slot` 的值只要满足函数参数定义的 JavaScript 表达式的都可以接受。因此，在支持的环境（单文件或现代浏览器）中，你还可以使用 **ES2015** 解构语法来提取特定的插值内容，例如：
 
-```Html
+```vue
 <current-user v-slot="{ user }">
   {{ user.firstName }}
 </current-user>
@@ -270,7 +273,7 @@ function (slotProps) {
 
 代码看起来更简洁对吧。我们还可以重命名解构变量：
 
-```Html
+```vue
 <current-user v-slot="{ user: person }">
   {{ person.firstName }}
 </current-user>
@@ -278,19 +281,19 @@ function (slotProps) {
 
 这给了我们很多自由操作的空间，你甚至可以自定义回退内容，以便在未定义插值情况下使用：
 
-```Html
-    <current-user v-slot="{ user = { firstName: 'Guest' } }">>
-      {{ user.firstName }}
-    </current-user>
+```vue
+<current-user v-slot="{ user = { firstName: 'Guest' } }">>
+  {{ user.firstName }}
+</current-user>
 ```
 
 ## 动态插槽名称
 
 > 2.6.0+ 新增
 
-[动态指令参数](https://cn.vuejs.org/v2/guide/syntax.html#%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0) 也适用于 `v-slot` ，允许我们定义动态插槽名称：
+[动态指令参数](https://v2.cn.vuejs.org/v2/guide/syntax.html#%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0) 也适用于 `v-slot` ，允许我们定义动态插槽名称：
 
-```Html
+```vue
 <base-layout>
   <template v-slot:[dynamicSlotName]>
     ...
@@ -304,7 +307,7 @@ function (slotProps) {
 
 与 `v-on` 和 `v-bind` 类似，`v-slot` 也有一个简写，即使用 `#` 代替 `v-slot`。例如， `v-slot:header` 简写成 `#header`:
 
-```Html
+```vue
 <base-layout>
   <template #header>
     <h1>Here might be a page title</h1>
@@ -319,7 +322,7 @@ function (slotProps) {
 
 和其他指令一样，只有在提供参数时才能使用简写形式，下面的写法是无效的：
 
-```Html
+```vue
 <!-- 将会触发一个控制台警告 -->
 <current-user #="{ user }">
   {{ user.firstName }}
@@ -328,7 +331,7 @@ function (slotProps) {
 
 也就是说，如果你想使用简写语法，则务必指定插值的名字：
 
-```Html
+```vue
 <current-user #default="{ user }">
   {{ user.firstName }}
 </current-user>
@@ -342,9 +345,3 @@ function (slotProps) {
 ## Demo
 
 [https://codepen.io/anon/pen/mYOJrz](https://codepen.io/anon/pen/mYOJrz)
-
-## 转载信息
-
-作者：[gongph](https://juejin.im/user/57beefb6efa631005a9edd7c)  
-链接：[https://juejin.im/post/5c64e11151882562e4726d98](https://juejin.im/post/5c64e11151882562e4726d98 'https://juejin.im/post/5c64e11151882562e4726d98')  
-来源：[掘金](https://juejin.im)

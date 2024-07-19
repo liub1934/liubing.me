@@ -6,4 +6,4 @@ containerClass: article-container
 
 # 软件相关
 
-<AutoCatalog />
+<Catalog />

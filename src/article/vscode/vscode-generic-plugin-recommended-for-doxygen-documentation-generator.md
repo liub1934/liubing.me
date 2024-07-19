@@ -6,6 +6,7 @@ tag:
   - VsCode
   - VsCode插件
   - Doxygen Documentation Generator
+layout: ArticleLayout
 containerClass: article-container
 ---
 

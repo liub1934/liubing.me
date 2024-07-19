@@ -9,6 +9,7 @@ tag:
   - 自动打包
   - 自动部署
   - 自动构建
+layout: ArticleLayout
 containerClass: article-container
 ---
 
@@ -19,6 +20,10 @@ containerClass: article-container
 <!-- more -->
 
 ## 注册
+
+::: tip
+如果打不开 Buddy 官网，请开启魔法上网。
+:::
 
 没注册过的同学可以自行去 Buddy 官网注册：[点击前往](https://buddy.works)，推荐大家使用 GitHub 方式进行登录。
 

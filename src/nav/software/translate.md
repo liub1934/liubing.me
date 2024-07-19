@@ -1,5 +1,6 @@
 ---
 toc: false
+layout: NavLayout
 containerClass: nav-container
 ---
 
@@ -8,7 +9,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: https://image.liubing.me/2023/01/25/46ba7b50439d9.png
+- icon: '@websites/deepl.png'
   name: DeepL
   desc: 新一代 AI 翻译工具，号称全世界最准确的翻译软件。
   link: https://www.deepl.com/

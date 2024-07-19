@@ -6,4 +6,4 @@ containerClass: article-container
 
 # 宝塔面板
 
-<AutoCatalog />
+<Catalog />

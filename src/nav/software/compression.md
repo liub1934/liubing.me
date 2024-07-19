@@ -1,5 +1,6 @@
 ---
 toc: false
+layout: NavLayout
 containerClass: nav-container
 ---
 
@@ -8,7 +9,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: https://image.liubing.me/2023/01/25/4a6dfedf9a7b9.ico
+- icon: '@websites/7-zip.ico'
   name: 7-Zip
   desc: 经典开源免费的文件压缩/解压缩工具。
   link: https://www.7-zip.org/

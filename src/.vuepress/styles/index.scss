@@ -1,7 +1,7 @@
 // place your custom styles here
 html[data-theme='light'] {
-  .blog-info-list {
-    .blog-type-button {
+  .vp-blog-infos {
+    .vp-blog-type-button {
       .icon-wrapper {
         &.active {
           color: #fff;
@@ -11,8 +11,8 @@ html[data-theme='light'] {
   }
 }
 
-.footer-wrapper {
-  .footer {
+.vp-footer-wrapper {
+  .vp-footer {
     a {
       img {
         vertical-align: middle;
@@ -20,25 +20,25 @@ html[data-theme='light'] {
       }
     }
   }
-  .copyright {
+  .vp-copyright {
     display: none;
   }
 }
 
-.article-item {
-  .page-info > span {
-    flex-shrink: 1 !important;
-  }
-}
-
-.project-panel {
+.vp-project-panel {
+  margin-left: -16px;
+  margin-top: -6px;
   a {
     &:hover {
-      text-decoration: none;
+      text-decoration: none !important;
     }
   }
-  .project {
-    .image {
+  .vp-project-card {
+    margin: 6px 0 6px 16px;
+    &::after {
+      display: none !important;
+    }
+    .vp-project-image {
       border-radius: 50%;
     }
   }
@@ -59,15 +59,99 @@ figcaption {
   display: none !important;
 }
 
-// .blog-hero {
-//   .mask {
-//     background: url(https://file.mo7.cc/api/public/bz) center center / cover
-//       no-repeat !important;
-//   }
-// }
-
-.page.blog {
-  .blog-home {
+.vp-page.vp-page {
+  .vp-blog-main {
     margin-top: 6px;
+  }
+}
+
+.theme-hope-content {
+  &.custom-content-before {
+    padding-bottom: 0;
+  }
+}
+
+hr {
+  position: relative;
+  margin: 0.8rem auto;
+  box-sizing: content-box;
+  overflow: visible;
+  height: 1rem;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    width: calc(100% - 0.25rem);
+    height: 0;
+    border-width: 0.125rem;
+    border-style: dashed;
+    opacity: 0.2;
+  }
+  &::after {
+    position: absolute;
+    line-height: 1.6rem;
+    top: -0.4rem;
+    left: 1%;
+    font-family: 'iconfont';
+    content: '\e66c';
+    z-index: 2;
+    font-size: 1.6rem;
+    transition: 1s;
+    opacity: 0.2;
+  }
+  &:hover:after {
+    opacity: 0.8;
+    left: calc(99% - 1.6rem);
+  }
+}
+
+.vp-project-name {
+  &.no-desc {
+    margin-top: 10px;
+  }
+}
+
+.vp-navbar-end {
+  .vp-action-link {
+    .iconfont {
+      font-size: 20px;
+    }
+  }
+}
+
+[aria-label][data-balloon-pos]:after {
+  white-space: pre;
+}
+
+.artalk,
+.artalk.atk-dark-mode,
+.atk-layer-wrap,
+.atk-layer-wrap.atk-dark-mode {
+  --at-color-main: var(--theme-color);
+  --at-color-light: var(--theme-color-light);
+  --at-color-red: var(--badge-danger-color);
+  --at-color-yellow: var(--badge-warning-color);
+}
+
+.vp-toc-wrapper.open {
+  margin-top: 0;
+}
+
+// Fix 导航栏外链箭头样式
+.vp-navbar {
+  .vp-nav-links {
+    .vp-nav-item > .auto-link {
+      &.external-link {
+        &::after {
+          position: static;
+          visibility: visible;
+        }
+      }
+    }
   }
 }

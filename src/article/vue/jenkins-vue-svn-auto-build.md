@@ -2,6 +2,7 @@
 date: 2019-05-02
 category:
   - 其他
+  - Jenkins
 tag:
   - Vue
   - Jenkins
@@ -9,6 +10,7 @@ tag:
   - 自动构建
   - 自动部署
   - 自动打包
+layout: ArticleLayout
 containerClass: article-container
 ---
 

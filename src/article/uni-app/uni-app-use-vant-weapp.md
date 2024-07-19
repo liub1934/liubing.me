@@ -9,6 +9,7 @@ tag:
   - Vue
   - Vant
   - 微信小程序
+layout: ArticleLayout
 containerClass: article-container
 ---
 

@@ -6,4 +6,4 @@ containerClass: article-container
 
 # Ant Design Vue
 
-<AutoCatalog />
+<Catalog />

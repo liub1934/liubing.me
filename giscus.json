@@ -1,0 +1,4 @@
+{
+  "origins": ["https://liubing.me"],
+  "originsRegex": ["http://localhost:[0-9]+"]
+}

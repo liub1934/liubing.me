@@ -6,4 +6,4 @@ containerClass: article-container
 
 # Visual Studio Code
 
-<AutoCatalog />
+<Catalog />

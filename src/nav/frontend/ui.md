@@ -1,48 +1,107 @@
 ---
 toc: false
-order: 1
+order: 10
+layout: NavLayout
 containerClass: nav-container
 ---
 
-# UI 组件库
+# UI 库
 
 ::: projects
 
 ```yaml
-- icon: https://image.liubing.me/2022/12/25/75272dc92a967.png
+- icon: '@websites/element-plus.png'
   name: Element Plus
   desc: 基于 Vue 3，面向设计师和开发者的组件库。
   link: https://element-plus.org/zh-CN/
 
-- icon: https://image.liubing.me/2022/12/25/62128a7e2b1dd.jpg
+- icon: '@websites/element-ui.jpg'
   name: Element
   desc: 一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库。
   link: https://element.eleme.cn/
 
-- icon: https://image.liubing.me/2022/12/30/beb19d3c526de.png
+- icon: '@websites/ant.design.png'
   name: Ant Design
   desc: 基于 Ant Design 设计体系的 React UI 组件库。
   link: https://ant.design/
 
-- icon: https://image.liubing.me/2022/12/25/5a4b4bcc739b1.jpg
+- icon: '@websites/antdv.jpg'
   name: Ant Design Vue
   desc: Ant Design 的 Vue 实现，开发和服务于企业级后台产品。
   link: https://antdv.com/
 
-- icon: https://image.liubing.me/2020/12/14/dd792ba9f211f.png
+- icon: '@websites/quasar.png'
   name: Quasar Framework
   desc: 构建高性能和高质量的Vue 3组件库。
   link: https://quasar.dev/
 
-- icon: https://image.liubing.me/2021/07/01/cea4b11857789.png
+- icon: '@websites/naiveui.png'
   name: Naive UI
   desc: 一个 Vue 3 组件库，使用 TypeScript，快，有点意思。
   link: https://www.naiveui.com/
 
-- icon: https://image.liubing.me/2023/01/10/2b02fbf0c867b.ico
+- icon: '@websites/l-ui.ico'
   name: LuLu UI
   desc: 阅文集团荣誉出品的前端 UI 组件库。
   link: https://l-ui.com/
+
+- icon: '@websites/primevue.ico'
+  name: PrimeVue
+  desc: 一套丰富的 Vue 开源 UI 组件库。
+  link: https://primevue.org/
+
+- icon: '@websites/vuetifyjs.webp'
+  name: Vuetify
+  desc: 一个不要求设计能力的Vue界面组件框架，自带了许多自行设计实现的Vue组件。
+  link: https://vuetifyjs.com/
+
+- icon: '@websites/radix-vue.png'
+  name: Radix Vue
+  desc: 无样式、可访问的组件，用于在 Vue 中构建高质量的设计系统和 Web 应用程序。
+  link: https://www.radix-vue.com/
+
+- icon: '@websites/anu-vue.svg'
+  name: Anu
+  desc: 基于 DX 实用程序的 Vue 组件库。
+  link: https://anu-vue.netlify.app/
+
+- icon: '@websites/vuestic.png'
+  name: Vuestic
+  desc: 一个基于开源 Vue 3 的 UI 框架。
+  link: https://ui.vuestic.dev/
+```
+
+:::
+
+## 原子 UI
+
+::: projects
+
+```yaml
+- icon: '@websites/tailwind-elements.ico'
+  name: TW-Elements
+  desc: 一套基于Tailwind的 UI 组件库。
+  link: https://tw-elements.com/
+
+- icon: '@websites/headlessui.png'
+  name: Headless UI
+  desc: 完全无样式、完全可访问的 UI 组件，旨在与 Tailwind CSS 完美集成。
+  link: https://headlessui.com/
+
+- icon: '@websites/nuxtlabs.ico'
+  name: Nuxt UI
+  desc: 使用 Headless UI 和 Tailwind CSS 构建。
+  link: https://ui.nuxtlabs.com/
+
+- icon: '@websites/daisyui.ico'
+  name: Daisy UI
+  desc: 最受欢迎的组件库，基于Tailwind CSS。
+  link: https://daisyui.com/
+
+- icon: '@websites/shadcn.png'
+  name: shadcn/ui
+  desc: 设计精美的组件，您可以将其复制并粘贴到您的应用程序中。
+  link: https://ui.shadcn.com/
 ```
 
 :::

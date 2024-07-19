@@ -9,6 +9,7 @@ tag:
   - 人脸核身
   - sdk
   - uni-app
+layout: ArticleLayout
 containerClass: article-container
 ---
 

@@ -7,6 +7,7 @@ tag:
   - Vue
   - Vite
   - Scss
+layout: ArticleLayout
 containerClass: article-container
 ---
 
@@ -16,7 +17,7 @@ containerClass: article-container
 
 <!-- more -->
 
-::: tabs
+::: code-tabs
 @tab variables.scss
 
 ```scss

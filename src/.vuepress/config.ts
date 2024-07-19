@@ -1,9 +1,10 @@
-import { defineUserConfig } from 'vuepress'
+import { defineUserConfig } from '@vuepress/cli'
 import { getDirname, path } from '@vuepress/utils'
-import { AuthorName, Base, Description } from './constant'
-import { configPlugins } from './config/plugins'
+import { AuthorName, Base, Description } from './utils'
+import { configPlugins } from './configs/plugins'
 import { viteBundler } from '@vuepress/bundler-vite'
-import theme from './config/theme'
+import viteOptions from './configs/vite.config'
+import theme from './configs/theme'
 const __dirname = getDirname(import.meta.url)
 
 const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
@@ -23,13 +24,17 @@ export default defineUserConfig({
   },
   alias: {
     '@components': path.resolve(__dirname, './components'),
+    '@websites': path.resolve(__dirname, './public/assets/websites'),
     '@friends': path.resolve(__dirname, '../friends'),
-    '@theme-hope/components/PageFooter': PageFooter,
-    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel
+    '@theme-hope': path.resolve(
+      __dirname,
+      '../../node_modules/vuepress-theme-hope/lib/client'
+    ),
+    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel,
+    '@theme-hope/components/PageFooter': PageFooter
   },
   plugins: configPlugins,
   bundler: viteBundler({
-    viteOptions: {},
-    vuePluginOptions: {}
+    viteOptions
   })
 })

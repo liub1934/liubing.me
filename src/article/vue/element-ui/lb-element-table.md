@@ -8,6 +8,7 @@ tag:
   - Vue
   - Table
   - 表格
+layout: ArticleLayout
 containerClass: article-container
 ---
 

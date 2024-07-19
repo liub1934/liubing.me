@@ -8,17 +8,17 @@ pageInfo: false
 ```
 站点名称：Bing🐣
 站点地址：https://liubing.me
-站点描述：基于VuePress的个人博客，记录日常开发问题。
+站点描述：一个基于VuePress的个人博客。
 站点Logo：https://liubing.me/logo.png
 ```
 
 请先将本站加入友链后，在下方评论按如下格式提供信息：
 
 ```
-icon: '网站图标'
-name: '网站名字'
-desc: '网站描述'
-link: '网站链接'
+icon: 网站图标
+name: 网站名字
+desc: 网站描述
+link: 网站链接
 ```
 
 ## 固定链接
@@ -31,7 +31,7 @@ link: '网站链接'
   desc: 渐进式 JavaScript 框架
   link: https://cn.vuejs.org/
 
-- icon: https://vuepress.vuejs.org/hero.png
+- icon: '@websites/vuepress.png'
   name: VuePress
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
@@ -54,10 +54,10 @@ link: '网站链接'
 ::: projects friends
 
 ```yaml
-- icon: https://mrhope.site/logo.svg
+- icon: '@websites/mister-hope.png'
   name: Mr.Hope
   desc: VuePress Theme Hope 主题作者。
-  link: https://blog.sherry4869.com/
+  link: https://mrhope.site/
 
 - icon: https://file.mo7.cc/static/lxh_gif/lxh_71.gif
   name: 墨七
@@ -78,6 +78,16 @@ link: '网站链接'
   name: 二丫讲梵
   desc: 💻学习📝记录🔗分享
   link: https://wiki.eryajf.net/
+
+- icon: https://oragekk.me/logo.svg
+  name: 上冬十二
+  desc: 到最后，竟庆幸于夕阳仍留在身上
+  link: https://oragekk.me/
+
+- icon: https://paper-dragon.github.io/logo.svg
+  name: 运维开发绿皮书
+  desc: 放置我的笔记、搜集、摘录、实践，保持好奇心。看文需谨慎，后果很严重!
+  link: https://paper-dragon.github.io/
 ```
 
 :::

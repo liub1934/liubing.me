@@ -3,9 +3,11 @@ date: 2019-05-20
 category:
   - Vue
   - 其他
+  - Jenkins
 tag:
   - Vue
   - Jenkins
+layout: ArticleLayout
 containerClass: article-container
 ---
 

@@ -3,10 +3,12 @@ date: 2023-02-12
 category:
   - 宝塔面板
   - Lsky Pro
+  - 自部署
 tag:
   - Lsky Pro
   - 宝塔面板
   - 图床
+layout: ArticleLayout
 containerClass: article-container
 ---
 
@@ -75,6 +77,7 @@ containerClass: article-container
 ![image](https://image.liubing.me/i/2023/02/12/63e8af7c468f6.png)
 
 扩展和禁用函数有更改的时候需要重启下 PHP 服务
+
 ![image](https://image.liubing.me/i/2023/02/12/63e8b01b67cf2.png)
 
 ## 安装程序
@@ -137,7 +140,9 @@ php start.php migrate
 
 ## 重定向配置
 
-一切都 OK 后通过`https://image.liubing.me/2023/01/14/5457a8a4d653c.png`形式访问会 404，因为新迁移后的图片访问需要在域名后面加个`i`变成`https://image.liubing.me/i/2023/01/14/5457a8a4d653c.png`即可正常访问了。
+一切都 OK 后通过`https://image.liubing.me/2023/01/14/5457a8a4d653c.png`形式访问会 404。  
+因为新迁移后的图片访问需要在域名后面加个`i`变成如下地址：  
+`https://image.liubing.me/i/2023/01/14/5457a8a4d653c.png`即可正常访问了。
 
 但是我们之前的域名地址后面是不带`i`，需要将这些地址重定向到带`i`的地址。可以通过添加以下的 nginx 配置完成匹配和重定向。
 

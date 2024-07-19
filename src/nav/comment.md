@@ -1,5 +1,7 @@
 ---
 toc: false
+order: 100
+layout: NavLayout
 containerClass: nav-container
 ---
 
@@ -8,30 +10,30 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: https://image.liubing.me/2023/02/05/c6a5e48336abe.jpg
-  name: Artalk
-  desc: 轻量、安全、易上手的自托管评论系统。
-  link: https://artalk.js.org/
-
-- icon: https://image.liubing.me/2023/02/05/75554dafde4cf.png
-  name: Giscus
-  desc: 由 GitHub Discussions 驱动的评论系统。
-  link: https://giscus.app/
-
-- icon: https://image.liubing.me/2023/02/05/d62ac099e2772.png
-  name: Twikoo
-  desc: 一款简洁、安全的评论系统。
-  link: https://twikoo.js.org/
-
-- icon: https://image.liubing.me/2023/02/05/834597e9e927e.png
+- icon: '@websites/waline.png'
   name: Waline
   desc: 一款简洁、安全的评论系统。
   link: https://waline.js.org/
 
-- icon: https://image.liubing.me/2023/02/05/e0764b3459425.png
+- icon: '@websites/artalk.jpg'
+  name: Artalk
+  desc: 轻量、安全、易上手的自托管评论系统。
+  link: https://artalk.js.org/
+
+- icon: '@websites/giscus.png'
+  name: Giscus
+  desc: 由 GitHub Discussions 驱动的评论系统。
+  link: https://giscus.app/
+
+- icon: '@websites/valine.png'
   name: Valine
   desc: 一款快速、简洁且高效的无后端评论系统。
   link: https://valine.js.org/
+
+- icon: '@websites/twikoo.png'
+  name: Twikoo
+  desc: 一款简洁、安全的评论系统。
+  link: https://twikoo.js.org/
 ```
 
 :::

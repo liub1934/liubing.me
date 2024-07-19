@@ -8,6 +8,7 @@ tag:
   - GitHack
   - Staticaly
   - CDN
+layout: ArticleLayout
 containerClass: article-container
 ---
 

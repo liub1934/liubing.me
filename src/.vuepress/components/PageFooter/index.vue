@@ -1,68 +1,54 @@
 <template>
-  <PageFooter></PageFooter>
+  <div class="vp-footer-wrapper">
+    <div class="vp-footer" v-html="footerContent"></div>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import PageFooter from 'vuepress-theme-hope/components/PageFooter'
-import dayjs from 'dayjs'
-import duration, { DurationUnitType } from 'dayjs/plugin/duration'
-import { onBeforeUnmount, onMounted } from 'vue'
-import { BlogStartDate } from '../../constant'
-dayjs.extend(duration)
+import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { useThemeLocaleData } from 'vuepress-theme-hope/client/composables/index.js'
+import { usePageFrontmatter } from 'vuepress/client'
+import { isString } from 'vuepress/shared'
+import { calculateRuntime, BlogStartDate } from '../../utils'
+import '@theme-hope/styles/footer.scss'
 
-let timer
-const blogStartDate = dayjs(BlogStartDate)
-function setDurationTime() {
-  const $el = document.getElementById('blog-duration')
-  if (!$el) return
-  let durationText = ''
-  const nowDate = dayjs(new Date())
-  const $duration = dayjs.duration(nowDate.diff(blogStartDate))
-  const arrMap = [
-    {
-      key: 'years',
-      label: '年'
-    },
-    {
-      key: 'months',
-      label: '个月'
-    },
-    {
-      key: 'days',
-      label: '天'
-    },
-    {
-      key: 'hours',
-      label: '小时'
-    },
-    {
-      key: 'minutes',
-      label: '分钟'
-    },
-    {
-      key: 'seconds',
-      label: '秒'
-    }
-  ]
-  arrMap.map((item, index) => {
-    const { key, label } = item
-    const getValue = $duration.get(key as DurationUnitType)
-    if (getValue) {
-      const timeValue =
-        index < 3 ? getValue : getValue.toString().padStart(2, '0')
-      durationText += `${timeValue}${label} `
-    }
-  })
-  $el.innerHTML = durationText
-}
+let timerInterval: IntervalHandle | null
+const frontmatter = usePageFrontmatter<ThemeNormalPageFrontmatter>()
+const themeLocale = useThemeLocaleData()
+const $el = ref<HTMLElement | null>(null)
+const startDate = BlogStartDate
+
+const footerContent = computed(() => {
+  const { footer } = frontmatter.value
+  return footer === false
+    ? false
+    : isString(footer)
+      ? footer
+      : themeLocale.value.footer || ''
+})
 
 onMounted(() => {
-  setDurationTime()
-  timer = setInterval(() => {
-    setDurationTime()
-  }, 1000)
+  $el.value = document.querySelector('#running-time')
+  setRuntime()
 })
+
 onBeforeUnmount(() => {
-  clearInterval(timer)
+  clearTimeInterval()
 })
+
+function setRuntime() {
+  if ($el.value) {
+    $el.value.innerHTML = calculateRuntime(startDate)
+    timerInterval = setInterval(() => {
+      $el.value!.innerHTML = calculateRuntime(startDate)
+    }, 1000)
+  }
+}
+function clearTimeInterval() {
+  if (timerInterval) {
+    clearInterval(timerInterval)
+    timerInterval = null
+  }
+}
 </script>

@@ -1,27 +1,65 @@
 {
   "name": "liubing.me",
-  "version": "2.0.0",
   "description": "A project of vuepress-theme-hope",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "docs:build": "vuepress build src",
     "docs:clean-dev": "vuepress dev src --clean-cache",
     "docs:dev": "vuepress dev src",
-    "update:theme": "yarn upgrade vuepress-theme-hope@latest"
+    "docs:update-package": "pnpm dlx vp-update",
+    "compress-svg": "npx ts-node compress-svg.ts",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "devDependencies": {
-    "@vuepress/client": "^2.0.0-beta.60",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.60",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.60",
-    "js-yaml": "^4.1.0",
-    "vue": "^3.2.45",
-    "vuepress": "^2.0.0-beta.60",
-    "vuepress-plugin-redirect": "^2.0.0-beta.152",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.165",
-    "vuepress-theme-hope": "^2.0.0-beta.174"
+    "@rushstack/eslint-patch": "1.10.2",
+    "@tsconfig/node18": "18.2.4",
+    "@types/js-yaml": "4.0.9",
+    "@types/lodash-es": "^4.17.12",
+    "@types/markdown-it": "14.0.1",
+    "@types/node": "20.12.7",
+    "@unocss/eslint-config": "^0.59.4",
+    "@unocss/preset-attributify": "^0.59.4",
+    "@unocss/preset-rem-to-px": "^0.59.4",
+    "@unocss/preset-uno": "^0.59.4",
+    "@unocss/transformer-directives": "^0.59.4",
+    "@unocss/transformer-variant-group": "^0.59.4",
+    "@unocss/vite": "^0.59.4",
+    "@vitejs/plugin-vue": "4.5.2",
+    "@vitejs/plugin-vue-jsx": "3.1.0",
+    "@vue/eslint-config-prettier": "8.0.0",
+    "@vue/eslint-config-typescript": "12.0.0",
+    "@vue/tsconfig": "0.4.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/plugin-container": "2.0.0-rc.28",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.37",
+    "@vuepress/plugin-pwa": "2.0.0-rc.37",
+    "eslint": "8.57.0",
+    "eslint-plugin-vue": "9.25.0",
+    "git-cz": "4.9.0",
+    "prettier": "3.2.5",
+    "svgo": "^3.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "5.3.3",
+    "unocss": "^0.59.4",
+    "vue": "^3.4.31",
+    "vuepress": "2.0.0-rc.14",
+    "vuepress-plugin-search-pro": "2.0.0-rc.50",
+    "vuepress-theme-hope": "2.0.0-rc.50"
   },
   "dependencies": {
-    "dayjs": "^1.11.7"
+    "@ant-design/colors": "7.0.2",
+    "@lottiefiles/dotlottie-web": "^0.20.2",
+    "@splinetool/runtime": "0.9.369",
+    "@vueuse/core": "10.9.0",
+    "artalk": "2.8.7",
+    "colord": "^2.9.3",
+    "js-yaml": "4.1.0",
+    "lodash-es": "^4.17.21"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
   }
 }
