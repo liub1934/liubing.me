@@ -101,6 +101,10 @@ const count = defineModel<number>('count', { default: 0 })
 
 ## 启用 defineModel
 
+::: tip
+Vue 3.4+ 已默认支持，具体参考官网文档的[defineModel](https://cn.vuejs.org/api/sfc-script-setup.html#definemodel)
+:::
+
 ```ts{5-7}
 // vite.config.js
 export default {
