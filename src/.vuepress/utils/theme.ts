@@ -62,9 +62,13 @@ export function addCssVarsToHtml(themeColor: string, isDark: boolean) {
   const cssObj = parseCssText(cssText)
   const configCssObj: Recordable<string> = {}
   const generateColors = getGenerateColors(themeColor, isDark)
+  const length = generateColors.length
   generateColors.map((color, index) => {
     const { r, g, b } = getRGBColor(color)
     configCssObj[`--v-primary-color-${index + 1}-rgb`] = `${r},${g},${b}`
+    configCssObj[`--el-color-primary-light-${length - (index + 1)}`] = color
+    if (index === 5) configCssObj[`--el-color-primary`] = color
+    if (index === 6) configCssObj[`--el-color-primary-dark-2`] = color
   })
   const newCssText = Object.entries({
     ...cssObj,
@@ -74,4 +78,7 @@ export function addCssVarsToHtml(themeColor: string, isDark: boolean) {
     .join(' ')
 
   $root.style.cssText = newCssText
+  $root.classList.remove('light')
+  $root.classList.remove('dark')
+  $root.classList.add(isDark ? 'dark' : 'light')
 }

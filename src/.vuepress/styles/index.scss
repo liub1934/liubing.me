@@ -10,13 +10,6 @@ html[data-theme='light'] {
     }
   }
 }
-html[data-theme='dark'] {
-  .theme-hope-content {
-    img {
-      opacity: 0.8;
-    }
-  }
-}
 
 .vp-footer-wrapper {
   .vp-footer {
@@ -147,13 +140,6 @@ hr {
   --at-color-font: var(--main-text-color);
   --at-color-grey: var(--main-text-color);
   --at-color-meta: var(--main-text-color);
-  --at-color-bg: var(--main-text-color);
-  --at-color-bg-transl: var(--main-text-color);
-}
-.artalk.atk-dark-mode {
-  .atk-avatar {
-    opacity: 0.8;
-  }
 }
 .atk-comment > .atk-main > .atk-header .atk-badge {
   color: var(--main-text-color);

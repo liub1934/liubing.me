@@ -20,9 +20,6 @@
 <script setup lang="ts">
 import BloggerInfo from '@theme-hope/modules/blog/components/BloggerInfo'
 import InfoList from '@theme-hope/modules/blog/components/InfoList'
-import BlogClock from '../BlogClock/index.vue'
-import BingLogo from '../BingLogo/index.vue'
-import Heatmap from '../Heatmap/index.vue'
 import '@theme-hope/modules/blog/styles/info-panel.scss'
 </script>
 
