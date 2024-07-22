@@ -19,6 +19,10 @@ containerClass: article-container
 该面板适合有一定动手能力用户使用，纯小白用户建议还是选择[宝塔面板](https://www.bt.cn/?invite_code=M19senRrbW4=)
 :::
 
+::: tip
+博主是个爱折腾的人，近期将面板又迁移到了[1Panel面板](https://1panel.cn/)，该面板对Docker和Nodejs的支持较好，当然也是支持PHP的，都是基于Docker部署。
+:::
+
 ## 面板介绍
 
 - 首款开源

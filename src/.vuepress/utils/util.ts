@@ -1,4 +1,6 @@
+import { useClipboard } from '@vueuse/core'
 import { Base } from './constant'
+import { ElMessage } from 'element-plus'
 
 export const withBase = (path: string) => {
   if (!path) return ''
@@ -29,4 +31,21 @@ export function calculateRuntime(startDate: string) {
     }
   }
   return output
+}
+
+/**
+ * 复制文字
+ * @param text 文字内容
+ * @returns
+ */
+export function copyText(text: string) {
+  if (!text) return
+  const { copy, isSupported } = useClipboard()
+  if (isSupported) {
+    copy(text)
+    ElMessage({
+      message: '复制成功',
+      type: 'success'
+    })
+  }
 }

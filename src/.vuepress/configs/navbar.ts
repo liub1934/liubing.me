@@ -40,6 +40,18 @@ export const navbarConfig = navbar([
     link: '/nav/'
   },
   {
+    text: '工具箱',
+    icon: 'tool',
+    prefix: '/tools/',
+    children: [
+      {
+        text: 'CSS三角形生成器',
+        icon: 'triangle',
+        link: 'css-triangle-generator'
+      }
+    ]
+  },
+  {
     text: '友情链接',
     icon: 'link',
     link: '/friends/'

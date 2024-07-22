@@ -23,7 +23,6 @@
 
 <script lang="ts" setup>
 import NotFound from '@theme-hope/layouts/NotFound'
-import DotLottie from '../../components/DotLottie/index.vue'
 import { computed, ref } from 'vue'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
 

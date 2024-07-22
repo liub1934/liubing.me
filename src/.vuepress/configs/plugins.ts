@@ -44,6 +44,8 @@ export const themePlugins: PluginsOptions = {
       if (filePathRelative.startsWith('nav/')) return false
       // 舍弃about文件夹的页面
       if (filePathRelative.startsWith('about/')) return false
+      // 舍弃tools文件夹的页面
+      if (filePathRelative.startsWith('tools/')) return false
       // 舍弃所有的README.md页面
       if (filePathRelative.endsWith('README.md')) return false
       // 舍弃那些没有使用默认布局的页面
