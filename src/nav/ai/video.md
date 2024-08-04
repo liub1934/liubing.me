@@ -10,197 +10,192 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/d-id.png'
+- icon: 'https://api.iowen.cn/favicon/d-id.com.png'
   name: D-ID
   desc: AI神器让照片开口说话。
-  link: https://www.d-id.com/
+  link: https://d-id.com/
 
-- icon: '@websites/artflow.svg'
+- icon: 'https://api.iowen.cn/favicon/app.artflow.ai.png'
   name: Artflow
   desc: AI智能生成独特的视频。
-  link: https://www.app.artflow.ai/
+  link: https://app.artflow.ai/
 
-- icon: '@websites/runwayml.png'
+- icon: 'https://api.iowen.cn/favicon/runwayml.com.png'
   name: Runway
   desc: AI智能移除视频背景。
   link: https://runwayml.com/green-screen/
 
-- icon: '@websites/unscreen.png'
+- icon: 'https://api.iowen.cn/favicon/unscreen.com.png'
   name: Unscreen
   desc: AI智能移除视频背景。
-  link: https://www.unscreen.com/
+  link: https://unscreen.com/
 
-- icon: '@websites/cutout.pro.ico'
+- icon: 'https://api.iowen.cn/favicon/cutout.pro.png'
   name: Cutout.Pro
   desc: 一键去除视频背景
-  link: https://www.cutout.pro/zh-CN/remove-video-background
+  link: https://cutout.pro/zh-CN/remove-video-background
 
-- icon: '@websites/avclabs.png'
+- icon: 'https://api.iowen.cn/favicon/app.avclabs.com.png'
   name: AVCLabs
   desc: 删除视频背景，100%自动且免费。
   link: https://app.avclabs.com/
 
-- icon: '@websites/bgrem.png'
+- icon: 'https://api.iowen.cn/favicon/bgrem.ai.png'
   name: BgRem
   desc: AI智能删除视频背景。
-  link: https://bgrem.deelvin.com/zh/remove_video_bg/
+  link: https://bgrem.ai/zh/
 
-- icon: '@websites/dreamfaceapp.png'
+- icon: 'https://api.iowen.cn/favicon/dreamfaceapp.com.png'
   name: DreamFace
   desc: 手机上强大的AI动画照片应用程序。
   link: https://dreamfaceapp.com/
 
-- icon: '@websites/synthesia.ico'
+- icon: 'https://api.iowen.cn/favicon/synthesia.io.png'
   name: Synthesia
   desc: 基于关键词创作AI视频。
-  link: https://www.synthesia.io/
+  link: https://synthesia.io/
 
-- icon: '@websites/fliki.png'
+- icon: 'https://api.iowen.cn/favicon/fliki.ai.png'
   name: Fliki
   desc: 基于关键词创作AI视频。
   link: https://fliki.ai/
 
-- icon: '@websites/deepbrain.ico'
+- icon: 'https://api.iowen.cn/favicon/deepbrain.io.png'
   name: DeepBrain
   desc: 基于关键词创作AI视频。
-  link: https://www.deepbrain.io/
+  link: https://deepbrain.io/
 
-- icon: '@websites/rephrase.png'
+- icon: 'https://api.iowen.cn/favicon/rephrase.ai.png'
   name: Rephrase
   desc: 基于关键词创作AI视频。
-  link: https://www.rephrase.ai/
+  link: https://rephrase.ai/
 
-- icon: '@websites/colossyan.png'
+- icon: 'https://api.iowen.cn/favicon/colossyan.com.png'
   name: Colossyan
   desc: 只需输入文本，即可在几分钟内准备好支持70多种语言的视频。
-  link: https://www.colossyan.com/
+  link: https://colossyan.com/
 
-- icon: '@websites/heygen.png'
+- icon: 'https://api.iowen.cn/favicon/heygen.com.png'
   name: Heygen
   desc: 原名Movio，只需3个简单步骤创建AI视频。
-  link: https://www.heygen.com/
+  link: https://heygen.com/
 
-- icon: '@websites/elai.io.png'
+- icon: 'https://api.iowen.cn/favicon/elai.io.png'
   name: Elai.
   desc: 仅从文本创建AI视频。
   link: https://elai.io/
 
-- icon: '@websites/pictory.avif'
+- icon: 'https://api.iowen.cn/favicon/pictory.ai.png'
   name: Pictory
   desc: 根据长篇内容轻松制作品牌视频
   link: https://pictory.ai/
 
-- icon: '@websites/steve.ai.png'
+- icon: 'https://api.iowen.cn/favicon/steve.ai.png'
   name: Steve AI
   desc: 借助专利AI技术，在几分钟内制作专业视频。
-  link: https://www.steve.ai/
+  link: https://steve.ai/
 
-- icon: '@websites/virbo.wondershare.png'
+- icon: 'https://api.iowen.cn/favicon/virbo.wondershare.cn.png'
   name: 万兴播爆
   desc: 输入文案，一键生成“真人”营销视频。
   link: https://virbo.wondershare.cn/
 
-- icon: '@websites/qutui360.png'
+- icon: 'https://api.iowen.cn/favicon/qutui360.com.png'
   name: 飞推(趣推)
   desc: 用数字人轻松制作视频。
-  link: https://www.qutui360.com/
+  link: https://qutui360.com/
 
-- icon: '@websites/cascadeur.png'
+- icon: 'https://api.iowen.cn/favicon/cascadeur.com.png'
   name: Cascadeur
   desc: 骨骼AI智能生成动画。
   link: https://cascadeur.com/
 
-- icon: '@websites/pollinations.png'
+- icon: 'https://api.iowen.cn/favicon/pollinations.ai.png'
   name: Pollinations
   desc: 一个针对AI生成媒体的活跃、协作的生态系统。
   link: https://pollinations.ai/
 
-- icon: '@websites/lumen5.ico'
+- icon: 'https://api.iowen.cn/favicon/lumen5.com.png'
   name: Lumen5
   desc: AI自动将博客文章转换为视频。
   link: https://lumen5.com/
 
-- icon: '@websites/synthesys.ico'
+- icon: 'https://api.iowen.cn/favicon/synthesys.io.png'
   name: Synthesys
   desc: 一个专业AI配音或AI视频制作平台。
   link: https://synthesys.io/
 
-- icon: '@websites/vidyo.ai.png'
+- icon: 'https://api.iowen.cn/favicon/vidyo.ai.png'
   name: Vidyo
   desc: 使用AI智能将长视频制作成短视频。
   link: https://vidyo.ai/
 
-- icon: '@websites/getmunch.png'
+- icon: 'https://api.iowen.cn/favicon/getmunch.com.png'
   name: Munch
   desc: AI智能从长视频中提取最吸引人、最流行和最有影响力的片段。
-  link: https://www.getmunch.com/
+  link: https://getmunch.com/
 
-- icon: '@websites/latte.social.png'
+- icon: 'https://api.iowen.cn/favicon/latte.social.png'
   name: Latte
   desc: 使用AI选择视频中最吸引人的部分制作视频。
-  link: https://www.latte.social/
+  link: https://latte.social/
 
-- icon: '@websites/q.ai.ico'
+- icon: 'https://api.iowen.cn/favicon/ai.cue.group.png'
   name: Q.AI
   desc: AI智能视频检索工具。
   link: https://ai.cue.group/
 
-- icon: '@websites/rask.ai.png'
+- icon: 'https://api.iowen.cn/favicon/rask.ai.png'
   name: Rask
   desc: AI视频本地化，支持60种不同语言。
-  link: https://www.rask.ai/
+  link: https://rask.ai/
 
-- icon: '@websites/neurodub.png'
-  name: Neurodub
-  desc: AI视频本地化，支持超过70种语言。
-  link: https://neurodub.ai/
-
-- icon: '@websites/oxolo.png'
+- icon: 'https://api.iowen.cn/favicon/oxolo.com.png'
   name: OXOLO
   desc: 根据产品AI一键创建视频广告。
-  link: https://www.oxolo.com/
+  link: https://oxolo.com/
 
-- icon: '@websites/github.png'
+- icon: 'https://api.iowen.cn/favicon/github.com.png'
   name: Subvert
   desc: 借助OpenAI在几秒钟内生成视频的字幕、章节和摘要。
   link: https://github.com/aschmelyun/subvert
 
-- icon: '@websites/translate.video.png'
+- icon: 'https://api.iowen.cn/favicon/translate.video.png'
   name: Translate.Video
   desc: 一键翻译视频字幕。
-  link: https://www.translate.video/
+  link: https://translate.video/
 
-- icon: '@websites/zeemo.png'
+- icon: 'https://api.iowen.cn/favicon/zeemo.ai.png'
   name: Zeemo
   desc: 快速给视频添加AI字幕及翻译。
   link: https://zeemo.ai/
 
-- icon: '@websites/faceplay.png'
+- icon: 'https://api.iowen.cn/favicon/faceplay.cc.png'
   name: FacePlay
   desc: AI一键生成换脸视频。
-  link: https://www.faceplay.cc/
+  link: https://faceplay.cc/
 
-- icon: '@websites/flexclip.webp'
+- icon: 'https://api.iowen.cn/favicon/flexclip.com.png'
   name: FlexClip
   desc: AI在线视频制作软件，让你轻松制作精彩的视频。
-  link: https://www.flexclip.com/cn/
+  link: https://flexclip.com/cn/
 
-- icon: '@websites/bigmp4.ico'
+- icon: 'https://api.iowen.cn/favicon/bigmp4.com.png'
   name: bigmp4
   desc: 强大人工智能AI视频无损放大。
   link: https://bigmp4.com/
 
-- icon: '@websites/webcammotioncapture.ico'
+- icon: 'https://api.iowen.cn/favicon/webcammotioncapture.info.png'
   name: Webcam Motion Capture
   desc: 一秒化身二次元的AI动作捕捉工具。
   link: https://webcammotioncapture.info/
 
-- icon: '@websites/unboring.png'
+- icon: 'https://api.iowen.cn/favicon/reface.ai/unboring.png'
   name: Unboring
   desc: 几秒内AI快速实现换脸。
   link: https://reface.ai/unboring
 
-- icon: '@websites/pika.art.ico'
+- icon: 'https://api.iowen.cn/favicon/pika.art.png'
   name: Pika
   desc: 免费AI创意视频生成工具。
   link: https://pika.art/

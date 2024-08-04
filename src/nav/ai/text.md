@@ -10,87 +10,87 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/chatgpt.png'
+- icon: 'https://api.iowen.cn/favicon/chat.openai.com.png'
   name: ChatGPT
   desc: OpenAI开发的人工智能聊天机器人程序。
   link: https://chat.openai.com/
 
-- icon: '@websites/copy.ai.png'
+- icon: 'https://api.iowen.cn/favicon/copy.ai.png'
   name: Copy.ai
   desc: 无论您想问什么，我们的聊天都有答案。
-  link: https://www.copy.ai/
+  link: https://copy.ai/
 
-- icon: '@websites/notion.png'
+- icon: 'https://api.iowen.cn/favicon/getimg.ai.png'
   name: Notion AI
   desc: Notion旗下的AI笔记和内容创作助手。
   link: https://getimg.ai/
 
-- icon: '@websites/chatdoc.png'
+- icon: 'https://api.iowen.cn/favicon/chatdoc.com.png'
   name: ChatDOC
   desc: 一个基于ChatGPT的文件阅读助手。
   link: https://chatdoc.com/
 
-- icon: '@websites/magickpen.png'
+- icon: 'https://api.iowen.cn/favicon/magickpen.com.png'
   name: MagickPen
   desc: 由AI强力驱动的智能写作助手。
   link: https://magickpen.com/
 
-- icon: '@websites/rytr.me.png'
+- icon: 'https://api.iowen.cn/favicon/rytr.me.png'
   name: Rytr
   desc: 一个人工智能写作助手，创作高质量的内容。
   link: https://rytr.me/
 
-- icon: '@websites/teefactech.ico'
+- icon: 'https://api.iowen.cn/favicon/ai.teefactech.com.png'
   name: 达芬奇
   desc: AI创作大师。
   link: https://ai.teefactech.com/
 
-- icon: '@websites/jasper.png'
+- icon: 'https://api.iowen.cn/favicon/jasper.ai.png'
   name: Jasper
   desc: 商业AI平台，快速为品牌量身定制内容。
-  link: https://www.jasper.ai/
+  link: https://jasper.ai/
 
-- icon: '@websites/writesonic.png'
+- icon: 'https://api.iowen.cn/favicon/writesonic.com.png'
   name: Writesonic
   desc: AI写作，文案，释义工具。
   link: https://writesonic.com/
 
-- icon: '@websites/caiyunai.png'
+- icon: 'https://api.iowen.cn/favicon/if.caiyunai.com.png'
   name: 彩云小梦
   desc: 定制AI角色写作工具。
   link: https://if.caiyunai.com
 
-- icon: '@websites/chatpdf.ico'
+- icon: 'https://api.iowen.cn/favicon/chatpdf.com.png'
   name: ChatPDF
   desc: 上传PDF文件和PDF进行聊天。
-  link: https://www.chatpdf.com/
+  link: https://chatpdf.com/
 
-- icon: '@websites/copyai.ico'
+- icon: 'https://api.iowen.cn/favicon/copyai.cn.png'
   name: CopyDone
   desc: AIGC原创文案写作神器。
   link: https://copyai.cn/
 
-- icon: '@websites/sitesmo.ico'
+- icon: 'https://api.iowen.cn/favicon/sitesmo.com.png'
   name: 思默问答
   desc: 功能一应俱全、简单好用的AI工具。
-  link: https://www.sitesmo.com/
+  link: https://sitesmo.com/
 
-- icon: '@websites/ibiling.ico'
+- icon: 'https://api.iowen.cn/favicon/ibiling.cn.png'
   name: 笔灵AI
   desc: 全能型 AI创作 工具。
   link: https://ibiling.cn/
 
-- icon: '@websites/wingly.webp'
+- icon: 'https://api.iowen.cn/favicon/wingly.ai.png'
   name: 灵羽助手
   desc: 基于 ChatGPT 的桌面端智能助手
-  link: https://www.wingly.ai/
+  link: https://wingly.ai/
 
-- icon: '@websites/monica.png'
+- icon: 'https://api.iowen.cn/favicon/monica.im.png'
   name: Monica
   desc: 一站式AI助手，个性化，便捷，免费。
   link: https://monica.im/invitation?c=TLSPHTIY
 
-- icon: '@websites/kimi.ico'
+- icon: 'https://api.iowen.cn/favicon/kimi.moonshot.cn.png'
   name: Kimi.ai
   desc: Kimi 是一个有着超大“内存”的智能助手。
   link: https://kimi.moonshot.cn/
