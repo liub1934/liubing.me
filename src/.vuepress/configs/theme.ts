@@ -64,14 +64,14 @@ export default hopeTheme(
       </div>
       <div>
         <span>Server by</span>
-        <a href="https://amh.sh/install.htm?fid=45745" target="_blank" rel="noopener noreferrer">
-          <img src="https://liubing.me/assets/amh-CsDyk4kd.ico"><b>AMH面板</b>
+        <a href="https://1panel.cn/" target="_blank" rel="noopener noreferrer">
+          <img src="https://api.iowen.cn/favicon/1panel.cn.png"><b>1Panel</b>
         </a>
       </div>
       <div>
         <span>Powered By</span>
         <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
-          <img src="https://vuepress.vuejs.org/hero.png"><b>VuePress</b>
+          <img src="https://api.iowen.cn/favicon/vuepress.vuejs.org.png"><b>VuePress</b>
         </a>
       </div>
       <div>
