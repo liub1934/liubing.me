@@ -10,57 +10,57 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/element-plus.png'
+- icon: 'https://api.iowen.cn/favicon/element-plus.org.png'
   name: Element Plus
   desc: 基于 Vue 3，面向设计师和开发者的组件库。
   link: https://element-plus.org/zh-CN/
 
-- icon: '@websites/element-ui.jpg'
+- icon: 'https://api.iowen.cn/favicon/element.eleme.cn.png'
   name: Element
   desc: 一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库。
   link: https://element.eleme.cn/
 
-- icon: '@websites/ant.design.png'
+- icon: 'https://api.iowen.cn/favicon/ant.design.png'
   name: Ant Design
   desc: 基于 Ant Design 设计体系的 React UI 组件库。
   link: https://ant.design/
 
-- icon: '@websites/antdv.jpg'
+- icon: 'https://api.iowen.cn/favicon/antdv.com.png'
   name: Ant Design Vue
   desc: Ant Design 的 Vue 实现，开发和服务于企业级后台产品。
   link: https://antdv.com/
 
-- icon: '@websites/quasar.png'
+- icon: 'https://api.iowen.cn/favicon/quasar.dev.png'
   name: Quasar Framework
   desc: 构建高性能和高质量的Vue 3组件库。
   link: https://quasar.dev/
 
-- icon: '@websites/naiveui.png'
+- icon: 'https://api.iowen.cn/favicon/naiveui.com.png'
   name: Naive UI
   desc: 一个 Vue 3 组件库，使用 TypeScript，快，有点意思。
-  link: https://www.naiveui.com/
+  link: https://naiveui.com/
 
-- icon: '@websites/l-ui.ico'
+- icon: 'https://api.iowen.cn/favicon/l-ui.com.png'
   name: LuLu UI
   desc: 阅文集团荣誉出品的前端 UI 组件库。
   link: https://l-ui.com/
 
-- icon: '@websites/primevue.ico'
+- icon: 'https://api.iowen.cn/favicon/primevue.org.png'
   name: PrimeVue
   desc: 一套丰富的 Vue 开源 UI 组件库。
   link: https://primevue.org/
 
-- icon: '@websites/vuetifyjs.webp'
+- icon: 'https://api.iowen.cn/favicon/vuetifyjs.com.png'
   name: Vuetify
   desc: 一个不要求设计能力的Vue界面组件框架，自带了许多自行设计实现的Vue组件。
   link: https://vuetifyjs.com/
 
-- icon: '@websites/radix-vue.png'
+- icon: 'https://api.iowen.cn/favicon/radix-vue.com.png'
   name: Radix Vue
   desc: 无样式、可访问的组件，用于在 Vue 中构建高质量的设计系统和 Web 应用程序。
-  link: https://www.radix-vue.com/
+  link: https://radix-vue.com/
 
-- icon: '@websites/anu-vue.svg'
+- icon: 'https://api.iowen.cn/favicon/anu-vue.netlify.app.png'
   name: Anu
   desc: 基于 DX 实用程序的 Vue 组件库。
   link: https://anu-vue.netlify.app/

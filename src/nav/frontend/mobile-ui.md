@@ -10,17 +10,17 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/vant-ui.png'
+- icon: 'https://api.iowen.cn/favicon/vant.pro.png'
   name: Vant
   desc: 轻量、可靠的移动端 Vue 组件库。
-  link: https://vant-contrib.gitee.io/vant/#/zh-CN
+  link: https://vant.pro/vant/
 
-- icon: '@websites/vant-ui.png'
+- icon: 'https://api.iowen.cn/favicon/vant.pro.png'
   name: Vant Weapp
   desc: 轻量、可靠的小程序 UI 组件库。
-  link: https://vant-contrib.gitee.io/vant-weapp/
+  link: https://vant.pro/vant-weapp/
 
-- icon: '@websites/nutui.jpg'
+- icon: 'https://api.iowen.cn/favicon/nutui.jd.com.png'
   name: Naive UI
   desc: 京东风格的轻量级移动端 Vue 组件库。
   link: https://nutui.jd.com/
@@ -28,12 +28,12 @@ containerClass: nav-container
 - icon: '@websites/weixin.png'
   name: WeUI
   desc: 同微信原生视觉体验一致的 UI 组件库。
-  link: https://developers.weixin.qq.com/miniprogram/dev/extended/weui
+  link: https://wechat-miniprogram.github.io/weui/docs/
 
-- icon: '@websites/varlet-ui.png'
+- icon: 'https://api.iowen.cn/favicon/varletjs.org.png'
   name: VARLET
   desc: 一个基于 Vue3 开发的 Material 风格移动端组件库。
-  link: https://varlet.gitee.io/varlet-ui/
+  link: https://varletjs.org/
 
 - icon: '@websites/mand-mobile.jpg'
   name: Mand Mobile
@@ -43,7 +43,7 @@ containerClass: nav-container
 - icon: '@websites/quark-design.png'
   name: Quark Design
   desc: 一款基于 Web Components 的跨框架 UI 组件库。
-  link: https://quark-design.hellobike.com/
+  link: https://quark-ecosystem.github.io/quarkd-docs/
 ```
 
 :::

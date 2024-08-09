@@ -50,7 +50,7 @@ containerClass: nav-container
   desc: 多图合成GIF，轻松制作精彩的动图。
   link: https://tt0.top/
 
-- icon: '@websites/github.png'
+- icon: 'https://api.iowen.cn/favicon/github.com.png'
   name: image-conversion
   desc: 一个开源库Demo，纯本地图片压缩。
   link: https://demo.wangyulue.com/image-conversion/

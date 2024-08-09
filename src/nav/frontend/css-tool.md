@@ -133,17 +133,17 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/animista.jpg'
+- icon: 'https://api.iowen.cn/favicon/animista.net.png'
   name: Animista
   desc: 一个可自定义的 CSS 动画库工具
   link: https://animista.net/
 
-- icon: '@websites/cssload.ico'
+- icon: 'https://api.iowen.cn/favicon/cssload.net.png'
   name: CSS Load
   desc: 纯 CSS 生成各种 Loading 加载动画。
   link: https://cssload.net/
 
-- icon: '@websites/css-loaders.png'
+- icon: 'https://api.iowen.cn/favicon/css-loaders.com.png'
   name: CSS Loaders
   desc: 包含 30 多个类别下的 600 多个 CSS 加载动画。
   link: https://css-loaders.com/

@@ -10,7 +10,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/github.png'
+- icon: 'https://api.iowen.cn/favicon/github.com.png'
   name: Github
   desc: 全球最大异性交友社区！
   link: https://github.com/
@@ -55,7 +55,7 @@ containerClass: nav-container
   desc: 智能WebP、PNG和JPEG压缩。
   link: https://tinify.cn/
 
-- icon: '@websites/github.png'
+- icon: 'https://api.iowen.cn/favicon/github.com.png'
   name: image-conversion
   desc: 一个开源库Demo，纯本地图片压缩。
   link: https://demo.wangyulue.com/image-conversion/

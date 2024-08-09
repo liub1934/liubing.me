@@ -9,10 +9,10 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/7-zip.ico'
+- icon: 'https://api.iowen.cn/favicon/7-zip.org.png'
   name: 7-Zip
   desc: 经典开源免费的文件压缩/解压缩工具。
-  link: https://www.7-zip.org/
+  link: https://7-zip.org/
 ```
 
 :::

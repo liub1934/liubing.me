@@ -10,7 +10,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/qiankun.png'
+- icon: 'https://api.iowen.cn/favicon/qiankun.umijs.org.png'
   name: QianKun
   desc: 可能是你见过最完善的微前端解决方案🧐。
   link: https://qiankun.umijs.org/
@@ -25,10 +25,10 @@ containerClass: nav-container
   desc: 极致的微前端框架，基于 WebComponent 容器 + iframe 沙箱。
   link: https://wujie-micro.github.io/doc/
 
-- icon: '@websites/garfishjs.png'
+- icon: 'https://api.iowen.cn/favicon/garfishjs.org.png'
   name: Garfish
   desc: 包含构建微前端系统时所需要的基本能力，任意前端框架均可使用。
-  link: https://www.garfishjs.org/
+  link: https://garfishjs.org/
 ```
 
 :::

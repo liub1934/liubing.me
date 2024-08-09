@@ -10,40 +10,40 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/vuepress.png'
+- icon: 'https://api.iowen.cn/favicon/vuepress.vuejs.org.png'
   name: VuePress
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
 
-- icon: '@websites/vitepress.svg'
+- icon: 'https://api.iowen.cn/favicon/vitepress.dev.png'
   name: VitePress
   desc: VuePress的孪生兄弟。
   link: https://vitepress.dev/
 
-- icon: '@websites/gridsome.png'
+- icon: 'https://api.iowen.cn/favicon/gridsome.org.png'
   name: Gridsome
   desc: Vue.js的 Jamstack 框架。
   link: https://gridsome.org/
 
-- icon: '@websites/docusaurus.png'
+- icon: 'https://api.iowen.cn/favicon/docusaurus.io.png'
   name: Docusaurus
   desc: React、MDX驱动的静态网站生成器。
   link: https://docusaurus.io/
 
-- icon: '@websites/astro.ico'
+- icon: 'https://api.iowen.cn/favicon/astro.build.png'
   name: Astro
   desc: 一个一体化的网络框架，用于构建快速、以内容为中心的网站。
   link: https://astro.build/
 
-- icon: '@websites/nextra.png'
+- icon: 'https://api.iowen.cn/favicon/nextra.site.png'
   name: Nextra
   desc: 基于Next.js和MDX的网站生成器。
   link: https://nextra.site/
 
-- icon: '@websites/gatsbyjs.png'
+- icon: 'https://api.iowen.cn/favicon/gatsbyjs.com.png'
   name: Gatsby
   desc: 基于Next.js和MDX的网站生成器。
-  link: https://www.gatsbyjs.com/
+  link: https://gatsbyjs.com/
 
 - icon: '@websites/hexo.png'
   name: Hexo
