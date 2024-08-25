@@ -10,22 +10,22 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/npm.png'
+- icon: 'https://api.liubing.me/favicon/npmjs.com.png'
   name: Npm
   desc: Node.js 的包管理工具。
-  link: https://www.npmjs.com/
+  link: https://npmjs.com/
 
-- icon: '@websites/yarn.png'
+- icon: 'https://api.liubing.me/favicon/yarnpkg.com.png'
   name: Yarn
   desc: 快速、可靠、安全的依赖管理工具。
   link: https://yarnpkg.com/
 
-- icon: '@websites/pnpm.png'
+- icon: 'https://api.liubing.me/favicon/pnpm.io.png'
   name: Pnpm
   desc: 快速节省磁盘空间的包管理工具。
   link: https://pnpm.io/zh/
 
-- icon: '@websites/bower.ico'
+- icon: 'https://api.liubing.me/favicon/bower.io.png'
   name: Bower
   desc: 一个针对 Web 开发的包管理器。
   link: https://bower.io/

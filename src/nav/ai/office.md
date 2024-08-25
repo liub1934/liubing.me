@@ -10,52 +10,52 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/design.meitu.png'
+- icon: 'https://api.liubing.me/favicon/design.meitu.com.png'
   name: 美图 AI PPT
   desc: 一句话，10秒生成PPT。
   link: https://design.meitu.com/ppt/
 
-- icon: '@websites/gamma.png'
+- icon: 'https://api.liubing.me/favicon/gamma.app.png'
   name: Gamma
   desc: 强大的 AI 生成器，在几秒钟内生成文档、幻灯片和网页。
   link: https://gamma.app/
 
-- icon: '@websites/decktopus.png'
+- icon: 'https://api.liubing.me/favicon/decktopus.com.png'
   name: Decktopus AI
   desc: 号称世界排名第一的人工智能演示文稿生成器。
-  link: https://www.decktopus.com/
+  link: https://decktopus.com/
 
-- icon: '@websites/chroniclehq.ico'
+- icon: 'https://api.liubing.me/favicon/chroniclehq.com.png'
   name: Chronicle
   desc: 高颜值 AI 演示文稿生成器。
   link: https://chroniclehq.com/
 
-- icon: '@websites/mindshow.svg'
+- icon: 'https://api.liubing.me/favicon/mindshow.fun.png'
   name: MindShow
   desc: 输入内容，AI 自动生成演示，不再烦恼排版。
-  link: https://www.mindshow.fun/
+  link: https://mindshow.fun/
 
-- icon: '@websites/motion.ico'
+- icon: 'https://api.liubing.me/favicon/motion.yoo-ai.com.png'
   name: Motion Go
   desc: 命令式智能对话一键生成PPT，让PPT文档表达更加快速、高效。
   link: https://motion.yoo-ai.com/
 
-- icon: '@websites/js.design.ico'
+- icon: 'https://api.liubing.me/favicon/js.design.png'
   name: 即时AI
   desc: 由文本描述生成可编辑的原型设计稿。
   link: https://js.design/ai
 
-- icon: '@websites/shutu.png'
+- icon: 'https://api.liubing.me/favicon/shutu.cn.png'
   name: TreeMind树图
   desc: 新一代“AI人工智能”思维导图
   link: https://shutu.cn/
 
-- icon: '@websites/tome.ico'
+- icon: 'https://api.liubing.me/favicon/tome.app.png'
   name: Tome
   desc: AI智能生成PPT。
   link: https://tome.app/
 
-- icon: '@websites/huiyiai.ico'
+- icon: 'https://api.liubing.me/favicon/huiyiai.net.png'
   name: 会译
   desc: 免费好用的“AI 双语对照”网页翻译插件工具 (支持PDF/视频字幕/划词翻译等)。
   link: https://huiyiai.net/hy_api/activity/invite?invite_code=014286953
