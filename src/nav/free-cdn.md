@@ -14,54 +14,49 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/jsdelivr.ico'
+- icon: 'https://api.liubing.me/favicon/jsdelivr.com.png'
   name: jsDelivr
   desc: 大名鼎鼎的免费、高速且稳定的 CDN 服务。
-  link: https://www.jsdelivr.com/
+  link: https://jsdelivr.com/
 
-- icon: '@websites/statically.png'
+- icon: 'https://api.liubing.me/favicon/statically.io.png'
   name: Statically
   desc: 让你的网站加载更快的快速和简单的方法。
   link: https://statically.io/
 
-- icon: '@websites/bootcdn.png'
+- icon: 'https://api.liubing.me/favicon/bootcdn.cn.png'
   name: BootCDN
   desc: 极兔云联合 Bootstrap 中文网共同支持并维护的前端开源项目免费 CDN 服务。
-  link: https://www.bootcdn.cn/
+  link: https://bootcdn.cn/
 
-- icon: '@websites/staticfile.png'
+- icon: 'https://api.liubing.me/favicon/staticfile.net.png'
   name: Staticfile CDN
   desc: 七牛云提供，技术社区掘金支持的免费、快速、开放的 CDN 服务。
-  link: https://www.staticfile.org/
+  link: https://staticfile.net/
 
-- icon: '@websites/githack.png'
+- icon: 'https://api.liubing.me/favicon/raw.githack.com.png'
   name: raw.githack.com
   desc: 为你的源码提供 CDN 加速服务。
   link: https://raw.githack.com/
 
-- icon: '@websites/75cdn.png'
-  name: 75CDN
-  desc: 由 360 奇舞团支持并维护的开源项目免费 CDN 服务。
-  link: https://cdn.baomitu.com/
-
-- icon: '@websites/cdnjs.png'
+- icon: 'https://api.liubing.me/favicon/cdnjs.com.png'
   name: cdnjs
   desc: 一项简单快速可靠免费的开源 CDN 服务。
   link: https://cdnjs.com/
 
-- icon: '@websites/bytedance.png'
+- icon: 'https://api.liubing.me/favicon/cdn.bytedance.com.png'
   name: Bytedance
   desc: 字节跳动静态资源公共库。
   link: https://cdn.bytedance.com/
 
-- icon: '@websites/cloudimage.png'
+- icon: 'https://api.liubing.me/favicon/cloudimage.io.png'
   name: CloudImage
   desc: 图像 CDN，用于提供压缩、像素完美和响应迅速的图像。
-  link: https://www.cloudimage.io/
+  link: https://cloudimage.io/
 
-- icon: '@websites/weserv.png'
+- icon: 'https://api.liubing.me/favicon/images.weserv.nl.png'
   name: wsrv.nl
-  desc: 图像缓存和调整大小服务，使用全球缓存即时处理图像。。
+  desc: 图像缓存和调整大小服务，使用全球缓存即时处理图像。
   link: https://images.weserv.nl/
 ```
 

@@ -9,7 +9,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: 'https://api.iowen.cn/favicon/cubox.pro.png'
+- icon: 'https://api.liubing.me/favicon/cubox.pro.png'
   name: Cubox
   desc: 多平台收藏夹，将分散的网络内容收集并整合管理。
   link: https://cubox.pro/
