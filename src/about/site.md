@@ -14,37 +14,37 @@ breadcrumb: false
 ::: projects
 
 ```yaml
-- icon: https://image.liubing.me/2023/02/11/7f17f3cf426c3.png
+- icon: https://api.liubing.me/favicon/cloudflare.com.png
   name: Cloudflare
   desc: 提供免费的 CDN 服务。
   link: https://www.cloudflare.com/
 
-- icon: https://image.liubing.me/2023/02/11/a6de6381e4ae6.png
+- icon: https://api.liubing.me/favicon/contabo.com.png
   name: Contabo
   desc: VPS 所属供应商。
   link: https://contabo.com/
 
-- icon: '@websites/amh.ico'
-  name: AMH 云主机面板
+- icon: https://api.liubing.me/favicon/1panel.cn.png
+  name: 1Panel
   desc: 用来管理 VPS
-  link: https://amh.sh/install.htm?fid=45745
+  link: https://1panel.cn/
 
-- icon: '@websites/vuepress.png'
+- icon: https://api.liubing.me/favicon/vuepress.vuejs.org.png
   name: VuePress
   desc: 博客驱动引擎。
   link: https://vuepress.vuejs.org/zh/
 
-- icon: https://theme-hope.vuejs.press/logo.png
+- icon: https://api.liubing.me/favicon/theme-hope.vuejs.press.png
   name: VuePress Theme Hope
   desc: 本站博客所用主题
   link: https://theme-hope.vuejs.press/zh/
 
-- icon: '@websites/circleci.ico'
+- icon: https://api.liubing.me/favicon/circleci.com.png
   name: Circle CI
   desc: 本站自动化打包构建发布工具。
   link: https://circleci.com/
 
-- icon: '@websites/artalk.jpg'
+- icon: https://api.liubing.me/favicon/artalk.js.org.png
   name: Artalk
   desc: 本站评论所用服务。
   link: https://artalk.js.org/
