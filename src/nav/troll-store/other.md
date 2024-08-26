@@ -14,7 +14,7 @@ containerClass: nav-container
   name: 灵敢足迹
   link: https://www.123pan.com/s/FBM5Vv-xfVHA.html
 
-- icon: '@websites/toutiaopro.jpeg'
+- icon: 'https://api.liubing.me/favicon/toutiao.com.png'
   name: 今日头条
   link: https://www.123pan.com/s/FBM5Vv-afVHA.html
 

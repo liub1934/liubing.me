@@ -10,7 +10,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/weixin.png'
+- icon: 'https://api.liubing.me/favicon/weixin.qq.com.png'
   name: 微信
   link: https://www.123pan.com/s/FBM5Vv-pfVHA.html
 ```

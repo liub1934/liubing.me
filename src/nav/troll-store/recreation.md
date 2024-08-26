@@ -10,7 +10,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: '@websites/x.jpeg'
+- icon: 'https://api.liubing.me/favicon/x.com.png'
   name: X
   link: https://www.123pan.com/s/FBM5Vv-mfVHA.html
 
@@ -18,15 +18,15 @@ containerClass: nav-container
   name: TikTok
   link: https://www.123pan.com/s/FBM5Vv-1fVHA.html
 
-- icon: '@websites/xiaohongshu.jpeg'
+- icon: 'https://api.liubing.me/favicon/xiaohongshu.com.png'
   name: 小红书
   link: https://www.123pan.com/s/FBM5Vv-4fVHA.html
 
-- icon: '@websites/youtube.jpeg'
+- icon: 'https://api.liubing.me/favicon/youtube.com.png'
   name: YouTube
   link: https://www.123pan.com/s/FBM5Vv-ffVHA.html
 
-- icon: '@websites/mangguotv.jpeg'
+- icon: 'https://api.liubing.me/favicon/mgtv.com.png'
   name: 芒果TV
   link: https://www.123pan.com/s/FBM5Vv-BfVHA.html
 
