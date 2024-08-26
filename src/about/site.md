@@ -44,10 +44,10 @@ breadcrumb: false
   desc: 本站自动化打包构建发布工具。
   link: https://circleci.com/
 
-- icon: https://api.liubing.me/favicon/artalk.js.org.png
-  name: Artalk
+- icon: https://api.liubing.me/favicon/giscus.app.png
+  name: Giscus
   desc: 本站评论所用服务。
-  link: https://artalk.js.org/
+  link: https://giscus.app/
 ```
 
 :::
