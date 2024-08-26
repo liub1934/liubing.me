@@ -53,31 +53,31 @@ export default hopeTheme(
       <div>
         <span>VPS By</span>
         <a href="https://contabo.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://image.liubing.me/i/2023/02/11/a6de6381e4ae6.png"><b>Contabo</b>
+          <img src="https://api.liubing.me/favicon/contabo.com.png"><b>Contabo</b>
         </a>
       </div>
       <div>
         <span>CDN By</span>
         <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">
-          <img src="https://image.liubing.me/i/2023/02/11/7f17f3cf426c3.png"><b>Cloudflare</b>
+          <img src="https://api.liubing.me/favicon/cloudflare.com.png"><b>Cloudflare</b>
         </a>
       </div>
       <div>
         <span>Server by</span>
         <a href="https://1panel.cn/" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.iowen.cn/favicon/1panel.cn.png"><b>1Panel</b>
+          <img src="https://api.liubing.me/favicon/1panel.cn.png"><b>1Panel</b>
         </a>
       </div>
       <div>
         <span>Powered By</span>
         <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.iowen.cn/favicon/vuepress.vuejs.org.png"><b>VuePress</b>
+          <img src="https://api.liubing.me/favicon/vuepress.vuejs.org.png"><b>VuePress</b>
         </a>
       </div>
       <div>
         <span>Theme By</span>
         <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">
-          <img src="https://theme-hope.vuejs.press/logo.png"><b>VuePress Theme Hope</b>
+          <img src="https://api.liubing.me/favicon/theme-hope.vuejs.press.png"><b>VuePress Theme Hope</b>
         </a>
       </div>
       <div>
