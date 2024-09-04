@@ -1,25 +1,20 @@
 <template>
   <div class="generator-size">
     <div class="title text-24 font-600">大小</div>
-    <!-- <div class="flex items-center mb-5">
-      <div class="text-14 w-30 text-right pr-10">单位</div>
-      <el-input v-model="modelUnit" class="flex-1" />
-    </div> -->
     <div
       class="flex items-center mb-5"
       v-for="item in sizeList"
       :key="item.name"
     >
       <div class="text-14 w-30 text-right pr-10">{{ item.label }}</div>
-      <el-input
-        v-model="modelSize[item.name]"
+      <n-input-number
+        v-model:value="modelSize[item.name]"
         class="flex-1"
-        type="number"
         :disabled="getDisabled(item.name)"
-        @change="changeSize(item.name)"
+        @update:value="changeSize(item.name)"
       >
         <template #suffix>{{ modelUnit }}</template>
-      </el-input>
+      </n-input-number>
     </div>
   </div>
 </template>

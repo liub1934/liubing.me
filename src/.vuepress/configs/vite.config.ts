@@ -2,14 +2,14 @@ import type { InlineConfig } from 'vite'
 import unocss from '@unocss/vite'
 import path from 'node:path'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 const viteOptions = {
   plugins: [
     unocss(),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [NaiveUiResolver()],
       dts: path.resolve(process.cwd(), 'types/components.d.ts'),
       dirs: [path.resolve(__dirname, '../components')]
     }),
@@ -24,7 +24,7 @@ const viteOptions = {
     assetsInlineLimit: 0 // 设置为0禁止图片转base64
   },
   ssr: {
-    noExternal: ['element-plus']
+    noExternal: ['naive-ui']
   }
 } as InlineConfig
 

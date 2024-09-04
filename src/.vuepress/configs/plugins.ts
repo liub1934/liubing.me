@@ -3,8 +3,8 @@ import type { PluginsOptions } from 'vuepress-theme-hope'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
-import { themeColorPlugin } from '../plugins'
-import { renderProjects } from '../containers/projects'
+import { naiveDiscretePlugin, themeColorPlugin } from '../plugins'
+import { renderProjects } from '../containers'
 import { Repo } from '../utils'
 
 // VuePress插件配置
@@ -19,6 +19,7 @@ export const configPlugins: PluginConfig = [
     autoSuggestions: false
   }),
   themeColorPlugin(),
+  naiveDiscretePlugin(),
   // 自定义容器插件
   containerPlugin({
     type: 'projects',

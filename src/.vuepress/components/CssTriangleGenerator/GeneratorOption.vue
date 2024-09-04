@@ -1,16 +1,16 @@
 <template>
   <div class="generator-option">
     <div class="title text-24 font-600">选项</div>
-    <el-radio-group v-model="modelValue">
-      <el-radio
+    <n-radio-group v-model:value="modelValue">
+      <n-radio
         v-for="item in options"
         :key="item.value"
         :value="item.value"
         :disabled="getDisabled(item.value)"
       >
         {{ item.label }}
-      </el-radio>
-    </el-radio-group>
+      </n-radio>
+    </n-radio-group>
   </div>
 </template>
 

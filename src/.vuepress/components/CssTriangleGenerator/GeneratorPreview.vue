@@ -12,8 +12,8 @@
       ></div>
     </div>
     <div class="title text-24 font-600 mt-20">CSS</div>
-    <el-input
-      :model-value="getStyleInfo.outPutCss"
+    <n-input
+      :value="getStyleInfo.outPutCss"
       autosize
       readonly
       type="textarea"
@@ -34,7 +34,7 @@ import {
   type DirectionType,
   type TriangleSize
 } from './generator'
-import { copyText } from '../../utils'
+import { copyText } from '@/utils'
 
 type Direction = 'top' | 'right' | 'bottom' | 'left'
 
@@ -115,7 +115,7 @@ const getStyleInfo = computed(() => {
     height: 0,
     'border-style': 'solid'
   } as Record<string, string | number>
-  const { color } = colorValue.value
+  const color = colorValue.value
   const { width, widthLeft, widthRight, height, heightTop, heightBottom } =
     size.value
   const colors: Record<Direction, string> = {

@@ -1,16 +1,14 @@
 <template>
-  <div class="css-triangle-generator">
-    <el-row :gutter="40">
-      <el-col :span="24" :md="8">
-        <GeneratorDirection v-model:value="direction" class="mb-20" />
-        <GeneratorOption v-model:value="triangle" class="mb-20" />
-        <GeneratorSize v-model:unit="unit" v-model:size="size" class="mb-20" />
-        <GeneratorColor v-model:color="colorValue" />
-      </el-col>
-      <el-col :span="24" :md="16">
-        <GeneratorPreview />
-      </el-col>
-    </el-row>
+  <div class="css-triangle-generator flex flex-col gap-20 md:(flex-row)">
+    <div class="w-full md:(w-50%)">
+      <GeneratorDirection v-model:value="direction" class="mb-20" />
+      <GeneratorOption v-model:value="triangle" class="mb-20" />
+      <GeneratorSize v-model:unit="unit" v-model:size="size" class="mb-20" />
+      <GeneratorColor v-model:color="colorValue" />
+    </div>
+    <div class="w-full md:(w-50%)">
+      <GeneratorPreview />
+    </div>
   </div>
 </template>
 
@@ -22,7 +20,6 @@ import {
   TriangleKey,
   TriangleSizeKey,
   UnitKey,
-  type ColorValue,
   type DirectionType,
   type TriangleSize,
   type TriangleType
@@ -39,10 +36,7 @@ const size = ref<TriangleSize>({
   heightTop: 50,
   heightBottom: 50
 })
-const colorValue = ref<ColorValue>({
-  type: 'hex',
-  color: '#60a5fa'
-})
+const colorValue = ref<string>('#60a5fa')
 
 provide(DirectionKey, direction)
 provide(TriangleKey, triangle)
