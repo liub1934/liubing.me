@@ -1,6 +1,5 @@
 import { useClipboard } from '@vueuse/core'
 import { Base } from './constant'
-import { ElMessage } from 'element-plus'
 
 export const withBase = (path: string) => {
   if (!path) return ''
@@ -43,9 +42,6 @@ export function copyText(text: string) {
   const { copy, isSupported } = useClipboard()
   if (isSupported) {
     copy(text)
-    ElMessage({
-      message: '复制成功',
-      type: 'success'
-    })
+    window.$message.success('复制成功')
   }
 }

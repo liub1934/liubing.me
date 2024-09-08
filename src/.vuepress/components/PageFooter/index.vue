@@ -10,7 +10,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useThemeLocaleData } from 'vuepress-theme-hope/client/composables/index.js'
 import { usePageFrontmatter } from 'vuepress/client'
 import { isString } from 'vuepress/shared'
-import { calculateRuntime, BlogStartDate } from '../../utils'
+import { calculateRuntime, BlogStartDate } from '@/utils'
 import '@theme-hope/styles/footer.scss'
 
 let timerInterval: IntervalHandle | null

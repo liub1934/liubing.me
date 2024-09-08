@@ -1,6 +1,6 @@
 import { defineConfig } from '@unocss/vite'
 import { presetIcons } from 'unocss'
-import { getThemeColors } from './utils'
+import { generateColorCombinations } from './utils'
 import presetUno from '@unocss/preset-uno'
 import presetRemToPx from '@unocss/preset-rem-to-px'
 import transformerDirectives from '@unocss/transformer-directives'
@@ -28,7 +28,12 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      ...getThemeColors()
+      // 生成如下颜色数据
+      // 'primary': 'rgba(var(--n-primary-color))'
+      // 'primary-1': 'rgba(var(--n-primary-color-1))',
+      // 'primary-hover': 'rgba(var(--n-primary-color-hover))',
+      // ...其他
+      ...generateColorCombinations()
     }
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],

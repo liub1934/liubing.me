@@ -30,15 +30,8 @@ export interface TriangleSize {
   heightBottom: number
 }
 
-export type ColorType = 'hex' | 'rgba'
-
-export interface ColorValue {
-  type: ColorType
-  color: string
-}
-
 export const DirectionKey = Symbol() as InjectionKey<Ref<DirectionType>>
 export const TriangleKey = Symbol() as InjectionKey<Ref<TriangleType>>
 export const UnitKey = Symbol() as InjectionKey<Ref<string>>
 export const TriangleSizeKey = Symbol() as InjectionKey<Ref<TriangleSize>>
-export const ColorKey = Symbol() as InjectionKey<Ref<ColorValue>>
+export const ColorKey = Symbol() as InjectionKey<Ref<string>>

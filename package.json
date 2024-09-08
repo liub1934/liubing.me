@@ -56,9 +56,9 @@
     "@vueuse/core": "10.9.0",
     "artalk": "2.8.7",
     "colord": "^2.9.3",
-    "element-plus": "^2.7.7",
     "js-yaml": "4.1.0",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "naive-ui": "^2.39.0"
   },
   "config": {
     "commitizen": {

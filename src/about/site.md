@@ -1,6 +1,7 @@
 ---
 toc: false
 breadcrumb: false
+pageInfo: false
 ---
 
 # 关于本站

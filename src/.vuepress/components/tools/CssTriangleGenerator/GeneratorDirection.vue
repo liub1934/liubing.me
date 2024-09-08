@@ -2,7 +2,7 @@
   <div class="generator-direction">
     <div class="title text-24 font-600">方向</div>
     <div class="relative flex-center py-60">
-      <el-radio-group v-model="modelValue" class="ml-4">
+      <n-radio-group v-model:value="modelValue" class="ml-4">
         <div class="triangle-direction size-60 relative">
           <div class="corners size-60">
             <div
@@ -35,7 +35,7 @@
             ></div>
           </div>
           <div class="absolute-center size-38 bg-white"></div>
-          <el-radio
+          <n-radio
             class="absolute! mr-0!"
             v-for="(item, index) in directions"
             :key="item.value"
@@ -54,9 +54,9 @@
             }"
           >
             {{ item.label }}
-          </el-radio>
+          </n-radio>
         </div>
-      </el-radio-group>
+      </n-radio-group>
     </div>
   </div>
 </template>

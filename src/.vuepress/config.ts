@@ -23,9 +23,8 @@ export default defineUserConfig({
     }
   },
   alias: {
-    '@components': path.resolve(__dirname, './components'),
+    '@': path.resolve(__dirname, '../.vuepress'),
     '@websites': path.resolve(__dirname, './public/assets/websites'),
-    '@friends': path.resolve(__dirname, '../friends'),
     '@theme-hope': path.resolve(
       __dirname,
       '../../node_modules/vuepress-theme-hope/lib/client'
