@@ -341,6 +341,11 @@ containerClass: nav-container
   name: Vue Test Utils
   desc: Vue.js 3 的测试工具。
   link: https://vue-test.nodejs.cn/
+
+- icon: 'https://api.liubing.me/favicon/nuxt.com.cn.png'
+  name: Nuxt
+  desc: 一个 开源框架 ，使得Web开发变得直观且强大。
+  link: https://nuxt.com.cn/
 ```
 
 :::
