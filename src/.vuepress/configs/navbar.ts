@@ -48,6 +48,11 @@ export const navbarConfig = navbar([
         text: 'CSS三角形生成器',
         icon: 'triangle',
         link: 'css-triangle-generator'
+      },
+      {
+        text: '短视频去水印',
+        icon: 'video',
+        link: 'short-video-remove-watermark'
       }
     ]
   },
