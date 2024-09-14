@@ -45,3 +45,12 @@ export function copyText(text: string) {
     window.$message.success('复制成功')
   }
 }
+
+export function isValidJsonString(jsonString: string) {
+  try {
+    JSON.parse(jsonString)
+    return true
+  } catch (error) {
+    return false
+  }
+}

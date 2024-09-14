@@ -21,6 +21,7 @@ declare module 'vue' {
     InfoPanel: typeof import('./../src/.vuepress/components/InfoPanel/index.vue')['default']
     MacKeyboard: typeof import('./../src/.vuepress/components/MacKeyboard/index.vue')['default']
     NaiveProvider: typeof import('./../src/.vuepress/components/NaiveProvider/index.vue')['default']
+    NButton: typeof import('naive-ui')['NButton']
     NColorPicker: typeof import('naive-ui')['NColorPicker']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NDialogProvider: typeof import('naive-ui')['NDialogProvider']
@@ -33,6 +34,7 @@ declare module 'vue' {
     PageFooter: typeof import('./../src/.vuepress/components/PageFooter/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ShortVideoRemoveWatermark: typeof import('./../src/.vuepress/components/tools/ShortVideoRemoveWatermark/index.vue')['default']
     TravellingLink: typeof import('./../src/.vuepress/components/TravellingLink/index.vue')['default']
   }
 }
