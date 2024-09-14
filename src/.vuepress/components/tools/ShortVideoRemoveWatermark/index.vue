@@ -69,27 +69,31 @@ async function handleFetch() {
   resultData.value = null
   loading.value = true
   const msg = encodeURIComponent(videoUrl.value)
-  const response = await fetch(
-    `https://api.liubing.me/short-video?msg=${msg}`
-  ).finally(() => {
-    loading.value = false
-  })
-  if (response.ok) {
-    const content = await response.text()
-    const resData: string | ShortVideoRes = isValidJsonString(content)
-      ? JSON.parse(content)
-      : content
-    if (isString(resData)) {
-      window.$message.error(resData)
-      return
+  try {
+    const response = await fetch(
+      `https://api.liubing.me/short-video?msg=${msg}`
+    ).finally(() => {
+      loading.value = false
+    })
+    if (response.ok) {
+      const content = await response.text()
+      const resData: string | ShortVideoRes = isValidJsonString(content)
+        ? JSON.parse(content)
+        : content
+      if (isString(resData)) {
+        window.$message.error(resData)
+        return
+      }
+      if (resData.msg.includes('解析成功')) {
+        resultData.value = resData
+        return
+      }
+      window.$message.error(resData.msg)
+    } else {
+      window.$message.error('解析异常，请稍后再试！')
     }
-    if (resData.msg.includes('解析成功')) {
-      resultData.value = resData
-      return
-    }
-    window.$message.error(resData.msg)
-  } else {
-    window.$message.error('解析异常，请稍后再试！')
+  } catch (error) {
+    window.$message.error('请求异常，请稍后再试！')
   }
 }
 </script>
