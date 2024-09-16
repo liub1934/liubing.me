@@ -18,6 +18,7 @@ containerClass: nav-container
   name: Bitwarden
   desc: 开源免费密码管理器，简单搭建自己的私人密码库。
   link: https://bitwarden.com/
+  github: https://github.com/bitwarden/server
 
 - icon: 'https://api.liubing.me/favicon/1password.com.png'
   name: 1Password
@@ -48,6 +49,7 @@ containerClass: nav-container
   name: VeraCrypt
   desc: 最佳免费开源跨平台的文件加密工具 (支持U盘加密/硬盘分区加密)
   link: https://www.veracrypt.fr/code/VeraCrypt/
+  github: https://github.com/veracrypt/VeraCrypt
 ```
 
 :::

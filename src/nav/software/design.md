@@ -11,8 +11,9 @@ containerClass: nav-container
 ```yaml
 - icon: 'https://api.liubing.me/favicon/github.com.png'
   name: Mica
-  desc: 一键开启 Windows 11 半透明磨砂毛玻璃窗口特效。
+  desc: 一键开启 Windows 半透明磨砂毛玻璃窗口特效。
   link: https://github.com/MicaForEveryone/MicaForEveryone
+  github: https://github.com/MicaForEveryone/MicaForEveryone
 
 - icon: 'https://api.liubing.me/favicon/timeline.ink.png'
   name: 拾光壁纸
@@ -23,6 +24,7 @@ containerClass: nav-container
   name: Upscayl
   desc: 开源免费 AI 图片无损放大工具 (离线/跨平台)。
   link: https://upscayl.org/
+  github: https://github.com/upscayl/upscayl
 ```
 
 :::

@@ -54,3 +54,8 @@ export function isValidJsonString(jsonString: string) {
     return false
   }
 }
+
+export function getGithubShieldsImg(url: string) {
+  const starsLink = url.split('https://github.com/')[1]
+  return `https://img.shields.io/github/stars/${starsLink}`
+}

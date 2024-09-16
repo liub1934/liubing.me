@@ -13,6 +13,7 @@ containerClass: nav-container
   name: Draw.io
   desc: 开源免费的跨平台流程图绘图制图工具。
   link: https://app.diagrams.net/
+  github: https://github.com/jgraph/drawio
 
 - icon: 'https://api.liubing.me/favicon/edrawsoft.cn.png'
   name: 亿图
@@ -63,6 +64,7 @@ containerClass: nav-container
   name: 思源笔记
   desc: 一款本地优先的个人知识管理系统，支持完全离线使用。
   link: https://b3log.org/siyuan/
+  github: https://github.com/siyuan-note/siyuan
 
 - icon: 'https://api.liubing.me/favicon/wiz.cn.png'
   name: 为知笔记
@@ -83,6 +85,7 @@ containerClass: nav-container
   name: Yank Note
   desc: 一款强大可扩展的 Markdown 编辑器，支持运行代码片段。
   link: https://yank-note.com/zh-CN
+  github: https://github.com/purocean/yn
 ```
 
 :::

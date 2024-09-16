@@ -13,6 +13,7 @@ containerClass: nav-container
   name: Cryptomator
   desc: 专为网盘文件加密而生，开源免费的云同步网盘加密工具。
   link: https://cryptomator.org/
+  github: https://github.com/cryptomator/cryptomator
 
 - icon: 'https://api.liubing.me/favicon/macpaw.com.png'
   name: Encrypto

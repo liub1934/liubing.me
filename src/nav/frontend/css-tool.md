@@ -14,16 +14,19 @@ containerClass: nav-container
   name: Sass
   desc: Sass 是成熟、稳定、强大的 CSS 扩展语言。
   link: https://sass-lang.com/
+  github: https://github.com/sass/sass
 
 - icon: 'https://api.liubing.me/favicon/lesscss.org.png'
   name: Less
   desc: Less（Leaner Style Sheets 的缩写）是一门向后兼容的 CSS 扩展语言。
   link: https://lesscss.org/
+  github: https://github.com/less/less.js
 
 - icon: 'https://api.liubing.me/favicon/stylus-lang.com.png'
   name: Stylus
   desc: 富于表现力、动态的、健壮的 CSS。
   link: https://stylus-lang.com/
+  github: https://github.com/stylus/stylus
 
 - icon: 'https://api.liubing.me/favicon/css-tricks.com.png'
   name: CSS-Tricks
@@ -39,11 +42,13 @@ containerClass: nav-container
   name: Customize Border
   desc: 自定义 CSS Border 边框。
   link: https://kovart.github.io/dashed-border-generator/
+  github: https://github.com/kovart/dashed-border-generator
 
 - icon: 'https://api.liubing.me/favicon/9elements.github.io/fancy-border-radius.png'
   name: FANCY-BORDER-RADIUS
   desc: 生成花里胡哨的Border圆角样式。
   link: https://9elements.github.io/fancy-border-radius/
+  github: https://github.com/9elements/fancy-border-radius
 
 - icon: 'https://api.liubing.me/favicon/cubic-bezier.com.png'
   name: 贝塞尔曲线
@@ -54,21 +59,25 @@ containerClass: nav-container
   name: 缓动函数速查表
   desc: 缓动函数速查表。
   link: https://easings.net/zh-cn
+  github: https://github.com/ai/easings.net
 
 - icon: 'https://api.liubing.me/favicon/grabient.com.png'
   name: Grabient
   desc: CSS 代码渐变颜色生成工具。
   link: https://grabient.com/
+  github: https://github.com/johnkorzhuk/grabient
 
 - icon: 'https://api.liubing.me/favicon/webgradients.com.png'
   name: Fresh Background Gradients
   desc: CSS 个性渐变背景集合。
   link: https://webgradients.com/
+  github: https://github.com/itmeo/webgradients
 
 - icon: 'https://api.liubing.me/favicon/whirl.netlify.app.png'
   name: Fresh Background Gradients
   desc: 创建各样的 CSS 加载动画。
   link: https://whirl.netlify.app/
+  github: https://github.com/jh3y/whirl
 
 - icon: 'https://api.liubing.me/favicon/codemyui.com.png'
   name: Codemyui
@@ -94,11 +103,13 @@ containerClass: nav-container
   name: Glass Morphism
   desc: 在线CSS毛玻璃风格工具。
   link: https://glassgenerator.netlify.app/
+  github: https://github.com/daniektj/Glass-Morphism-Generator
 
 - icon: 'https://api.liubing.me/favicon/keyframes.app.png'
   name: Keyframes
   desc: 在线动画、阴影和颜色。
   link: https://keyframes.app/
+  github: https://github.com/mitchas/keyframes
 
 - icon: 'https://api.liubing.me/favicon/bgjar.com.png'
   name: BGJar

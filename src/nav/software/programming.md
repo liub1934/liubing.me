@@ -26,6 +26,7 @@ containerClass: nav-container
   name: VSCode
   desc: 当今最流行的免费开源代码编辑器，跨平台支持多种编程语言。
   link: https://code.visualstudio.com/
+  github: https://github.com/microsoft/vscode
 
 - icon: 'https://api.liubing.me/favicon/jetbrains.com/webstorm.png'
   name: WebStorm
@@ -51,6 +52,7 @@ containerClass: nav-container
   name: Komodo IDE
   desc: 一个免费的开源代码编辑器。
   link: https://activestate.com/
+  github: https://github.com/ActiveState/code
 ```
 
 :::

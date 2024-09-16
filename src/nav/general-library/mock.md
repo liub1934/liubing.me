@@ -13,11 +13,13 @@ containerClass: nav-container
   name: Mock.js
   desc: 生成随机数据，拦截Ajax 请求。
   link: https://github.com/nuysoft/Mock
+  github: https://github.com/nuysoft/Mock
 
-- icon: 'https://api.liubing.me/favicon/github.com.png'
+- icon: 'https://api.liubing.me/favicon/fakerjs.dev.png'
   name: Faker.js
   desc: 用于测试和开发生成大量虚假(但真实的)数据。
-  link: https://github.com/faker-js/faker
+  link: https://fakerjs.dev/
+  github: https://github.com/faker-js/faker
 ```
 
 :::

@@ -1,12 +1,13 @@
 import yaml from 'js-yaml'
 import type Token from 'markdown-it/lib/token.mjs'
-import { withBase } from '../utils'
+import { getGithubShieldsImg, withBase } from '../utils'
 
 export interface Project {
   icon: string
   name: string
   desc: string
   link: string
+  github?: string
 }
 
 /**
@@ -46,22 +47,37 @@ export const renderProjects = (tokens: Token[], idx: number) => {
           type?: string
         ) => {
           const isFriends = type === 'friends'
+          const githubLink = `
+            ${
+              project.github
+                ? `
+                <a class="no-external-link-icon flex" target="_blank"
+                  rel="noopener noreferrer" href="${project.github}">
+                  <img src="${getGithubShieldsImg(project.github)}" alt="Stars">
+                </a>
+              `
+                : ''
+            }
+          `
           return `
-              <a class="vp-project-card color${index % 9}"
-                href="${withBase(project.link)}"
-                ${isFriends ? '' : 'rel="noopener noreferrer"'}
-                target="_blank">
-                <img src="${withBase(project.icon)}"
-                  alt="${project.name}" class="vp-project-image" />
-                <div class="vp-project-name ${project.desc ? '' : 'no-desc'}">
-                  ${project.name}
-                </div>
-                ${
-                  project.desc
-                    ? `<div class="vp-project-desc">${project.desc}</div>`
-                    : ''
-                }
-              </a>
+              <div class="vp-project-card color${index % 9}">
+                <a href="${withBase(project.link)}"
+                  class="no-external-link-icon"
+                  ${isFriends ? '' : 'rel="noopener noreferrer"'}
+                  target="_blank">
+                  <img src="${withBase(project.icon)}"
+                    alt="${project.name}" class="vp-project-image" />
+                  <div class="vp-project-name ${project.desc ? '' : 'no-desc'}">
+                    ${project.name}
+                  </div>
+                  ${
+                    project.desc
+                      ? `<div class="vp-project-desc">${project.desc}</div>`
+                      : ''
+                  }
+                </a>
+                ${githubLink}
+              </div>
             `
         }
         const getProjects = (projects: Project[], type?: string) => {

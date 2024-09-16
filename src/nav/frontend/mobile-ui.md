@@ -57,16 +57,19 @@ containerClass: nav-container
   name: Vant Weapp
   desc: 轻量、可靠的小程序 UI 组件库。
   link: https://vant.pro/vant-weapp
+  github: https://github.com/vant-ui/vant
 
 - icon: 'https://api.liubing.me/favicon/mini.ant.design.png'
   name: Ant Design Mini
   desc: 探索移动端小程序的极致体验。
   link: https://mini.ant.design/
+  github: https://github.com/ant-design/ant-design-mini
 
 - icon: 'https://api.liubing.me/favicon/weapp-tw.icebreaker.top.png'
   name: weapp-tailwindcss
   desc: 小程序 使用 tailwindcss 全方面解决方案。
   link: https://weapp-tw.icebreaker.top/
+  github: https://github.com/sonofmagic/weapp-tailwindcss
 ```
 
 :::

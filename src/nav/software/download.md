@@ -23,6 +23,7 @@ containerClass: nav-container
   name: Motrix
   desc: 一款开源全能的下载工具。
   link: https://motrix.app/
+  github: https://github.com/agalwood/Motrix
 
 - icon: '@websites/downie.png'
   name: Downie
@@ -43,6 +44,7 @@ containerClass: nav-container
   name: Gopeed
   desc: 一款现代化的开源下载器，支持多协议。
   link: https://gopeed.com/zh-CN
+  github: https://github.com/GopeedLab/gopeed
 ```
 
 :::
