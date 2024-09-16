@@ -19,6 +19,7 @@ containerClass: nav-container
   name: 30 seconds of code
   desc: 30秒代码片段，针对所有开发需求的短代码片段。
   link: https://www.30secondsofcode.org/
+  github: https://github.com/Chalarangelo/30-seconds-of-code
 
 - icon: 'https://api.liubing.me/favicon/codeimg.io.png'
   name: Codeimg
@@ -59,6 +60,7 @@ containerClass: nav-container
   name: image-conversion
   desc: 一个开源库Demo，纯本地图片压缩。
   link: https://demo.wangyulue.com/image-conversion/
+  github: https://github.com/WangYuLue/image-conversion
 
 - icon: 'https://api.liubing.me/favicon/convertio.co.png'
   name: Convertio
@@ -69,6 +71,7 @@ containerClass: nav-container
   name: 亲戚关系计算器
   desc: 逢年过节遇到三姑六婆，拒绝叫不出口的尴尬！轻松搞定亲戚关系。
   link: https://passer-by.com/relationship/
+  github: https://github.com/mumuy/relationship
 
 - icon: 'https://api.liubing.me/favicon/csacademy.com.png'
   name: 文本对比
@@ -79,6 +82,7 @@ containerClass: nav-container
   name: Snippet Generator
   desc: 代码片段生成器，支持VSCode、Sublime Text、Atom。
   link: https://snippet-generator.app/
+  github: https://github.com/pawelgrzybek/snippet-generator
 
 - icon: 'https://api.liubing.me/favicon/emojiall.com.png'
   name: EMOJI中文网

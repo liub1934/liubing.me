@@ -14,6 +14,7 @@ containerClass: nav-container
   name: Snippet Generator
   desc: 代码片段生成器，支持VSCode、Sublime Text、Atom。
   link: https://snippet-generator.app/
+  github: https://github.com/pawelgrzybek/snippet-generator
 
 - icon: 'https://api.liubing.me/favicon/colorhunt.co.png'
   name: Color Hunt

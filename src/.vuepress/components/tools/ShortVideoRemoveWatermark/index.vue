@@ -4,6 +4,7 @@
     <n-input
       v-model:value="videoUrl"
       type="textarea"
+      clearable
       placeholder="请输入视频链接，支持抖音、小红书、快手、哔哩哔哩 各大平台"
     />
     <div class="mt-20 text-center md:(text-right)">

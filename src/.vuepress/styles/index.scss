@@ -35,6 +35,9 @@ html[data-theme='light'] {
   }
   .vp-project-card {
     margin: 6px 0 6px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &::after {
       display: none !important;
     }

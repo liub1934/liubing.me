@@ -11,30 +11,35 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: 'https://api.liubing.me/favicon/github.com.png'
+- icon: 'https://api.liubing.me/favicon/airbnb.io/lottie.png'
   name: Lottie
   desc: 一个适用于Android, iOS, Web和Windows的动画库
-  link: https://github.com/airbnb/lottie
+  link: https://airbnb.io/lottie/#/
+  github: https://github.com/airbnb/lottie
 
-- icon: 'https://api.liubing.me/favicon/github.com.png'
+- icon: 'https://api.liubing.me/favicon/popmotion.io.png'
   name: Popmotion
   desc: 一款支持数字、颜色和复杂字符串的关键帧和弹簧动画。
-  link: https://github.com/Popmotion/popmotion
+  link: https://popmotion.io/
+  github: https://github.com/Popmotion/popmotion
 
-- icon: 'https://api.liubing.me/favicon/github.com.png'
+- icon: 'https://api.liubing.me/favicon/animejs.com.png'
   name: Anime.js
   desc: 一个轻量级的JavaScript动画库，具有简单而强大的API。
-  link: https://github.com/juliangarnier/anime
+  link: https://animejs.com/
+  github: https://github.com/juliangarnier/anime
 
-- icon: 'https://api.liubing.me/favicon/github.com.png'
+- icon: 'https://api.liubing.me/favicon/mojs.github.io.png'
   name: Mo.js
   desc: 一个javascript动态图形库，声明性 API 提供了对动画的完全控制，使其易于定制。
-  link: https://github.com/mojs/mojs
+  link: https://mojs.github.io/
+  github: https://github.com/mojs/mojs
 
 - icon: 'https://api.liubing.me/favicon/github.com.png'
   name: Hover effect
   desc: 用于在悬停时绘制图像和动画图像的 Javascript 库。
   link: https://github.com/robin-dela/hover-effect
+  github: https://github.com/robin-dela/hover-effect
 ```
 
 :::
@@ -44,30 +49,35 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: 'https://api.liubing.me/favicon/github.com.png'
+- icon: 'https://api.liubing.me/favicon/animate.style.png'
   name: Animate.css
   desc: 一个跨浏览器的CSS动画库。
-  link: https://github.com/animate-css/animate.css
+  link: https://animate.style/
+  github: https://github.com/animate-css/animate.css
 
 - icon: 'https://api.liubing.me/favicon/github.com.png'
   name: Magic
   desc: 带有特殊效果的 CSS3 动画。
   link: https://github.com/miniMAC/magic
+  github: https://github.com/miniMAC/magic
 
-- icon: 'https://api.liubing.me/favicon/github.com.png'
+- icon: 'https://api.liubing.me/favicon/tobiasahlin.com/spinkit.png'
   name: SpinKit
   desc: 纯 CSS 动画加载 Loading 集合。
-  link: https://github.com/tobiasahlin/SpinKit
+  link: https://tobiasahlin.com/spinkit/
+  github: https://github.com/tobiasahlin/SpinKit
 
 - icon: 'https://api.liubing.me/favicon/github.com.png'
   name: Css-Loaders
   desc: 纯 CSS 动画加载 Loading 集合。
   link: https://github.com/lukehaas/css-loaders
+  github: https://github.com/lukehaas/css-loaders
 
 - icon: 'https://api.liubing.me/favicon/github.com.png'
   name: Whirl
   desc: 创建各样的 CSS 加载动画。
   link: https://github.com/jh3y/whirl
+  github: https://github.com/jh3y/whirl
 ```
 
 :::

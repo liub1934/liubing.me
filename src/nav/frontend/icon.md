@@ -19,6 +19,7 @@ containerClass: nav-container
   name: IconPark
   desc: 字节跳动出品的高质量开源图标库。
   link: https://iconpark.oceanengine.com/
+  github: https://github.com/bytedance/iconpark
 
 - icon: 'https://api.liubing.me/favicon/fontawesome.com.png'
   name: Font Awesome
@@ -29,6 +30,13 @@ containerClass: nav-container
   name: Iconify
   desc: 免费开源的图标库，超过150k+图标自由选择。
   link: https://iconify.design/
+  github: https://github.com/iconify/iconify
+
+- icon: 'https://api.liubing.me/favicon/icones.js.org.png'
+  name: Icones
+  desc: 由Iconify提供支持的即时搜索功能的图标浏览器。
+  link: https://icones.js.org/
+  github: https://github.com/antfu-collective/icones
 
 - icon: 'https://api.liubing.me/favicon/icons8.com.png'
   name: Icons8
@@ -49,6 +57,7 @@ containerClass: nav-container
   name: xicons
   desc: 整合了N多组件库的Icon图标，提供Vue/React组件。
   link: https://xicons.org/#/zh-CN
+  github: https://github.com/07akioni/xicons
 ```
 
 :::

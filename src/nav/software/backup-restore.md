@@ -18,6 +18,7 @@ containerClass: nav-container
   name: Lomorage
   desc: 自建免费无限制的私有相册云。
   link: https://lomorage.com/zh/
+  github: https://github.com/lomorage/homepage
 
 - icon: 'https://api.liubing.me/favicon/freefilesync.org.png'
   name: FreeFileSync

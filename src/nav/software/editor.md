@@ -25,6 +25,7 @@ containerClass: nav-container
   name: VNote
   desc: 更适合程序员使用的跨平台免费开源 Markdown 笔记工具。
   link: https://app.vnote.fun/
+  github: https://github.com/vnotex/vnote
 
 - icon: 'https://api.liubing.me/favicon/maxiang.io.png'
   name: 马克飞象
@@ -68,6 +69,7 @@ containerClass: nav-container
   name: RIME
   desc: 开源跨平台流畅纯净无广告/拼音/五笔。
   link: https://rime.im/
+  github: https://github.com/rime/librime
 ```
 
 :::

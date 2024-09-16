@@ -234,6 +234,7 @@ containerClass: nav-container
   name: Upscayl
   desc: 开源免费 AI 图片无损放大工具 (离线/跨平台)。
   link: https://upscayl.org/
+  github: https://github.com/upscayl/upscayl
 
 - icon: 'https://api.liubing.me/favicon/pixfix.com.png'
   name: PIX FIX
