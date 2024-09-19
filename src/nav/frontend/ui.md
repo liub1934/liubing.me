@@ -94,7 +94,7 @@ containerClass: nav-container
   name: TW-Elements
   desc: 一套基于Tailwind的 UI 组件库。
   link: https://tw-elements.com/
-  github: https://github.com/mdbootstrap/TW-Elements/
+  github: https://github.com/mdbootstrap/TW-Elements
 
 - icon: 'https://api.liubing.me/favicon/headlessui.com.png'
   name: Headless UI
