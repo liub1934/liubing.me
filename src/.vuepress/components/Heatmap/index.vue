@@ -95,7 +95,7 @@ function handleClick(item: IHeatmap) {
       bottom: 2px;
       left: 2px;
       border: 1px solid var(--border-color);
-      transition: all var(--color-transition);
+      transition: all var(--vp-t-transform);
     }
   }
 }

@@ -1,4 +1,11 @@
 // place your custom styles here
+:root {
+  --border-color: #eaecef;
+}
+[data-theme='dark'] {
+  --border-color: #30363d;
+}
+
 html[data-theme='light'] {
   .vp-blog-infos {
     .vp-blog-type-button {
