@@ -158,17 +158,3 @@ hr {
 .vp-toc-wrapper.open {
   margin-top: 0;
 }
-
-// Fix 导航栏外链箭头样式
-.vp-navbar {
-  .vp-nav-links {
-    .vp-nav-item > .auto-link {
-      &.external-link {
-        &::after {
-          position: static;
-          visibility: visible;
-        }
-      }
-    }
-  }
-}
