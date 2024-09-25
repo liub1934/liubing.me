@@ -56,7 +56,7 @@ UnoCSS 支持市面上各种框架/工具的集成，如 Vite、Webpack 等等�
 
 ### 安装 UnoCSS
 
-::: code-tabs
+::: tabs
 @tab pnpm
 
 ```bash

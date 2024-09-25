@@ -169,7 +169,7 @@ CloudFlare 的 DNS 记录中添加解析，IP 地址填写自己的服务器 IP�
 
 执行下面的命令安装需要的依赖。
 
-::: code-tabs
+::: tabs
 @tab yarn
 
 ```sh
@@ -228,7 +228,7 @@ require('@waline/vercel/vanilla.js')
 
 然后添加`.gitignore`文件用于忽略上传`node_modules`，内容如下所示。
 
-::: code-tabs
+::: tabs
 @tab .gitignore
 
 ```

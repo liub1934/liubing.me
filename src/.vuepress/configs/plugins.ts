@@ -88,12 +88,14 @@ export const themePlugins: PluginsOptions = {
   // Disable features you don’t want here
   // Markdown 增强插件配置
   mdEnhance: {
-    codetabs: true,
     gfm: true,
     include: true
   },
   markdownImage: {
     figure: true
+  },
+  markdownTab: {
+    tabs: true
   },
   // PWA插件配置
   // pwa: false // 暂时关闭PWA功能

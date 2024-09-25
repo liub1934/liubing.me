@@ -301,7 +301,7 @@ const { doubleCount } = storeToRefs(counterStore)
 
 Getter 只是幕后的计算属性，所以不可以向它们传递任何参数。不过，你可以从 getter 返回一个函数，该函数可以接受任意参数。 下面定义了一个`getCount`的计算属性，接收一个`num`参数，返回将`count`的值加上`num`的值，模版中直接使用`getCount(10)`就能展示相应的值了，由于是计算属性的缘故，在`count`不断`+1`的同时，`getCount`也会在原本的基础上不断`+1`。
 
-::: code-tabs
+::: tabs
 @tab stores/counter.ts
 
 ```ts {6-8}
@@ -357,7 +357,7 @@ function reset() {
 Action 相当于组合式写法里面的`funtion`方法，支持同步和异步方法。  
 定一个`oneWord`Store，里面定义 2 个方法，`clearOneWord`清空一言的方法，`fetchOneWord`异步接口获取一言的方法，异步方法可以返回一个`Promise`用于成功后回调。
 
-::: code-tabs
+::: tabs
 @tab stores/oneWord.ts
 
 ```ts
@@ -428,7 +428,7 @@ function getOneWord() {
 
 需要访问哪个 Store 就引用哪个，非常方便，这里以访问 state 数据为例，getter 和 action 同理。
 
-::: code-tabs
+::: tabs
 
 @tab stores/counter.ts
 

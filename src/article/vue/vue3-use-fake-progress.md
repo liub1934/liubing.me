@@ -21,7 +21,7 @@ containerClass: article-container
 
 使用自己常用的方式安装`fake-progress`即可。
 
-::: code-tabs
+::: tabs
 @tab npm
 
 ```sh
@@ -159,7 +159,7 @@ setInterval(() => {
 ## 封装成 Hook
 
 为了方便日常使用，我们可以封装一个`useFakeProgress`的 Hook，引入后直接可以使用`percentage`和相关的`start()`和`end()`方法。
-::: code-tabs
+::: tabs
 @tab Demo.vue
 
 ```vue {13-14,19,21-23}

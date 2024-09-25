@@ -19,7 +19,7 @@ containerClass: article-container
 
 使用[create-vue](https://github.com/vuejs/create-vue)创建的项目可选集成自带，其他方式创建的项目可以参考[User Guide](https://eslint.vuejs.org/user-guide/)教程进行安装。
 
-::: code-tabs
+::: tabs
 @tab npm
 
 ```sh

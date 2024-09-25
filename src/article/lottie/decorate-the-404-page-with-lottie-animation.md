@@ -67,7 +67,7 @@ var animation = bodymovin.loadAnimation({
 
 所以可以写一个简单的组件，传入相关参数即可，当然你也可以使用别人封装好的[lottie-web-vue](https://github.com/garbit/lottie-web-vue)，这里由于使用场景比较简单，就自己撸一个了，先将 lottie-web 安装一下。
 
-::: code-tabs
+::: tabs
 @tab NPM
 
 ```sh
@@ -86,7 +86,7 @@ yarn add lottie-web
 
 由于使用场景比较简单，将相关配置直接通过`options`传入，派发一个`DOMLoaded`事件。
 
-::: code-tabs
+::: tabs
 @tab LottieWeb/index.vue
 
 ```vue
@@ -143,7 +143,7 @@ onBeforeUnmount(() => {
 
 新的 NotFound 布局写好后在`src/.vuepress/client.ts`中的`layouts`中引入即可。
 
-::: code-tabs
+::: tabs
 @tab NotFound/index.vue
 
 ```vue

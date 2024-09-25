@@ -35,7 +35,7 @@ function generateUUID() {
 
 ## 复制到剪贴板
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -92,7 +92,7 @@ function copyToClipboard(
 
 ## 获取地址栏参数
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -160,7 +160,7 @@ const printNums = async () => {
 
 ## 深度合并对象
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -218,7 +218,7 @@ console.log(result) // { a: 1, b: { c: 2, d: 3 }, e: 4 }
 
 ## 重命名键
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -263,7 +263,7 @@ renameKeys({ name: 'firstName', job: 'passion' }, obj)
 
 ## 解析 Cookie
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -306,7 +306,7 @@ parseCookie('foo=bar; equation=E%3Dmc%5E2')
 
 ## FormData 转 Object
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -421,7 +421,7 @@ supportsTouchEvents() // true
 
 ## 深度对象比较
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -467,7 +467,7 @@ function deepEquals(a: any, b: any): boolean {
 
 ## 数组转嵌套对象
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
