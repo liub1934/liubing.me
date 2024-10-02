@@ -84,10 +84,10 @@ link: 网站链接
   desc: 到最后，竟庆幸于夕阳仍留在身上
   link: https://oragekk.me/
 
-- icon: https://paper-dragon.github.io/logo.svg
+- icon: https://geekery.cn/logo.svg
   name: 运维开发绿皮书
   desc: 放置我的笔记、搜集、摘录、实践，保持好奇心。看文需谨慎，后果很严重!
-  link: https://paper-dragon.github.io/
+  link: https://geekery.cn/
 ```
 
 :::
