@@ -10,7 +10,7 @@
         data-balloon-pos="up"
         :aria-label="
           item.counts
-            ? `${item.year}-${item.month}&#xa;Post: ${item.counts}`
+            ? `${item.year}-${item.month}&#xa;Posts: ${item.counts}`
             : `${item.year}-${item.month}`
         "
         @click="handleClick(item)"
