@@ -69,7 +69,7 @@ Github 可在[SSH and GPG keys](https://github.com/settings/keys)中点击`New S
 
 在`.ssh`中新建一个`config`文件。
 
-```ssh
+```sh
 cd ~/.ssh
 touch config
 vim config

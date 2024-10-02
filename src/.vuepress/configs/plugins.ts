@@ -97,6 +97,12 @@ export const themePlugins: PluginsOptions = {
   markdownTab: {
     tabs: true
   },
+  shiki: {
+    // 自定义语言别名
+    langAlias: {
+      env: 'dotenv'
+    }
+  },
   // PWA插件配置
   // pwa: false // 暂时关闭PWA功能
   pwa: {
