@@ -2,6 +2,7 @@
 order: 1
 category:
   - 代码笔记
+layout: NoteLayout
 ---
 
 # Git 常用命令

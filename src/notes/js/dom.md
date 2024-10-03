@@ -2,6 +2,7 @@
 order: 3
 category:
   - 代码笔记
+layout: NoteLayout
 ---
 
 # DOM 相关

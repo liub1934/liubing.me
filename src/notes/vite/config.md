@@ -1,3 +1,7 @@
+---
+layout: NoteLayout
+---
+
 # Vite Config 配置
 
 ## 别名 alias 配置

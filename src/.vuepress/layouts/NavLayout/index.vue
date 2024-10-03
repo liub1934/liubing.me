@@ -1,21 +1,26 @@
 <template>
-  <SkipLink />
-  <CommonWrapper>
-    <NormalPage>
-      <template #contentBefore>
-        <div class="theme-hope-content custom-content-before">
-          <div class="hint-container tip">
-            <p class="hint-container-title">提示</p>
-            <p>
-              导航数据完善中，欢迎 👏👏 通过 PR 或者点击下方的
-              <AutoLink :config="editLink!"></AutoLink>
-              提供其他未收集的站点
-            </p>
+  <NaiveProvider>
+    <SkipLink />
+    <CommonWrapper>
+      <NormalPage>
+        <template #contentBefore>
+          <div class="theme-hope-content custom-content-before">
+            <div class="hint-container tip">
+              <p class="hint-container-title">提示</p>
+              <p>
+                导航数据完善中，欢迎 👏👏 通过 PR 或者点击下方的
+                <AutoLink :config="editLink!"></AutoLink>
+                提供其他未收集的站点
+              </p>
+            </div>
           </div>
-        </div>
-      </template>
-    </NormalPage>
-  </CommonWrapper>
+        </template>
+        <template #contentAfter>
+          <SponsorButton />
+        </template>
+      </NormalPage>
+    </CommonWrapper>
+  </NaiveProvider>
 </template>
 
 <script setup lang="ts">
