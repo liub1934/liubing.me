@@ -29,12 +29,15 @@ declare module 'vue' {
     NInputNumber: typeof import('naive-ui')['NInputNumber']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
     NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
+    NPopover: typeof import('naive-ui')['NPopover']
     NRadio: typeof import('naive-ui')['NRadio']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
+    NSpace: typeof import('naive-ui')['NSpace']
     PageFooter: typeof import('./../src/.vuepress/components/PageFooter/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ShortVideoRemoveWatermark: typeof import('./../src/.vuepress/components/tools/ShortVideoRemoveWatermark/index.vue')['default']
+    SponsorButton: typeof import('./../src/.vuepress/components/SponsorButton/index.vue')['default']
     TravellingLink: typeof import('./../src/.vuepress/components/TravellingLink/index.vue')['default']
   }
 }
