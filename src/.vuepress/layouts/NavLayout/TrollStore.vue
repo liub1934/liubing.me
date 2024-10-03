@@ -27,6 +27,9 @@
             </div>
           </div>
         </template>
+        <template #contentAfter>
+          <SponsorButton />
+        </template>
       </NormalPage>
     </CommonWrapper>
   </NaiveProvider>
