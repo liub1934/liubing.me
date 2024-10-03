@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@ant-design/colors':
-    specifier: 7.0.2
-    version: 7.0.2
+    specifier: 7.1.0
+    version: 7.1.0
   '@lottiefiles/dotlottie-web':
-    specifier: ^0.20.2
-    version: 0.20.2
+    specifier: ^0.34.0
+    version: 0.34.0
   '@splinetool/runtime':
     specifier: 0.9.369
     version: 0.9.369
@@ -156,8 +156,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@ant-design/colors@7.0.2:
-    resolution: {integrity: sha512-7KJkhTiPiLHSu+LmMJnehfJ6242OCxSlR3xHVBecYxnMW8MS/878NXct1GqYARyL59fyeFdKRxXTfvR9SnDgJg==}
+  /@ant-design/colors@7.1.0:
+    resolution: {integrity: sha512-MMoDGWn1y9LdQJQSHiCC20x3uZ3CwQnv9QMz6pCmJOrqdgM9YxsoVVY0wtrdXbmfSgnV0KNk6zi09NAhMR2jvg==}
     dependencies:
       '@ctrl/tinycolor': 3.6.1
     dev: false
@@ -1837,8 +1837,8 @@ packages:
       '@lit-labs/ssr-dom-shim': 1.2.1
     dev: true
 
-  /@lottiefiles/dotlottie-web@0.20.2:
-    resolution: {integrity: sha512-o0v7vlEwp5ck7MqLfJAXlNeuPj56TBgXLzNNeCWwgaOyFjgQJI/tr9noAGM7SaGEfEmVroBXtYeRUp09fse41A==}
+  /@lottiefiles/dotlottie-web@0.34.0:
+    resolution: {integrity: sha512-lKayn0IaqFKcnLGxJKKaDlxwKqKBpHzZ7COMEZ0HYhd3cbI9GFJb9YDUgtdpzTH5uL9Eqnr19myWYmEXHPm9pQ==}
     dev: false
 
   /@mdit-vue/plugin-component@2.1.3:

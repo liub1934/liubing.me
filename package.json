@@ -52,8 +52,8 @@
     "vuepress-theme-hope": "2.0.0-rc.58"
   },
   "dependencies": {
-    "@ant-design/colors": "7.0.2",
-    "@lottiefiles/dotlottie-web": "^0.20.2",
+    "@ant-design/colors": "7.1.0",
+    "@lottiefiles/dotlottie-web": "^0.34.0",
     "@splinetool/runtime": "0.9.369",
     "@vueuse/core": "10.9.0",
     "colord": "^2.9.3",
