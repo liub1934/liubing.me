@@ -26,7 +26,7 @@ function getRGBColor(color: string) {
  */
 export function getThemeColor() {
   const rootStyles = window.getComputedStyle(document.documentElement)
-  return rootStyles.getPropertyValue('--theme-color')
+  return rootStyles.getPropertyValue('--vp-c-accent')
 }
 
 /**

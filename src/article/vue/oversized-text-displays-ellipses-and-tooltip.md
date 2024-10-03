@@ -53,7 +53,7 @@ Element Plus 比较简单，提供了`disabled`的参数，我们只需要通过
 
 :::: details 点击查看代码
 
-::: code-tabs
+::: tabs
 @tab TextEllipsis.vue
 
 ```vue
@@ -144,7 +144,7 @@ function setTooltipDisabled() {
 由于 Ant Design Vue ToolTip 没有提供`disabled`的参数，所以不能使用`v-model`绑定`tooltipVisible`，需要通过`:visible="tooltipVisible"`这种形式手动控制，利用`visibleChange`事件去手动去处理，如果`disabledTooltip`为`true`的时候需要控制`tooltipVisible`为`false`，在需要禁用的时候不弹出 ToolTip。
 
 :::: details 点击查看代码
-::: code-tabs
+::: tabs
 @tab TextEllipsis.vue
 
 ```vue
@@ -242,7 +242,7 @@ function visibleChange(visible: boolean) {
 代码同 Element Plus，只是改写成 Vue2 的写法。
 
 :::: details 点击查看代码
-::: code-tabs
+::: tabs
 @tab TextEllipsis.vue
 
 ```vue
@@ -339,7 +339,7 @@ export default {
 代码同 Ant Design Vue 3.x，只是改写成 Vue2 的写法。
 
 :::: details 点击查看代码
-::: code-tabs
+::: tabs
 @tab TextEllipsis.vue
 
 ```vue

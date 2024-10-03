@@ -10,7 +10,7 @@
         data-balloon-pos="up"
         :aria-label="
           item.counts
-            ? `${item.year}-${item.month}&#xa;Post: ${item.counts}`
+            ? `${item.year}-${item.month}&#xa;Posts: ${item.counts}`
             : `${item.year}-${item.month}`
         "
         @click="handleClick(item)"
@@ -95,7 +95,7 @@ function handleClick(item: IHeatmap) {
       bottom: 2px;
       left: 2px;
       border: 1px solid var(--border-color);
-      transition: all var(--color-transition);
+      transition: all var(--vp-t-transform);
     }
   }
 }

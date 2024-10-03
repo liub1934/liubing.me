@@ -32,7 +32,7 @@
                 </li>
                 <li class="copyright-link">
                   <strong>本文链接：</strong>
-                  <a :href="path">{{ title }}</a>
+                  <a class="no-external-link-icon" :href="path">{{ title }}</a>
                 </li>
                 <li class="copyright-license">
                   <strong>版权声明：</strong>

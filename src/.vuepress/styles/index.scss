@@ -1,4 +1,11 @@
 // place your custom styles here
+:root {
+  --border-color: #eaecef;
+}
+[data-theme='dark'] {
+  --border-color: #30363d;
+}
+
 html[data-theme='light'] {
   .vp-blog-infos {
     .vp-blog-type-button {
@@ -131,37 +138,23 @@ hr {
   white-space: pre;
 }
 
-.artalk,
-.artalk.atk-dark-mode,
-.atk-layer-wrap,
-.atk-layer-wrap.atk-dark-mode {
-  color: var(--main-text-color);
-  --at-color-main: var(--theme-color);
-  --at-color-light: var(--theme-color-light);
-  --at-color-red: var(--badge-danger-color);
-  --at-color-yellow: var(--badge-warning-color);
-  --at-color-font: var(--main-text-color);
-  --at-color-grey: var(--main-text-color);
-  --at-color-meta: var(--main-text-color);
-}
-.atk-comment > .atk-main > .atk-header .atk-badge {
-  color: var(--main-text-color);
-}
+// .artalk,
+// .artalk.atk-dark-mode,
+// .atk-layer-wrap,
+// .atk-layer-wrap.atk-dark-mode {
+//   color: var(--main-text-color);
+//   --at-color-main: var(--theme-color);
+//   --at-color-light: var(--theme-color-light);
+//   --at-color-red: var(--badge-danger-color);
+//   --at-color-yellow: var(--badge-warning-color);
+//   --at-color-font: var(--main-text-color);
+//   --at-color-grey: var(--main-text-color);
+//   --at-color-meta: var(--main-text-color);
+// }
+// .atk-comment > .atk-main > .atk-header .atk-badge {
+//   color: var(--main-text-color);
+// }
 
 .vp-toc-wrapper.open {
   margin-top: 0;
-}
-
-// Fix 导航栏外链箭头样式
-.vp-navbar {
-  .vp-nav-links {
-    .vp-nav-item > .auto-link {
-      &.external-link {
-        &::after {
-          position: static;
-          visibility: visible;
-        }
-      }
-    }
-  }
 }

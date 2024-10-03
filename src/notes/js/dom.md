@@ -8,7 +8,7 @@ category:
 
 ## 平滑滚动到指定元素
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -93,7 +93,7 @@ getScrollPosition() // {x: 0, y: 200}
 
 ## 检查是否见底
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -128,7 +128,7 @@ isScrolledToBottom() // true
 
 ## 判断是否含有某个 class
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -169,7 +169,7 @@ function hasClass(element: HTMLElement, className: string | string[]): boolean {
 
 ## 添加 class
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -206,7 +206,7 @@ function addClass(element: Element, classNames: string | string[]): void {
 
 ## 移除 class
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -243,7 +243,7 @@ function removeClass(element: Element, classNames: string | string[]): void {
 
 ## 监听
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -270,7 +270,7 @@ function on(element: Element, event: string, handler: EventListener): void {
 
 ## 移除监听
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js

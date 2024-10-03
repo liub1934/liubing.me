@@ -88,7 +88,7 @@ export class AppComponent {
 
 ![image](https://image.liubing.me/2022/12/19/10fc54166f8b5.png)
 
-::: code-tabs
+::: tabs
 
 @tab app.component.ts
 
@@ -131,7 +131,7 @@ export class AppComponent {
 
 - Object - 每个 key 都是要处理的 CSS 类，当表达式求值为真的时候则添加，为假则移除。
 
-::: code-tabs
+::: tabs
 
 @tab app.component.html
 
@@ -168,7 +168,7 @@ export class AppComponent {
 
 ### Style 绑定
 
-::: code-tabs
+::: tabs
 
 @tab app.component.html
 
@@ -207,7 +207,7 @@ export class AppComponent {
 
 和`Vue`类似，`v-for in` 换成了`*ngFor of`，指定`Key`通过`trackBy`方法，该方法接受 2 个参数：`index`和`item`
 
-::: code-tabs
+::: tabs
 
 @tab Angular
 
@@ -315,7 +315,7 @@ export class AppComponent {
 
 循环对象和循环数组类似，在循环对象的时候需要指定`keyvalue`的管道
 
-::: code-tabs
+::: tabs
 @tab Angular
 
 ```html
@@ -346,7 +346,7 @@ export class AppComponent {
 
 ### 使用 if
 
-::: code-tabs
+::: tabs
 @tab Angular
 
 ```html
@@ -363,7 +363,7 @@ export class AppComponent {
 
 ### 使用 else
 
-::: code-tabs
+::: tabs
 @tab Angular
 
 在`else`后面指定`elseBlock`，通过`elseBlock`展示不满足`if`条件的内容，其中`elseBlock`可以按实际需要命名。
@@ -398,7 +398,7 @@ export class AppComponent {
 
 ![image](https://image.liubing.me/2022/12/20/65dbc198781ef.jpg)
 
-::: code-tabs
+::: tabs
 
 @tab app.component.html
 
@@ -452,7 +452,7 @@ Can't bind to 'ngModel' since it isn't a known property of 'input'.
 
 然而并不是，为了能够对表单输入使用双向数据绑定，此时还需要将`FormsModule`在 `Angular` 模块中导入。
 
-::: code-tabs
+::: tabs
 @tab app.module.ts
 
 ```ts
@@ -511,7 +511,7 @@ export class AppModule {}
 `Angular` 中提供了两种不同的方法来通过表单处理用户输入：`响应式表单`和`模板驱动表单`。 两者都从视图中捕获用户输入事件、验证用户输入、创建表单模型、修改数据模型，并提供跟踪这些更改的途径。  
 使用之前需要将`ReactiveFormsModule`在 `Angular` 模块中导入。
 
-::: code-tabs
+::: tabs
 @tab app.module.ts
 
 ```ts
@@ -539,7 +539,7 @@ export class AppModule {}
 在模板驱动表单中，表单模型是隐式的，而不是显式的。通过 `NgModel` 为指定的表单元素创建并管理一个 `FormControl` 实例。  
 下方代码与下面`响应式表单`中内容功能相同。
 
-::: code-tabs
+::: tabs
 @tab app.component.html
 
 ```html
@@ -578,7 +578,7 @@ export class AppComponent {
 想简单点，你可以把 `[formControl]` 理解成 `Ant Vue` 或者 `Element UI` 表单中的`prop`。  
 可以调用 `formControl` 提供的 `getRawValue` 和 `setValue`方法来获取输入的值或者设置一个新值。还有其他方法请参考[文档说明](https://angular.cn/api/forms/FormControl#instance-methods)查看。
 
-::: code-tabs
+::: tabs
 @tab app.component.html
 
 ```html
@@ -619,7 +619,7 @@ export class AppComponent {
 先创建一个最简单的 Form 表单结构，里面有用户名、密码、重复密码、注册按钮。  
 所有输入框的值都是通过`[(ngModel)]`绑定，点击`注册`后会触发表单的`Submit`事件调用`onSubmit()`方法，输出打印`formData`中的内容。
 
-::: code-tabs
+::: tabs
 @tab app.component.html
 
 ```html
@@ -748,7 +748,7 @@ providers: [
 
 在该指令中`appCheckEmail`为该指令的名称，`useExisting`为该指令的类名，然后需要在指令的`providers`中注册上面提到过的 `NG_VALIDATORS` 提供者， 最后提供`validate`验证的方法。
 
-::: code-tabs
+::: tabs
 @tab app.check-email.directive.ts
 
 ```ts
@@ -803,7 +803,7 @@ export const checkEmailValidator = (): ValidatorFn => {
 
 接下来在`validate`中调用该方法：
 
-::: code-tabs
+::: tabs
 @tab app.check-email.directive.ts
 
 ```ts
@@ -931,7 +931,7 @@ export const checkPasswordValidator = (): ValidatorFn => {
 
 将`app.check-password.directive.ts`文件补全：
 
-::: code-tabs
+::: tabs
 @tab app.check-password.directive.ts
 
 ```ts
@@ -1078,7 +1078,7 @@ export class CheckUsernameDirective implements AsyncValidator {
 
 #### 模板驱动表单完整代码
 
-::: code-tabs
+::: tabs
 @tab app.component.html
 
 ```html
@@ -1318,7 +1318,7 @@ export class CheckPasswordDirective implements Validator {
 
 和模板驱动表单不同的是响应式表单初始化数据需要创建一个 `FormGroup` 实例，如`app.component.ts`中的`new FormGroup()`，然后把这个 `FormGroup` 模型关联到视图，如`app.component.html`中的`[formGroup]="formData"`，表单中的输入项通过由 `FormControlName` 指令提供的 `formControlName` 属性把每个输入框和 `FormGroup` 中定义的表单控件绑定起来。
 
-::: code-tabs
+::: tabs
 @tab app.component.html
 
 ```html
@@ -1400,7 +1400,7 @@ export class AppComponent {
 
 可以对比下两种方式的区别，会发现使用 `FormBuilder`代码比较简洁，不用去`new` 很多的实例了。
 
-::: code-tabs
+::: tabs
 @tab instances
 
 ```ts
@@ -1553,7 +1553,7 @@ isShowError(errorName: string, field?: string) {
 
 同上响应式表单自定义验证器的写法，需要将控件值第二项的数组改成对象形式，`validators`是同步验证，`asyncValidators`为异步验证，可以直接将之前写好的`checkUsernameValidator`拿过来直接使用。由于存在异步验证，输入变化的时候实际情况会频繁的触发异步验证调用接口，增加`updateOn`为`blur`可以进行优化下，将触发时机改为输入框`blur`之后。
 
-::: code-tabs
+::: tabs
 @tab 对象形式
 
 ```ts
@@ -1600,7 +1600,7 @@ formData = this.fb.group({
 
 #### 响应式表单完整代码
 
-::: code-tabs
+::: tabs
 @tab app.component.html
 
 ```html
@@ -1872,7 +1872,7 @@ export class AppComponent implements AfterViewInit {
 
 可以使用 `CLI` 提供的命令`ng g c [name]`来快速创建一个组件，输入命令`ng g c test --skip-tests`跳过测试文件创建一个`app-test`组件。
 
-::: code-tabs
+::: tabs
 @tab test.component.html
 
 ```html
@@ -1924,7 +1924,7 @@ export class AppModule {}
 在`Vue`中可以通过定义组件的`props`，在`Angular`需要使用`@Input()`的装饰器来传入数据。  
 我们在`test.component.ts`中定义需要传入的参数`name`，在模版文件`test.component.html`中显示`name`，在`app.component.ts`中定义传入的值`testName`，最后在`app.component.html`中组件上绑定值。
 
-::: code-tabs
+::: tabs
 
 @tab test.component.ts
 
@@ -1982,7 +1982,7 @@ export class AppComponent {
 
 `test.component.html`中新增一个`Update Name`的按钮，点击后会执行`updateName`的方法,`test.component.ts`中需要先引入`Output`和`EventEmitter`，通过`@Output()`定义一个往外派发的`clickEvent`事件，`updateName`中调用`clickEvent`的`emit`方法。
 
-::: code-tabs
+::: tabs
 @tab test.component.html
 
 ```html {3}
@@ -2021,7 +2021,7 @@ export class TestComponent implements OnInit {
 
 在`app.component.html`中将`clickEvent`绑定到模版中，子组件点击`Update Name`按钮会派发事件从而执行`app.component.ts`中定义的`handleClick()`方法修改`name`的值。
 
-::: code-tabs
+::: tabs
 @tab app.component.html
 
 ```html
@@ -2106,7 +2106,7 @@ export class TestComponent implements OnChanges, OnInit {
 
 我接着上面的代码示例在`test.component.html`中在`Name`下方添加`<ng-content>`元素，然后在`app.component.html`就可以将插槽的内容应用到`app-test`组件中。
 
-::: code-tabs
+::: tabs
 @tab test.component.html
 
 ```html {3}
@@ -2145,7 +2145,7 @@ export class TestComponent implements OnChanges, OnInit {
 
 最后在`app.component.html`中的`app-test`组件内部使用。
 
-::: code-tabs
+::: tabs
 @tab test.component.html
 
 ```html {2,3,7,8}

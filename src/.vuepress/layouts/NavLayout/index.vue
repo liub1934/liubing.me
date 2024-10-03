@@ -8,7 +8,7 @@
             <p class="hint-container-title">提示</p>
             <p>
               导航数据完善中，欢迎 👏👏 通过 PR 或者点击下方的
-              <b class="color-primary">在 GitHub 上编辑此页</b>
+              <AutoLink :config="editLink!"></AutoLink>
               提供其他未收集的站点
             </p>
           </div>
@@ -22,4 +22,8 @@
 import CommonWrapper from '@theme-hope/components/CommonWrapper'
 import NormalPage from '@theme-hope/components/NormalPage'
 import SkipLink from '@theme-hope/components/SkipLink'
+import AutoLink from '@theme-hope/components/AutoLink'
+import { useEditLink } from '@theme-hope/modules/info/composables/index'
+
+const editLink = useEditLink()
 </script>

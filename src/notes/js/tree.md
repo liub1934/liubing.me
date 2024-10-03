@@ -55,7 +55,7 @@ function treeForeach(tree, func, childrenName = 'children') {
 
 ### 深度优先遍历
 
-::: code-tabs
+::: tabs
 @tab 先序遍历
 
 ```js
@@ -82,7 +82,7 @@ function treeForeach(tree, func) {
 
 ### 深度优先循环
 
-::: code-tabs
+::: tabs
 @tab 先序遍历
 
 ```js
@@ -170,7 +170,7 @@ function listToTree(list) {
 
 ### 树结构转列表
 
-::: code-tabs
+::: tabs
 @tab 递归实现
 
 ```js

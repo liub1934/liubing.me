@@ -18,7 +18,7 @@ containerClass: article-container
 
 ## 安装 UnoCSS
 
-::: code-tabs
+::: tabs
 @tab pnpm
 
 ```bash
@@ -62,7 +62,7 @@ export default defineConfig({
 
 ## 安装 postcss-px-to-viewport-8-plugin
 
-::: code-tabs
+::: tabs
 @tab pnpm
 
 ```bash

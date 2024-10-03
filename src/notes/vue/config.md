@@ -32,7 +32,7 @@ pluginOptions: {
 
 ### 插件安装
 
-::: code-tabs
+::: tabs
 @tab NPM
 
 ```sh

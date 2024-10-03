@@ -27,7 +27,7 @@ containerClass: article-container
 
 ### 百度地图通用方法
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
@@ -122,7 +122,7 @@ onMounted(() => {
 
 ### 高德地图通用方法
 
-::: code-tabs
+::: tabs
 @tab JS
 
 ```js
