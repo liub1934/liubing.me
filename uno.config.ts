@@ -33,7 +33,10 @@ export default defineConfig({
       // 'primary-1': 'rgba(var(--n-primary-color-1))',
       // 'primary-hover': 'rgba(var(--n-primary-color-hover))',
       // ...其他
-      ...generateColorCombinations()
+      ...generateColorCombinations(),
+      text: 'var(--vp-c-text)',
+      subText: 'var(--vp-c-text-subtle)',
+      grey: 'var(--vp-c-grey-text)'
     }
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],
