@@ -57,5 +57,3 @@ function loadEvent(e: LoadEvent) {
   emit('load', e)
 }
 </script>
-
-<style lang="less" scoped></style>
