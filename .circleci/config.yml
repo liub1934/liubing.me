@@ -43,7 +43,10 @@ jobs:
       # Build打包
       - run:
           name: Build project
-          command: pnpm docs:build
+          name: Build project
+          command: |
+            export NODE_OPTIONS="--max-old-space-size=4096"
+            pnpm docs:build
 
       # 将dist打成压缩包
       - run:
