@@ -1,6 +1,7 @@
 ---
 category:
   - 代码笔记
+layout: NoteLayout
 ---
 
 # is 判断类型

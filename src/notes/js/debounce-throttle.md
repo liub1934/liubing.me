@@ -2,6 +2,7 @@
 order: 4
 category:
   - 代码笔记
+layout: NoteLayout
 ---
 
 # 防抖节流

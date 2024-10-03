@@ -2,6 +2,7 @@
 order: 1
 category:
   - 代码笔记
+layout: NoteLayout
 ---
 
 # 通用 CSS
@@ -72,7 +73,7 @@ category:
     .demo-box {
       width: 20%;
       padding-top: 20%;
-      background: var(--theme-color-mask);
+      background: var(--vp-c-accent-soft);
       margin-right: 20px;
     }
   }
@@ -82,7 +83,7 @@ category:
     .demo-box {
       width: 20%;
       padding-top: 10%;
-      background: var(--theme-color-mask);
+      background: var(--vp-c-accent-soft);
       margin-right: 20px;
     }
   }
@@ -122,7 +123,7 @@ category:
     .demo-box {
       width: 20%;
       aspect-ratio: 1 / 1;
-      background: var(--theme-color-mask);
+      background: var(--vp-c-accent-soft);
       margin-right: 20px;
     }
   }
@@ -132,7 +133,7 @@ category:
     .demo-box {
       width: 20%;
       aspect-ratio: 2 / 1;
-      background: var(--theme-color-mask);
+      background: var(--vp-c-accent-soft);
       margin-right: 20px;
     }
   }

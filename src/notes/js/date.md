@@ -2,6 +2,7 @@
 order: 2
 category:
   - 代码笔记
+layout: NoteLayout
 ---
 
 # 日期工具

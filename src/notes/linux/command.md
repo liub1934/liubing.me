@@ -2,6 +2,7 @@
 order: 1
 category:
   - 常用命令
+layout: NoteLayout
 ---
 
 # 常用命令

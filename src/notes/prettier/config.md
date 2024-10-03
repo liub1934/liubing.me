@@ -1,3 +1,7 @@
+---
+layout: NoteLayout
+---
+
 # Prettier 配置
 
 ```js

@@ -1,9 +1,16 @@
 ---
 category:
   - 代码笔记
+layout: NoteLayout
 ---
 
 # 树结构操作
+
+::: tip
+代码来源：[https://wintc.top/article/20](https://wintc.top/article/20)
+
+工具库：[https://github.com/wintc23/js-tree-tool](https://github.com/wintc23/js-tree-tool)
+:::
 
 ## 遍历树结构
 
@@ -265,9 +272,3 @@ function treeFindPath(tree, func, path = [], result = []) {
   return result
 }
 ```
-
-::: tip
-代码来源：[https://wintc.top/article/20](https://wintc.top/article/20)
-
-工具库：[https://github.com/wintc23/js-tree-tool](https://github.com/wintc23/js-tree-tool)
-:::

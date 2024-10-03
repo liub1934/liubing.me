@@ -33,7 +33,10 @@ export default defineConfig({
       // 'primary-1': 'rgba(var(--n-primary-color-1))',
       // 'primary-hover': 'rgba(var(--n-primary-color-hover))',
       // ...其他
-      ...generateColorCombinations()
+      ...generateColorCombinations(),
+      text: 'var(--vp-c-text)',
+      subText: 'var(--vp-c-text-subtle)',
+      grey: 'var(--vp-c-grey-text)'
     }
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],
@@ -44,6 +47,7 @@ export default defineConfig({
     'absolute-center':
       'absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'
   },
+  rules: [['shadow', { 'box-shadow': '0 1px 3px 1px var(--vp-c-shadow)' }]],
   safelist: [
     ...Array.from({ length: 10 }, (_, i) => `bg-primary-${i + 1}`),
     'flex'

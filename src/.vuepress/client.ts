@@ -6,6 +6,7 @@ import NavLayout from './layouts/NavLayout/index.vue'
 import TrollStoreLayout from './layouts/NavLayout/TrollStore.vue'
 import ArticleLayout from './layouts/ArticleLayout/index.vue'
 import ToolLayout from './layouts/ToolLayout/index.vue'
+import NoteLayout from './layouts/NoteLayout/index.vue'
 import HeatmapLayout from './layouts/HeatmapLayout/index.vue'
 import TravellingLink from './components/TravellingLink/index.vue'
 import { injectNaiveTheme } from './hooks'
@@ -17,7 +18,8 @@ export default defineClientConfig({
     TrollStoreLayout,
     ArticleLayout,
     HeatmapLayout,
-    ToolLayout
+    ToolLayout,
+    NoteLayout
   },
   enhance: ({ app, router, siteData }) => {
     injectNaiveTheme(app)

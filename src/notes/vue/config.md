@@ -1,3 +1,7 @@
+---
+layout: NoteLayout
+---
+
 # Vue Config 配置
 
 ## 移除 preload prefetch 插件
