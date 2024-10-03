@@ -5,6 +5,9 @@ jobs:
     docker:
       - image: node:18.19.0
 
+    environment:
+      NODE_OPTIONS: '--max-old-space-size=4096' # 增加Node.js内存限制
+
     # 步骤定义
     steps:
       # 拉取代码
@@ -43,10 +46,7 @@ jobs:
       # Build打包
       - run:
           name: Build project
-          name: Build project
-          command: |
-            export NODE_OPTIONS="--max-old-space-size=4096"
-            pnpm docs:build
+          command: pnpm docs:build
 
       # 将dist打成压缩包
       - run:
