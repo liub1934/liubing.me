@@ -26,7 +26,7 @@ function getRGBColor(color: string) {
  */
 export function getThemeColor() {
   const rootStyles = window.getComputedStyle(document.documentElement)
-  return rootStyles.getPropertyValue('--vp-c-accent')
+  return rootStyles.getPropertyValue('--vp-c-accent-hover')
 }
 
 /**
