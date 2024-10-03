@@ -4,7 +4,9 @@
     <CommonWrapper>
       <NormalPage>
         <template #contentAfter>
-          <SponsorButton />
+          <ClientOnly>
+            <SponsorButton />
+          </ClientOnly>
         </template>
       </NormalPage>
     </CommonWrapper>

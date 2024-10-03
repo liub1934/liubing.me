@@ -5,7 +5,9 @@
       <NormalPage>
         <template #contentAfter>
           <div class="theme-hope-content article-content-after">
-            <SponsorButton />
+            <ClientOnly>
+              <SponsorButton />
+            </ClientOnly>
             <hr />
             <div class="hint-container warning">
               <div class="article-copyright">
