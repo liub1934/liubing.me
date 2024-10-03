@@ -5,6 +5,9 @@ jobs:
     docker:
       - image: node:18.19.0
 
+    environment:
+      NODE_OPTIONS: '--max-old-space-size=4096' # 增加Node.js内存限制
+
     # 步骤定义
     steps:
       # 拉取代码
