@@ -76,7 +76,7 @@ function initPlayer() {
       }
     })
     player.value.on('pause', () => {
-      isPlay.value = true
+      isPlay.value = false
     })
   })
 }
