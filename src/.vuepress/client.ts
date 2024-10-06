@@ -9,7 +9,9 @@ import ToolLayout from './layouts/ToolLayout/index.vue'
 import NoteLayout from './layouts/NoteLayout/index.vue'
 import HeatmapLayout from './layouts/HeatmapLayout/index.vue'
 import TravellingLink from './components/TravellingLink/index.vue'
-import { injectNaiveTheme } from './hooks'
+import APlayer from './components/APlayer/index.vue'
+import APlayerButton from './components/APlayer/APlayerButton.vue'
+import { injectNaiveTheme, injectPlayer } from './hooks'
 
 export default defineClientConfig({
   layouts: {
@@ -23,6 +25,9 @@ export default defineClientConfig({
   },
   enhance: ({ app, router, siteData }) => {
     injectNaiveTheme(app)
+    injectPlayer(app)
     app.component('TravellingLink', TravellingLink)
-  }
+    app.component('APlayerButton', APlayerButton)
+  },
+  rootComponents: [APlayer]
 })
