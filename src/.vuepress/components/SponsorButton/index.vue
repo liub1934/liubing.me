@@ -18,7 +18,7 @@
             @click="showPopover = !showPopover"
           >
             <font-icon icon="like" class="mr-4" />
-            <span>赞助</span>
+            <span>随意打赏</span>
           </n-button>
         </template>
         <div class="sponsor-content" flex items-center>
