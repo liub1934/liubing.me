@@ -4,8 +4,6 @@ import { darkTheme, type GlobalThemeOverrides } from 'naive-ui'
 import { getGenerateColors, getThemeOverrides } from '@/utils'
 import type { BuiltInGlobalTheme } from 'naive-ui/es/themes/interface'
 
-declare const __VUEPRESS_DEV__: boolean
-
 interface NaiveTheme {
   isDarkmode: Ref<boolean>
   themeConfig: Ref<NTheme.Config>

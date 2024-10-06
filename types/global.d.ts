@@ -16,4 +16,5 @@ declare global {
   declare type TimeoutHandle = ReturnType<typeof setTimeout>
   declare type IntervalHandle = ReturnType<typeof setInterval>
   declare const WebViewJavascriptBridge: any
+  declare const __VUEPRESS_DEV__: boolean
 }
