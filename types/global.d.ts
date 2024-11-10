@@ -4,10 +4,10 @@ declare global {
   declare type VueNode = VNodeChild | JSX.Element
   declare type Nullable<T> = T | null
   declare type Recordable<T = any> = Record<string, T>
-  declare type ReadonlyRecordable<T = any> = {
+  declare interface ReadonlyRecordable<T = any> {
     readonly [key: string]: T
   }
-  declare type Indexable<T = any> = {
+  declare interface Indexable<T = any> {
     [key: string]: T
   }
   declare type DeepPartial<T> = {

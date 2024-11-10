@@ -3,7 +3,7 @@
     class="transition-all"
     :class="{
       'opacity-0': !isShow,
-      'opacity-100': isShow
+      'opacity-100': isShow,
     }"
   >
     <SkipLink />

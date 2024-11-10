@@ -1,5 +1,5 @@
-import yaml from 'js-yaml'
 import type Token from 'markdown-it/lib/token.mjs'
+import yaml from 'js-yaml'
 import { getGithubShieldsImg, withBase } from '../utils'
 
 export interface Project {
@@ -14,17 +14,19 @@ export interface Project {
  * 渲染容器列表
  * @param tokens
  * @param idx
- * @returns
+ * @returns {string} 渲染后的html
  */
-export const renderProjects = (tokens: Token[], idx: number) => {
+export function renderProjects(tokens: Token[], idx: number) {
   const { nesting: tokenNesting, info: tokenInfo } = tokens[idx]
   // 渲染开头的 ':::' 标记
   if (tokenNesting === 1) {
     let yamlStr = ''
     for (let i = idx; i < tokens.length; i++) {
       const { type, content, info } = tokens[i]
-      if (type === 'container_projects_close') break
-      if (!content) continue
+      if (type === 'container_projects_close')
+        break
+      if (!content)
+        continue
       if (type === 'fence' && info === 'yaml') {
         // 是代码块类型，并且是yaml代码
         yamlStr = content
@@ -44,7 +46,7 @@ export const renderProjects = (tokens: Token[], idx: number) => {
         const getProjectItem = (
           project: Project,
           index: number,
-          type?: string
+          type?: string,
         ) => {
           const isFriends = type === 'friends'
           const githubLink = `
@@ -82,7 +84,7 @@ export const renderProjects = (tokens: Token[], idx: number) => {
         }
         const getProjects = (projects: Project[], type?: string) => {
           let projectsStr = ''
-          projects.map((project, index) => {
+          projects.forEach((project, index) => {
             projectsStr += getProjectItem(project, index, type)
           })
           return projectsStr
@@ -91,7 +93,8 @@ export const renderProjects = (tokens: Token[], idx: number) => {
         return `<div class="vp-project-panel">${getProjects(dataList, type)}`
       }
     }
-  } else {
+  }
+  else {
     // 渲染':::' 结尾
     return '</div>'
   }

@@ -1,8 +1,8 @@
 <template>
   <div class="clock">
-    <div class="hour"></div>
-    <div class="min"></div>
-    <div class="sec"></div>
+    <div class="hour" />
+    <div class="min" />
+    <div class="sec" />
   </div>
 </template>
 

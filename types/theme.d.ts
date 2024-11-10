@@ -1,4 +1,4 @@
-import { DialogApi, LoadingBarApi, MessageApi, NotificationApi } from 'naive-ui'
+import type { DialogApi, LoadingBarApi, MessageApi, NotificationApi } from 'naive-ui'
 
 /** 主题相关类型 */
 declare namespace VTheme {

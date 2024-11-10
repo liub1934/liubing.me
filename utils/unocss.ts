@@ -13,7 +13,7 @@ export function generateColorCombinations(): Record<ColorVariable, string> {
     'info',
     'success',
     'warning',
-    'error'
+    'error',
   ]
   const colorScenes: ColorScenes[] = ['hover', 'pressed', 'focus', 'disabled']
   const result = {} as Record<ColorVariable, string>

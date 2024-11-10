@@ -3,8 +3,8 @@
     <BlogWrapper>
       <div class="vp-page vp-blog">
         <div class="blog-page-wrapper">
-          <main class="vp-blog-main" id="main-content">
-            <slot></slot>
+          <main id="main-content" class="vp-blog-main">
+            <slot />
           </main>
           <InfoPanel />
         </div>

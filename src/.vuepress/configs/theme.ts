@@ -1,13 +1,14 @@
 import type { Theme } from 'vuepress'
 import { hopeTheme } from 'vuepress-theme-hope'
-import { sidebarConfig } from './sidebar'
-import { navbarConfig } from './navbar'
-import { ArticleInfo, AuthorName, Description, HostName, Repo } from '../utils'
-import { themePlugins } from './plugins'
 import packageData from '../../../package.json' assert { type: 'json' }
+import { ArticleInfo, AuthorName, Description, HostName, Repo } from '../utils'
+import { navbarConfig } from './navbar'
+import { themePlugins } from './plugins'
+import { sidebarConfig } from './sidebar'
+
 const devDependencies = packageData.devDependencies
-const ThemeVersion =
-  'v' + devDependencies['vuepress-theme-hope'].replace('^', '')
+const ThemeVersion
+  = `v${devDependencies['vuepress-theme-hope'].replace('^', '')}`
 const year = new Date().getFullYear()
 
 export default hopeTheme(
@@ -28,21 +29,21 @@ export default hopeTheme(
       medias: {
         GitHub: 'https://github.com/liub1934',
         Email: 'mailto:w@liubing.me',
-        Gmail: 'mailto:liub1934@gmail.com'
+        Gmail: 'mailto:liub1934@gmail.com',
       },
-      articleInfo: ArticleInfo
+      articleInfo: ArticleInfo,
     },
     // page meta
     metaLocales: {
-      editLink: '在 GitHub 上编辑此页'
+      editLink: '在 GitHub 上编辑此页',
     },
     encrypt: {
-      config: {}
+      config: {},
     },
     navbarLayout: {
       start: ['Brand'],
       center: ['Links'],
-      end: ['Repo', 'TravellingLink', 'APlayerButton', 'Outlook', 'Search']
+      end: ['Repo', 'TravellingLink', 'APlayerButton', 'Outlook', 'Search'],
     },
     headerDepth: 3,
     // 内置插件
@@ -92,10 +93,10 @@ export default hopeTheme(
         <span id="running-time"></span>
       </div>
     </div>
-  `
+  `,
   },
   // 主题行为选项：https://theme-hope.vuejs.press/zh/config/theme/behavior.html
   {
-    custom: true
-  }
+    custom: true,
+  },
 ) as Theme

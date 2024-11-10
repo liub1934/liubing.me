@@ -1,17 +1,19 @@
 <template>
   <div class="generator-preview">
     <div
-      class="triangle-output h-250 bg-white overflow-auto flex items-center"
+      class="triangle-output h-250 flex items-center overflow-auto bg-white"
       :class="{
-        'opacity-80': isDarkmode
+        'opacity-80': isDarkmode,
       }"
     >
       <div
-        class="transition-all mx-auto"
+        class="mx-auto transition-all"
         :style="getStyleInfo.outPutStyle"
-      ></div>
+      />
     </div>
-    <div class="title text-24 font-600 mt-20">CSS</div>
+    <div class="title mt-20 text-24 font-600">
+      CSS
+    </div>
     <n-input
       :value="getStyleInfo.outPutCss"
       autosize
@@ -23,18 +25,18 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, inject } from 'vue'
+import { copyText } from '@/utils'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { computed, inject } from 'vue'
 import {
   ColorKey,
   DirectionKey,
+  type DirectionType,
   TriangleKey,
+  type TriangleSize,
   TriangleSizeKey,
   UnitKey,
-  type DirectionType,
-  type TriangleSize
 } from './generator'
-import { copyText } from '@/utils'
 
 type Direction = 'top' | 'right' | 'bottom' | 'left'
 
@@ -56,91 +58,93 @@ const colorDirection: Record<DirectionType, Direction> = {
   topRight: 'right',
   bottomRight: 'bottom',
   bottomLeft: 'left',
-  topLeft: 'top'
+  topLeft: 'top',
 }
 const lengthDirection: Record<DirectionType, LengthDirection> = {
   top: {
     top: false,
     right: 'widthRight',
     bottom: 'height',
-    left: 'widthLeft'
+    left: 'widthLeft',
   },
   right: {
     top: 'heightTop',
     right: false,
     bottom: 'heightBottom',
-    left: 'width'
+    left: 'width',
   },
   bottom: {
     top: 'height',
     right: 'widthRight',
     bottom: false,
-    left: 'widthLeft'
+    left: 'widthLeft',
   },
   left: {
     top: 'heightTop',
     right: 'width',
     bottom: 'heightBottom',
-    left: false
+    left: false,
   },
   topRight: {
     top: false,
     right: 'width',
     bottom: 'height',
-    left: false
+    left: false,
   },
   bottomRight: {
     top: false,
     right: false,
     bottom: 'height',
-    left: 'width'
+    left: 'width',
   },
   bottomLeft: {
     top: 'height',
     right: false,
     bottom: false,
-    left: 'width'
+    left: 'width',
   },
   topLeft: {
     top: 'height',
     right: 'width',
     bottom: false,
-    left: false
-  }
+    left: false,
+  },
 }
 
 const getStyleInfo = computed(() => {
   const outPutStyle = {
-    width: 0,
-    height: 0,
-    'border-style': 'solid'
+    'width': 0,
+    'height': 0,
+    'border-style': 'solid',
   } as Record<string, string | number>
   const color = colorValue.value
-  const { width, widthLeft, widthRight, height, heightTop, heightBottom } =
-    size.value
+  const { width, widthLeft, widthRight, height, heightTop, heightBottom }
+    = size.value
   const colors: Record<Direction, string> = {
     top: 'transparent',
     right: 'transparent',
     bottom: 'transparent',
-    left: 'transparent'
+    left: 'transparent',
   }
   const lengths: Record<Direction, string | number> = {
     top: 0,
     right: 0,
     bottom: 0,
-    left: 0
+    left: 0,
   }
   const lengthDirections = lengthDirection[direction.value]
   colors[colorDirection[direction.value]] = color
-  for (var key in lengthDirections) {
+  for (const key in lengthDirections) {
     const directionKey = key as Direction
     if (lengthDirections[directionKey] === false) {
       lengths[directionKey] = '0'
-    } else {
+    }
+    else {
+      let equHeight = ''
       switch (triangle.value) {
         case 'equilateral':
           if (direction.value === 'top' || direction.value === 'bottom') {
-            var equHeight = ((Math.sqrt(3) / 2) * width).toFixed(1)
+            equHeight = ((Math.sqrt(3) / 2) * width).toFixed(1)
             switch (lengthDirections[directionKey]) {
               case 'width':
                 lengths[directionKey] = equHeight + unit.value
@@ -155,11 +159,12 @@ const getStyleInfo = computed(() => {
                 lengths[directionKey] = width / 2 + unit.value
                 break
             }
-          } else if (
-            direction.value === 'left' ||
-            direction.value === 'right'
+          }
+          else if (
+            direction.value === 'left'
+            || direction.value === 'right'
           ) {
-            var equHeight = ((Math.sqrt(3) / 2) * height).toFixed(1)
+            equHeight = ((Math.sqrt(3) / 2) * height).toFixed(1)
             switch (lengthDirections[directionKey]) {
               case 'width':
                 lengths[directionKey] = equHeight + unit.value
@@ -201,22 +206,22 @@ const getStyleInfo = computed(() => {
         case 'scalene':
           switch (lengthDirections[directionKey]) {
             case 'width':
-              lengths[directionKey] = width + 'px'
+              lengths[directionKey] = `${width}px`
               break
             case 'height':
-              lengths[directionKey] = height + 'px'
+              lengths[directionKey] = `${height}px`
               break
             case 'widthLeft':
-              lengths[directionKey] = widthLeft + 'px'
+              lengths[directionKey] = `${widthLeft}px`
               break
             case 'widthRight':
-              lengths[directionKey] = widthRight + 'px'
+              lengths[directionKey] = `${widthRight}px`
               break
             case 'heightTop':
-              lengths[directionKey] = heightTop + 'px'
+              lengths[directionKey] = `${heightTop}px`
               break
             case 'heightBottom':
-              lengths[directionKey] = heightBottom + 'px'
+              lengths[directionKey] = `${heightBottom}px`
               break
           }
           break
@@ -235,18 +240,18 @@ const getStyleInfo = computed(() => {
     border-color: ${colorsString};
   `
     .split('\n')
-    .map((line) => line.trim())
-    .filter((line) => line.length > 0)
+    .map(line => line.trim())
+    .filter(line => line.length > 0)
     .join('\n')
   return {
     outPutCss,
-    outPutStyle
+    outPutStyle,
   }
 })
 
 function toArrayString<T = any>(obj: T) {
-  var arr = []
-  for (var key in obj) {
+  const arr = []
+  for (const key in obj) {
     arr.push(obj[key])
   }
   return arr.join(' ')

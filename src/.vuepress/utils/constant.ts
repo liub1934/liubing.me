@@ -12,5 +12,5 @@ export const ArticleInfo: PageInfoType[] = [
   'Date',
   'Category',
   'Tag',
-  'ReadingTime'
+  'ReadingTime',
 ]

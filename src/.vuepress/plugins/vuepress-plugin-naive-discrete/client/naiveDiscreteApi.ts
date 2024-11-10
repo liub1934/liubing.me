@@ -1,6 +1,6 @@
-import { computed, onMounted } from 'vue'
 import { useNaiveTheme } from '@/hooks'
-import { createDiscreteApi, type ConfigProviderProps } from 'naive-ui'
+import { type ConfigProviderProps, createDiscreteApi } from 'naive-ui'
+import { computed, onMounted } from 'vue'
 
 /**
  * 挂载 Naive-ui 脱离上下文的 API，方便在全局使用
@@ -13,18 +13,18 @@ export function setupNaiveDiscreteApi() {
   const configProviderProps = computed<ConfigProviderProps>(() => {
     return {
       theme: theme.value,
-      themeOverrides: themeOverrides.value
+      themeOverrides: themeOverrides.value,
     }
   })
   const { message, dialog, notification, loadingBar } = createDiscreteApi(
     ['message', 'dialog', 'notification', 'loadingBar'],
-    { configProviderProps }
+    { configProviderProps },
   )
 
   onMounted(() => {
-    window['$message'] = message
-    window['$dialog'] = dialog
-    window['$notification'] = notification
-    window['$loadingBar'] = loadingBar
+    window.$message = message
+    window.$dialog = dialog
+    window.$notification = notification
+    window.$loadingBar = loadingBar
   })
 }
