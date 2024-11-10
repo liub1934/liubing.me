@@ -1,18 +1,21 @@
 <template>
   <NotFound>
     <div class="not-found-hint">
-      <p class="error-code">404</p>
-      <h1 class="error-title">页面不存在</h1>
+      <p class="error-code">
+        404
+      </p>
+      <h1 class="error-title">
+        页面不存在
+      </h1>
     </div>
     <div class="size-40vh">
       <ClientOnly>
         <DotLottie
-          ref="el"
           width="40vh"
           height="40vh"
           :path="lottiePath"
           :style="{
-            opacity: showDotLottie ? 1 : 0
+            opacity: showDotLottie ? 1 : 0,
           }"
           @load="showDotLottie = true"
         />
@@ -23,8 +26,8 @@
 
 <script lang="ts" setup>
 import NotFound from '@theme-hope/layouts/NotFound'
-import { computed, ref } from 'vue'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { computed, ref } from 'vue'
 
 const showDotLottie = ref(false)
 const { isDarkmode } = useDarkmode()

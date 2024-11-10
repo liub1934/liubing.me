@@ -1,22 +1,22 @@
 import type { PluginConfig } from 'vuepress'
 import type { PluginsOptions } from 'vuepress-theme-hope'
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { containerPlugin } from '@vuepress/plugin-container'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
-import { naiveDiscretePlugin, themeColorPlugin } from '../plugins'
 import { renderProjects } from '../containers'
+import { naiveDiscretePlugin, themeColorPlugin } from '../plugins'
 import { Repo } from '../utils'
 
 // VuePress插件配置
 export const configPlugins: PluginConfig = [
   // 谷歌统计插件
   googleAnalyticsPlugin({
-    id: 'G-GBZBT89WGJ'
+    id: 'G-GBZBT89WGJ',
   }),
   // 搜索插件
   searchProPlugin({
     indexContent: true,
-    autoSuggestions: false
+    autoSuggestions: false,
   }),
   themeColorPlugin(),
   naiveDiscretePlugin(),
@@ -25,8 +25,8 @@ export const configPlugins: PluginConfig = [
     type: 'projects',
     render: (tokens, idx) => {
       return renderProjects(tokens, idx)
-    }
-  })
+    },
+  }),
 ]
 
 // 主题内置插件配置
@@ -38,30 +38,37 @@ export const themePlugins: PluginsOptions = {
     // 过滤列表页面
     filter: ({ filePathRelative, frontmatter }) => {
       // 舍弃那些不是从 Markdown 文件生成的页面
-      if (!filePathRelative) return false
+      if (!filePathRelative)
+        return false
       // 舍弃notes文件夹的页面
-      if (filePathRelative.startsWith('notes/')) return false
+      if (filePathRelative.startsWith('notes/'))
+        return false
       // 舍弃nav文件夹的页面
-      if (filePathRelative.startsWith('nav/')) return false
+      if (filePathRelative.startsWith('nav/'))
+        return false
       // 舍弃about文件夹的页面
-      if (filePathRelative.startsWith('about/')) return false
+      if (filePathRelative.startsWith('about/'))
+        return false
       // 舍弃tools文件夹的页面
-      if (filePathRelative.startsWith('tools/')) return false
+      if (filePathRelative.startsWith('tools/'))
+        return false
       // 舍弃所有的README.md页面
-      if (filePathRelative.endsWith('README.md')) return false
+      if (filePathRelative.endsWith('README.md'))
+        return false
       // 舍弃那些没有使用默认布局的页面
       const excludeLayouts = ['ArticleLayout']
       if (
-        frontmatter.home ||
-        (frontmatter.layout && !excludeLayouts.includes(frontmatter.layout))
-      )
+        frontmatter.home
+        || (frontmatter.layout && !excludeLayouts.includes(frontmatter.layout))
+      ) {
         return false
+      }
       return true
-    }
+    },
   },
   // 复制代码插件配置
   copyCode: {
-    showInMobile: true // 手机端显示代码复制
+    showInMobile: true, // 手机端显示代码复制
   },
   // 版权信息是否显示
   copyright: false,
@@ -77,31 +84,31 @@ export const themePlugins: PluginsOptions = {
     repo: Repo,
     repoId: 'R_kgDOIq_bDg',
     category: 'Comments',
-    categoryId: 'DIC_kwDOIq_bDs4CfSC6'
+    categoryId: 'DIC_kwDOIq_bDs4CfSC6',
   },
   // 自动目录配置
   catalog: {
     exclude: [
-      '/article/' // 排除/article/目录，防止和博客article有冲突Overriding existing page警告
-    ]
+      '/article/', // 排除/article/目录，防止和博客article有冲突Overriding existing page警告
+    ],
   },
   // Disable features you don’t want here
   // Markdown 增强插件配置
   mdEnhance: {
     gfm: true,
-    include: true
+    include: true,
   },
   markdownImage: {
-    figure: true
+    figure: true,
   },
   markdownTab: {
-    tabs: true
+    tabs: true,
   },
   shiki: {
     // 自定义语言别名
     langAlias: {
-      env: 'dotenv'
-    }
+      env: 'dotenv',
+    },
   },
   // PWA插件配置
   // pwa: false // 暂时关闭PWA功能
@@ -113,11 +120,11 @@ export const themePlugins: PluginsOptions = {
     update: 'available',
     apple: {
       icon: '/assets/icon/apple-icon-152.png',
-      statusBarColor: 'black'
+      statusBarColor: 'black',
     },
     msTile: {
       image: '/assets/icon/ms-icon-144.png',
-      color: '#ffffff'
+      color: '#ffffff',
     },
     manifest: {
       icons: [
@@ -125,25 +132,25 @@ export const themePlugins: PluginsOptions = {
           src: '/assets/icon/chrome-mask-512.png',
           sizes: '512x512',
           purpose: 'maskable',
-          type: 'image/png'
+          type: 'image/png',
         },
         {
           src: '/assets/icon/chrome-mask-192.png',
           sizes: '192x192',
           purpose: 'maskable',
-          type: 'image/png'
+          type: 'image/png',
         },
         {
           src: '/assets/icon/chrome-512.png',
           sizes: '512x512',
-          type: 'image/png'
+          type: 'image/png',
         },
         {
           src: '/assets/icon/chrome-192.png',
           sizes: '192x192',
-          type: 'image/png'
-        }
-      ]
-    }
-  }
+          type: 'image/png',
+        },
+      ],
+    },
+  },
 }

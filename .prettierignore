@@ -1,5 +1,0 @@
-**/.vuepress/.cache/**
-**/.vuepress/.temp/**
-**/.vuepress/layouts/NotFound/data.json
-dist/
-node_modules/

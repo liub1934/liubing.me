@@ -1,18 +1,18 @@
 <template>
   <canvas
-    class="dot-lottie"
     :id="id"
+    class="dot-lottie"
     :style="{
       width: props.width,
-      height: props.height
+      height: props.height,
     }"
-  ></canvas>
+  />
 </template>
 
 <script lang="ts" setup>
 import { DotLottie, type LoadEvent } from '@lottiefiles/dotlottie-web'
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 const props = defineProps<{
   width: string
@@ -49,7 +49,7 @@ function initDotLottie() {
     autoplay: true,
     loop: true,
     canvas: document.getElementById(id.value) as HTMLCanvasElement,
-    src: props.path
+    src: props.path,
   })
 }
 

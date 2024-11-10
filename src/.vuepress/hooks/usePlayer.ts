@@ -1,5 +1,5 @@
 import type APlayer from 'aplayer'
-import { inject, ref, type App, type InjectionKey, type Ref } from 'vue'
+import { type App, inject, type InjectionKey, ref, type Ref } from 'vue'
 
 interface Player {
   /** 播放器实例 */
@@ -14,7 +14,7 @@ interface Player {
 }
 
 const playerSymbol: InjectionKey<Player> = Symbol(
-  __VUEPRESS_DEV__ ? 'player' : ''
+  __VUEPRESS_DEV__ ? 'player' : '',
 )
 export function injectPlayer(app: App) {
   const player = ref<APlayer | null>(null)
@@ -28,12 +28,13 @@ export function injectPlayer(app: App) {
     isShowPlayer,
     isCanPlay,
     isPlay,
-    id
+    id,
   })
 }
 
 export function usePlayer() {
   const player = inject(playerSymbol)
-  if (!player) throw new Error('usePlayer() is called without provider.')
+  if (!player)
+    throw new Error('usePlayer() is called without provider.')
   return player
 }

@@ -17,12 +17,12 @@ import { provide, ref } from 'vue'
 import {
   ColorKey,
   DirectionKey,
-  TriangleKey,
-  TriangleSizeKey,
-  UnitKey,
   type DirectionType,
+  TriangleKey,
   type TriangleSize,
-  type TriangleType
+  TriangleSizeKey,
+  type TriangleType,
+  UnitKey,
 } from './generator'
 
 const direction = ref<DirectionType>('top')
@@ -34,7 +34,7 @@ const size = ref<TriangleSize>({
   widthRight: 100,
   height: 100,
   heightTop: 50,
-  heightBottom: 50
+  heightBottom: 50,
 })
 const colorValue = ref<string>('#60a5fa')
 

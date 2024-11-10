@@ -1,6 +1,8 @@
 <template>
   <div class="generator-color">
-    <div class="title text-24 font-600">颜色</div>
+    <div class="title text-24 font-600">
+      颜色
+    </div>
     <n-color-picker
       v-model:value="modelColor"
       :show-preview="true"

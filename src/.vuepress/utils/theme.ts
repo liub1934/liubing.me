@@ -1,13 +1,13 @@
 import { generate } from '@ant-design/colors'
 import { colord } from 'colord'
-import { upperFirst, kebabCase } from 'lodash-es'
-import { type GlobalThemeOverrides, commonDark, commonLight } from 'naive-ui'
+import { kebabCase, upperFirst } from 'lodash-es'
+import { commonDark, commonLight, type GlobalThemeOverrides } from 'naive-ui'
 
 type ColorKey = `${NTheme.ColorType}Color${NTheme.ColorSceneCase}`
 type ButtonColorKey =
   `textColor${NTheme.ButtonColorSceneCase}${NTheme.ColorTypeCase}`
 type ThemeColor = Partial<Record<ColorKey, string>>
-type CssObject = {
+interface CssObject {
   [key: string]: string
 }
 
@@ -22,9 +22,9 @@ function getRGBColor(color: string) {
 
 /**
  * 获取当前主题颜色
- * @returns
+ * @returns {string} 主题颜色
  */
-export function getThemeColor() {
+export function getThemeColor(): string {
   const rootStyles = window.getComputedStyle(document.documentElement)
   return rootStyles.getPropertyValue('--vp-c-accent-hover')
 }
@@ -39,9 +39,9 @@ export function getThemeColor() {
 export function getGenerateColors(color: string, darkMode: boolean): string[] {
   return darkMode
     ? generate(color, {
-        theme: 'dark',
-        backgroundColor: commonDark.bodyColor
-      })
+      theme: 'dark',
+      backgroundColor: commonDark.bodyColor,
+    })
     : generate(color)
 }
 
@@ -55,22 +55,22 @@ export function getGenerateColors(color: string, darkMode: boolean): string[] {
  */
 function getOtherColor(
   config: NTheme.Config,
-  darkMode: boolean
+  darkMode: boolean,
 ): GlobalThemeOverrides {
   const otherColor: GlobalThemeOverrides = {
     Button: {},
     Checkbox: {
-      checkMarkColor: getTextColor(darkMode)
+      checkMarkColor: getTextColor(darkMode),
     },
     DatePicker: {
-      itemTextColorActive: getTextColor(darkMode)
+      itemTextColorActive: getTextColor(darkMode),
     },
     Calendar: {
-      dateTextColorCurrent: getTextColor(darkMode)
+      dateTextColorCurrent: getTextColor(darkMode),
     },
     Switch: {
-      buttonColor: getTextColor(darkMode)
-    }
+      buttonColor: getTextColor(darkMode),
+    },
   }
   const keys = Object.keys(config) as NTheme.ColorType[]
   const scenes: NTheme.ButtonColorSceneCase[] = [
@@ -78,7 +78,7 @@ function getOtherColor(
     'Hover',
     'Pressed',
     'Focus',
-    'Disabled'
+    'Disabled',
   ]
   keys.forEach((key) => {
     scenes.forEach((scene) => {
@@ -98,24 +98,24 @@ function getOtherColor(
  */
 export function getThemeColors(
   config: NTheme.Config,
-  darkMode: boolean
+  darkMode: boolean,
 ): ThemeColor {
   const themeColor: ThemeColor = {}
   const keys = Object.keys(config) as NTheme.ColorType[]
   const colorActions: ColorAction[] = [
-    { scene: '', handler: (color) => getGenerateColors(color, darkMode)[5] },
+    { scene: '', handler: color => getGenerateColors(color, darkMode)[5] },
     {
       scene: 'Hover',
-      handler: (color) => getGenerateColors(color, darkMode)[4]
+      handler: color => getGenerateColors(color, darkMode)[4],
     },
     {
       scene: 'Suppl',
-      handler: (color) => getGenerateColors(color, darkMode)[4]
+      handler: color => getGenerateColors(color, darkMode)[4],
     },
     {
       scene: 'Pressed',
-      handler: (color) => getGenerateColors(color, darkMode)[6]
-    }
+      handler: color => getGenerateColors(color, darkMode)[6],
+    },
   ]
   keys.forEach((key) => {
     colorActions.forEach((action) => {
@@ -146,15 +146,15 @@ function getTextColor(darkMode: boolean): string {
  */
 export function getThemeOverrides(
   config: NTheme.Config,
-  darkMode: boolean
+  darkMode: boolean,
 ): GlobalThemeOverrides {
   const themeColors = getThemeColors(config, darkMode)
   // addCssVarsToHtml(config, darkMode, themeColors)
   return {
     common: {
-      ...themeColors
+      ...themeColors,
     },
-    ...getOtherColor(config, darkMode)
+    ...getOtherColor(config, darkMode),
   }
 }
 
@@ -181,12 +181,11 @@ export function parseCssText(cssText: string): CssObject {
  * @param {NTheme.Config} config - store themeConfig
  * @param {boolean} darkMode - 暗黑模式
  * @param {ThemeColor} themeColors - getThemeColors返回的颜色列表
- * @return {void}
  */
 export function addCssVarsToHtml(
   config: NTheme.Config,
   darkMode: boolean,
-  themeColors: ThemeColor
+  themeColors: ThemeColor,
 ): void {
   const $root: HTMLElement = document.documentElement
   const cssText = $root.style.cssText
@@ -202,7 +201,7 @@ export function addCssVarsToHtml(
 
   for (const [key, value] of configEntries) {
     const generateColors = getGenerateColors(value, darkMode)
-    generateColors.map((color, index) => {
+    generateColors.forEach((color, index) => {
       const { r, g, b } = getRGBColor(color)
       configCssObj[`--n-${key}-color-${index + 1}`] = `${r},${g},${b}`
     })
@@ -210,7 +209,7 @@ export function addCssVarsToHtml(
 
   const newCssText = Object.entries({
     ...cssObj,
-    ...configCssObj
+    ...configCssObj,
   })
     .map(([key, value]) => `${key}: ${value};`)
     .join(' ')

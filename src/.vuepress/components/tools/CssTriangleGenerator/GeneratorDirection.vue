@@ -1,46 +1,48 @@
 <template>
   <div class="generator-direction">
-    <div class="title text-24 font-600">方向</div>
+    <div class="title text-24 font-600">
+      方向
+    </div>
     <div class="relative flex-center py-60">
       <n-radio-group v-model:value="modelValue" class="ml-4">
-        <div class="triangle-direction size-60 relative">
+        <div class="triangle-direction relative size-60">
           <div class="corners size-60">
             <div
               v-for="(item, index) in directions2"
               :key="item.value"
-              class="triangle size-30 absolute bg-blue cursor-pointer hover:(bg-green)"
+              class="triangle absolute size-30 cursor-pointer bg-blue hover:(bg-green)"
               :class="{
                 'top-0 right-0': index === 0,
                 'bottom-0 right-0': index === 1,
                 'bottom-0 left-0': index === 2,
                 'top-0 left-0': index === 3,
-                'bg-green': modelValue === item.value
+                'bg-green': modelValue === item.value,
               }"
               @click="modelValue = item.value"
-            ></div>
+            />
           </div>
-          <div class="corners absolute top-0 size-54 -rotate-45 mt-4 ml-3">
+          <div class="corners absolute top-0 ml-3 mt-4 size-54 -rotate-45">
             <div
               v-for="(item, index) in directions1"
               :key="item.value"
-              class="triangle size-27 absolute bg-fuchsia cursor-pointer hover:(bg-green)"
+              class="triangle absolute size-27 cursor-pointer bg-fuchsia hover:(bg-green)"
               :class="{
                 'top-0 right-0': index === 0,
                 'bottom-0 right-0': index === 1,
                 'bottom-0 left-0': index === 2,
                 'top-0 left-0': index === 3,
-                'bg-green': modelValue === item.value
+                'bg-green': modelValue === item.value,
               }"
               @click="modelValue = item.value"
-            ></div>
+            />
           </div>
-          <div class="absolute-center size-38 bg-white"></div>
+          <div class="size-38 bg-white absolute-center" />
           <n-radio
-            class="absolute! mr-0!"
             v-for="(item, index) in directions"
-            :key="item.value"
-            :value="item.value"
             :id="item.value + index"
+            :key="item.value"
+            class="absolute! mr-0!"
+            :value="item.value"
             :class="{
               'flex-row-reverse': index === 3 || index === 6 || index === 7,
               '-top-38 left-1/2 -translate-x-1/2': index === 0,
@@ -50,7 +52,7 @@
               '-top-16 -right-60': index === 4,
               '-bottom-16 -right-60': index === 5,
               '-bottom-16 -left-60': index === 6,
-              '-top-16 -left-60': index === 7
+              '-top-16 -left-60': index === 7,
             }"
           >
             {{ item.label }}
@@ -73,36 +75,36 @@ const modelValue = defineModel<DirectionType>('value')
 const directions: Direction[] = [
   {
     label: '上',
-    value: 'top'
+    value: 'top',
   },
   {
     label: '右',
-    value: 'right'
+    value: 'right',
   },
   {
     label: '下',
-    value: 'bottom'
+    value: 'bottom',
   },
   {
     label: '左',
-    value: 'left'
+    value: 'left',
   },
   {
     label: '右上',
-    value: 'topRight'
+    value: 'topRight',
   },
   {
     label: '右下',
-    value: 'bottomRight'
+    value: 'bottomRight',
   },
   {
     label: '左下',
-    value: 'bottomLeft'
+    value: 'bottomLeft',
   },
   {
     label: '左上',
-    value: 'topLeft'
-  }
+    value: 'topLeft',
+  },
 ]
 const directions1 = [...directions].splice(0, 4)
 const directions2 = [...directions].splice(4)

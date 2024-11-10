@@ -1,19 +1,25 @@
 <template>
   <div class="generator-size">
-    <div class="title text-24 font-600">大小</div>
+    <div class="title text-24 font-600">
+      大小
+    </div>
     <div
-      class="flex items-center mb-5"
       v-for="item in sizeList"
       :key="item.name"
+      class="mb-5 flex items-center"
     >
-      <div class="text-14 w-30 text-right pr-10">{{ item.label }}</div>
+      <div class="w-30 pr-10 text-right text-14">
+        {{ item.label }}
+      </div>
       <n-input-number
         v-model:value="modelSize[item.name]"
         class="flex-1"
         :disabled="getDisabled(item.name)"
         @update:value="changeSize(item.name)"
       >
-        <template #suffix>{{ modelUnit }}</template>
+        <template #suffix>
+          {{ modelUnit }}
+        </template>
       </n-input-number>
     </div>
   </div>
@@ -23,9 +29,9 @@
 import { inject, watch } from 'vue'
 import {
   DirectionKey,
-  TriangleKey,
   type DirectionType,
-  type TriangleSize
+  TriangleKey,
+  type TriangleSize,
 } from './generator'
 
 interface SizeItem {
@@ -40,28 +46,28 @@ const triangle = inject(TriangleKey)!
 const sizeList: SizeItem[] = [
   {
     label: '宽度',
-    name: 'width'
+    name: 'width',
   },
   {
     label: '左',
-    name: 'widthLeft'
+    name: 'widthLeft',
   },
   {
     label: '右',
-    name: 'widthRight'
+    name: 'widthRight',
   },
   {
     label: '高度',
-    name: 'height'
+    name: 'height',
   },
   {
     label: '上',
-    name: 'heightTop'
+    name: 'heightTop',
   },
   {
     label: '下',
-    name: 'heightBottom'
-  }
+    name: 'heightBottom',
+  },
 ]
 
 watch(direction, () => {
@@ -81,7 +87,7 @@ function getDisabled(name: keyof TriangleSize) {
             widthLeft: true,
             widthRight: true,
             heightTop: true,
-            heightBottom: true
+            heightBottom: true,
           }
           break
         case 'left':
@@ -92,7 +98,7 @@ function getDisabled(name: keyof TriangleSize) {
             widthLeft: true,
             widthRight: true,
             heightTop: true,
-            heightBottom: true
+            heightBottom: true,
           }
           break
         default:
@@ -102,7 +108,7 @@ function getDisabled(name: keyof TriangleSize) {
             widthLeft: true,
             widthRight: true,
             heightTop: true,
-            heightBottom: true
+            heightBottom: true,
           }
           break
       }
@@ -114,7 +120,7 @@ function getDisabled(name: keyof TriangleSize) {
         widthLeft: true,
         widthRight: true,
         heightTop: true,
-        heightBottom: true
+        heightBottom: true,
       }
       break
     case 'scalene':
@@ -127,7 +133,7 @@ function getDisabled(name: keyof TriangleSize) {
             widthLeft: false,
             widthRight: false,
             heightTop: true,
-            heightBottom: true
+            heightBottom: true,
           }
           break
         case 'left':
@@ -138,7 +144,7 @@ function getDisabled(name: keyof TriangleSize) {
             widthLeft: true,
             widthRight: true,
             heightTop: false,
-            heightBottom: false
+            heightBottom: false,
           }
           break
         default:
@@ -148,7 +154,7 @@ function getDisabled(name: keyof TriangleSize) {
             widthLeft: true,
             widthRight: true,
             heightTop: true,
-            heightBottom: true
+            heightBottom: true,
           }
           break
       }
@@ -161,25 +167,30 @@ function changeSize(name?: keyof TriangleSize) {
   const directions: DirectionType[] = ['top', 'right', 'bottom', 'left']
   if (directions.includes(direction.value)) {
     if (getDisabled('width')) {
-      modelSize.value.width =
-        modelSize.value.widthLeft * 1 + modelSize.value.widthRight * 1
-    } else {
+      modelSize.value.width
+        = modelSize.value.widthLeft * 1 + modelSize.value.widthRight * 1
+    }
+    else {
       modelSize.value.widthLeft = (modelSize.value.width * 1) / 2
       modelSize.value.widthRight = (modelSize.value.width * 1) / 2
     }
     if (getDisabled('height')) {
-      modelSize.value.height =
-        modelSize.value.heightTop * 1 + modelSize.value.heightBottom * 1
-    } else {
+      modelSize.value.height
+        = modelSize.value.heightTop * 1 + modelSize.value.heightBottom * 1
+    }
+    else {
       modelSize.value.heightTop = (modelSize.value.height * 1) / 2
       modelSize.value.heightBottom = (modelSize.value.height * 1) / 2
     }
-  } else if (triangle.value === 'isosceles') {
+  }
+  else if (triangle.value === 'isosceles') {
     if (name === 'width') {
       modelSize.value.height = modelSize.value.width
-    } else if (name === 'height') {
+    }
+    else if (name === 'height') {
       modelSize.value.width = modelSize.value.height
-    } else if (modelSize.value.height != modelSize.value.width) {
+    }
+    else if (modelSize.value.height !== modelSize.value.width) {
       modelSize.value.height = modelSize.value.width
     }
     modelSize.value.widthLeft = (modelSize.value.width * 1) / 2

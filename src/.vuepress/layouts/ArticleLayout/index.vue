@@ -8,7 +8,7 @@
             <ClientOnly>
               <SponsorButton />
             </ClientOnly>
-            <hr />
+            <hr>
             <div class="hint-container warning">
               <div class="article-copyright">
                 <!-- 转载信息 -->
@@ -48,17 +48,17 @@
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <font-icon icon="cc"></font-icon>BY-NC-SA
+                      <FontIcon icon="cc" />BY-NC-SA
                     </a>
                     许可协议，转载请注明出处！
                   </li>
                 </ul>
               </div>
-              <font-icon
+              <FontIcon
                 class="font-icon-bg"
                 :icon="source ? 'reship' : 'cc'"
                 size="160px"
-              ></font-icon>
+              />
             </div>
           </div>
         </template>
@@ -68,13 +68,13 @@
 </template>
 
 <script setup lang="ts">
+import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
+import { HostName } from '@/utils'
 import CommonWrapper from '@theme-hope/components/CommonWrapper'
 import NormalPage from '@theme-hope/components/NormalPage'
 import SkipLink from '@theme-hope/components/SkipLink'
-import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { useThemeData } from '@theme-hope/composables/index'
-import { HostName } from '@/utils'
-import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
+import { usePageData, usePageFrontmatter } from '@vuepress/client'
 
 interface PageFrontmatter extends ThemeNormalPageFrontmatter {
   source?: string
