@@ -58,6 +58,11 @@ containerClass: nav-container
   name: wsrv.nl
   desc: 图像缓存和调整大小服务，使用全球缓存即时处理图像。
   link: https://images.weserv.nl/
+
+- icon: 'https://api.liubing.me/favicon/www.webcache.cn.png'
+  name: Web缓存网
+  desc: 一个免费、快速、可靠的网站静态加速服务。
+  link: https://www.webcache.cn/
 ```
 
 :::
