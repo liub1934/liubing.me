@@ -43,19 +43,19 @@ npm install vite-bundle-analyzer -D
 ```
 
 ```ts
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
 
-import { analyzer } from "vite-bundle-analyzer";
+import { analyzer } from 'vite-bundle-analyzer'
 
 export default defineConfig({
   plugins: [
     // ...your plugin
     analyzer({
-      analyzerMode: "static" // 使用静态模式，会生成一个可以直接打开的html文件
-      fileName: "report" // 生成Html的名称
-    }),
-  ],
-});
+      analyzerMode: 'static', // 使用静态模式，会生成一个可以直接打开的html文件
+      fileName: 'report' // 生成Html的名称
+    })
+  ]
+})
 
 // If you are using it in rollup you can import 'adapter' from package.
 // Then use it with adapter(analyzer())
