@@ -14,7 +14,7 @@ containerClass: article-container
 
 # rollup-plugin-visualizer 替代插件 vite-bundle-analyzer
 
-不知道为什么，搜索`vue3打包分析`、`vite打包分析`，清一色的都是推荐的使用`rollup-plugin-visualizer`插件，我自己也使用过，感觉这个打包分析的插件生成的分析报告贼不好用，不支持放大缩小，只能点击模块进行放大，尝试了下按`Exclude`和`Include`关键词搜索也搜索不出内容，不知道是不是我使用有问题还是我搜索方式不对，总之感觉没有vue2的`vue-cli-service`生成的报告好使。
+在搜索`vue3打包分析`、`vite打包分析`，清一色的都是推荐的使用`rollup-plugin-visualizer`插件，自己也使用过，感觉这个打包分析的插件生成的分析报告贼不好用，不支持放大缩小，只能点击模块进行放大，尝试了下按`Exclude`和`Include`关键词搜索也搜索不出内容，不知道是不是我使用有问题还是我搜索方式不对，总之感觉没有 vue2 的`vue-cli-service`生成的报告好使。
 
 <!-- more -->
 
@@ -30,7 +30,7 @@ containerClass: article-container
 
 ## 替代插件
 
-后来根据关键词在Google上各种搜索，终于找到了可以替代的打包分析插件[vite-bundle-analyzer](https://github.com/nonzzz/vite-bundle-analyzer)。
+后来根据关键词在 Google 上各种搜索，终于找到了可以替代的打包分析插件[vite-bundle-analyzer](https://github.com/nonzzz/vite-bundle-analyzer)。
 
 ![image](https://image.liubing.me/i/2024/03/23/65fe464724647.gif)
 
@@ -61,6 +61,6 @@ export default defineConfig({
 // Then use it with adapter(analyzer())
 ```
 
-运行打包命令后打开生成的Html就能看到熟悉的界面了。
+运行打包命令后打开生成的 Html 就能看到熟悉的界面了。
 
 ![image](https://image.liubing.me/i/2024/03/23/65fe474402e99.png)
