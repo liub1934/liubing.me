@@ -2,11 +2,14 @@
   "gutterpreview.paths": {
     "@websites": "src/.vuepress/public/assets/websites"
   },
+  // markdown 启用自动格式化保存
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
   // Start antfu's config
   // Disable the default formatter, use eslint instead
-  // 需要使用prettier格式化md文件，所以这2行暂时注释掉，添加.prettierignore忽略掉其他文件
-  // "prettier.enable": false,
-  // "editor.formatOnSave": false,
+  // "prettier.enable": false, // 需要使用prettier格式化md文件，暂时注释调这行
+  "editor.formatOnSave": false,
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
