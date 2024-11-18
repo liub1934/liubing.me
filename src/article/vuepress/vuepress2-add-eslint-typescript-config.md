@@ -157,13 +157,15 @@ export default antfu({
 
 ## 添加 Prettier 单独格式化 MD 文件
 
-该配置会要求禁用 Prettier 和代码自动保存功能，导致 MD 文件在保存的时候无法使用 Prettier 自动格式化，这里先暂时先注释`prettier.enable`和`editor.formatOnSave`来启用默认的 Prettier 和代码自动格式功能。
+该配置会要求禁用 Prettier 和代码自动保存功能，导致 MD 文件在保存的时候无法使用 Prettier 自动格式化，这里先暂时先注释`prettier.enable`，针对 MD 文件新增`editor.formatOnSave`来启用默认的 Prettier 和代码自动格式功能。
 
 ```json title=".vscode/settings.json"
 {
-  // Disable the default formatter, use eslint instead
-  // "prettier.enable": false,
-  // "editor.formatOnSave": false,
+  // markdown 启用自动格式化保存
+  "[markdown]": {
+    "editor.formatOnSave": true
+  }
+  // "prettier.enable": false, // 需要使用prettier格式化md文件，暂时注释调这行
 }
 ```
 
