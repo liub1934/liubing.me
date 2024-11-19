@@ -51,5 +51,8 @@ export default defineConfig({
   safelist: [
     ...Array.from({ length: 10 }, (_, i) => `bg-primary-${i + 1}`),
     'flex',
+    'text-13',
+    'text-red',
+    'text-right',
   ],
 })
