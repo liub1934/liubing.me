@@ -8,6 +8,8 @@ export interface Project {
   desc: string
   link: string
   github?: string
+  tip?: string
+  tipLink?: string
 }
 
 /**
@@ -16,7 +18,7 @@ export interface Project {
  * @param idx
  * @returns {string} 渲染后的html
  */
-export function renderProjects(tokens: Token[], idx: number) {
+export function renderProjects(tokens: Token[], idx: number): string {
   const { nesting: tokenNesting, info: tokenInfo } = tokens[idx]
   // 渲染开头的 ':::' 标记
   if (tokenNesting === 1) {
@@ -50,12 +52,22 @@ export function renderProjects(tokens: Token[], idx: number) {
         ) => {
           const isFriends = type === 'friends'
           const githubLink = `
-            ${
-              project.github
+            ${project.github
                 ? `
                 <a class="no-external-link-icon flex" target="_blank"
                   rel="noopener noreferrer" href="${project.github}">
                   <img src="${getGithubShieldsImg(project.github)}" alt="Stars">
+                </a>
+              `
+                : ''
+            }
+          `
+          const tipLink = `
+            ${project.tipLink
+                ? `
+                <a class="no-external-link-icon text-13" target="_blank"
+                  rel="noopener noreferrer" href="${project.tipLink}">
+                  ${project.tip}
                 </a>
               `
                 : ''
@@ -72,12 +84,12 @@ export function renderProjects(tokens: Token[], idx: number) {
                   <div class="vp-project-name ${project.desc ? '' : 'no-desc'}">
                     ${project.name}
                   </div>
-                  ${
-                    project.desc
+                  ${project.desc
                       ? `<div class="vp-project-desc">${project.desc}</div>`
                       : ''
                   }
                 </a>
+                ${tipLink}
                 ${githubLink}
               </div>
             `
