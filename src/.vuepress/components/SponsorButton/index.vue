@@ -1,84 +1,39 @@
 <template>
   <div class="sponsor-button">
     <div class="sponsor-button-wrapper" flex-center>
-      <n-popover
-        raw
-        trigger="click"
-        to=".sponsor-button-wrapper"
-        display-directive="show"
-        :show="showPopover"
-        :show-arrow="false"
-        :on-update:show="handleUpdateShow"
-      >
+      <n-popover raw trigger="click" to=".sponsor-button-wrapper" display-directive="show" :show="showPopover"
+        :show-arrow="false" :on-update:show="handleUpdateShow">
         <template #trigger>
-          <n-button
-            type="primary"
-            ghost
-            round
-            @click="showPopover = !showPopover"
-          >
+          <n-button type="primary" ghost round @click="showPopover = !showPopover">
             <font-icon icon="like" class="mr-4" />
             <span>赞助</span>
           </n-button>
         </template>
         <div class="sponsor-content" flex items-center>
           <n-space>
-            <component
-              class="sponsor-item"
-              block
-              cursor-pointer
-              relative
-              v-for="item in list"
-              :is="item.link ? 'a' : 'div'"
-              :key="item.name"
-              :class="{
+            <component class="sponsor-item" block cursor-pointer relative v-for="item in list"
+              :is="item.link ? 'a' : 'div'" :key="item.name" :class="{
                 'no-external-link-icon': !!item.link,
                 '!no-underline': !!item.link
-              }"
-              v-bind="
-                item.link
+              }" v-bind="item.link
                   ? {
-                      href: item.link,
-                      target: '_blank',
-                      ref: 'noopener noreferrer'
-                    }
+                    href: item.link,
+                    target: '_blank',
+                    ref: 'noopener noreferrer'
+                  }
                   : {}
-              "
-            >
-              <div
-                class="icon-content"
-                shadow
-                bg-white
-                rounded-6
-                size-50
-                flex-center
-                overflow-hidden
-                relative
-              >
-                <div
-                  class="filled"
-                  :style="{
-                    background: item.color
-                  }"
-                ></div>
+                ">
+              <div class="icon-content" shadow bg-white rounded-6 size-50 flex-center overflow-hidden relative>
+                <div class="filled" :style="{
+                  background: item.color
+                }"></div>
                 <font-icon class="!text-30 relative z-1" :icon="item.icon" />
-                <img
-                  v-if="item.image"
-                  class="qrcode-image"
-                  absolute
-                  size-full
-                  opacity-0
-                  z-2
-                  :src="item.image"
-                />
+                <img v-if="item.image" class="qrcode-image" absolute size-full opacity-0 z-2 :src="item.image" />
               </div>
 
-              <div
-                class="tooltip"
-                :style="{
-                  background: item.color
-                }"
-              >
+              <div class="tooltip" :style="{
+                background: item.color
+              }">
                 {{ item.name }}
               </div>
             </component>
@@ -148,25 +103,30 @@ function handleUpdateShow(show: boolean) {
   .n-popover {
     box-shadow: none;
   }
+
   .sponsor-content {
     .sponsor-item {
       &:hover {
         .icon-content {
           color: var(--vp-c-white);
+
           .filled {
             height: 100%;
           }
         }
+
         .tooltip {
           opacity: 1;
           visibility: visible;
           top: -40px;
         }
       }
+
       .icon-content {
         color: var(--vp-c-text);
         background: var(--vp-c-bg-elv);
         transition: all 0.3s ease-in-out;
+
         .filled {
           position: absolute;
           top: auto;
