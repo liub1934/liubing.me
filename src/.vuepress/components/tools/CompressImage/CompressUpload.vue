@@ -2,6 +2,8 @@
   <div
     id="CompressUpload"
     class="relative border border-border rounded-6 border-dashed p-10 transition-all hover:border-primary"
+    @dragover.prevent
+    @drop.stop.prevent="handleDropStop"
   >
     <label
       class="absolute left-0 top-0 z-1 size-full cursor-pointer"
@@ -36,21 +38,32 @@ const emit = defineEmits<{
   change: [data: UploadImage[]]
 }>()
 
+function getFileList(files: FileList) {
+  const list: UploadImage[] = Array.from(files).map((file) => {
+    return {
+      file,
+      id: uniqueId(),
+      name: file.name,
+      fileName: getFileName(file.name),
+      size: file.size,
+      type: file.type,
+      src: URL.createObjectURL(file),
+    }
+  })
+  emit('change', list)
+}
+
 function handleChange(e: Event) {
   const target = e.target as HTMLInputElement
   if (target.files) {
-    const list: UploadImage[] = Array.from(target.files).map((file) => {
-      return {
-        file,
-        id: uniqueId(),
-        name: file.name,
-        fileName: getFileName(file.name),
-        size: file.size,
-        type: file.type,
-        src: URL.createObjectURL(file),
-      }
-    })
-    emit('change', list)
+    getFileList(target.files)
+  }
+}
+
+function handleDropStop(e: DragEvent) {
+  const files = e.dataTransfer?.files
+  if (files && files.length) {
+    getFileList(files)
   }
 }
 </script>
