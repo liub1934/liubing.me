@@ -129,6 +129,11 @@ containerClass: nav-container
   name: MarsCode
   desc: 国际版豆包MarsCode
   link: https://marscode.com/
+
+- icon: 'https://api.liubing.me/favicon/www.cursor.com.png'
+  name: Cursor
+  desc: 一款 AI 代码编辑器
+  link: https://www.cursor.com/
 ```
 
 :::

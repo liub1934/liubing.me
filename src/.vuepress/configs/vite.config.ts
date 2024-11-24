@@ -1,25 +1,28 @@
-import type { InlineConfig } from 'vite'
+import type { InlineConfig, PluginOption } from 'vite'
 import path from 'node:path'
 import unocss from '@unocss/vite'
-import { visualizer } from 'rollup-plugin-visualizer'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import { analyzer } from 'vite-bundle-analyzer'
 
+const isReport = process.argv.includes('--report')
+const vitePlugins: PluginOption[] = [
+  unocss(),
+  Components({
+    resolvers: [NaiveUiResolver()],
+    dts: path.resolve(process.cwd(), 'types/components.d.ts'),
+    dirs: [path.resolve(__dirname, '../components')],
+  }),
+]
+if (isReport) {
+  vitePlugins.push(
+    analyzer({
+      defaultSizes: 'parsed',
+    }),
+  )
+}
 const viteOptions = {
-  plugins: [
-    unocss(),
-    Components({
-      resolvers: [NaiveUiResolver()],
-      dts: path.resolve(process.cwd(), 'types/components.d.ts'),
-      dirs: [path.resolve(__dirname, '../components')],
-    }),
-    visualizer({
-      gzipSize: true,
-      brotliSize: true,
-      emitFile: false,
-      filename: 'report.html',
-    }),
-  ],
+  plugins: vitePlugins,
   css: {
     preprocessorOptions: {
       scss: {

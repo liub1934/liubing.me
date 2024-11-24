@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import { DotLottie, type LoadEvent } from '@lottiefiles/dotlottie-web'
+import type { DotLottie, LoadEvent } from '@lottiefiles/dotlottie-web'
 import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
@@ -35,7 +35,6 @@ watch(isDarkmode, () => {
 
 onMounted(() => {
   initDotLottie()
-  dotLottie.value?.addEventListener('load', loadEvent)
 })
 
 onBeforeUnmount(() => {
@@ -45,11 +44,15 @@ onBeforeUnmount(() => {
 })
 
 function initDotLottie() {
-  dotLottie.value = new DotLottie({
-    autoplay: true,
-    loop: true,
-    canvas: document.getElementById(id.value) as HTMLCanvasElement,
-    src: props.path,
+  import('@lottiefiles/dotlottie-web').then((res) => {
+    const { DotLottie } = res
+    dotLottie.value = new DotLottie({
+      autoplay: true,
+      loop: true,
+      canvas: document.getElementById(id.value) as HTMLCanvasElement,
+      src: props.path,
+    })
+    dotLottie.value.addEventListener('load', loadEvent)
   })
 }
 

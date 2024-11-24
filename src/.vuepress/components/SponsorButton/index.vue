@@ -2,13 +2,8 @@
   <div class="sponsor-button">
     <div class="sponsor-button-wrapper" flex-center>
       <n-popover
-        raw
-        trigger="click"
-        to=".sponsor-button-wrapper"
-        display-directive="show"
-        :show="showPopover"
-        :show-arrow="false"
-        :on-update:show="handleUpdateShow"
+        raw trigger="click" to=".sponsor-button-wrapper" display-directive="show" :show="showPopover"
+        :show-arrow="false" :on-update:show="handleUpdateShow"
       >
         <template #trigger>
           <n-button
@@ -140,25 +135,30 @@ function handleUpdateShow(show: boolean) {
   .n-popover {
     box-shadow: none;
   }
+
   .sponsor-content {
     .sponsor-item {
       &:hover {
         .icon-content {
           color: var(--vp-c-white);
+
           .filled {
             height: 100%;
           }
         }
+
         .tooltip {
           opacity: 1;
           visibility: visible;
           top: -40px;
         }
       }
+
       .icon-content {
         color: var(--vp-c-text);
         background: var(--vp-c-bg-elv);
         transition: all 0.3s ease-in-out;
+
         .filled {
           position: absolute;
           top: auto;

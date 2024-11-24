@@ -14,7 +14,11 @@ export default defineConfig({
     },
   },
   presets: [
-    presetUno(),
+    presetUno({
+      dark: {
+        dark: '[data-theme="dark"]',
+      },
+    }),
     presetIcons({
       extraProperties: {
         'display': 'inline-block',
@@ -37,6 +41,7 @@ export default defineConfig({
       text: 'var(--vp-c-text)',
       subText: 'var(--vp-c-text-subtle)',
       grey: 'var(--vp-c-grey-text)',
+      border: 'var(--border-color)',
     },
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],
@@ -51,5 +56,8 @@ export default defineConfig({
   safelist: [
     ...Array.from({ length: 10 }, (_, i) => `bg-primary-${i + 1}`),
     'flex',
+    'text-13',
+    'text-red',
+    'text-right',
   ],
 })
