@@ -4,12 +4,12 @@
       <span>压缩前</span>
       <span>压缩后</span>
     </div>
-    <div class="h-250 rounded-6 overflow-hidden">
+    <div class="h-250 overflow-hidden rounded-6">
       <img
         v-if="src && !compressedSrc"
         class="size-full object-cover"
         :src="src"
-      />
+      >
       <n-split
         v-if="src && compressedSrc"
         v-model:size="split"
@@ -19,31 +19,31 @@
         <template #1>
           <div ref="leftBox" class="size-full">
             <img
-              class="size-full absolute top-0 left-0 z-1 object-cover"
+              class="absolute left-0 top-0 z-1 size-full object-cover"
               :src="src"
               :style="{
-                clip: `rect(auto, ${width}px, auto, auto)`
+                clip: `rect(auto, ${width}px, auto, auto)`,
               }"
-            />
+            >
           </div>
         </template>
         <template #2>
           <div class="size-full">
             <img
-              class="size-full absolute top-0 left-0 object-cover"
+              class="absolute left-0 top-0 size-full object-cover"
               :src="compressedSrc"
-            />
+            >
           </div>
         </template>
         <template #resize-trigger>
-          <div class="relative h-full bg-primary z-1">
+          <div class="relative z-1 h-full bg-primary">
             <div
-              class="absolute-center size-40 rounded-1/2 border-2 border-solid border-primary flex items-center"
+              class="size-40 flex items-center border-2 border-primary rounded-1/2 border-solid absolute-center"
             >
-              <span class="i-ri-arrow-left-s-fill color-primary text-22"></span>
+              <span class="i-ri-arrow-left-s-fill text-22 color-primary" />
               <span
-                class="i-ri-arrow-right-s-fill color-primary text-22"
-              ></span>
+                class="i-ri-arrow-right-s-fill text-22 color-primary"
+              />
             </div>
           </div>
         </template>
@@ -53,10 +53,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { useElementSize } from '@vueuse/core'
+import { ref } from 'vue'
 
-const props = defineProps<{
+defineProps<{
   src: string
   compressedSrc?: string
 }>()

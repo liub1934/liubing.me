@@ -52,7 +52,7 @@ export const navbarConfig = navbar([
       {
         text: '图片压缩',
         icon: 'pic',
-        link: 'compress-image'
+        link: 'compress-image',
       },
       {
         text: '短视频去水印',

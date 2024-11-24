@@ -72,8 +72,8 @@ export function getGithubShieldsImg(url: string) {
 export function formatFileSize(size: number): string {
   const units = ['B', 'KB', 'MB', 'G']
   const index = Math.floor(Math.log(size) / Math.log(1024))
-  const fileSize = Math.round(size / Math.pow(1024, index))
-  return fileSize + ' ' + units[index]
+  const fileSize = Math.round(size / 1024 ** index)
+  return `${fileSize} ${units[index]}`
 }
 
 /**
@@ -100,6 +100,7 @@ export function getErrorInfo(error: unknown) {
 }
 
 export function getFileName(path: string) {
-  if (!path) return ''
+  if (!path)
+    return ''
   return path.split('.').slice(0, -1).join('.')
 }

@@ -1,10 +1,10 @@
 <template>
   <div
     id="CompressUpload"
-    class="border border-dashed border-border rounded-6 p-10 relative hover:border-primary transition-all"
+    class="relative border border-border rounded-6 border-dashed p-10 transition-all hover:border-primary"
   >
     <label
-      class="absolute size-full top-0 left-0 z-1 cursor-pointer"
+      class="absolute left-0 top-0 z-1 size-full cursor-pointer"
       for="image-uploader"
     />
     <input
@@ -14,22 +14,22 @@
       accept="image/png,image/jpeg,image/avif"
       multiple
       @change="handleChange"
-    />
+    >
 
     <div class="text-center">
       <n-text depth="3">
-        <span class="i-mage-image-upload text-40"></span>
+        <span class="i-mage-image-upload text-40" />
       </n-text>
     </div>
-    <n-p class="text-center text-14 mt-0" depth="3">
+    <n-p class="mt-0 text-center text-14" depth="3">
       拖拽文件到该区域或点击选择图片
     </n-p>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { getFileName } from '@/utils'
 import type { UploadImage } from './interface'
+import { getFileName } from '@/utils'
 import { uniqueId } from 'lodash-es'
 
 const emit = defineEmits<{
@@ -47,7 +47,7 @@ function handleChange(e: Event) {
         fileName: getFileName(file.name),
         size: file.size,
         type: file.type,
-        src: URL.createObjectURL(file)
+        src: URL.createObjectURL(file),
       }
     })
     emit('change', list)

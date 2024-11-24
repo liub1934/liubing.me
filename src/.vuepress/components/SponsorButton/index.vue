@@ -1,8 +1,10 @@
 <template>
   <div class="sponsor-button">
     <div class="sponsor-button-wrapper" flex-center>
-      <n-popover raw trigger="click" to=".sponsor-button-wrapper" display-directive="show" :show="showPopover"
-        :show-arrow="false" :on-update:show="handleUpdateShow">
+      <n-popover
+        raw trigger="click" to=".sponsor-button-wrapper" display-directive="show" :show="showPopover"
+        :show-arrow="false" :on-update:show="handleUpdateShow"
+      >
         <template #trigger>
           <n-button
             type="primary"

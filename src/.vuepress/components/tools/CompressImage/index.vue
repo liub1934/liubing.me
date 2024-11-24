@@ -4,7 +4,7 @@
     :class="{
       'opacity-50': !loadSuccess && !showSpin,
       'after:(content-empty absolute size-full top-0 z-1 cursor-not-allowed)':
-        !loadSuccess && !showSpin
+        !loadSuccess && !showSpin,
     }"
   >
     <n-spin :show="showSpin">
@@ -16,7 +16,7 @@
       </template>
       <div
         v-if="compressList.length"
-        class="border border-solid border-border rounded-6"
+        class="border border-border rounded-6 border-solid"
       >
         <n-layout has-sider class="h-[calc(100vh-150px)]">
           <n-layout-sider
@@ -26,7 +26,7 @@
             show-trigger="arrow-circle"
             bordered
           >
-            <div class="p-10 border-r border-r-solid border-border">
+            <div class="border-r border-border border-r-solid p-10">
               <CompressList v-model:active="active" :list="compressList" />
             </div>
           </n-layout-sider>
@@ -88,12 +88,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
-import { useDialog } from 'naive-ui'
-import { type UploadImage, type OutputType } from './interface'
-import { downloadZip } from 'client-zip'
+import type { OutputType, UploadImage } from './interface'
 import { downloadFile, getErrorInfo } from '@/utils'
+import { downloadZip } from 'client-zip'
 import { cloneDeep } from 'lodash-es'
+import { useDialog } from 'naive-ui'
+import { computed, ref } from 'vue'
 
 const dialog = useDialog()
 const defaultCompressList = ref<UploadImage[]>([])
@@ -107,15 +107,15 @@ const loadSuccess = ref(false)
 const downloadAllLoading = ref(false)
 const outputType = ref<OutputType>('webp')
 const activeInfo = computed(() =>
-  compressList.value.find((item) => item.id === active.value)
+  compressList.value.find(item => item.id === active.value),
 )
 const successList = computed(() =>
   compressList.value.filter(
-    (item) => item.status === 'success' && item.compressedFile
-  )
+    item => item.status === 'success' && item.compressedFile,
+  ),
 )
 const failedList = computed(() =>
-  compressList.value.filter((item) => item.status === 'failed')
+  compressList.value.filter(item => item.status === 'failed'),
 )
 const activeSrc = computed(() => activeInfo.value?.src)
 const activeCompressedSrc = computed(() => activeInfo.value?.compressedSrc)
@@ -123,7 +123,9 @@ let handleCompress: () => void
 
 try {
   loadModules()
-} catch (error) {
+}
+catch (error) {
+  console.log('loadModules error', error)
   showSpin.value = false
   dialog.error({
     title: '加载异常',
@@ -131,7 +133,7 @@ try {
     positiveText: '重试',
     onPositiveClick: () => {
       window.location.reload()
-    }
+    },
   })
 }
 
@@ -140,7 +142,7 @@ async function loadModules() {
     import('https://unpkg.com/@jsquash/avif@1.3.0?module'),
     import('https://unpkg.com/@jsquash/jpeg@1.4.0?module'),
     import('https://unpkg.com/@jsquash/png@3.0.1?module'),
-    import('https://unpkg.com/@jsquash/webp@1.4.0?module')
+    import('https://unpkg.com/@jsquash/webp@1.4.0?module'),
   ])
 
   showSpin.value = false
@@ -159,23 +161,24 @@ async function loadModules() {
         const imageBuffer = await convert(sourceType, fileBuffer)
         const fileType = `image/${outputType.value}`
         const compressedBlob = new Blob([imageBuffer], {
-          type: fileType
+          type: fileType,
         })
         item.compressedFile = new File(
           [compressedBlob],
           `${item.fileName}.${outputType.value}`,
           {
-            type: fileType
-          }
+            type: fileType,
+          },
         )
         item.compressedSrc = URL.createObjectURL(item.compressedFile)
         item.status = 'success'
-      } catch (error) {
+      }
+      catch (error) {
         item.status = 'failed'
         item.failedInfo = getErrorInfo(error)
       }
       percentage.value = Math.round(
-        ((index + 1) / compressList.value.length) * 100
+        ((index + 1) / compressList.value.length) * 100,
       )
     }
     compressing.value = false
@@ -234,10 +237,11 @@ function handleReset() {
 
 async function handleDownloadAll() {
   try {
-    const successFiles = successList.value.map((item) => item.compressedFile!)
+    const successFiles = successList.value.map(item => item.compressedFile!)
     const blob = await downloadZip(successFiles).blob()
     downloadFile(blob, `liubing.me_compressed_${Date.now()}.zip`)
-  } catch (error) {
+  }
+  catch (error) {
     window.$message.error(getErrorInfo(error) as string)
   }
 }

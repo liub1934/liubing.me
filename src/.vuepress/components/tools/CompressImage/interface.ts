@@ -1,4 +1,4 @@
-import type { ComputedRef, InjectionKey, Ref } from "vue"
+import type { ComputedRef, InjectionKey, Ref } from 'vue'
 
 export interface UploadImage {
   id: string
@@ -23,7 +23,7 @@ export const CompressEndKey = Symbol() as InjectionKey<Ref<boolean>>
 
 export function imageDataToFile(
   imageData: ImageData,
-  fileName: string
+  fileName: string,
 ): Promise<File> {
   const canvas = document.createElement('canvas')
   canvas.width = imageData.width
@@ -35,7 +35,8 @@ export function imageDataToFile(
       if (blob) {
         const file = new File([blob], fileName, { type: 'image/webp' })
         resolve(file)
-      } else {
+      }
+      else {
         reject(new Error('Failed to create Blob from canvas.'))
       }
     }, 'image/webp')

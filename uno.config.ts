@@ -41,7 +41,7 @@ export default defineConfig({
       text: 'var(--vp-c-text)',
       subText: 'var(--vp-c-text-subtle)',
       grey: 'var(--vp-c-grey-text)',
-      border: 'var(--border-color)'
+      border: 'var(--border-color)',
     },
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],

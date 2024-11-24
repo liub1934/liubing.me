@@ -10,7 +10,7 @@
     <div v-if="compressEnd" class="ml-4 flex items-center">
       <div
         v-if="successList.length === compressList.length"
-        class="i-solar-check-circle-bold text-success ml-4"
+        class="i-solar-check-circle-bold ml-4 text-success"
       />
       <n-popover v-else>
         <template #trigger>
@@ -18,7 +18,7 @@
             class="i-solar-info-circle-bold"
             :class="{
               'text-error': failedList.length === compressList.length,
-              'text-warning': successList.length !== compressList.length
+              'text-warning': successList.length !== compressList.length,
             }"
           />
         </template>
@@ -43,9 +43,9 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
 import type { Status } from 'naive-ui/es/progress/src/interface'
-import { type UploadImage } from './interface'
+import type { UploadImage } from './interface'
+import { computed } from 'vue'
 
 const props = defineProps<{
   compressList: UploadImage[]
