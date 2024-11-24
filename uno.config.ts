@@ -14,7 +14,11 @@ export default defineConfig({
     },
   },
   presets: [
-    presetUno(),
+    presetUno({
+      dark: {
+        dark: '[data-theme="dark"]',
+      },
+    }),
     presetIcons({
       extraProperties: {
         'display': 'inline-block',
@@ -37,6 +41,7 @@ export default defineConfig({
       text: 'var(--vp-c-text)',
       subText: 'var(--vp-c-text-subtle)',
       grey: 'var(--vp-c-grey-text)',
+      border: 'var(--border-color)'
     },
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],

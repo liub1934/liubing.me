@@ -50,6 +50,11 @@ export const navbarConfig = navbar([
         link: 'css-triangle-generator',
       },
       {
+        text: '图片压缩',
+        icon: 'pic',
+        link: 'compress-image'
+      },
+      {
         text: '短视频去水印',
         icon: 'video',
         link: 'short-video-remove-watermark',

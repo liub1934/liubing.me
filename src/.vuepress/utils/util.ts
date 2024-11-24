@@ -63,3 +63,43 @@ export function getGithubShieldsImg(url: string) {
   const starsLink = url.split('https://github.com/')[1]
   return `https://img.shields.io/github/stars/${starsLink}`
 }
+
+/**
+ * 格式化文件大小
+ * @param {number} size 文件大小
+ * @returns {string} B|KB|MB|G
+ */
+export function formatFileSize(size: number): string {
+  const units = ['B', 'KB', 'MB', 'G']
+  const index = Math.floor(Math.log(size) / Math.log(1024))
+  const fileSize = Math.round(size / Math.pow(1024, index))
+  return fileSize + ' ' + units[index]
+}
+
+/**
+ * 图片下载
+ * @param {File} file 文件File
+ * @param {string} fileName 文件名
+ */
+export function downloadFile(file: File | Blob, fileName: string) {
+  const url = URL.createObjectURL(file)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = fileName
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+  URL.revokeObjectURL(url)
+}
+
+export function getErrorInfo(error: unknown) {
+  if (error instanceof Error) {
+    return error.stack
+  }
+  return error
+}
+
+export function getFileName(path: string) {
+  if (!path) return ''
+  return path.split('.').slice(0, -1).join('.')
+}
