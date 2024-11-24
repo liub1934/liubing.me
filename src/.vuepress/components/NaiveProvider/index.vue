@@ -3,7 +3,7 @@
     <n-dialog-provider>
       <n-notification-provider>
         <n-message-provider>
-          <slot></slot>
+          <slot />
         </n-message-provider>
       </n-notification-provider>
     </n-dialog-provider>

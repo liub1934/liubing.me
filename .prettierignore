@@ -1,5 +1,9 @@
-**/.vuepress/.cache/**
-**/.vuepress/.temp/**
-**/.vuepress/layouts/NotFound/data.json
-dist/
-node_modules/
+# 以下文件使用ESLint格式化，这里需要忽略掉
+**/*.js
+**/*.jsx
+**/*.ts
+**/*.tsx
+**/*.vue
+**/*.json
+**/*.html
+**/*.yaml

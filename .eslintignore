@@ -1,5 +1,0 @@
-**/dist/**
-**/node_modules/**
-!**/.vuepress/**
-**/.vuepress/.cache/**
-**/.vuepress/.temp/**

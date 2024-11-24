@@ -1,6 +1,6 @@
 <template>
   <div class="bing-canvas-wrapper">
-    <canvas ref="canvas" class="bing-canvas"></canvas>
+    <canvas ref="canvas" class="bing-canvas" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ onMounted(() => {
     spline.value = new Application(canvas.value!)
     spline.value.load('/assets/model/scene.splinecode').then(() => {
       const $avatar = document.querySelector(
-        '.vp-blogger-avatar'
+        '.vp-blogger-avatar',
       ) as HTMLElement
       if ($avatar) {
         $avatar.style.visibility = 'hidden'

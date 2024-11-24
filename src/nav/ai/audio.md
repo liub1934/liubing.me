@@ -178,7 +178,7 @@ containerClass: nav-container
 - icon: 'https://api.liubing.me/favicon/veed.io.png'
   name: VEED.IO
   desc: 文本转换为语音的AI工具。
-  link: https://veed.io/
+  link: https://www.veed.io/tools/ai-video
 
 - icon: 'https://api.liubing.me/favicon/voicemaker.in.png'
   name: Voicemaker

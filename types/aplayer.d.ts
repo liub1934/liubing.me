@@ -27,18 +27,18 @@ declare module 'aplayer' {
   }
 
   interface APlayer {
-    play(): void
-    pause(): void
-    toggle(): void
-    seek(time: number): void
-    volume(percentage: number, nostorage?: boolean): void
+    play: () => void
+    pause: () => void
+    toggle: () => void
+    seek: (time: number) => void
+    volume: (percentage: number, nostorage?: boolean) => void
     list: {
-      add(audio: APlayerOptions['audio']): void
-      remove(index: number): void
-      switch(index: number): void
+      add: (audio: APlayerOptions['audio']) => void
+      remove: (index: number) => void
+      switch: (index: number) => void
     }
-    on(event: APlayerEventType, handler: () => void): void
-    destroy(): void
+    on: (event: APlayerEventType, handler: () => void) => void
+    destroy: () => void
   }
 
   export type APlayerEventType =

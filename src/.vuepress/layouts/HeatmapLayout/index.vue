@@ -7,21 +7,22 @@
 </template>
 
 <script lang="ts" setup>
-import CommonLayout from '../CommonLayout/index.vue'
 import ArticleList from '@theme-hope/modules/blog/components/ArticleList'
 import { useArticles } from '@theme-hope/modules/blog/composables/index'
 import { usePageData } from '@vuepress/client'
-import { watch } from 'vue'
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import CommonLayout from '../CommonLayout/index.vue'
 
 const route = useRoute()
 const articles = useArticles()
 const page = usePageData()
 const queryDate = computed(() => route.query.date as string)
 const items = computed(() => {
-  if (!queryDate.value) return articles.value.items
-  if (new Date(queryDate.value).toString() === 'Invalid Date') return []
+  if (!queryDate.value)
+    return articles.value.items
+  if (new Date(queryDate.value).toString() === 'Invalid Date')
+    return []
   const queryYear = new Date(queryDate.value).getFullYear()
   const queryMonth = new Date(queryDate.value).getMonth()
   return articles.value.items.filter((item) => {
@@ -38,7 +39,7 @@ watch(
       ? `${description} ${queryDate.value}`
       : description
   },
-  { immediate: true }
+  { immediate: true },
 )
 </script>
 

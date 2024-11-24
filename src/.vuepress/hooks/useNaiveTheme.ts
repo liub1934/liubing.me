@@ -1,8 +1,8 @@
-import { computed, inject, ref } from 'vue'
-import type { App, ComputedRef, InjectionKey, Ref } from 'vue'
-import { darkTheme, type GlobalThemeOverrides } from 'naive-ui'
-import { getGenerateColors, getThemeOverrides } from '@/utils'
 import type { BuiltInGlobalTheme } from 'naive-ui/es/themes/interface'
+import type { App, ComputedRef, InjectionKey, Ref } from 'vue'
+import { getGenerateColors, getThemeOverrides } from '@/utils'
+import { darkTheme, type GlobalThemeOverrides } from 'naive-ui'
+import { computed, inject, ref } from 'vue'
 
 interface NaiveTheme {
   isDarkmode: Ref<boolean>
@@ -14,7 +14,7 @@ interface NaiveTheme {
 }
 
 const naiveThemeSymbol: InjectionKey<NaiveTheme> = Symbol(
-  __VUEPRESS_DEV__ ? 'naiveTheme' : ''
+  __VUEPRESS_DEV__ ? 'naiveTheme' : '',
 )
 
 export function injectNaiveTheme(app: App) {
@@ -26,7 +26,7 @@ export function injectNaiveTheme(app: App) {
     info: '#722ed1',
     success: '#52c41a',
     warning: '#faad14',
-    error: '#f5222d'
+    error: '#f5222d',
   })
 
   /** 主题 */
@@ -41,7 +41,7 @@ export function injectNaiveTheme(app: App) {
   const themeColors = computed(() => {
     const entries = Object.entries(themeConfig.value) as [
       NTheme.ColorType,
-      string
+      string,
     ][]
     const colors = {} as Record<NTheme.ColorType, string[]>
     entries.forEach(([key, value]) => {
@@ -54,7 +54,7 @@ export function injectNaiveTheme(app: App) {
   function setThemeConfig(config: Partial<NTheme.Config>) {
     themeConfig.value = {
       ...themeConfig.value,
-      ...config
+      ...config,
     }
   }
 
@@ -64,7 +64,7 @@ export function injectNaiveTheme(app: App) {
     theme,
     themeOverrides,
     themeColors,
-    setThemeConfig
+    setThemeConfig,
   })
 }
 

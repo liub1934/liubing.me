@@ -1,6 +1,8 @@
 <template>
   <div class="short-video-remove-watermark">
-    <div class="title text-24 font-600">视频链接</div>
+    <div class="title text-24 font-600">
+      视频链接
+    </div>
     <n-input
       v-model:value="videoUrl"
       type="textarea"
@@ -19,7 +21,9 @@
       </n-button>
     </div>
     <template v-if="resultData">
-      <div class="title text-24 font-600">解析预览</div>
+      <div class="title text-24 font-600">
+        解析预览
+      </div>
       <div>{{ resultData.title }}</div>
       <div>
         封面：
@@ -36,7 +40,7 @@
       <div v-if="resultData.images && resultData.images.length">
         图片集合：
         <a
-          v-for="(img, re) in resultData.images"
+          v-for="(img) in resultData.images"
           :key="img"
           :href="img"
           target="_blank"
@@ -66,13 +70,14 @@ const loading = ref(false)
 const resultData = ref<ShortVideoRes | null>(null)
 
 async function handleFetch() {
-  if (!videoUrl.value) return
+  if (!videoUrl.value)
+    return
   resultData.value = null
   loading.value = true
   const msg = encodeURIComponent(videoUrl.value)
   try {
     const response = await fetch(
-      `https://api.liubing.me/short-video?msg=${msg}`
+      `https://api.liubing.me/short-video?msg=${msg}`,
     ).finally(() => {
       loading.value = false
     })
@@ -90,10 +95,13 @@ async function handleFetch() {
         return
       }
       window.$message.error(resData.msg)
-    } else {
+    }
+    else {
       window.$message.error('解析异常，请稍后再试！')
     }
-  } catch (error) {
+  }
+  catch (error) {
+    console.log('error', error)
     window.$message.error('请求异常，请稍后再试！')
   }
 }

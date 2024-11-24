@@ -1,6 +1,8 @@
 <template>
   <div class="generator-option">
-    <div class="title text-24 font-600">选项</div>
+    <div class="title text-24 font-600">
+      选项
+    </div>
     <n-radio-group v-model:value="modelValue">
       <n-radio
         v-for="item in options"
@@ -19,7 +21,7 @@ import { inject, watch } from 'vue'
 import {
   DirectionKey,
   type DirectionType,
-  type TriangleType
+  type TriangleType,
 } from './generator'
 
 interface Option {
@@ -32,22 +34,22 @@ const direction = inject(DirectionKey)!
 const options: Option[] = [
   {
     label: '等边',
-    value: 'equilateral'
+    value: 'equilateral',
   },
   {
     label: '等腰',
-    value: 'isosceles'
+    value: 'isosceles',
   },
   {
     label: '不等边',
-    value: 'scalene'
-  }
+    value: 'scalene',
+  },
 ]
 const directions: DirectionType[] = [
   'topRight',
   'bottomRight',
   'bottomLeft',
-  'topLeft'
+  'topLeft',
 ]
 
 watch(direction, () => {

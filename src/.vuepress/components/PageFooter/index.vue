@@ -1,16 +1,16 @@
 <template>
   <div class="vp-footer-wrapper">
-    <div class="vp-footer" v-html="footerContent"></div>
+    <div class="vp-footer" v-html="footerContent" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
+import { BlogStartDate, calculateRuntime } from '@/utils'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import { useThemeLocaleData } from 'vuepress-theme-hope/client/composables/index.js'
 import { usePageFrontmatter } from 'vuepress/client'
 import { isString } from 'vuepress/shared'
-import { calculateRuntime, BlogStartDate } from '@/utils'
+import { useThemeLocaleData } from 'vuepress-theme-hope/client/composables/index.js'
 import '@theme-hope/styles/footer.scss'
 
 let timerInterval: IntervalHandle | null

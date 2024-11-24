@@ -1,9 +1,9 @@
 <template>
   <div class="heatmap">
     <div
-      class="heatmap-item"
       v-for="item in heatmaps"
       :key="`${item.year}-${item.month}`"
+      class="heatmap-item"
     >
       <div
         :class="`heatmap-inner ${getCountColor(item.counts)}`"
@@ -14,16 +14,16 @@
             : `${item.year}-${item.month}`
         "
         @click="handleClick(item)"
-      ></div>
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
 import { useArticles } from '@theme-hope/modules/blog/composables/index'
-import { useRouter } from 'vue-router'
 import { cloneDeep } from 'lodash-es'
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 
 interface IHeatmap {
   year: number
@@ -34,8 +34,9 @@ interface IHeatmap {
 const router = useRouter()
 const articles = useArticles()
 const postList = cloneDeep(articles.value)
-  .items.sort((a, b) => a.info.d! - b.info.d!)
-  .map((item) => item.info)
+  .items
+  .sort((a, b) => a.info.d! - b.info.d!)
+  .map(item => item.info)
 
 const heatmaps = computed(() => {
   const minYear = new Date(postList[0].d!).getFullYear()
@@ -55,19 +56,21 @@ const heatmaps = computed(() => {
 
 function getCountColor(counts: number) {
   if (counts) {
-    if (counts > 10) counts = 10
+    if (counts > 10)
+      counts = 10
     return `bg-primary-${counts}`
   }
   return ''
 }
 
 function handleClick(item: IHeatmap) {
-  if (!item.counts) return
+  if (!item.counts)
+    return
   router.push({
     path: '/heatmap/',
     query: {
-      date: `${item.year}/${item.month}`
-    }
+      date: `${item.year}/${item.month}`,
+    },
   })
 }
 </script>

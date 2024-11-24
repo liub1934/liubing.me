@@ -3,13 +3,13 @@
  * 项目根目录执行脚本：npm run compress-svg
  */
 
-import * as path from 'path'
-import { readFile, readdir, writeFile } from 'fs'
+import { readdir, readFile, writeFile } from 'node:fs'
+import * as path from 'node:path'
 import { type Config, optimize } from 'svgo'
 
 // 需要处理的svg目录
 const relativeSvgDirectories: string[] = [
-  'src/.vuepress/public/assets/websites'
+  'src/.vuepress/public/assets/websites',
 ]
 // 指定要忽略的文件
 const ignoreFiles: string[] = []
@@ -23,18 +23,18 @@ const config: Config = {
       name: 'preset-default',
       params: {
         overrides: {
-          removeViewBox: false // 保留 viewBox属性
-        }
-      }
-    }
-  ]
+          removeViewBox: false, // 保留 viewBox属性
+        },
+      },
+    },
+  ],
 }
 
 function isIgnoreFile(filePath: string) {
   const fileName = path.basename(filePath)
   return (
-    ignoreFiles.includes(fileName) ||
-    ignoreDirectoriesRelative.some((s) => filePath.indexOf(s) > -1)
+    ignoreFiles.includes(fileName)
+    || ignoreDirectoriesRelative.some(s => filePath.includes(s))
   )
 }
 
@@ -52,7 +52,8 @@ function compressAndReplace(filePath: string) {
     writeFile(filePath, result.data, (err) => {
       if (err) {
         console.error('❌Error writing file:', err)
-      } else {
+      }
+      else {
         console.log(`✅Successfully compressed and replaced: ${filePath}`)
       }
     })
@@ -80,7 +81,8 @@ function processDirectory(inputDirectory: string, directoryPath: string) {
       if (entry.isDirectory()) {
         // 如果是子目录，则递归处理子目录
         processDirectory(inputDirectory, entryPath)
-      } else if (entry.isFile() && entry.name.endsWith('.svg')) {
+      }
+      else if (entry.isFile() && entry.name.endsWith('.svg')) {
         // 如果是SVG文件，则进行压缩并覆盖原文件
         compressAndReplace(entryPath)
       }
@@ -92,8 +94,8 @@ function processDirectory(inputDirectory: string, directoryPath: string) {
 const scriptDirectory = process.cwd()
 
 // 将相对路径的输入目录转换为绝对路径
-const inputDirectories = relativeSvgDirectories.map((dir) =>
-  path.join(scriptDirectory, dir)
+const inputDirectories = relativeSvgDirectories.map(dir =>
+  path.join(scriptDirectory, dir),
 )
 
 // 开始处理多个目录

@@ -1,12 +1,13 @@
 <template>
   <div class="mac-keyboard">
     <div
+      v-for="(key, i) in props.keys"
+      :key="i"
       class="keyboard"
-      v-for="key in props.keys"
       :class="{
         [getKeyboardSize(key)]: true,
         'keyboard-multiline': getTop(key) && getBottom(key),
-        'align-bottom': getBottom(key) && !getTop(key)
+        'align-bottom': getBottom(key) && !getTop(key),
       }"
     >
       <div v-if="key !== 'space'" class="keyboard-inner">
@@ -15,10 +16,12 @@
             class="keyboard-top"
             :class="{
               [`align-${getTopAlign(key)}`]: true,
-              'top-multiple': getTop(key)!.length > 1
+              'top-multiple': getTop(key)!.length > 1,
             }"
           >
-            <span v-for="top in getTop(key)">{{ top }}</span>
+            <span v-for="(top, ti) in getTop(key)" :key="ti">
+              {{ top }}
+            </span>
           </div>
         </template>
         <div v-if="getCenter(key)" class="keyboard-center">
@@ -29,13 +32,14 @@
           class="keyboard-bottom"
           :class="{
             [`align-${getBottomAlign(key)}`]: true,
-            'bottom-multiple': getBottom(key)!.length > 1
+            'bottom-multiple': getBottom(key)!.length > 1,
           }"
         >
           <span
-            v-for="text in getBottom(key)"
+            v-for="(text, textIndex) in getBottom(key)"
+            :key="textIndex"
             :class="{
-              'type-number': typeof text === 'number'
+              'type-number': typeof text === 'number',
             }"
           >
             {{ text }}
@@ -55,99 +59,99 @@ const keyMap: any = {
   control: {
     top: ['⌃'],
     bottom: ['control'],
-    topAlign: 'right'
+    topAlign: 'right',
   },
   option: {
     top: ['⌥'],
     bottom: ['option'],
-    topAlign: 'right'
+    topAlign: 'right',
   },
   command: {
     top: ['⌘'],
     size: 'kw-2',
     bottom: ['command'],
-    topAlign: 'right'
+    topAlign: 'right',
   },
   enter: {
     bottom: ['⏎'],
     size: 'kw-3',
-    bottomAlign: 'right'
+    bottomAlign: 'right',
   },
   tab: {
     bottom: ['⇥'],
     size: 'kw-2',
-    bottomAlign: 'left'
+    bottomAlign: 'left',
   },
   delete: {
     bottom: ['⌫'],
     size: 'kw-2',
-    bottomAlign: 'right'
+    bottomAlign: 'right',
   },
   shift: {
     bottom: ['⇧'],
     size: 'kw-4',
-    bottomAlign: 'left'
+    bottomAlign: 'left',
   },
   esc: {
     bottom: ['esc'],
     size: 'kw-3',
-    bottomAlign: 'left'
+    bottomAlign: 'left',
   },
   space: {
-    size: 'kw-space'
+    size: 'kw-space',
   },
   dot: {
     top: ['~'],
-    bottom: ['・']
+    bottom: ['・'],
   },
   slash: {
     top: ['?'],
-    bottom: ['/']
+    bottom: ['/'],
   },
   leftBracket: {
     top: ['「', '{'],
-    bottom: ['【', '[']
+    bottom: ['【', '['],
   },
   rightBracket: {
     top: ['」', '}'],
-    bottom: ['】', ']']
+    bottom: ['】', ']'],
   },
   topArrow: {
     center: '▴',
-    size: 'kh-half'
+    size: 'kh-half',
   },
   rightArrow: {
     center: '▸',
-    size: 'kh-half'
+    size: 'kh-half',
   },
   bottomArrow: {
     center: '▾',
-    size: 'kh-half'
+    size: 'kh-half',
   },
   leftArrow: {
     center: '◂',
-    size: 'kh-half'
+    size: 'kh-half',
   },
   1: {
     top: ['!'],
-    bottom: [1]
+    bottom: [1],
   },
   2: {
     top: ['@'],
-    bottom: [2]
+    bottom: [2],
   },
   3: {
     top: ['#'],
-    bottom: [3]
+    bottom: [3],
   },
   4: {
     top: ['¥', '$'],
-    bottom: [4]
+    bottom: [4],
   },
   5: {
     top: ['%'],
-    bottom: [5]
-  }
+    bottom: [5],
+  },
 }
 
 function getTop(key: string): string[] | undefined {

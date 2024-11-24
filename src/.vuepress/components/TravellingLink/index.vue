@@ -7,7 +7,7 @@
     aria-label="开往"
     data-balloon-pos="down"
   >
-    <font-icon icon="travelling"></font-icon>
+    <FontIcon icon="travelling" />
   </a>
 </template>
 
