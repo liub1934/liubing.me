@@ -74,6 +74,11 @@ containerClass: nav-container
   name: Coze
   desc: 国际版扣子
   link: https://coze.com/
+
+- icon: 'https://api.liubing.me/favicon/chatboxai.app.png'
+  name: Chatbox AI
+  desc: 一款 AI 客户端应用和智能助手，支持众多先进的 AI 模型和 API。
+  link: https://chatboxai.app/
 ```
 
 :::
