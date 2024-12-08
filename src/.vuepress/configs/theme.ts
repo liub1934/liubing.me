@@ -2,6 +2,7 @@ import type { Theme } from 'vuepress'
 import { hopeTheme } from 'vuepress-theme-hope'
 import packageData from '../../../package.json' assert { type: 'json' }
 import { ArticleInfo, AuthorName, Description, HostName, Repo } from '../utils'
+import { markdownOptions } from './markdown'
 import { navbarConfig } from './navbar'
 import { themePlugins } from './plugins'
 import { sidebarConfig } from './sidebar'
@@ -48,6 +49,8 @@ export default hopeTheme(
     headerDepth: 3,
     // 内置插件
     plugins: themePlugins,
+    // markdown配置
+    markdown: markdownOptions,
     // 自定义页脚
     footer: `
     <div>
