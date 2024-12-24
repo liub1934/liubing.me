@@ -20,7 +20,6 @@
           <n-space>
             <component
               :is="item.link ? 'a' : 'div'"
-
               v-for="item in list" :key="item.name" class="sponsor-item"
               relative
               block
@@ -38,6 +37,7 @@
                   }
                   : {}
               "
+              @click="handleClick(item)"
             >
               <div
                 class="icon-content"
@@ -54,7 +54,6 @@
                 <img
                   v-if="item.image"
                   class="qrcode-image"
-
                   absolute z-2 size-full opacity-0
                   :src="item.image"
                 >
@@ -77,7 +76,7 @@
 </template>
 
 <script lang="ts" setup>
-import { registerPhotoSwipe } from '@vuepress/plugin-photo-swipe/client'
+import { createPhotoSwipe } from '@vuepress/plugin-photo-swipe/client'
 import { nextTick, onUnmounted, ref } from 'vue'
 
 interface SponsorItem {
@@ -86,10 +85,17 @@ interface SponsorItem {
   color: string
   link?: string
   image?: string
+  index?: number
+}
+
+interface PhotoSwipeState {
+  open: (index: number) => void
+  close: () => void
+  destroy: () => void
 }
 
 const showPopover = ref(false)
-let destroy: (() => void) | null = null
+let state: PhotoSwipeState | null = null
 
 const list: SponsorItem[] = [
   {
@@ -103,26 +109,36 @@ const list: SponsorItem[] = [
     icon: 'weixin',
     color: '#07c160',
     image: '/sponsor-weixin.png',
+    index: 0,
   },
   {
     name: '支付宝',
     icon: 'alipay',
     color: '#00a3ee',
     image: '/sponsor-alipay.png',
+    index: 1,
   },
 ]
 
 onUnmounted(() => {
-  destroy?.()
+  state?.destroy()
+  state = null
 })
 
+function handleClick(item: SponsorItem) {
+  if (item.index !== undefined) {
+    state?.open(item.index)
+  }
+}
+
 function handleUpdateShow(show: boolean) {
-  if (show && !destroy) {
+  if (show && !state) {
     nextTick(async () => {
-      const images: HTMLImageElement[] = Array.from(
+      const $images: HTMLImageElement[] = Array.from(
         document.querySelectorAll('.qrcode-image'),
       )
-      destroy = await registerPhotoSwipe(images, {
+      const images = $images.map(img => img.src)
+      state = await createPhotoSwipe(images, {
         // PhotoSwipe 选项
       })
     })

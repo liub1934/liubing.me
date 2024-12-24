@@ -2,7 +2,6 @@ import type { PluginConfig } from 'vuepress'
 import type { PluginsOptions } from 'vuepress-theme-hope'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { searchProPlugin } from 'vuepress-plugin-search-pro'
 import { renderProjects } from '../containers'
 import { naiveDiscretePlugin, themeColorPlugin } from '../plugins'
 import { Repo } from '../utils'
@@ -12,11 +11,6 @@ export const configPlugins: PluginConfig = [
   // 谷歌统计插件
   googleAnalyticsPlugin({
     id: 'G-GBZBT89WGJ',
-  }),
-  // 搜索插件
-  searchProPlugin({
-    indexContent: true,
-    autoSuggestions: false,
   }),
   themeColorPlugin(),
   naiveDiscretePlugin(),
@@ -92,23 +86,10 @@ export const themePlugins: PluginsOptions = {
       '/article/', // 排除/article/目录，防止和博客article有冲突Overriding existing page警告
     ],
   },
-  // Disable features you don’t want here
-  // Markdown 增强插件配置
-  mdEnhance: {
-    gfm: true,
-    include: true,
-  },
-  markdownImage: {
-    figure: true,
-  },
-  markdownTab: {
-    tabs: true,
-  },
-  shiki: {
-    // 自定义语言别名
-    langAlias: {
-      env: 'dotenv',
-    },
+  // 搜素配置
+  slimsearch: {
+    indexContent: true,
+    suggestion: false,
   },
   // PWA插件配置
   // pwa: false // 暂时关闭PWA功能

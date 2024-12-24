@@ -232,7 +232,10 @@ function handleChange(list: UploadImage[]) {
 
 function handleReset() {
   defaultCompressList.value = []
+  active.value = ''
   compressList.value = []
+  compressing.value = false
+  compressEnd.value = false
 }
 
 async function handleDownloadAll() {

@@ -4,7 +4,7 @@
     <CommonWrapper>
       <NormalPage>
         <template #contentBefore>
-          <div class="theme-hope-content custom-content-before">
+          <div vp-content class="theme-hope-content custom-content-before">
             <div class="hint-container tip">
               <p class="hint-container-title">
                 提示

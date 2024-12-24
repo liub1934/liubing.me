@@ -1,6 +1,7 @@
 // place your custom styles here
 :root {
   --border-color: #eaecef;
+  --vp-c-accent: var(--vp-c-accent-hover) !important;
 }
 [data-theme='dark'] {
   --border-color: #30363d;

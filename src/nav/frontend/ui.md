@@ -119,6 +119,12 @@ containerClass: nav-container
   desc: 设计精美的组件，您可以将其复制并粘贴到您的应用程序中。
   link: https://ui.shadcn.com/
   github: https://github.com/shadcn-ui/ui
+
+- icon: 'https://api.liubing.me/favicon/flyonui.com.png'
+  name: shadcn/ui
+  desc: 一个开源的 Tailwind CSS 组件库，具有语义类和强大的 JS 插件。
+  link: https://flyonui.com/
+  github: https://github.com/themeselection/flyonui
 ```
 
 :::

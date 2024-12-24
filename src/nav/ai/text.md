@@ -94,6 +94,11 @@ containerClass: nav-container
   name: Kimi.ai
   desc: Kimi 是一个有着超大“内存”的智能助手。
   link: https://kimi.moonshot.cn/
+
+- icon: 'https://api.liubing.me/favicon/www.n.cn.png'
+  name: 纳米AI搜索
+  desc: 新一代智能答案引擎，值得信赖的智能搜索伙伴。
+  link: https://www.n.cn/
 ```
 
 :::
