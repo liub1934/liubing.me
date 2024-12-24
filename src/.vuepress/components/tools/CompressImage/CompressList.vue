@@ -12,7 +12,7 @@
     >
       <n-spin :show="item.status === 'processing'">
         <div class="h-150 w-full">
-          <img class="size-full object-cover" :src="item.src">
+          <img class="size-full object-cover" :src="item.src" no-view>
         </div>
       </n-spin>
 
