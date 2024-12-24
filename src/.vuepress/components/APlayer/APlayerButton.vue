@@ -5,6 +5,8 @@
       class="vp-outlook-button flex-center"
       tabindex="-1"
       aria-hidden="true"
+      aria-label="听个音乐吧"
+      data-balloon-pos="down"
       @click="handleShowPlayer"
     >
       <svg
