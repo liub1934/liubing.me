@@ -4,7 +4,7 @@
     <CommonWrapper>
       <NormalPage>
         <template #contentAfter>
-          <div class="theme-hope-content article-content-after">
+          <div vp-content class="theme-hope-content article-content-after">
             <ClientOnly>
               <SponsorButton />
             </ClientOnly>
