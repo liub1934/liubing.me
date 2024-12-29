@@ -104,3 +104,29 @@ export function getFileName(path: string) {
     return ''
   return path.split('.').slice(0, -1).join('.')
 }
+
+export function getImageSize(file: File): Promise<{ width: number, height: number }> {
+  return new Promise((resolve, reject) => {
+    if (!file.type.startsWith('image/')) {
+      reject(new Error('文件类型不是图片'))
+      return
+    }
+    const reader = new FileReader()
+    reader.onload = () => {
+      const img = new Image()
+      img.onload = () => {
+        resolve({ width: img.width, height: img.height })
+      }
+      img.onerror = () => {
+        reject(new Error('无法加载图片'))
+      }
+      if (typeof reader.result === 'string') {
+        img.src = reader.result
+      }
+    }
+    reader.onerror = () => {
+      reject(new Error('无法读取文件'))
+    }
+    reader.readAsDataURL(file)
+  })
+}

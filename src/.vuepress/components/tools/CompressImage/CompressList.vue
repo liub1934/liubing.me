@@ -23,7 +23,7 @@
             'text-error': item.status === 'failed',
           }"
         >
-          {{ item.name }}
+          {{ item.file.name }}
         </n-ellipsis>
         <n-space :size="4">
           <n-tag
@@ -84,5 +84,3 @@ function handleSelect(id: string) {
   modelActive.value = id
 }
 </script>
-
-<style lang="less" scoped></style>

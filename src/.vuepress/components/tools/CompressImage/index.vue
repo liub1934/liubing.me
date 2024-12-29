@@ -37,7 +37,7 @@
                 :src="activeSrc"
                 :compressed-src="activeCompressedSrc"
               />
-              <CompressOption v-model:checked="outputType" />
+              <CompressOption v-model:checked="outputType" v-model:size="compressSize" />
               <CompressProgress
                 v-if="compressing || compressEnd"
                 :compress-list="compressList"
@@ -57,6 +57,7 @@
                   </n-button>
                   <n-button
                     type="primary"
+                    secondary
                     :disabled="
                       downloadAllLoading || !successList.length || compressing
                     "
@@ -71,7 +72,7 @@
                     :loading="compressing"
                     @click="handleCompress"
                   >
-                    压缩
+                    开始压缩
                   </n-button>
                 </n-space>
               </div>
@@ -81,15 +82,15 @@
       </div>
       <template v-else>
         <CompressUpload @change="handleChange" />
-        <CompressOption v-model:checked="outputType" class="mt-10" />
+        <CompressOption v-model:checked="outputType" v-model:size="compressSize" class="mt-10" />
       </template>
     </n-spin>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { OutputType, UploadImage } from './interface'
-import { downloadFile, getErrorInfo } from '@/utils'
+import type { CompressSize, OutputType, UploadImage } from './interface'
+import { downloadFile, getErrorInfo, getImageSize } from '@/utils'
 import { downloadZip } from 'client-zip'
 import { cloneDeep } from 'lodash-es'
 import { useDialog } from 'naive-ui'
@@ -106,6 +107,10 @@ const compressEnd = ref(false)
 const loadSuccess = ref(false)
 const downloadAllLoading = ref(false)
 const outputType = ref<OutputType>('webp')
+const compressSize = ref<CompressSize>({
+  width: void 0,
+  height: void 0,
+})
 const activeInfo = computed(() =>
   compressList.value.find(item => item.id === active.value),
 )
@@ -138,11 +143,12 @@ catch (error) {
 }
 
 async function loadModules() {
-  const [avif, jpeg, png, webp] = await Promise.all([
+  const [avif, jpeg, png, webp, { default: resize }] = await Promise.all([
     import('https://unpkg.com/@jsquash/avif@1.3.0?module'),
     import('https://unpkg.com/@jsquash/jpeg@1.4.0?module'),
     import('https://unpkg.com/@jsquash/png@3.0.1?module'),
     import('https://unpkg.com/@jsquash/webp@1.4.0?module'),
+    import('https://unpkg.com/@jsquash/resize@2.1.0?module'),
   ])
 
   showSpin.value = false
@@ -151,14 +157,14 @@ async function loadModules() {
   handleCompress = async () => {
     compressing.value = true
     compressEnd.value = false
+    percentage.value = 0
     compressList.value = cloneDeep(defaultCompressList.value)
     for (let index = 0; index < compressList.value.length; index++) {
       const item = compressList.value[index]
       try {
         const sourceType = item.file.type.replace('image/', '') as OutputType
         item.status = 'processing'
-        const fileBuffer = await item.file.arrayBuffer()
-        const imageBuffer = await convert(sourceType, fileBuffer)
+        const imageBuffer = await convert(sourceType, item.file)
         const fileType = `image/${outputType.value}`
         const compressedBlob = new Blob([imageBuffer], {
           type: fileType,
@@ -186,7 +192,8 @@ async function loadModules() {
   }
 
   // 执行你的回调或后续操作
-  async function decode(sourceType: OutputType, fileBuffer: ArrayBuffer) {
+  async function decode(sourceType: OutputType, file: File) {
+    const fileBuffer = await file.arrayBuffer()
     switch (sourceType) {
       case 'avif':
         return await avif.decode(fileBuffer)
@@ -216,9 +223,25 @@ async function loadModules() {
     }
   }
 
-  async function convert(sourceType: OutputType, fileBuffer: ArrayBuffer) {
-    const imageData = await decode(sourceType, fileBuffer)
+  async function convert(sourceType: OutputType, file: File) {
+    const imageData = await decode(sourceType, file)
+    if (compressSize.value.width || compressSize.value.height) {
+      const imageSize = await getImageSize(file)
+      const resizeSize = resizeImageDimensions(imageSize, compressSize.value)
+      const resizedData = await resize(imageData, resizeSize)
+      return encode(resizedData)
+    }
     return encode(imageData)
+  }
+
+  function resizeImageDimensions(original: Required<CompressSize>, target: CompressSize) {
+    const { width: originalWidth, height: originalHeight } = original
+    const { width: targetWidth, height: targetHeight } = target
+    const aspectRatio = originalWidth / originalHeight
+    return {
+      width: targetWidth ?? Math.round((targetHeight! * aspectRatio)),
+      height: targetHeight ?? Math.round((targetWidth! / aspectRatio)),
+    }
   }
 }
 
@@ -231,8 +254,15 @@ function handleChange(list: UploadImage[]) {
 }
 
 function handleReset() {
-  defaultCompressList.value = []
+  revokeObjectURL(defaultCompressList.value)
+  revokeObjectURL(compressList.value)
   active.value = ''
+  compressSize.value = {
+    width: void 0,
+    height: void 0,
+  }
+  percentage.value = 0
+  defaultCompressList.value = []
   compressList.value = []
   compressing.value = false
   compressEnd.value = false
@@ -247,6 +277,21 @@ async function handleDownloadAll() {
   catch (error) {
     window.$message.error(getErrorInfo(error) as string)
   }
+}
+
+/**
+ * 释放图片临时URL
+ * @param list
+ */
+function revokeObjectURL(list: UploadImage[]) {
+  list.forEach((item) => {
+    if (item.src) {
+      URL.revokeObjectURL(item.src)
+    }
+    if (item.compressedSrc) {
+      URL.revokeObjectURL(item.compressedSrc)
+    }
+  })
 }
 </script>
 

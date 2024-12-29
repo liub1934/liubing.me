@@ -52,6 +52,9 @@ devDependencies:
   '@jsquash/png':
     specifier: ^3.0.1
     version: 3.0.1
+  '@jsquash/resize':
+    specifier: ^2.1.0
+    version: 2.1.0
   '@jsquash/webp':
     specifier: ^1.4.0
     version: 1.4.0
@@ -2212,6 +2215,10 @@ packages:
 
   /@jsquash/png@3.0.1:
     resolution: {integrity: sha512-Bnvv93Y5LL92cuk2r2gpV+9JKuDo2/w7bOODw1iPxk8VARknky0sS1tSDgMosUdhNb4CdMlcCm3TMzTaqa3zZw==}
+    dev: true
+
+  /@jsquash/resize@2.1.0:
+    resolution: {integrity: sha512-UxF45pe5a84GrleHichsnGHyFAJhOu4Ms9L1UQYXhhmDifRm4U3pMEzgly+m3xDe+h4XZyDlpr9f8FBB1LZ+LA==}
     dev: true
 
   /@jsquash/webp@1.4.0:
