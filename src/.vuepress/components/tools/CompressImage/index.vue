@@ -138,10 +138,9 @@ catch (error) {
 }
 
 async function loadModules() {
-  const [avif, jpeg, png, webp] = await Promise.all([
+  const [avif, jpeg, webp] = await Promise.all([
     import('https://unpkg.com/@jsquash/avif@1.3.0?module'),
     import('https://unpkg.com/@jsquash/jpeg@1.4.0?module'),
-    import('https://unpkg.com/@jsquash/png@3.0.1?module'),
     import('https://unpkg.com/@jsquash/webp@1.4.0?module'),
   ])
 
@@ -192,8 +191,6 @@ async function loadModules() {
         return await avif.decode(fileBuffer)
       case 'jpeg':
         return await jpeg.decode(fileBuffer)
-      case 'png':
-        return await png.decode(fileBuffer)
       case 'webp':
         return await webp.decode(fileBuffer)
       default:
@@ -207,8 +204,6 @@ async function loadModules() {
         return await avif.encode(imageData)
       case 'jpeg':
         return await jpeg.encode(imageData)
-      case 'png':
-        return await png.encode(imageData)
       case 'webp':
         return await webp.encode(imageData)
       default:
