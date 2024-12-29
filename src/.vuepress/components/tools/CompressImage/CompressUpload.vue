@@ -43,10 +43,7 @@ function getFileList(files: FileList) {
     return {
       file,
       id: uniqueId(),
-      name: file.name,
       fileName: getFileName(file.name),
-      size: file.size,
-      type: file.type,
       src: URL.createObjectURL(file),
     }
   })
@@ -67,5 +64,3 @@ function handleDropStop(e: DragEvent) {
   }
 }
 </script>
-
-<style lang="less" scoped></style>

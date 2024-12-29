@@ -65,5 +65,3 @@ const split = ref(0.5)
 const leftBox = ref<HTMLElement>()
 const { width } = useElementSize(leftBox)
 </script>
-
-<style lang="less" scoped></style>

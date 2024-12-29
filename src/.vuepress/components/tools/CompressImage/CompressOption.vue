@@ -14,11 +14,43 @@
         {{ item.label }} <span class="color-grey">{{ item.tip }}</span>
       </n-radio>
     </n-space>
+
+    <div class="mt-20 flex items-center font-600">
+      图片输出尺寸
+      <n-popover placement="right">
+        <template #trigger>
+          <span class="i-solar-info-circle-bold" />
+        </template>
+        如果只输入宽度或者高度，另外一项会自动计算
+      </n-popover>
+    </div>
+    <n-space vertical>
+      <div class="flex items-center">
+        <div class="text-16">
+          图片宽度：
+        </div>
+        <n-input-number v-model:value="modelSize.width" placeholder="请输入" :min="1">
+          <template #suffix>
+            px
+          </template>
+        </n-input-number>
+      </div>
+      <div class="flex items-center">
+        <div class="text-16">
+          图片高度：
+        </div>
+        <n-input-number v-model:value="modelSize.height" placeholder="请输入" :min="1">
+          <template #suffix>
+            px
+          </template>
+        </n-input-number>
+      </div>
+    </n-space>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { OutputType } from './interface'
+import type { CompressSize, OutputType } from './interface'
 
 interface OutputItem {
   label: string
@@ -27,6 +59,7 @@ interface OutputItem {
 }
 
 const modelChecked = defineModel<OutputType>('checked', { required: true })
+const modelSize = defineModel<CompressSize>('size', { required: true })
 const outputs: OutputItem[] = [
   {
     label: 'WebP',
@@ -49,5 +82,3 @@ function handleChange(value: OutputType) {
   modelChecked.value = value
 }
 </script>
-
-<style lang="less" scoped></style>

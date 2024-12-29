@@ -68,5 +68,3 @@ const getProgressStatus = computed<ProgressStatus>(() => {
   return 'default'
 })
 </script>
-
-<style lang="less" scoped></style>
