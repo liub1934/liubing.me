@@ -43,7 +43,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Status } from 'naive-ui/es/progress/src/interface'
+import type { ProgressStatus } from 'naive-ui'
 import type { UploadImage } from './interface'
 import { computed } from 'vue'
 
@@ -55,7 +55,7 @@ const props = defineProps<{
   percentage: number
 }>()
 
-const getProgressStatus = computed<Status>(() => {
+const getProgressStatus = computed<ProgressStatus>(() => {
   if (props.compressEnd) {
     if (props.successList.length === props.compressList.length) {
       return 'success'
