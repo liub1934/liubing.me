@@ -58,6 +58,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     ShortVideoRemoveWatermark: typeof import('./../src/.vuepress/components/tools/ShortVideoRemoveWatermark/index.vue')['default']
     SponsorButton: typeof import('./../src/.vuepress/components/SponsorButton/index.vue')['default']
+    SvgIcon: typeof import('./../src/.vuepress/components/SvgIcon/index.vue')['default']
     TravellingLink: typeof import('./../src/.vuepress/components/TravellingLink/index.vue')['default']
   }
 }

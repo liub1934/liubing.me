@@ -60,6 +60,7 @@
     "unocss": "^0.64.1",
     "unplugin-vue-components": "^0.27.5",
     "vite-bundle-analyzer": "^0.13.1",
+    "vite-svg-loader": "^5.1.0",
     "vue": "^3.5.13",
     "vuepress": "2.0.0-rc.19",
     "vuepress-theme-hope": "2.0.0-rc.70"

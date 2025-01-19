@@ -4,10 +4,12 @@ import unocss from '@unocss/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { analyzer } from 'vite-bundle-analyzer'
+import svgLoader from 'vite-svg-loader'
 
 const isReport = process.argv.includes('--report')
 const vitePlugins: PluginOption[] = [
   unocss(),
+  svgLoader(),
   Components({
     resolvers: [NaiveUiResolver()],
     dts: path.resolve(process.cwd(), 'types/components.d.ts'),
