@@ -16,10 +16,10 @@
       >
         <NaiveProvider>
           <APlayerPlayer ref="playerRef" :audio="audioList" />
-          <FontIcon
+          <VPIcon
             absolute right-10 top-10 size-30 flex-center cursor-pointer color-grey opacity-40
             class="text-30!"
-            icon="close-fill"
+            icon="material-symbols:cancel"
             @click="isShowPlayer = false"
           />
         </NaiveProvider>

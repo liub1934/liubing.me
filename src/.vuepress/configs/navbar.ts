@@ -1,80 +1,84 @@
 import { navbar } from 'vuepress-theme-hope'
 
 export const navbarConfig = navbar([
-  '/',
+  {
+    text: '首页',
+    icon: 'material-symbols:home',
+    link: '/',
+  },
   {
     text: '代码笔记',
-    icon: 'code',
+    icon: 'ant-design:code-filled',
     prefix: '/notes/',
     children: [
       {
         text: 'Vue',
-        icon: 'vue',
+        icon: 'bxl:vuejs',
         link: 'vue/',
       },
       {
         text: 'JavaScript',
-        icon: 'javascript',
+        icon: 'mdi:language-javascript',
         link: 'js/',
       },
       {
         text: 'CSS',
-        icon: 'css',
+        icon: 'mdi:language-css3',
         link: 'css/',
       },
       {
         text: 'Html',
-        icon: 'html',
+        icon: 'mdi:language-html5',
         link: 'html/',
       },
       {
         text: 'Linux',
-        icon: 'linux',
+        icon: 'devicon-plain:linux',
         link: 'linux/command',
       },
     ],
   },
   {
     text: '导航',
-    icon: 'nav',
+    icon: 'mynaui:navigation-one-solid',
     link: '/nav/',
   },
   {
     text: '工具箱',
-    icon: 'tool',
+    icon: 'clarity:tools-solid',
     prefix: '/tools/',
     children: [
       {
         text: 'CSS三角形生成器',
-        icon: 'triangle',
+        icon: 'mdi:triangle',
         link: 'css-triangle-generator',
       },
       {
         text: '图片压缩',
-        icon: 'pic',
+        icon: 'icon-park-solid:compression',
         link: 'compress-image',
       },
       {
         text: '短视频去水印',
-        icon: 'video',
+        icon: 'ic:round-video-library',
         link: 'short-video-remove-watermark',
       },
     ],
   },
   {
     text: '友情链接',
-    icon: 'link',
+    icon: 'mdi:link-box',
     link: '/friends/',
   },
   {
     text: '私有图床',
-    icon: 'pic',
+    icon: 'material-symbols:image-rounded',
     rel: ' ',
     link: 'https://image.liubing.me',
   },
   {
     text: '关于本站',
-    icon: 'about',
+    icon: 'ix:about-filled',
     link: '/about/site',
   },
 ])

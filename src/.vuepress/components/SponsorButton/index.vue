@@ -12,7 +12,7 @@
             round
             @click="showPopover = !showPopover"
           >
-            <FontIcon icon="like" class="mr-4" />
+            <VPIcon icon="material-symbols:favorite" class="mr-4" />
             <span>随意打赏</span>
           </n-button>
         </template>
@@ -41,7 +41,6 @@
             >
               <div
                 class="icon-content"
-
                 relative size-50 flex-center overflow-hidden rounded-6 bg-white shadow
               >
                 <div
@@ -50,7 +49,7 @@
                     background: item.color,
                   }"
                 />
-                <FontIcon class="relative z-1 !text-30" :icon="item.icon" />
+                <VPIcon class="relative z-1 !text-30" :icon="item.icon" />
                 <img
                   v-if="item.image"
                   class="qrcode-image"
@@ -58,7 +57,6 @@
                   :src="item.image"
                 >
               </div>
-
               <div
                 class="tooltip"
                 :style="{
@@ -100,20 +98,20 @@ let state: PhotoSwipeState | null = null
 const list: SponsorItem[] = [
   {
     name: 'PayPal',
-    icon: 'paypal',
+    icon: 'mdi:paypal',
     color: '#008cff',
     link: 'https://paypal.me/lb1937',
   },
   {
     name: '微信',
-    icon: 'weixin',
+    icon: 'uiw:weixin',
     color: '#07c160',
     image: '/sponsor-weixin.png',
     index: 0,
   },
   {
     name: '支付宝',
-    icon: 'alipay',
+    icon: 'ant-design:alipay-outlined',
     color: '#00a3ee',
     image: '/sponsor-alipay.png',
     index: 1,

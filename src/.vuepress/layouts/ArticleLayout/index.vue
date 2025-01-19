@@ -48,17 +48,16 @@
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <FontIcon icon="cc" />BY-NC-SA
+                      <VPIcon icon="material-symbols:copyright-outline" />BY-NC-SA
                     </a>
                     许可协议，转载请注明出处！
                   </li>
                 </ul>
               </div>
-              <FontIcon
-                class="font-icon-bg"
-                :icon="source ? 'reship' : 'cc'"
-                size="160px"
-              />
+              <div class="font-icon-bg">
+                <SvgIcon v-if="source" class="text-160" name="icon-reship" />
+                <SvgIcon v-else class="text-160" name="icon-copyright" />
+              </div>
             </div>
           </div>
         </template>

@@ -25,6 +25,9 @@ export const configPlugins: PluginConfig = [
 
 // 主题内置插件配置
 export const themePlugins: PluginsOptions = {
+  icon: {
+    assets: 'iconify',
+  },
   // 博客插件配置
   blog: {
     hotReload: true, // 启用热更新
@@ -102,10 +105,6 @@ export const themePlugins: PluginsOptions = {
     apple: {
       icon: '/assets/icon/apple-icon-152.png',
       statusBarColor: 'black',
-    },
-    msTile: {
-      image: '/assets/icon/ms-icon-144.png',
-      color: '#ffffff',
     },
     manifest: {
       icons: [
