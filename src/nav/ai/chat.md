@@ -79,6 +79,11 @@ containerClass: nav-container
   name: Chatbox AI
   desc: 一款 AI 客户端应用和智能助手，支持众多先进的 AI 模型和 API。
   link: https://chatboxai.app/
+
+- icon: 'https://api.liubing.me/favicon/www.deepseek.com.png'
+  name: DeepSeek
+  desc: 探索未至之境，性能对标 OpenAI o1 正式版。
+  link: https://www.deepseek.com/
 ```
 
 :::
