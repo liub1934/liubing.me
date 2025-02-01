@@ -1,13 +1,13 @@
 import { useNaiveTheme } from '@/hooks'
 import { addCssVarsToHtml, getThemeColor, getThemeColors } from '@/utils'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useDarkmode } from '@vuepress/helper/client'
 import { useMutationObserver } from '@vueuse/core'
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { defineClientConfig } from 'vuepress/client'
 
 export default defineClientConfig({
   setup() {
-    const { isDarkmode } = useDarkmode()
+    const isDarkmode = useDarkmode()
     const themeColor = ref('')
     const el = ref<HTMLHtmlElement | null>(null)
     const { stop } = useMutationObserver(

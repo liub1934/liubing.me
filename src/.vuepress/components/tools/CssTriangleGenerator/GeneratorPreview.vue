@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import { copyText } from '@/utils'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useDarkmode } from '@vuepress/helper/client'
 import { computed, inject } from 'vue'
 import {
   ColorKey,
@@ -44,7 +44,7 @@ type LengthDirection = {
   [K in Direction]: keyof TriangleSize | boolean
 }
 
-const { isDarkmode } = useDarkmode()
+const isDarkmode = useDarkmode()
 const direction = inject(DirectionKey)!
 const triangle = inject(TriangleKey)!
 const size = inject(TriangleSizeKey)!
