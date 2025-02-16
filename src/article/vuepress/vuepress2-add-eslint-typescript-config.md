@@ -34,7 +34,7 @@ export default antfu()
 
 `package.json`文件中可以添加校验和格式化的命令
 
-```ts title="package.json"
+```json title="package.json"
 {
   "scripts": {
     "lint": "eslint .",
@@ -149,37 +149,44 @@ export default antfu({
     '**/.vuepress/.cache/**',
     '**/.vuepress/.temp/**',
     '**/.vuepress/dist/**',
-    // 由于会格式化及校验md文件中的代码块的内容，这里我暂时忽略了md文件
-    '**/*.md'
   ]
 })
 ```
 
-## 添加 Prettier 单独格式化 MD 文件
+## 添加 Prettier 处理其他文件
 
-该配置会要求禁用 Prettier 和代码自动保存功能，导致 MD 文件在保存的时候无法使用 Prettier 自动格式化，这里先暂时先注释`prettier.enable`，针对 MD 文件新增`editor.formatOnSave`来启用默认的 Prettier 和代码自动格式功能。
+由于 ESLint 尚无法处理 `.css` `.html`等文件，可以设置 `formatters` 配置来启用对于这些文件使用 `Prettier` 来格式化。
 
-```json title=".vscode/settings.json"
-{
-  // markdown 启用自动格式化保存
-  "[markdown]": {
-    "editor.formatOnSave": true
+```ts
+// eslint.config.js
+import antfu from '@antfu/eslint-config'
+
+export default antfu({
+  formatters: {
+    /**
+     * Format CSS, LESS, SCSS files, also the `<style>` blocks in Vue
+     * By default uses Prettier
+     */
+    css: true,
+    /**
+     * Format HTML files
+     * By default uses Prettier
+     */
+    html: true,
+    /**
+     * Format Markdown files
+     * Supports Prettier and dprint
+     * By default uses Prettier
+     */
+    markdown: 'prettier'
   }
-  // "prettier.enable": false, // 需要使用prettier格式化md文件，暂时注释调这行
-}
+})
 ```
 
-这样后自动保存 Prettier 格式化会和 ESLint 格式化打架，我这里暂时添加了`.prettierignore`文件忽略会打架的文件。
+该配置由[eslint-plugin-format](https://github.com/antfu/eslint-plugin-format)驱动，所以需要先安装对应的插件。
 
-```txt title=".prettierignore"
-**/*.js
-**/*.jsx
-**/*.ts
-**/*.tsx
-**/*.vue
-**/*.json
-**/*.html
-**/*.yaml
+```sh
+npm i -D eslint-plugin-format
 ```
 
 ## 额外规则启用禁用

@@ -26,11 +26,11 @@
 
 <script lang="ts" setup>
 import NotFound from '@theme-hope/layouts/NotFound'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useDarkmode } from '@vuepress/helper/client'
 import { computed, ref } from 'vue'
 
 const showDotLottie = ref(false)
-const { isDarkmode } = useDarkmode()
+const isDarkmode = useDarkmode()
 const lottiePath = computed(() => {
   return isDarkmode.value
     ? new URL('./dark.lottie', import.meta.url).href

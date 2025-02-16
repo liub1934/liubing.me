@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 import type { APlayerAudio, APlayerOptions } from 'aplayer'
 import { usePlayer } from '@/hooks'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useDarkmode } from '@vuepress/helper/client'
 import { useBroadcastChannel } from '@vueuse/core'
 import { watch } from 'vue'
 import 'aplayer/dist/APlayer.min.css'
@@ -40,7 +40,7 @@ const props = defineProps<{
 }>()
 
 const { player, isCanPlay, isPlay, id } = usePlayer()
-const { isDarkmode } = useDarkmode()
+const isDarkmode = useDarkmode()
 const { isSupported, data, post } = useBroadcastChannel<
   PlayerPlayMessage,
   PlayerPlayMessage

@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import { copyText } from '@/utils'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useDarkmode } from '@vuepress/helper/client'
 import { computed, inject } from 'vue'
 import {
   ColorKey,
@@ -44,7 +44,7 @@ type LengthDirection = {
   [K in Direction]: keyof TriangleSize | boolean
 }
 
-const { isDarkmode } = useDarkmode()
+const isDarkmode = useDarkmode()
 const direction = inject(DirectionKey)!
 const triangle = inject(TriangleKey)!
 const size = inject(TriangleSizeKey)!
@@ -265,10 +265,9 @@ function handleCopy() {
 <style lang="scss" scoped>
 .generator-preview {
   .triangle-output {
-    background-image: linear-gradient(45deg, #ccc 25%, transparent 0),
-      linear-gradient(45deg, transparent 75%, #ccc 0),
-      linear-gradient(45deg, #ccc 25%, transparent 0),
-      linear-gradient(45deg, transparent 75%, #ccc 0);
+    background-image:
+      linear-gradient(45deg, #ccc 25%, transparent 0), linear-gradient(45deg, transparent 75%, #ccc 0),
+      linear-gradient(45deg, #ccc 25%, transparent 0), linear-gradient(45deg, transparent 75%, #ccc 0);
     background-position:
       0 0,
       10px 10px,

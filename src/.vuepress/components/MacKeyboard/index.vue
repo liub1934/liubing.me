@@ -205,11 +205,8 @@ function getBottomAlign(key: string): string {
     will-change: transform;
     transition: all 0.1s ease-in-out 0s;
     user-select: none;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0)
-      ),
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
       linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     background-position:
       bottom right,
@@ -236,11 +233,7 @@ function getBottomAlign(key: string): string {
       bottom: 0;
       left: 0;
       right: 0;
-      background-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.2),
-        rgba(0, 0, 0, 0.5)
-      );
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
       z-index: -1;
       border-radius: 15px;
       box-shadow:
@@ -248,11 +241,7 @@ function getBottomAlign(key: string): string {
         inset 4px -8px 0px rgba(0, 0, 0, 0.3);
       transition: all 0.1s ease-in-out 0s;
       &:active {
-        background-image: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.5),
-          rgba(255, 255, 255, 0.2)
-        );
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
       }
     }
     &::before {
@@ -262,11 +251,8 @@ function getBottomAlign(key: string): string {
       bottom: 0;
       left: 0;
       right: 0;
-      background-image: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.8),
-          rgba(0, 0, 0, 0)
-        ),
+      background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
       background-position:
         bottom right,
@@ -281,8 +267,7 @@ function getBottomAlign(key: string): string {
     }
     &:active {
       will-change: transform;
-      transform: perspective(80px) rotateX(5deg) rotateY(1deg) translateY(3px)
-        scale(0.96);
+      transform: perspective(80px) rotateX(5deg) rotateY(1deg) translateY(3px) scale(0.96);
       height: 64px;
       border: 0.25px solid rgba(0, 0, 0, 0.2);
       box-shadow:

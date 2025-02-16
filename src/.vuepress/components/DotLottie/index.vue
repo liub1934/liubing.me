@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import type { DotLottie, LoadEvent } from '@lottiefiles/dotlottie-web'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useDarkmode } from '@vuepress/helper/client'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 const props = defineProps<{
@@ -23,7 +23,7 @@ const emit = defineEmits<{
   (e: 'load', event: LoadEvent): void
 }>()
 
-const { isDarkmode } = useDarkmode()
+const isDarkmode = useDarkmode()
 const dotLottie = ref<DotLottie | null>(null)
 const id = computed(() => {
   return `${+new Date()}-${Math.random()}`
