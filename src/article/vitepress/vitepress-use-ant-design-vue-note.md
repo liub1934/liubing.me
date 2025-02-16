@@ -13,6 +13,8 @@ containerClass: article-container
 
 近期使用 VitePress 重构了下公司的 API 文档官网，UI使用的是 `Ant Design Vue`，记录下所遇到的问题，毕竟好记性不如烂笔头。
 
+<!-- more -->
+
 ## 添加 vite.config.ts
 
 `.vitepress/config.ts` 文件中是支持 [Vite](https://vitepress.dev/zh/reference/site-config#vite) 相关配置的，个人更倾向于将 `vite.config.ts` 文件放在项目的根目录，此时可以设置 `configFile` 为 `vite.config.ts`，然后在根目录添加 `vite.config.ts` 文件即可。
