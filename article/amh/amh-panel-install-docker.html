@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/amh/amh-panel-install-docker.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="AMH 面板安装及管理 Docker 应用"><meta property="og:description" content="AMH 面板官方暂不支持 Docker 应用的管理，需要自己动手手动安装 Docker 应用，最后再安装一个人气很高的 Docker 面板可视化工具 Portainer 即可，记录下安装过程。"><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/i/2023/12/10/65752f4c77811.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-01-02T06:17:41.000Z"><meta property="article:tag" content="AMH面板"><meta property="article:tag" content="Docker"><meta property="article:tag" content="Portainer"><meta property="article:published_time" content="2023-12-10T00:00:00.000Z"><meta property="article:modified_time" content="2024-01-02T06:17:41.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AMH 面板安装及管理 Docker 应用","image":["https://image.liubing.me/i/2023/12/10/65752f4c77811.png","https://image.liubing.me/i/2023/12/10/6575328289065.png","https://image.liubing.me/i/2023/12/10/657532c38d0f8.png","https://image.liubing.me/i/2023/12/10/6575330b43750.png","https://image.liubing.me/i/2023/12/10/6575347866a9d.png","https://image.liubing.me/i/2023/12/10/657534ae10cb9.png","https://image.liubing.me/i/2023/12/10/65753576a0e17.png"],"datePublished":"2023-12-10T00:00:00.000Z","dateModified":"2024-01-02T06:17:41.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>AMH 面板安装及管理 Docker 应用 | Bing🐣</title><meta name="description" content="AMH 面板官方暂不支持 Docker 应用的管理，需要自己动手手动安装 Docker 应用，最后再安装一个人气很高的 Docker 面板可视化工具 Portainer 即可，记录下安装过程。">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-Bp6dsyek.js"><link rel="modulepreload" href="/assets/amh-panel-install-docker.html-GnptF6q6.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-Bp6dsyek.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/vue/jenkins-vue-svn-auto-build.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="Jenkins+Vue+SVN 实现自动打包构建及部署"><meta property="og:description" content="imageimage 由于公司里版本控制用的 svn，项目框架用的是 vue，所以在后期的时候搜索自学了下 Jenkins， 实现了下 Jenkins+Vue+SVN 自动化打包构建及部署。"><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2019/12/26/e3fb047569f16.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-06-20T14:06:59.000Z"><meta property="article:tag" content="Vue"><meta property="article:tag" content="Jenkins"><meta property="article:tag" content="SVN"><meta property="article:tag" content="自动构建"><meta property="article:tag" content="自动部署"><meta property="article:tag" content="自动打包"><meta property="article:published_time" content="2019-05-02T00:00:00.000Z"><meta property="article:modified_time" content="2023-06-20T14:06:59.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Jenkins+Vue+SVN 实现自动打包构建及部署","image":["https://image.liubing.me/2019/12/26/e3fb047569f16.png","https://image.liubing.me/2019/12/26/b239d25fa863e.png","https://image.liubing.me/2019/12/26/5061a770ceea6.png","https://image.liubing.me/2019/12/26/4d0ab7c5f6cad.png","https://image.liubing.me/2019/12/26/52ad11b1e53c5.png","https://image.liubing.me/2019/12/26/b7a1486121a8d.png","https://image.liubing.me/2019/12/26/04d6f903f9666.png","https://image.liubing.me/2019/12/26/4d0ab7c5f6cad.png","https://image.liubing.me/2019/12/26/69d73209b7cb6.png","https://image.liubing.me/2019/12/26/6ac0baec94434.png","https://image.liubing.me/2019/12/26/85e29164bfe52.png","https://image.liubing.me/2019/12/26/9cc55036fe7e0.png","https://image.liubing.me/2019/12/26/52f6abf94cac0.png","https://image.liubing.me/2019/12/26/4120a35a21061.png","https://image.liubing.me/2019/12/26/6a2118b8f0e05.png","https://image.liubing.me/2019/12/26/3167adb63944b.png","https://image.liubing.me/2019/12/26/3598d378b12f8.png","https://image.liubing.me/2019/12/26/f899b25d416e0.png","https://image.liubing.me/2019/12/26/efdeb36495df2.png","https://image.liubing.me/2019/12/26/a0e264c632219.png","https://image.liubing.me/2019/12/26/90f91d8dc0769.png","https://image.liubing.me/2019/12/26/4584b92ea0c39.png","https://image.liubing.me/2019/12/26/99e5e933891d0.png"],"datePublished":"2019-05-02T00:00:00.000Z","dateModified":"2023-06-20T14:06:59.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>Jenkins+Vue+SVN 实现自动打包构建及部署 | Bing🐣</title><meta name="description" content="imageimage 由于公司里版本控制用的 svn，项目框架用的是 vue，所以在后期的时候搜索自学了下 Jenkins， 实现了下 Jenkins+Vue+SVN 自动化打包构建及部署。">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-Bp6dsyek.js"><link rel="modulepreload" href="/assets/jenkins-vue-svn-auto-build.html-Bb7fkYRH.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-Bp6dsyek.js" defer></script>
+  </body>
+</html>

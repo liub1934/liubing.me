@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/v2ray/v2ray-websocket-tl-nginx-cloudflare-x-ui.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="V2Ray+WebSocket(ws)+TLS+Nginx+Cloudflare+x-ui 拯救被墙的 VPS"><meta property="og:description" content="之前看着别人的教程写过一篇拯救搬瓦工被 Q 的文章，用的是v2ray.fun 的面板，后面因为某些原因脚本失效了，后面就换成了v2-ui的可视化面板，之后发现该面板在 Github 上的项目也因为某些原因项目不存在了，后来又发现新的面板x-ui，页面长的基本一样，不知道是不是同一个作者。接下来记录下具体的x-ui面板的安装和使用。"><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2022/12/26/87835a432b73e.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-12-20T08:41:48.000Z"><meta property="article:tag" content="V2Ray"><meta property="article:tag" content="WebSocket"><meta property="article:tag" content="TLS"><meta property="article:tag" content="Nginx"><meta property="article:tag" content="Cloudflare"><meta property="article:tag" content="x-ui"><meta property="article:published_time" content="2022-12-26T00:00:00.000Z"><meta property="article:modified_time" content="2023-12-20T08:41:48.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"V2Ray+WebSocket(ws)+TLS+Nginx+Cloudflare+x-ui 拯救被墙的 VPS","image":["https://image.liubing.me/2022/12/26/87835a432b73e.png","https://image.liubing.me/2022/12/26/c7ccce9fa55f4.png","https://image.liubing.me/2022/12/26/964f79ba67ea5.png","https://image.liubing.me/2022/12/26/ec5eb32247043.png","https://image.liubing.me/2022/12/26/c2ee266c508b6.png"],"datePublished":"2022-12-26T00:00:00.000Z","dateModified":"2023-12-20T08:41:48.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>V2Ray+WebSocket(ws)+TLS+Nginx+Cloudflare+x-ui 拯救被墙的 VPS | Bing🐣</title><meta name="description" content="之前看着别人的教程写过一篇拯救搬瓦工被 Q 的文章，用的是v2ray.fun 的面板，后面因为某些原因脚本失效了，后面就换成了v2-ui的可视化面板，之后发现该面板在 Github 上的项目也因为某些原因项目不存在了，后来又发现新的面板x-ui，页面长的基本一样，不知道是不是同一个作者。接下来记录下具体的x-ui面板的安装和使用。">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-Bp6dsyek.js"><link rel="modulepreload" href="/assets/v2ray-websocket-tl-nginx-cloudflare-x-ui.html-CDW-zwfq.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-Bp6dsyek.js" defer></script>
+  </body>
+</html>

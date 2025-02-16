@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/vue/ant-design-vue/ant-design-vue-change-theme.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="Ant Vue 1.x 动态自定义换肤"><meta property="og:description" content="由于项目老平台使用的 UI 框架是 Ant Vue 1.x 的版本，首先考虑的就是官方自己的Pro Admin平台的方案，由于 Ant Admin 的方案只支持了主题色换肤，而内容项目平台是需要支持多种颜色换肤，如主题色、各个功能色，超链接等颜色换肤。既然官方的 Admin 平台支持换肤，咱们就去具体研究下怎么实现的，既然支持一种那应该也支持多种颜色的..."><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2023/02/04/3154f9c34a42f.jpg"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-06-20T14:06:59.000Z"><meta property="article:tag" content="Vue"><meta property="article:tag" content="Ant Design Vue"><meta property="article:tag" content="Ant Vue"><meta property="article:tag" content="一键换肤"><meta property="article:published_time" content="2023-02-04T00:00:00.000Z"><meta property="article:modified_time" content="2023-06-20T14:06:59.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Ant Vue 1.x 动态自定义换肤","image":["https://image.liubing.me/2023/02/04/3154f9c34a42f.jpg","https://image.liubing.me/2023/02/04/f714f9edb4ca7.jpg","https://image.liubing.me/2023/02/04/e6d93d63e3a82.jpg","https://image.liubing.me/2023/02/04/99a56553f3482.jpg","https://image.liubing.me/2023/02/04/78e6da06b9fce.jpg","https://image.liubing.me/2023/02/04/61578232735f7.jpg","https://image.liubing.me/2023/02/04/2d98b073a6f0e.jpg","https://image.liubing.me/2023/02/04/f11baa52a7597.jpg"],"datePublished":"2023-02-04T00:00:00.000Z","dateModified":"2023-06-20T14:06:59.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>Ant Vue 1.x 动态自定义换肤 | Bing🐣</title><meta name="description" content="由于项目老平台使用的 UI 框架是 Ant Vue 1.x 的版本，首先考虑的就是官方自己的Pro Admin平台的方案，由于 Ant Admin 的方案只支持了主题色换肤，而内容项目平台是需要支持多种颜色换肤，如主题色、各个功能色，超链接等颜色换肤。既然官方的 Admin 平台支持换肤，咱们就去具体研究下怎么实现的，既然支持一种那应该也支持多种颜色的...">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-Bp6dsyek.js"><link rel="modulepreload" href="/assets/ant-design-vue-change-theme.html-CtG3i42O.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-Bp6dsyek.js" defer></script>
+  </body>
+</html>

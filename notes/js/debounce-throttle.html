@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/notes/js/debounce-throttle.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="防抖节流"><meta property="og:description" content="防抖节流 imageimage 防抖函数（debounce） 防抖函数原理：在事件被触发 n 秒后再执行回调，如果在这 n 秒内又被触发，则重新计时。 节流函数（throttle） 防抖函数原理:规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。"><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2021/03/25/ec6edc3e84fa6.gif"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-10-03T09:52:53.000Z"><meta property="article:modified_time" content="2024-10-03T09:52:53.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"防抖节流","image":["https://image.liubing.me/2021/03/25/ec6edc3e84fa6.gif"],"dateModified":"2024-10-03T09:52:53.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>防抖节流 | Bing🐣</title><meta name="description" content="防抖节流 imageimage 防抖函数（debounce） 防抖函数原理：在事件被触发 n 秒后再执行回调，如果在这 n 秒内又被触发，则重新计时。 节流函数（throttle） 防抖函数原理:规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-Bp6dsyek.js"><link rel="modulepreload" href="/assets/debounce-throttle.html-BtR11sGm.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-Bp6dsyek.js" defer></script>
+  </body>
+</html>
