@@ -53,6 +53,7 @@
     "@vuepress/plugin-redirect": "2.0.0-rc.74",
     "@vuepress/plugin-slimsearch": "2.0.0-rc.74",
     "eslint": "^9.20.1",
+    "eslint-plugin-format": "^1.0.1",
     "git-cz": "4.9.0",
     "sass-embedded": "^1.85.0",
     "svgo": "^3.3.2",
