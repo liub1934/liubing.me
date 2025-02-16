@@ -39,9 +39,9 @@ export function getThemeColor(): string {
 export function getGenerateColors(color: string, darkMode: boolean): string[] {
   return darkMode
     ? generate(color, {
-      theme: 'dark',
-      backgroundColor: commonDark.bodyColor,
-    })
+        theme: 'dark',
+        backgroundColor: commonDark.bodyColor,
+      })
     : generate(color)
 }
 

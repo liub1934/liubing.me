@@ -265,10 +265,9 @@ function handleCopy() {
 <style lang="scss" scoped>
 .generator-preview {
   .triangle-output {
-    background-image: linear-gradient(45deg, #ccc 25%, transparent 0),
-      linear-gradient(45deg, transparent 75%, #ccc 0),
-      linear-gradient(45deg, #ccc 25%, transparent 0),
-      linear-gradient(45deg, transparent 75%, #ccc 0);
+    background-image:
+      linear-gradient(45deg, #ccc 25%, transparent 0), linear-gradient(45deg, transparent 75%, #ccc 0),
+      linear-gradient(45deg, #ccc 25%, transparent 0), linear-gradient(45deg, transparent 75%, #ccc 0);
     background-position:
       0 0,
       10px 10px,
