@@ -26,7 +26,7 @@ declare module 'aplayer' {
     storageName?: string
   }
 
-  interface APlayer {
+  interface IAPlayer {
     play: () => void
     pause: () => void
     toggle: () => void
@@ -67,7 +67,7 @@ declare module 'aplayer' {
     | 'waiting'
 
   const APlayer: {
-    new (options: APlayerOptions): APlayer
+    new (options: APlayerOptions): IAPlayer
   }
 
   export default APlayer
