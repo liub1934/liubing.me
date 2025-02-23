@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/notes/js/utils.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="通用工具"><meta property="og:description" content="通用工具 UUID 生成 复制到剪贴板 获取地址栏参数 睡眠 Sleep 深度合并对象 重命名键 解析 Cookie FormData 转 Object 是否是浏览器环境 是否是绝对 URL 检测当前用户的首选语言 检测用户设备类型 检查是否启用 localStorage 检查是否启用 sessionStorage 检查是否支持 Touch 事件 深度..."><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-10-03T09:52:53.000Z"><meta property="article:modified_time" content="2024-10-03T09:52:53.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"通用工具","image":[""],"dateModified":"2024-10-03T09:52:53.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>通用工具 | Bing🐣</title><meta name="description" content="通用工具 UUID 生成 复制到剪贴板 获取地址栏参数 睡眠 Sleep 深度合并对象 重命名键 解析 Cookie FormData 转 Object 是否是浏览器环境 是否是绝对 URL 检测当前用户的首选语言 检测用户设备类型 检查是否启用 localStorage 检查是否启用 sessionStorage 检查是否支持 Touch 事件 深度...">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-DewMY4YL.js"><link rel="modulepreload" href="/assets/utils.html-NIo48wmX.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-DewMY4YL.js" defer></script>
+  </body>
+</html>

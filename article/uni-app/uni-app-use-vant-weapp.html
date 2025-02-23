@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/uni-app/uni-app-use-vant-weapp.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="uni-app 微信小程序引入 vant weapp"><meta property="og:description" content="总结下使用 uni-app 开发微信小程序过程中引入及使用 Vant Weapp 的方法及问题。 GitHub：https://github.com/liub1934/uniapp-use-vant"><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2020/01/17/6cd551a3f245d.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-06-20T14:06:59.000Z"><meta property="article:tag" content="uni-app"><meta property="article:tag" content="Vue"><meta property="article:tag" content="Vant"><meta property="article:tag" content="微信小程序"><meta property="article:published_time" content="2020-01-26T00:00:00.000Z"><meta property="article:modified_time" content="2023-06-20T14:06:59.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"uni-app 微信小程序引入 vant weapp","image":["https://image.liubing.me/2020/01/17/6cd551a3f245d.png","https://image.liubing.me/2020/01/26/f3a567e9da682.png","https://image.liubing.me/2020/01/26/b54316bd343ef.png","https://image.liubing.me/2020/01/26/366ddf8e46340.png","https://image.liubing.me/2020/01/26/a7b835cb1cd84.png"],"datePublished":"2020-01-26T00:00:00.000Z","dateModified":"2023-06-20T14:06:59.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>uni-app 微信小程序引入 vant weapp | Bing🐣</title><meta name="description" content="总结下使用 uni-app 开发微信小程序过程中引入及使用 Vant Weapp 的方法及问题。 GitHub：https://github.com/liub1934/uniapp-use-vant">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-DewMY4YL.js"><link rel="modulepreload" href="/assets/uni-app-use-vant-weapp.html-BtP1h9WO.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-DewMY4YL.js" defer></script>
+  </body>
+</html>

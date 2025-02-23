@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/baota/bt-docker-build-bitwarden.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="基于宝塔 Docker 自建 Bitwarden 密码管理服务"><meta property="og:description" content="Bitwarden是一个跨平台的密码管理软件，类似于 1Password、EnPass、LastPass 等。Bitwarden 是免费开源的，可以将服务端部署在自己的服务器上，比如群晖，并且支持 Docker 部署。但官方的镜像要求至少 2G 以上内存，要求比较高。有人用 Rust 实现了 Bitwarden 服务器，项目叫，现在已经更新为vault..."><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2019/12/26/500745e78893f.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-03-10T10:39:05.000Z"><meta property="article:tag" content="Bitwarden"><meta property="article:tag" content="Docker"><meta property="article:published_time" content="2019-12-21T00:00:00.000Z"><meta property="article:modified_time" content="2024-03-10T10:39:05.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"基于宝塔 Docker 自建 Bitwarden 密码管理服务","image":["https://image.liubing.me/2019/12/26/500745e78893f.png","https://image.liubing.me/2019/12/26/c14a8df9528d3.png","https://image.liubing.me/2019/12/26/49d59861f5edf.png","https://image.liubing.me/2019/12/26/d2b1be24d8fcc.png","https://image.liubing.me/2019/12/26/812f2e8686901.png","https://image.liubing.me/2019/12/26/8f442adca1059.png","https://image.liubing.me/2019/12/26/c4dc1ab3b419d.png","https://image.liubing.me/2019/12/26/87e73267f1965.png","https://image.liubing.me/2019/12/26/823752848793e.png","https://image.liubing.me/2019/12/26/426be9f96588c.png","https://image.liubing.me/2019/12/26/7aaae31a5fd4f.png","https://image.liubing.me/2019/12/26/fcb5744695fd8.png","https://image.liubing.me/2019/12/26/b6de0110b315b.png","https://image.liubing.me/2019/12/26/5908b0aee9a95.png","https://image.liubing.me/2021/08/08/e62e4752478d0.png","https://image.liubing.me/2021/08/08/8fa6a18434118.png","https://image.liubing.me/2021/08/08/cba9ac5a06ae1.png","https://image.liubing.me/2019/12/29/a876abe759b9f.png","https://image.liubing.me/2019/12/29/88198d86a91cb.png"],"datePublished":"2019-12-21T00:00:00.000Z","dateModified":"2024-03-10T10:39:05.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>基于宝塔 Docker 自建 Bitwarden 密码管理服务 | Bing🐣</title><meta name="description" content="Bitwarden是一个跨平台的密码管理软件，类似于 1Password、EnPass、LastPass 等。Bitwarden 是免费开源的，可以将服务端部署在自己的服务器上，比如群晖，并且支持 Docker 部署。但官方的镜像要求至少 2G 以上内存，要求比较高。有人用 Rust 实现了 Bitwarden 服务器，项目叫，现在已经更新为vault...">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-DewMY4YL.js"><link rel="modulepreload" href="/assets/bt-docker-build-bitwarden.html-CjL6d-8P.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-DewMY4YL.js" defer></script>
+  </body>
+</html>

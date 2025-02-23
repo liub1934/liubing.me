@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/i18n/gracefully-manage-i18n-using-csv-in-vue.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="Vue 中使用 CSV 优雅的管理 i18n 多语言"><meta property="og:description" content="项目中使用 CSV 文件将多语言集中在一起，方便同时对一个 Key 进行修改。 通过一个可执行的文件icotjo，将 CSV 转换成各语言的 JSON 文件。 icotjo是一个 Go 写的工具，源码可在https://github.com/wonsikin/icotjo查看。"><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2023/02/11/1d7ccb37ebf62.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-09-25T00:44:02.000Z"><meta property="article:tag" content="Vue"><meta property="article:tag" content="Vite"><meta property="article:tag" content="i18n"><meta property="article:tag" content="Vue I18n"><meta property="article:published_time" content="2023-02-11T00:00:00.000Z"><meta property="article:modified_time" content="2024-09-25T00:44:02.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Vue 中使用 CSV 优雅的管理 i18n 多语言","image":["https://image.liubing.me/2023/02/11/1d7ccb37ebf62.png","https://image.liubing.me/2023/02/11/8a782f7f97a35.gif","https://image.liubing.me/2023/02/11/d3eefb393fd1e.png","https://image.liubing.me/2023/02/11/6b05f51e2faa9.png","https://image.liubing.me/2023/02/11/38fb104290d00.png","https://image.liubing.me/2023/02/11/5b0bb4bb835d0.png","https://image.liubing.me/2023/02/11/a35d824bebbb3.png"],"datePublished":"2023-02-11T00:00:00.000Z","dateModified":"2024-09-25T00:44:02.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>Vue 中使用 CSV 优雅的管理 i18n 多语言 | Bing🐣</title><meta name="description" content="项目中使用 CSV 文件将多语言集中在一起，方便同时对一个 Key 进行修改。 通过一个可执行的文件icotjo，将 CSV 转换成各语言的 JSON 文件。 icotjo是一个 Go 写的工具，源码可在https://github.com/wonsikin/icotjo查看。">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-DewMY4YL.js"><link rel="modulepreload" href="/assets/gracefully-manage-i18n-using-csv-in-vue.html-bAPUpC7A.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-DewMY4YL.js" defer></script>
+  </body>
+</html>

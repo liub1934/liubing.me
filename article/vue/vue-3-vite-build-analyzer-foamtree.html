@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/vue/vue-3-vite-build-analyzer-foamtree.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="rollup-plugin-visualizer 替代插件 vite-bundle-analyzer"><meta property="og:description" content="在搜索vue3打包分析、vite打包分析，清一色的都是推荐的使用rollup-plugin-visualizer插件，自己也使用过，感觉这个打包分析的插件生成的分析报告贼不好用，不支持放大缩小，只能点击模块进行放大，尝试了下按Exclude和Include关键词搜索也搜索不出内容，不知道是不是我使用有问题还是我搜索方式不对，总之感觉没有 vue2 的v..."><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/i/2024/03/23/65fe43e4a13fa.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-11-13T08:47:53.000Z"><meta property="article:tag" content="Vue"><meta property="article:tag" content="Vue3"><meta property="article:tag" content="FoamTree"><meta property="article:tag" content="rollup-plugin-visualizer"><meta property="article:tag" content="vite-bundle-analyzer"><meta property="article:published_time" content="2024-03-23T00:00:00.000Z"><meta property="article:modified_time" content="2024-11-13T08:47:53.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"rollup-plugin-visualizer 替代插件 vite-bundle-analyzer","image":["https://image.liubing.me/i/2024/03/23/65fe43e4a13fa.png","https://image.liubing.me/i/2024/03/23/65fe423b4c3f4.png","https://image.liubing.me/i/2024/03/23/65fe4463a909f.png","https://image.liubing.me/i/2024/03/23/65fe464724647.gif","https://image.liubing.me/i/2024/03/23/65fe474402e99.png"],"datePublished":"2024-03-23T00:00:00.000Z","dateModified":"2024-11-13T08:47:53.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>rollup-plugin-visualizer 替代插件 vite-bundle-analyzer | Bing🐣</title><meta name="description" content="在搜索vue3打包分析、vite打包分析，清一色的都是推荐的使用rollup-plugin-visualizer插件，自己也使用过，感觉这个打包分析的插件生成的分析报告贼不好用，不支持放大缩小，只能点击模块进行放大，尝试了下按Exclude和Include关键词搜索也搜索不出内容，不知道是不是我使用有问题还是我搜索方式不对，总之感觉没有 vue2 的v...">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-DewMY4YL.js"><link rel="modulepreload" href="/assets/vue-3-vite-build-analyzer-foamtree.html-BDplclo7.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-DewMY4YL.js" defer></script>
+  </body>
+</html>

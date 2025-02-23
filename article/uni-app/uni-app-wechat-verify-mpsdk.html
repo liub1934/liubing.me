@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://liubing.me/article/uni-app/uni-app-wechat-verify-mpsdk.html"><meta property="og:site_name" content="Bing🐣"><meta property="og:title" content="uni-app 微信小程序接入人脸核身 SDK"><meta property="og:description" content="imageimage 这几天使用 uni-app 开发某银行的一个微信小程序，需要集成接入腾讯云的人脸核身 SDK，如上图所示，记录下整合接入过程及踩的一些坑，帮助后面需要的朋友们。关于 uni-app 接入人脸核身 SDK 有不懂的地方可以在下面提问，看到会及时回复。"><meta property="og:type" content="article"><meta property="og:image" content="https://image.liubing.me/2019/12/26/336a94e239a5f.png"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-06-20T14:06:59.000Z"><meta property="article:tag" content="微信小程序"><meta property="article:tag" content="WeChat"><meta property="article:tag" content="人脸核身"><meta property="article:tag" content="sdk"><meta property="article:tag" content="uni-app"><meta property="article:published_time" content="2019-08-17T00:00:00.000Z"><meta property="article:modified_time" content="2023-06-20T14:06:59.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"uni-app 微信小程序接入人脸核身 SDK","image":["https://image.liubing.me/2019/12/26/336a94e239a5f.png","https://image.liubing.me/2019/12/26/cf4574b0e1e09.png","https://image.liubing.me/2019/12/26/b785c22afe7c2.png","https://image.liubing.me/2019/12/26/43e41f71fdb96.png","https://image.liubing.me/2019/12/26/1acb9dfe54c7a.png","https://image.liubing.me/2019/12/26/efff0fc801e0d.png","https://image.liubing.me/2019/12/26/ae97b97b95ec8.png","https://image.liubing.me/2019/12/26/b448bf6e38531.png","https://image.liubing.me/2019/12/26/add318ae96511.png","https://image.liubing.me/2019/12/26/5b68735163aca.png","https://image.liubing.me/2019/12/26/1d7b45b526df2.png","https://image.liubing.me/2019/12/26/00c9d4aa17b74.png","https://image.liubing.me/2019/12/26/62818e83c0ca7.png","https://image.liubing.me/2019/12/26/cb1aea18b95b0.png","https://image.liubing.me/2019/12/26/f685179d955a3.png","https://image.liubing.me/2019/12/26/e7198199e28a6.png","https://image.liubing.me/2019/12/26/66e2a7217386c.png","https://image.liubing.me/2019/12/26/15041760d4833.png","https://image.liubing.me/2019/12/26/d107501ee8a40.png","https://image.liubing.me/2019/12/26/2c761686d6f2a.png","https://image.liubing.me/2019/12/26/361a820e125be.png","https://image.liubing.me/2019/12/26/c4a2e95b835ac.png","https://image.liubing.me/2019/12/26/edc4314b7947d.png","https://image.liubing.me/2019/12/26/bf8aa4ae266d1.png","https://image.liubing.me/2019/12/26/42a2a5cf13274.png","https://image.liubing.me/2019/12/26/8ae35e6337fc6.png","https://image.liubing.me/2019/12/26/a56b3945a5220.png"],"datePublished":"2019-08-17T00:00:00.000Z","dateModified":"2023-06-20T14:06:59.000Z","author":[{"@type":"Person","name":"Bing🐣"}]}</script><meta name="application-name" content="Bing🐣"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#009b5e"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><link rel="icon" href="/assets/icon/chrome-mask-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-mask-192.png" type="image/png" sizes="192x192"><link rel="icon" href="/assets/icon/chrome-512.png" type="image/png" sizes="512x512"><link rel="icon" href="/assets/icon/chrome-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png"><title>uni-app 微信小程序接入人脸核身 SDK | Bing🐣</title><meta name="description" content="imageimage 这几天使用 uni-app 开发某银行的一个微信小程序，需要集成接入腾讯云的人脸核身 SDK，如上图所示，记录下整合接入过程及踩的一些坑，帮助后面需要的朋友们。关于 uni-app 接入人脸核身 SDK 有不懂的地方可以在下面提问，看到会及时回复。">
+    <link rel="preload" href="/assets/style-Bzrb4unH.css" as="style"><link rel="stylesheet" href="/assets/style-Bzrb4unH.css">
+    <link rel="modulepreload" href="/assets/app-DewMY4YL.js"><link rel="modulepreload" href="/assets/uni-app-wechat-verify-mpsdk.html-BFQkGPov.js">
+    
+  </head>
+  <body>
+    <div id="app"><!----></div>
+    <script type="module" src="/assets/app-DewMY4YL.js" defer></script>
+  </body>
+</html>
