@@ -26,6 +26,7 @@ declare module 'vue' {
     GeneratorPreview: typeof import('./../src/.vuepress/components/tools/CssTriangleGenerator/GeneratorPreview.vue')['default']
     GeneratorSize: typeof import('./../src/.vuepress/components/tools/CssTriangleGenerator/GeneratorSize.vue')['default']
     Heatmap: typeof import('./../src/.vuepress/components/Heatmap/index.vue')['default']
+    ImageUploader: typeof import('./../src/.vuepress/components/ImageUploader/index.vue')['default']
     InfoPanel: typeof import('./../src/.vuepress/components/InfoPanel/index.vue')['default']
     MacKeyboard: typeof import('./../src/.vuepress/components/MacKeyboard/index.vue')['default']
     NaiveProvider: typeof import('./../src/.vuepress/components/NaiveProvider/index.vue')['default']
