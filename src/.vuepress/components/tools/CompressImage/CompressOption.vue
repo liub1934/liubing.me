@@ -16,6 +16,17 @@
     </n-space>
 
     <div class="mt-20 flex items-center font-600">
+      图片压缩质量
+    </div>
+    <div class="flex">
+      <n-input-number v-model:value="modelQuality" placeholder="请输入" :min="1" :max="100">
+        <template #suffix>
+          %
+        </template>
+      </n-input-number>
+    </div>
+
+    <div class="mt-20 flex items-center font-600">
       图片输出尺寸
       <n-popover placement="right">
         <template #trigger>
@@ -60,6 +71,7 @@ interface OutputItem {
 
 const modelChecked = defineModel<OutputType>('checked', { required: true })
 const modelSize = defineModel<CompressSize>('size', { required: true })
+const modelQuality = defineModel<number>('quality', { required: true })
 const outputs: OutputItem[] = [
   {
     label: 'WebP',
