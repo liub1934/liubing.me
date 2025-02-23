@@ -71,6 +71,13 @@ const audioList = ref([
     cover: '/assets/music/冲动的惩罚 - 刀郎.jpg',
     lrc: '/assets/music/冲动的惩罚 - 刀郎.lrc',
   },
+  {
+    name: '黄昏 - 罗文',
+    artist: '戲說人生',
+    url: 'https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkZ1pOaHZsTjU1SHNwZUlqcjBIZk8wQmFnckU1U0NvaTlNTXg1ZU1kbktuWUE.mp3',
+    cover: '/assets/music/黄昏 - 罗文.jpg',
+    lrc: '/assets/music/黄昏 - 罗文.lrc',
+  },
 ])
 
 function onAfterEnter() {
