@@ -37,7 +37,7 @@
                 :src="activeSrc"
                 :compressed-src="activeCompressedSrc"
               />
-              <CompressOption v-model:checked="outputType" v-model:size="compressSize" />
+              <CompressOption v-model:checked="outputType" v-model:quality="quality" v-model:size="compressSize" />
               <CompressProgress
                 v-if="compressing || compressEnd"
                 :compress-list="compressList"
@@ -82,7 +82,7 @@
       </div>
       <template v-else>
         <CompressUpload @change="handleChange" />
-        <CompressOption v-model:checked="outputType" v-model:size="compressSize" class="mt-10" />
+        <CompressOption v-model:checked="outputType" v-model:quality="quality" v-model:size="compressSize" class="mt-10" />
       </template>
     </n-spin>
   </div>
@@ -107,6 +107,7 @@ const compressEnd = ref(false)
 const loadSuccess = ref(false)
 const downloadAllLoading = ref(false)
 const outputType = ref<OutputType>('webp')
+const quality = ref<number>(75)
 const compressSize = ref<CompressSize>({
   width: void 0,
   height: void 0,
@@ -209,15 +210,18 @@ async function loadModules() {
   }
 
   async function encode(imageData: ImageData) {
+    const options: any = {
+      quality: quality.value,
+    }
     switch (outputType.value) {
       case 'avif':
-        return await avif.encode(imageData)
+        return await avif.encode(imageData, options)
       case 'jpeg':
-        return await jpeg.encode(imageData)
+        return await jpeg.encode(imageData, options)
       case 'png':
         return await png.encode(imageData)
       case 'webp':
-        return await webp.encode(imageData)
+        return await webp.encode(imageData, options)
       default:
         throw new Error(`Unknown output type: ${outputType.value}`)
     }
