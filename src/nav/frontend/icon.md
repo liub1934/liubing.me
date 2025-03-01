@@ -58,6 +58,11 @@ containerClass: nav-container
   desc: 整合了N多组件库的Icon图标，提供Vue/React组件。
   link: https://xicons.org/#/zh-CN
   github: https://github.com/07akioni/xicons
+
+- icon: 'https://api.liubing.me/favicon/yesicon.app.png'
+  name: Yesicon
+  desc: 精选全球高品质、开源、免费的矢量图标库。
+  link: https://yesicon.app/
 ```
 
 :::
