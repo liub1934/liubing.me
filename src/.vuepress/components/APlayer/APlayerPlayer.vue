@@ -3,7 +3,7 @@
     relative
     min-h-90
     :class="{
-      'brightness-80': isDarkmode,
+      'brightness-80': isDarkMode,
     }"
   >
     <div
@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 import type { APlayerAudio, APlayerOptions } from 'aplayer'
 import { usePlayer } from '@/hooks'
-import { useDarkmode } from '@vuepress/helper/client'
+import { useDarkMode } from '@vuepress/helper/client'
 import { useBroadcastChannel } from '@vueuse/core'
 import { watch } from 'vue'
 import 'aplayer/dist/APlayer.min.css'
@@ -40,7 +40,7 @@ const props = defineProps<{
 }>()
 
 const { player, isCanPlay, isPlay, id } = usePlayer()
-const isDarkmode = useDarkmode()
+const isDarkMode = useDarkMode()
 const { isSupported, data, post } = useBroadcastChannel<
   PlayerPlayMessage,
   PlayerPlayMessage
