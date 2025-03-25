@@ -146,7 +146,7 @@ catch (error) {
 async function loadModules() {
   const [avif, jpeg, png, webp, { default: resize }] = await Promise.all([
     import('https://unpkg.com/@jsquash/avif@1.3.0?module'),
-    import('https://unpkg.com/@jsquash/jpeg@1.4.0?module'),
+    import('https://unpkg.com/@jsquash/jpeg@1.5.0?module'),
     import('https://unpkg.com/@jsquash/png@3.0.1?module'),
     import('https://unpkg.com/@jsquash/webp@1.4.0?module'),
     import('https://unpkg.com/@jsquash/resize@2.1.0?module'),
