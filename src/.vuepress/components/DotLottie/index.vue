@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import type { DotLottie, LoadEvent } from '@lottiefiles/dotlottie-web'
-import { useDarkmode } from '@vuepress/helper/client'
+import { useDarkMode } from '@vuepress/helper/client'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 const props = defineProps<{
@@ -23,13 +23,13 @@ const emit = defineEmits<{
   (e: 'load', event: LoadEvent): void
 }>()
 
-const isDarkmode = useDarkmode()
+const isDarkMode = useDarkMode()
 const dotLottie = ref<DotLottie | null>(null)
 const id = computed(() => {
   return `${+new Date()}-${Math.random()}`
 })
 
-watch(isDarkmode, () => {
+watch(isDarkMode, () => {
   initDotLottie()
 })
 

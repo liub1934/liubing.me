@@ -5,7 +5,7 @@ import { darkTheme, type GlobalThemeOverrides } from 'naive-ui'
 import { computed, inject, ref } from 'vue'
 
 interface NaiveTheme {
-  isDarkmode: Ref<boolean>
+  isDarkMode: Ref<boolean>
   themeConfig: Ref<NTheme.Config>
   theme: ComputedRef<BuiltInGlobalTheme | null>
   themeOverrides: ComputedRef<GlobalThemeOverrides>
@@ -18,7 +18,7 @@ const naiveThemeSymbol: InjectionKey<NaiveTheme> = Symbol(
 )
 
 export function injectNaiveTheme(app: App) {
-  const isDarkmode = ref(app.config.globalProperties.$isDarkmode)
+  const isDarkMode = ref(app.config.globalProperties.$isDarkMode)
 
   /** 主题配置 */
   const themeConfig = ref<NTheme.Config>({
@@ -30,11 +30,11 @@ export function injectNaiveTheme(app: App) {
   })
 
   /** 主题 */
-  const theme = computed(() => (isDarkmode.value ? darkTheme : null))
+  const theme = computed(() => (isDarkMode.value ? darkTheme : null))
 
   /** 主题theme-overrides */
   const themeOverrides = computed(() => {
-    return getThemeOverrides(themeConfig.value, isDarkmode.value)
+    return getThemeOverrides(themeConfig.value, isDarkMode.value)
   })
 
   /** 主题颜色 */
@@ -45,7 +45,7 @@ export function injectNaiveTheme(app: App) {
     ][]
     const colors = {} as Record<NTheme.ColorType, string[]>
     entries.forEach(([key, value]) => {
-      colors[key] = getGenerateColors(value, isDarkmode.value)
+      colors[key] = getGenerateColors(value, isDarkMode.value)
     })
     return colors
   })
@@ -59,7 +59,7 @@ export function injectNaiveTheme(app: App) {
   }
 
   app.provide(naiveThemeSymbol, {
-    isDarkmode,
+    isDarkMode,
     themeConfig,
     theme,
     themeOverrides,

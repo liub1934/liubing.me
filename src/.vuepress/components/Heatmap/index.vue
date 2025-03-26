@@ -35,17 +35,17 @@ const router = useRouter()
 const articles = useArticles()
 const postList = cloneDeep(articles.value)
   .items
-  .sort((a, b) => a.info.d! - b.info.d!)
+  .sort((a, b) => a.info.date! - b.info.date!)
   .map(item => item.info)
 
 const heatmaps = computed(() => {
-  const minYear = new Date(postList[0].d!).getFullYear()
-  const maxYear = new Date(postList[postList.length - 1].d!).getFullYear()
+  const minYear = new Date(postList[0].date!).getFullYear()
+  const maxYear = new Date(postList[postList.length - 1].date!).getFullYear()
   const counts: IHeatmap[] = []
   for (let year = minYear; year <= maxYear; year++) {
     for (let month = 1; month <= 12; month++) {
       const count = postList.filter((item) => {
-        const date = new Date(item.d!)
+        const date = new Date(item.date!)
         return date.getFullYear() === year && date.getMonth() === month - 1
       }).length
       counts.push({ year, month, counts: count })

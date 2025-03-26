@@ -3,6 +3,15 @@ toc: false
 pageInfo: false
 layout: ToolLayout
 description: 一个纯本地图片压缩工具，支持输出WebP、AVIF、JPEG格图片
+head:
+  - - script
+    - type: importmap
+    - |
+      {
+        "imports": {
+          "wasm-feature-detect": "https://unpkg.com/wasm-feature-detect@1.8.0?module"
+        }
+      }
 ---
 
 # 图片压缩

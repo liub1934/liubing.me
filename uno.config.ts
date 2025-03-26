@@ -1,10 +1,5 @@
-import presetAttributify from '@unocss/preset-attributify'
 import presetRemToPx from '@unocss/preset-rem-to-px'
-import presetUno from '@unocss/preset-uno'
-import transformerDirectives from '@unocss/transformer-directives'
-import transformerVariantGroup from '@unocss/transformer-variant-group'
-import { defineConfig } from '@unocss/vite'
-import { presetIcons } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetWind3, transformerDirectives, transformerVariantGroup } from 'unocss'
 import { generateColorCombinations } from './utils'
 
 export default defineConfig({
@@ -14,7 +9,7 @@ export default defineConfig({
     },
   },
   presets: [
-    presetUno({
+    presetWind3({
       dark: {
         dark: '[data-theme="dark"]',
       },
