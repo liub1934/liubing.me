@@ -63,6 +63,12 @@ containerClass: nav-container
   name: Yesicon
   desc: 精选全球高品质、开源、免费的矢量图标库。
   link: https://yesicon.app/
+
+- icon: 'https://api.liubing.me/favicon/svgl.app.png'
+  name: Svgl
+  desc: 一个拥有 SVG 徽标的精美图标库。
+  link: https://svgl.app/
+  github: https://github.com/pheralb/svgl
 ```
 
 :::
