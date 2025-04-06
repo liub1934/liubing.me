@@ -37,7 +37,6 @@
                   }
                   : {}
               "
-              @click="handleClick(item)"
             >
               <div
                 class="icon-content"
@@ -97,12 +96,6 @@ let state: PhotoSwipeState | null = null
 
 const list: SponsorItem[] = [
   {
-    name: 'PayPal',
-    icon: 'mdi:paypal',
-    color: '#008cff',
-    link: 'https://paypal.me/lb1937',
-  },
-  {
     name: '微信',
     icon: 'uiw:weixin',
     color: '#07c160',
@@ -122,12 +115,6 @@ onUnmounted(() => {
   state?.destroy()
   state = null
 })
-
-function handleClick(item: SponsorItem) {
-  if (item.index !== undefined) {
-    state?.open(item.index)
-  }
-}
 
 function handleUpdateShow(show: boolean) {
   if (show && !state) {

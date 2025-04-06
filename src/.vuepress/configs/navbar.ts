@@ -71,14 +71,24 @@ export const navbarConfig = navbar([
     link: '/friends/',
   },
   {
-    text: '私有图床',
-    icon: 'material-symbols:image-rounded',
-    rel: ' ',
-    link: 'https://image.liubing.me',
-  },
-  {
     text: '关于本站',
     icon: 'ix:about-filled',
     link: '/about/site',
+  },
+  {
+    text: '其他',
+    icon: 'mdi:dots-horizontal-circle',
+    children: [
+      {
+        text: '私有图床',
+        icon: 'material-symbols:image-rounded',
+        link: 'https://image.liubing.me',
+      },
+      {
+        text: '服务状态',
+        icon: 'icon-park-solid:server',
+        link: 'https://uptime.liubing.me',
+      },
+    ],
   },
 ])
