@@ -5,6 +5,13 @@
       <BloggerInfo />
     </div>
 
+    <div class="vp-blogger-info node-support flex-center">
+      <iframe
+        frameborder="0"
+        src="https://support.nodeget.com/page/promotion?id=176"
+      />
+    </div>
+
     <div class="vp-blogger-info">
       <Heatmap />
     </div>
@@ -31,5 +38,13 @@ import '@theme-hope/modules/blog/styles/info-panel.scss'
 }
 .vp-blogger-info-inner {
   position: relative;
+}
+.vp-blogger-info {
+  &.node-support {
+    padding: 0;
+    iframe {
+      height: 246px;
+    }
+  }
 }
 </style>
