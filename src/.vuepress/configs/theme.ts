@@ -45,7 +45,9 @@ export default hopeTheme(
       center: ['Links'],
       end: ['Repo', 'TravellingLink', 'APlayerButton', 'Outlook', 'Search'],
     },
-    headerDepth: 3,
+    toc: {
+      levels: 'deep',
+    },
     // 内置插件
     plugins: themePlugins,
     // markdown配置
@@ -55,8 +57,8 @@ export default hopeTheme(
     <div>
       <div>
         <span>VPS By</span>
-        <a href="https://contabo.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/contabo.com.png"><b>Contabo</b>
+        <a href="https://yxvm.com/" target="_blank" rel="noopener noreferrer">
+          <img src="https://support.nodeget.com/static/image/yxvm-logo.png">
         </a>
       </div>
       <div>
