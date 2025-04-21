@@ -57,8 +57,8 @@ export default hopeTheme(
     <div>
       <div>
         <span>VPS By</span>
-        <a href="https://contabo.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/contabo.com.png"><b>Contabo</b>
+        <a href="https://yxvm.com/" target="_blank" rel="noopener noreferrer">
+          <img src="https://support.nodeget.com/static/image/yxvm-logo.png">
         </a>
       </div>
       <div>

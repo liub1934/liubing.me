@@ -20,10 +20,10 @@ pageInfo: false
   desc: 提供免费的 CDN 服务。
   link: https://www.cloudflare.com/
 
-- icon: https://api.liubing.me/favicon/contabo.com.png
-  name: Contabo
+- icon: https://support.nodeget.com/static/image/yxvm-logo.png
+  name: YXVM
   desc: VPS 所属供应商。
-  link: https://contabo.com/
+  link: https://yxvm.com/
 
 - icon: https://api.liubing.me/favicon/1panel.cn.png
   name: 1Panel
