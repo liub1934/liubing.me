@@ -92,7 +92,7 @@ const sourceLink = frontmatter.value.sourceLink as string // 转载地址
 
 <style lang="scss" scoped>
 .article-content-after {
-  padding-bottom: 0;
+  padding: 0;
   .hint-container {
     position: relative;
     overflow: hidden;

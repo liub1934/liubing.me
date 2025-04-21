@@ -45,7 +45,9 @@ export default hopeTheme(
       center: ['Links'],
       end: ['Repo', 'TravellingLink', 'APlayerButton', 'Outlook', 'Search'],
     },
-    headerDepth: 3,
+    toc: {
+      levels: 'deep',
+    },
     // 内置插件
     plugins: themePlugins,
     // markdown配置
