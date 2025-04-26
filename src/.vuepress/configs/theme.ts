@@ -58,7 +58,7 @@ export default hopeTheme(
       <div>
         <span>VPS By</span>
         <a href="https://yxvm.com/" target="_blank" rel="noopener noreferrer">
-          <img src="https://support.nodeget.com/static/image/yxvm-logo.png">
+          YXVM
         </a>
       </div>
       <div>
