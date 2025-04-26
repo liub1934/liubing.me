@@ -58,11 +58,11 @@ export const navbarConfig = navbar([
         icon: 'icon-park-solid:compression',
         link: 'compress-image',
       },
-      {
-        text: '短视频去水印',
-        icon: 'ic:round-video-library',
-        link: 'short-video-remove-watermark',
-      },
+      // {
+      //   text: '短视频去水印',
+      //   icon: 'ic:round-video-library',
+      //   link: 'short-video-remove-watermark',
+      // },
     ],
   },
   {
