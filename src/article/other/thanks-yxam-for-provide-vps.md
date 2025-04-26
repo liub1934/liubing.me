@@ -12,6 +12,8 @@ containerClass: article-container
 
 起因是在[NodeSeek](https://www.nodeseek.com/)社区看到了[NodeSupport 永久免费服务器赞助计划](https://www.nodeseek.com/post-305185-1)的公告，参与门槛很低，对于有博客的的只需要 300 uv/月即可参与申请。
 
+<!-- more -->
+
 ## 审批门槛概览
 
 有条件的可以取申请看看，具体规则参见[NodeSupport 永久免费服务器赞助计划](https://www.nodeseek.com/post-305185-1)的公告。
