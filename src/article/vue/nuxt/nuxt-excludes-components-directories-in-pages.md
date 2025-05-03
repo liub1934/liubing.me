@@ -8,13 +8,13 @@ layout: ArticleLayout
 containerClass: article-container
 ---
 
-# Nuxt排除pages页面中的components组件目录
+# Nuxt 排除 pages 页面中的 components 组件目录
 
 通常在项目的页面开发过程中会将一整个页面分割成多个组件形式，这样也方便后续的维护，但由于 Nuxt 会为 `~/pages/` 目录中的每个页面自动创建路由，这会导致在`pages`目录中的新建的`components`目录中的组件代码也会被生成页面路由，并且是可以通过路由地址进行访问的，没有使用到的`components`组件代码也会被进行打包，这显然不是我们想要的效果，顺带记录下解决方法。
 
 <!-- more -->
 
-## 通过nuxtignore忽略
+## 通过 nuxtignore 忽略
 
 `.nuxtignore` 文件告诉 Nuxt 在构建阶段忽略项目根目录（rootDir）中的文件。
 
@@ -54,7 +54,7 @@ export default defineNuxtConfig({
       }
       // 移除pages中components目录自动生成的路由
       removePagesMatching(/\/components/, pages)
-    },
+    }
   }
 })
 ```
