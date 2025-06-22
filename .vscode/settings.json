@@ -4,8 +4,9 @@
   },
   // Start antfu's config
   // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
+  // 需要使用prettier格式化md文件，所以这2行暂时注释掉，添加.prettierignore忽略掉其他文件
+  // "prettier.enable": false,
+  // "editor.formatOnSave": false,
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
