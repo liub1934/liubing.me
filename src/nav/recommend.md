@@ -88,6 +88,11 @@ containerClass: nav-container
   name: EMOJI中文网
   desc: 非常方便的查询各种Emoji表情🤪。
   link: https://www.emojiall.com/zh-hans
+
+- icon: 'https://api.liubing.me/favicon/ogimage.click.png'
+  name: OG Image Generator
+  desc: 一个可以帮助我们快速生成社交媒体图片的在线工具。
+  link: https://ogimage.click/
 ```
 
 :::
