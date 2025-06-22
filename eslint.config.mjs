@@ -21,7 +21,7 @@ export default antfu(
        * Supports Prettier and dprint
        * By default uses Prettier
        */
-      markdown: 'prettier',
+      markdown: false,
     },
     ignores: [
       '**/node_modules/*',
@@ -29,6 +29,7 @@ export default antfu(
       '**/.vuepress/.cache/**',
       '**/.vuepress/.temp/**',
       '**/.vuepress/dist/**',
+      '**/*.md',
     ],
   },
   {
