@@ -93,6 +93,11 @@ containerClass: nav-container
   name: OG Image Generator
   desc: 一个可以帮助我们快速生成社交媒体图片的在线工具。
   link: https://ogimage.click/
+
+- icon: 'https://api.liubing.me/favicon/omnitools.app.png'
+  name: OmniTools
+  desc: 使用 OmniTools 提升您的工作效率，这是一款快速完成任务的终极工具包。
+  link: https://omnitools.app/
 ```
 
 :::
