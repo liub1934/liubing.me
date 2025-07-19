@@ -113,7 +113,7 @@ const UseTemplate = () => render()
 
 这样我们就可以用`DefineTemplate`定义需要复用的模板内容，使用`UseTemplate`在需要渲染的地方使用，非常方便，由于这 2 个组件都是函数，所以我们可以将这 2 个组件抽成一个公共的方法，方便直接引用和使用。
 
-定义一个`createReusableTemplate`方法，`return`返回一个数组，内容是`DefineTemplate`和`UseTemplate`，数组形式方便结构的时候命名，可以参考`React`的`useState`，当然你可以返回一个对象，都是可以的。
+定义一个`createReusableTemplate`方法，`return`返回一个数组，内容是`DefineTemplate`和`UseTemplate`，数组形式方便解构的时候命名，可以参考`React`的`useState`，当然你可以返回一个对象，都是可以的。
 
 ```ts title="utils.ts"
 export function createReusableTemplate() {
