@@ -87,7 +87,7 @@ export const navbarConfig = navbar([
       {
         text: '服务状态',
         icon: 'icon-park-solid:server',
-        link: 'https://uptime.liubing.me',
+        link: 'https://status.liubing.me/',
       },
     ],
   },

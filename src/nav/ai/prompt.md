@@ -74,6 +74,11 @@ containerClass: nav-container
   name: Originality.ai
   desc: AI 提示词生成器。
   link: https://originality.ai/ai-prompt-generator
+
+- icon: 'https://api.liubing.me/favicon/prompt.always200.com.png'
+  name: 提示词优化器
+  desc: 一个强大的AI提示词优化工具，帮助你编写更好的AI提示词，提升AI输出质量。
+  link: https://prompt.always200.com/
 ```
 
 :::

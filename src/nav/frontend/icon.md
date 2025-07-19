@@ -69,6 +69,12 @@ containerClass: nav-container
   desc: 一个拥有 SVG 徽标的精美图标库。
   link: https://svgl.app/
   github: https://github.com/pheralb/svgl
+
+- icon: 'https://api.liubing.me/favicon/lucide.dev.png'
+  name: Lucide
+  desc: 一款社区打造的开源美观且一致的图标工具包。
+  link: https://lucide.dev/
+  github: https://github.com/lucide-icons/lucide
 ```
 
 :::
