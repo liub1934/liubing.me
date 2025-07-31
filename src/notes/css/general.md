@@ -138,3 +138,67 @@ layout: NoteLayout
     }
   }
 </style>
+
+## Sass 媒介查询
+
+```sass
+//scss 响应式通用配置
+@use 'sass:meta';
+@use 'sass:list';
+@use 'sass:map';
+$breakpoints: (
+  'phone': (
+    320px,
+    480px
+  ),
+  'pad': (
+    481px,
+    768px
+  ),
+  'notebook': (
+    769px,
+    1024px
+  ),
+  'desktop': (
+    10245px,
+    1200px
+  ),
+  'tv': 1201px
+);
+@mixin responseTo($breakname) {
+  $bp: map.get($breakpoints, $breakname);
+  @if meta.type-of($bp) == 'list' {
+    @media (min-width: list.nth($bp,1)) and (max-width: list.nth($bp,2)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $bp) {
+      @content;
+    }
+  }
+}
+```
+
+::: tabs
+
+@tab 使用
+
+```css
+@include responseTo('notebook') {
+  div {
+    background: yellow;
+  }
+}
+```
+
+@tab 编译后
+
+```css
+@media (min-width: 769px) and (max-width: 1024px) {
+  div {
+    background: yellow;
+  }
+}
+```
+
+:::
