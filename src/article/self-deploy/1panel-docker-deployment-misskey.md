@@ -408,3 +408,15 @@ PS：就是这个目录，点击终端后执行上面的命令即可。
 最后就可以快乐的玩耍了，希望这个教程可以帮助到有需要的人 😁
 
 PS：博主也在摸索阶段...
+
+## 其他
+
+### Misskey 管理员密码重置
+
+首次安装完成后设置账号和密码的时候由于密码是用的随机生成的密码，而且忘了保存了，导致后面密码不知道是啥了，就很尴尬，网上搜了一圈也没找到相关方法，问了 GPT 也是说的改`user`表的`passwordHash`字段，关键表里面都没有这个字段，只能在和 user 相关的表里面找，然后找到了`user_profile`表，里面正好有个`password`字段，盲猜一波就是它了，先把原值复制出来备份下。
+
+![image](https://image.liubing.me/i/2025/08/01/688ccd97669e2.png)
+
+问了 GPT 得知密码是 `bcrypt` 哈希（cost 为 8）加密的，叫 GPT 给个在线工具[Bcrypt Hash Generator](https://bcrypt-generator.com/)，将`Rounds (Cost Factor)`调成`8`，`Text to Hash`输入明文密码，点击`Generate Hash`按钮生成 Hash，然后复制后替换库里面`password`的值即可。
+
+![image](https://image.liubing.me/i/2025/08/01/688cce347e9ee.png)

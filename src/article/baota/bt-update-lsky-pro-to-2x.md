@@ -14,7 +14,7 @@ containerClass: article-container
 
 # 宝塔面板升级兰空图床 Lsky Pro 到 2x 版本
 
-之前一直用的是兰空图床 Lsky Pro，版本也是 1x 的版本，里面也上传了不少的图片，最近看到该图床也升级到了 2x 的版本，看了下[升级指南](https://docs.lsky.pro/docs/free/v2/#%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97)才知道 2x 版本与 1x 存在巨大差异需要手动升级，乘着周末有时间搞一下，记录下升级过程。
+之前一直用的是兰空图床 Lsky Pro，版本也是 1x 的版本，里面也上传了不少的图片，最近看到该图床也升级到了 2x 的版本，看了下[升级指南](https://docs.lsky.pro/archive/free/v2/#%E5%8D%87%E7%BA%A7%E6%8C%87%E5%8D%97)才知道 2x 版本与 1x 存在巨大差异需要手动升级，乘着周末有时间搞一下，记录下升级过程。
 
 <!-- more -->
 
@@ -102,7 +102,7 @@ containerClass: article-container
 
 ## 数据迁移
 
-好在作者勤快提供了迁移的脚本，可以在[迁移脚本配置](https://docs.lsky.pro/docs/free/v2/#%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%E9%85%8D%E7%BD%AE)中找到，或者直接点击[下载迁移脚本](https://github.com/lsky-org/lsky-pro/releases/download/2.0/migrate.zip)。
+好在作者勤快提供了迁移的脚本，可以在[迁移脚本配置](https://docs.lsky.pro/archive/free/v2/#%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%E9%85%8D%E7%BD%AE)中找到，或者直接点击[下载迁移脚本](https://github.com/lsky-org/lsky-pro/releases/download/2.0/migrate.zip)。
 
 建议将下载的脚本上传到站点的目录下，可以在站点的根目录下新建一个`update-to-v2`的文件夹，将下载的脚本上传到该目录下并解压。
 
