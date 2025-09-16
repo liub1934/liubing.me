@@ -88,6 +88,11 @@ link: 网站链接
   name: 运维开发绿皮书
   desc: 放置我的笔记、搜集、摘录、实践，保持好奇心。看文需谨慎，后果很严重!
   link: https://geekery.cn/
+
+- icon: https://woolyun.com/wp-content/uploads/2025/05/yyl-e1746698677584.jpg
+  name: 天海博客
+  desc: 建站经验记录，实用工具推荐，免费资源分享。
+  link: https://woolyun.com/
 ```
 
 :::
