@@ -93,6 +93,11 @@ link: 网站链接
   name: 天海博客
   desc: 建站经验记录，实用工具推荐，免费资源分享。
   link: https://woolyun.com/
+
+- icon: https://blog.ooliver.cn/wp-content/uploads/2025/08/1755862991-%E5%A4%B4%E5%83%8F.jpg
+  name: ooliver的博客
+  desc: 分OI笔记分享，个人闲话记录
+  link: https://blog.ooliver.cn/
 ```
 
 :::
