@@ -16,12 +16,6 @@ containerClass: nav-container
   link: https://vant.pro/vant/
   github: https://github.com/vant-ui/vant
 
-- icon: 'https://api.liubing.me/favicon/vant.pro.png'
-  name: Vant Weapp
-  desc: 轻量、可靠的小程序 UI 组件库。
-  link: https://vant.pro/vant-weapp/
-  github: https://github.com/youzan/vant-weapp
-
 - icon: 'https://api.liubing.me/favicon/nutui.jd.com.png'
   name: Naive UI
   desc: 京东风格的轻量级移动端 Vue 组件库。
@@ -63,8 +57,8 @@ containerClass: nav-container
 - icon: 'https://api.liubing.me/favicon/vant.pro.png'
   name: Vant Weapp
   desc: 轻量、可靠的小程序 UI 组件库。
-  link: https://vant.pro/vant-weapp
-  github: https://github.com/vant-ui/vant
+  link: https://vant.pro/vant-weapp/
+  github: https://github.com/youzan/vant-weapp
 
 - icon: 'https://api.liubing.me/favicon/mini.ant.design.png'
   name: Ant Design Mini

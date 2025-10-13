@@ -121,7 +121,7 @@ containerClass: nav-container
   github: https://github.com/shadcn-ui/ui
 
 - icon: 'https://api.liubing.me/favicon/flyonui.com.png'
-  name: shadcn/ui
+  name: Flyon UI
   desc: 一个开源的 Tailwind CSS 组件库，具有语义类和强大的 JS 插件。
   link: https://flyonui.com/
   github: https://github.com/themeselection/flyonui
