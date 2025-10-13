@@ -1,6 +1,6 @@
 import type { Theme } from 'vuepress'
 import { hopeTheme } from 'vuepress-theme-hope'
-import packageData from '../../../package.json' assert { type: 'json' }
+import packageData from '../../../package.json' with { type: 'json' }
 import { ArticleInfo, AuthorName, Description, HostName, Repo } from '../utils'
 import { markdownOptions } from './markdown'
 import { navbarConfig } from './navbar'
