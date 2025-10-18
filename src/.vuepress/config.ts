@@ -30,8 +30,9 @@ export default defineUserConfig({
       __dirname,
       '../../node_modules/vuepress-theme-hope/lib/client',
     ),
-    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel,
-    '@theme-hope/components/PageFooter': PageFooter,
+    // 替换内置组件
+    '@theme-hope/components/blog/InfoPanel': InfoPanel,
+    '@theme-hope/components/base/PageFooter': PageFooter,
   },
   plugins: configPlugins,
   bundler: viteBundler({

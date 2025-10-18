@@ -6,16 +6,14 @@
 
 <script lang="ts" setup>
 import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
-import { BlogStartDate, calculateRuntime } from '@/utils'
+import { useData } from '@theme-hope/composables/useData'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import { useThemeLocaleData } from 'vuepress-theme-hope/client/composables/index.js'
-import { usePageFrontmatter } from 'vuepress/client'
 import { isString } from 'vuepress/shared'
-import '@theme-hope/styles/page-footer.scss'
+import { BlogStartDate, calculateRuntime } from '@/utils'
+import '@theme-hope/styles/base/page-footer.scss'
 
 let timerInterval: IntervalHandle | null
-const frontmatter = usePageFrontmatter<ThemeNormalPageFrontmatter>()
-const themeLocale = useThemeLocaleData()
+const { frontmatter, themeLocale } = useData<ThemeNormalPageFrontmatter>()
 const $el = ref<HTMLElement | null>(null)
 const startDate = BlogStartDate
 

@@ -2,7 +2,7 @@
   <div class="vp-nav-item">
     <button
       type="button"
-      class="vp-outlook-button flex-center"
+      class="vp-appearance-button flex-center"
       tabindex="-1"
       aria-hidden="true"
       aria-label="听个音乐吧"

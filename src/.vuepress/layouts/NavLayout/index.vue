@@ -1,8 +1,8 @@
 <template>
   <NaiveProvider>
     <SkipLink />
-    <CommonWrapper>
-      <NormalPage>
+    <MainLayout>
+      <PageContent>
         <template #contentBefore>
           <div vp-content class="theme-hope-content custom-content-before">
             <div class="hint-container tip">
@@ -22,17 +22,17 @@
             <SponsorButton />
           </ClientOnly>
         </template>
-      </NormalPage>
-    </CommonWrapper>
+      </PageContent>
+    </MainLayout>
   </NaiveProvider>
 </template>
 
 <script setup lang="ts">
-import AutoLink from '@theme-hope/components/AutoLink'
-import CommonWrapper from '@theme-hope/components/CommonWrapper'
-import NormalPage from '@theme-hope/components/NormalPage'
-import SkipLink from '@theme-hope/components/SkipLink'
-import { useEditLink } from '@theme-hope/modules/info/composables/index'
+import AutoLink from '@theme-hope/components/base/AutoLink'
+import MainLayout from '@theme-hope/components/base/MainLayout'
+import PageContent from '@theme-hope/components/base/PageContent'
+import SkipLink from '@theme-hope/components/base/SkipLink'
+import { useEditLink } from '@theme-hope/composables/info/useEditLink'
 
 const editLink = useEditLink()
 </script>

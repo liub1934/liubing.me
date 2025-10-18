@@ -1,8 +1,8 @@
 <template>
   <NaiveProvider>
     <SkipLink />
-    <CommonWrapper>
-      <NormalPage>
+    <MainLayout>
+      <PageContent>
         <template #contentAfter>
           <div vp-content class="theme-hope-content article-content-after">
             <ClientOnly>
@@ -61,30 +61,27 @@
             </div>
           </div>
         </template>
-      </NormalPage>
-    </CommonWrapper>
+      </PageContent>
+    </MainLayout>
   </NaiveProvider>
 </template>
 
 <script setup lang="ts">
 import type { ThemeNormalPageFrontmatter } from 'vuepress-theme-hope'
+import MainLayout from '@theme-hope/components/base/MainLayout'
+import PageContent from '@theme-hope/components/base/PageContent'
+import SkipLink from '@theme-hope/components/base/SkipLink'
+import { useData } from '@theme-hope/composables'
 import { HostName } from '@/utils'
-import CommonWrapper from '@theme-hope/components/CommonWrapper'
-import NormalPage from '@theme-hope/components/NormalPage'
-import SkipLink from '@theme-hope/components/SkipLink'
-import { useThemeData } from '@theme-hope/composables/index'
-import { usePageData, usePageFrontmatter } from '@vuepress/client'
 
 interface PageFrontmatter extends ThemeNormalPageFrontmatter {
   source?: string
   sourceLink?: string
 }
 
-const page = usePageData()
-const themeData = useThemeData()
-const frontmatter = usePageFrontmatter<PageFrontmatter>()
+const { frontmatter, theme, page } = useData<PageFrontmatter>()
 const title = page.value.title // 文章标题
-const author = frontmatter.value.author || themeData.value.author // 文章作者
+const author = frontmatter.value.author || theme.value.author // 文章作者
 const path = HostName + page.value.path // 文章链接
 const source = frontmatter.value.source as string // 转载来源
 const sourceLink = frontmatter.value.sourceLink as string // 转载地址

@@ -37,6 +37,7 @@ export default antfu(
       'no-console': 'off',
       'node/prefer-global/process': 'off',
       'symbol-description': 'off',
+      '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
     },
   },
   {

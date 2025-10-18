@@ -90,11 +90,11 @@
 
 <script lang="ts" setup>
 import type { CompressSize, OutputType, UploadImage } from './interface'
-import { downloadFile, getErrorInfo, getImageSize } from '@/utils'
 import { downloadZip } from 'client-zip'
 import { cloneDeep } from 'lodash-es'
 import { useDialog } from 'naive-ui'
 import { computed, ref } from 'vue'
+import { downloadFile, getErrorInfo, getImageSize } from '@/utils'
 
 const dialog = useDialog()
 const defaultCompressList = ref<UploadImage[]>([])
@@ -146,9 +146,9 @@ catch (error) {
 async function loadModules() {
   const [avif, jpeg, png, webp, { default: resize }] = await Promise.all([
     import('https://unpkg.com/@jsquash/avif@1.3.0?module'),
-    import('https://unpkg.com/@jsquash/jpeg@1.5.0?module'),
-    import('https://unpkg.com/@jsquash/png@3.0.1?module'),
-    import('https://unpkg.com/@jsquash/webp@1.4.0?module'),
+    import('https://unpkg.com/@jsquash/jpeg@1.6.0?module'),
+    import('https://unpkg.com/@jsquash/png@3.1.1?module'),
+    import('https://unpkg.com/@jsquash/webp@1.5.0?module'),
     import('https://unpkg.com/@jsquash/resize@2.1.0?module'),
   ])
 
