@@ -14,6 +14,6 @@
 </template>
 
 <script lang="ts" setup>
-import BlogWrapper from '@theme-hope/modules/blog/components/BlogWrapper'
-import InfoPanel from '@theme-hope/modules/blog/components/InfoPanel'
+import BlogWrapper from '@theme-hope/components/blog/BlogMainLayout'
+import InfoPanel from '@theme-hope/components/blog/InfoPanel'
 </script>

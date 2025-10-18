@@ -1,14 +1,14 @@
 import type { InjectionKey, Ref } from 'vue'
 
-export type DirectionType =
-  | 'top'
-  | 'right'
-  | 'bottom'
-  | 'left'
-  | 'topLeft'
-  | 'topRight'
-  | 'bottomLeft'
-  | 'bottomRight'
+export type DirectionType
+  = | 'top'
+    | 'right'
+    | 'bottom'
+    | 'left'
+    | 'topLeft'
+    | 'topRight'
+    | 'bottomLeft'
+    | 'bottomRight'
 
 /**
  * 三角形类型：

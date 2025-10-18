@@ -1,6 +1,6 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 icon: home
 title: 首页
 description: 一个基于VuePress的个人博客。

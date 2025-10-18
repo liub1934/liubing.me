@@ -1,6 +1,7 @@
-import { useNaiveTheme } from '@/hooks'
-import { type ConfigProviderProps, createDiscreteApi } from 'naive-ui'
+import type { ConfigProviderProps } from 'naive-ui'
+import { createDiscreteApi } from 'naive-ui'
 import { computed, onMounted } from 'vue'
+import { useNaiveTheme } from '@/hooks'
 
 /**
  * 挂载 Naive-ui 脱离上下文的 API，方便在全局使用

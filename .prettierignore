@@ -3,7 +3,9 @@
 **/*.jsx
 **/*.ts
 **/*.tsx
+**/*.mjs
 **/*.vue
 **/*.json
 **/*.html
 **/*.yaml
+**/*.json

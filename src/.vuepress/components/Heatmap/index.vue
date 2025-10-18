@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useArticles } from '@theme-hope/modules/blog/composables/index'
+import { useArticles } from '@theme-hope/composables/blog/useArticles'
 import { cloneDeep } from 'lodash-es'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
@@ -35,12 +35,16 @@ const router = useRouter()
 const articles = useArticles()
 const postList = cloneDeep(articles.value)
   .items
+  .filter(item => item.info.date)
   .sort((a, b) => a.info.date! - b.info.date!)
   .map(item => item.info)
 
 const heatmaps = computed(() => {
-  const minYear = new Date(postList[0].date!).getFullYear()
-  const maxYear = new Date(postList[postList.length - 1].date!).getFullYear()
+  if (postList.length === 0) {
+    return []
+  }
+  const minYear = new Date(postList[0]?.date!).getFullYear()
+  const maxYear = new Date(postList[postList.length - 1]?.date!).getFullYear()
   const counts: IHeatmap[] = []
   for (let year = minYear; year <= maxYear; year++) {
     for (let month = 1; month <= 12; month++) {

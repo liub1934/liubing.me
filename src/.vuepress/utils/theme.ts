@@ -1,11 +1,12 @@
+import type { GlobalThemeOverrides } from 'naive-ui'
 import { generate } from '@ant-design/colors'
 import { colord } from 'colord'
 import { kebabCase, upperFirst } from 'lodash-es'
-import { commonDark, commonLight, type GlobalThemeOverrides } from 'naive-ui'
+import { commonDark, commonLight } from 'naive-ui'
 
 type ColorKey = `${NTheme.ColorType}Color${NTheme.ColorSceneCase}`
-type ButtonColorKey =
-  `textColor${NTheme.ButtonColorSceneCase}${NTheme.ColorTypeCase}`
+type ButtonColorKey
+  = `textColor${NTheme.ButtonColorSceneCase}${NTheme.ColorTypeCase}`
 type ThemeColor = Partial<Record<ColorKey, string>>
 interface CssObject {
   [key: string]: string
@@ -103,18 +104,18 @@ export function getThemeColors(
   const themeColor: ThemeColor = {}
   const keys = Object.keys(config) as NTheme.ColorType[]
   const colorActions: ColorAction[] = [
-    { scene: '', handler: color => getGenerateColors(color, darkMode)[5] },
+    { scene: '', handler: color => getGenerateColors(color, darkMode)[5]! },
     {
       scene: 'Hover',
-      handler: color => getGenerateColors(color, darkMode)[4],
+      handler: color => getGenerateColors(color, darkMode)[4]!,
     },
     {
       scene: 'Suppl',
-      handler: color => getGenerateColors(color, darkMode)[4],
+      handler: color => getGenerateColors(color, darkMode)[4]!,
     },
     {
       scene: 'Pressed',
-      handler: color => getGenerateColors(color, darkMode)[6],
+      handler: color => getGenerateColors(color, darkMode)[6]!,
     },
   ]
   keys.forEach((key) => {
@@ -169,7 +170,9 @@ export function parseCssText(cssText: string): CssObject {
   cssText.split(';').forEach((rule) => {
     if (rule) {
       const [key, value] = rule.split(':')
-      cssObj[key.trim()] = value.trim()
+      if (key && value) {
+        cssObj[key.trim()] = value.trim()
+      }
     }
   })
   return cssObj

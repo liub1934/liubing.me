@@ -3,9 +3,10 @@
  * 项目根目录执行脚本：npm run compress-svg
  */
 
+import type { Config } from 'svgo'
 import { readdir, readFile, writeFile } from 'node:fs'
 import * as path from 'node:path'
-import { type Config, optimize } from 'svgo'
+import { optimize } from 'svgo'
 
 // 需要处理的svg目录
 const relativeSvgDirectories: string[] = [

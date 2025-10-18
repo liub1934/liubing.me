@@ -29,8 +29,8 @@
 </template>
 
 <script lang="ts" setup>
-import { usePlayer } from '@/hooks'
 import { nextTick, ref } from 'vue'
+import { usePlayer } from '@/hooks'
 import APlayerPlayer from './APlayerPlayer.vue'
 
 const { isShowPlayer } = usePlayer()

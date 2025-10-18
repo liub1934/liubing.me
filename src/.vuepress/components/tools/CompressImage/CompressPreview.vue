@@ -38,7 +38,7 @@
         <template #resize-trigger>
           <div class="relative z-1 h-full bg-primary">
             <div
-              class="size-40 flex items-center border-2 border-primary rounded-1/2 border-solid absolute-center"
+              class="absolute-center size-40 flex items-center border-2 border-primary rounded-1/2 border-solid"
             >
               <span class="i-ri-arrow-left-s-fill text-22 color-primary" />
               <span

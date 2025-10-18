@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts" setup>
-import NotFound from '@theme-hope/layouts/NotFound'
+import NotFound from '@theme-hope/layouts/base/NotFound'
 import { useDarkMode } from '@vuepress/helper/client'
 import { computed, ref } from 'vue'
 
