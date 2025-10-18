@@ -36,7 +36,7 @@
               @click="modelValue = item.value"
             />
           </div>
-          <div class="size-38 bg-white absolute-center" />
+          <div class="absolute-center size-38 bg-white" />
           <n-radio
             v-for="(item, index) in directions"
             :id="item.value + index"

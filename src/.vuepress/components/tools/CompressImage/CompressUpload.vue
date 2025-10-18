@@ -8,8 +8,8 @@
 
 <script lang="ts" setup>
 import type { UploadImage } from './interface'
-import { getFileName } from '@/utils'
 import { uniqueId } from 'lodash-es'
+import { getFileName } from '@/utils'
 
 const emit = defineEmits<{
   change: [data: UploadImage[]]

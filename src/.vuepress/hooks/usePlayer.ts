@@ -1,9 +1,12 @@
 import type APlayer from 'aplayer'
-import { type App, inject, type InjectionKey, ref, type Ref } from 'vue'
+import type { App, InjectionKey, Ref } from 'vue'
+import { inject, ref } from 'vue'
+
+type APlayerInstance = InstanceType<typeof APlayer>
 
 interface Player {
   /** 播放器实例 */
-  player: Ref<APlayer | null>
+  player: Ref<APlayerInstance | null>
   /** 是否展示播放器 */
   isShowPlayer: Ref<boolean>
   /** 是否支持播放 */
@@ -17,7 +20,7 @@ const playerSymbol: InjectionKey<Player> = Symbol(
   __VUEPRESS_DEV__ ? 'player' : '',
 )
 export function injectPlayer(app: App) {
-  const player = ref<APlayer | null>(null)
+  const player = ref<APlayerInstance | null>(null)
   const isShowPlayer = ref(false)
   const isCanPlay = ref(false)
   const isPlay = ref(false)

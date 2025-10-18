@@ -23,10 +23,10 @@
 
 <script lang="ts" setup>
 import type { APlayerAudio, APlayerOptions } from 'aplayer'
-import { usePlayer } from '@/hooks'
 import { useDarkMode } from '@vuepress/helper/client'
 import { useBroadcastChannel } from '@vueuse/core'
 import { watch } from 'vue'
+import { usePlayer } from '@/hooks'
 import 'aplayer/dist/APlayer.min.css'
 
 interface PlayerPlayMessage {

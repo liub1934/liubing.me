@@ -25,15 +25,16 @@
 </template>
 
 <script lang="ts" setup>
-import { copyText } from '@/utils'
+import type { DirectionType, TriangleSize } from './generator'
 import { useDarkMode } from '@vuepress/helper/client'
 import { computed, inject } from 'vue'
+import { copyText } from '@/utils'
 import {
   ColorKey,
   DirectionKey,
-  type DirectionType,
+
   TriangleKey,
-  type TriangleSize,
+
   TriangleSizeKey,
   UnitKey,
 } from './generator'

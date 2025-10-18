@@ -26,12 +26,13 @@
 </template>
 
 <script lang="ts" setup>
+import type { DirectionType, TriangleSize } from './generator'
 import { inject, watch } from 'vue'
 import {
   DirectionKey,
-  type DirectionType,
+
   TriangleKey,
-  type TriangleSize,
+
 } from './generator'
 
 interface SizeItem {

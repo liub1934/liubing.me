@@ -1,11 +1,11 @@
 type ColorTypes = NTheme.ColorType
 type ColorScenes = Exclude<NTheme.ButtonColorScene, ''>
 type ColorNumber = `${1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10}`
-type ColorVariable =
-  | ColorTypes
-  | `${ColorTypes}-${ColorNumber}`
-  | `${ColorTypes}-${ColorScenes}`
-  | `${ColorTypes}-${ColorScenes}-${ColorNumber}`
+type ColorVariable
+  = | ColorTypes
+    | `${ColorTypes}-${ColorNumber}`
+    | `${ColorTypes}-${ColorScenes}`
+    | `${ColorTypes}-${ColorScenes}-${ColorNumber}`
 
 export function generateColorCombinations(): Record<ColorVariable, string> {
   const colorTypes: ColorTypes[] = [

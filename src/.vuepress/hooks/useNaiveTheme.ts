@@ -1,8 +1,9 @@
+import type { GlobalThemeOverrides } from 'naive-ui'
 import type { BuiltInGlobalTheme } from 'naive-ui/es/themes/interface'
 import type { App, ComputedRef, InjectionKey, Ref } from 'vue'
-import { getGenerateColors, getThemeOverrides } from '@/utils'
-import { darkTheme, type GlobalThemeOverrides } from 'naive-ui'
+import { darkTheme } from 'naive-ui'
 import { computed, inject, ref } from 'vue'
+import { getGenerateColors, getThemeOverrides } from '@/utils'
 
 interface NaiveTheme {
   isDarkMode: Ref<boolean>

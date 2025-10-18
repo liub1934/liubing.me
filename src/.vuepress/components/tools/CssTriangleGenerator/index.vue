@@ -13,15 +13,16 @@
 </template>
 
 <script lang="ts" setup>
+import type { DirectionType, TriangleSize, TriangleType } from './generator'
 import { provide, ref } from 'vue'
 import {
   ColorKey,
   DirectionKey,
-  type DirectionType,
+
   TriangleKey,
-  type TriangleSize,
+
   TriangleSizeKey,
-  type TriangleType,
+
   UnitKey,
 } from './generator'
 

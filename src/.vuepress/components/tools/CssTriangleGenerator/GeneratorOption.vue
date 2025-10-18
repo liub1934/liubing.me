@@ -17,11 +17,11 @@
 </template>
 
 <script lang="ts" setup>
+import type { DirectionType, TriangleType } from './generator'
 import { inject, watch } from 'vue'
 import {
   DirectionKey,
-  type DirectionType,
-  type TriangleType,
+
 } from './generator'
 
 interface Option {

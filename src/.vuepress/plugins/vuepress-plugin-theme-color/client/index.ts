@@ -1,9 +1,9 @@
-import { useNaiveTheme } from '@/hooks'
-import { addCssVarsToHtml, getThemeColor, getThemeColors } from '@/utils'
 import { useDarkMode } from '@vuepress/helper/client'
 import { useMutationObserver } from '@vueuse/core'
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { defineClientConfig } from 'vuepress/client'
+import { useNaiveTheme } from '@/hooks'
+import { addCssVarsToHtml, getThemeColor, getThemeColors } from '@/utils'
 
 export default defineClientConfig({
   setup() {
