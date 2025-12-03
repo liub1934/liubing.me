@@ -80,6 +80,11 @@ export const navbarConfig = navbar([
     icon: 'mdi:dots-horizontal-circle',
     children: [
       {
+        text: '随语',
+        icon: 'solar:notes-bold',
+        link: 'https://m.liubing.me/',
+      },
+      {
         text: '私有图床',
         icon: 'material-symbols:image-rounded',
         link: 'https://image.liubing.me',
