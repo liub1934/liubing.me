@@ -1,5 +1,5 @@
 import type { PluginConfig } from 'vuepress'
-import type { PluginsOptions } from 'vuepress-theme-hope'
+import type { ThemePluginsOptions } from 'vuepress-theme-hope'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { renderProjects } from '../containers'
@@ -24,7 +24,7 @@ export const configPlugins: PluginConfig = [
 ]
 
 // 主题内置插件配置
-export const themePlugins: PluginsOptions = {
+export const themePlugins: ThemePluginsOptions = {
   icon: {
     assets: 'iconify',
   },
