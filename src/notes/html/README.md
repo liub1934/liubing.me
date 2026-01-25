@@ -1,7 +1,7 @@
 ---
 index: false
 dir:
-  order: 1
+  order: 10
 layout: NoteLayout
 ---
 

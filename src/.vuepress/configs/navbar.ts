@@ -22,6 +22,11 @@ export const navbarConfig = navbar([
         link: 'js/',
       },
       {
+        text: 'TypeScript',
+        icon: 'mdi:language-typescript',
+        link: 'ts/',
+      },
+      {
         text: 'CSS',
         icon: 'mdi:language-css3',
         link: 'css/',
