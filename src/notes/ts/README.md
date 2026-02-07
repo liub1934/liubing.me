@@ -2,10 +2,10 @@
 index: false
 toc: false
 dir:
-  order: 50
+  order: 40
 layout: NoteLayout
 ---
 
-# Vue
+# TypeScript
 
 <Catalog />
