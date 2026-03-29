@@ -64,25 +64,25 @@ export default hopeTheme(
       <div>
         <span>CDN By</span>
         <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/cloudflare.com.png"><b>Cloudflare</b>
+          <img src="https://favicon.liubing.me/cloudflare.com.png"><b>Cloudflare</b>
         </a>
       </div>
       <div>
         <span>Server by</span>
         <a href="https://1panel.cn/" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/1panel.cn.png"><b>1Panel</b>
+          <img src="https://favicon.liubing.me/1panel.cn.png"><b>1Panel</b>
         </a>
       </div>
       <div>
         <span>Powered By</span>
         <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/vuepress.vuejs.org.png"><b>VuePress</b>
+          <img src="https://favicon.liubing.me/vuepress.vuejs.org.png"><b>VuePress</b>
         </a>
       </div>
       <div>
         <span>Theme By</span>
         <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/theme-hope.vuejs.press.png"><b>VuePress Theme Hope</b>
+          <img src="https://favicon.liubing.me/theme-hope.vuejs.press.png"><b>VuePress Theme Hope</b>
         </a>
       </div>
       <div>

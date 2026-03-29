@@ -10,7 +10,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: 'https://api.liubing.me/favicon/kuwo.cn.png'
+- icon: 'https://favicon.liubing.me/kuwo.cn.png'
   name: 酷我音乐
   link: https://www.123pan.com/s/FBM5Vv-rpVHA.html
 ```
