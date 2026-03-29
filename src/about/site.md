@@ -15,7 +15,7 @@ pageInfo: false
 ::: projects
 
 ```yaml
-- icon: https://api.liubing.me/favicon/cloudflare.com.png
+- icon: https://favicon.liubing.me/cloudflare.com.png
   name: Cloudflare
   desc: 提供免费的 CDN 服务。
   link: https://www.cloudflare.com/
@@ -25,27 +25,27 @@ pageInfo: false
   desc: VPS 所属供应商。
   link: https://yxvm.com/
 
-- icon: https://api.liubing.me/favicon/1panel.cn.png
+- icon: https://favicon.liubing.me/1panel.cn.png
   name: 1Panel
   desc: 用来管理 VPS
   link: https://1panel.cn/
 
-- icon: https://api.liubing.me/favicon/vuepress.vuejs.org.png
+- icon: https://favicon.liubing.me/vuepress.vuejs.org.png
   name: VuePress
   desc: 博客驱动引擎。
   link: https://vuepress.vuejs.org/zh/
 
-- icon: https://api.liubing.me/favicon/theme-hope.vuejs.press.png
+- icon: https://favicon.liubing.me/theme-hope.vuejs.press.png
   name: VuePress Theme Hope
   desc: 本站博客所用主题
   link: https://theme-hope.vuejs.press/zh/
 
-- icon: https://api.liubing.me/favicon/circleci.com.png
+- icon: https://favicon.liubing.me/circleci.com.png
   name: Circle CI
   desc: 本站自动化打包构建发布工具。
   link: https://circleci.com/
 
-- icon: https://api.liubing.me/favicon/giscus.app.png
+- icon: https://favicon.liubing.me/giscus.app.png
   name: Giscus
   desc: 本站评论所用服务。
   link: https://giscus.app/

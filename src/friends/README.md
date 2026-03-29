@@ -26,22 +26,22 @@ link: 网站链接
 ::: projects friends
 
 ```yaml
-- icon: https://api.liubing.me/favicon/vuejs.org.png
+- icon: https://favicon.liubing.me/vuejs.org.png
   name: Vue
   desc: 渐进式 JavaScript 框架
   link: https://cn.vuejs.org/
 
-- icon: https://api.liubing.me/favicon/vuepress.vuejs.org.png
+- icon: https://favicon.liubing.me/vuepress.vuejs.org.png
   name: VuePress
   desc: Vue 驱动的静态网站生成器。
   link: https://vuepress.vuejs.org/zh/
 
-- icon: https://api.liubing.me/favicon/theme-hope.vuejs.press.png
+- icon: https://favicon.liubing.me/theme-hope.vuejs.press.png
   name: VuePress Theme Hope
   desc: 一个具有强大功能的 vuepress 主题✨
   link: https://theme-hope.vuejs.press/zh/
 
-- icon: https://api.liubing.me/favicon/iconfont.cn.png
+- icon: https://favicon.liubing.me/iconfont.cn.png
   name: iconfont
   desc: 阿里巴巴矢量图标库。
   link: https://www.iconfont.cn/

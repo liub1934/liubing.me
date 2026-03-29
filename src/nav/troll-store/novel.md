@@ -10,7 +10,7 @@ containerClass: nav-container
 ::: projects
 
 ```yaml
-- icon: 'https://api.liubing.me/favicon/fanqienovel.com.png'
+- icon: 'https://favicon.liubing.me/fanqienovel.com.png'
   name: 番茄小说
   link: https://www.123pan.com/s/FBM5Vv-8pVHA.html
 
