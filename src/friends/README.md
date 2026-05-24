@@ -98,6 +98,11 @@ link: 网站链接
   name: ooliver的博客
   desc: 分OI笔记分享，个人闲话记录
   link: https://blog.ooliver.cn/
+
+- icon: https://undz.cn/logo.png
+  name: undz
+  desc: Protect What You Love
+  link: https://undz.cn/
 ```
 
 :::
