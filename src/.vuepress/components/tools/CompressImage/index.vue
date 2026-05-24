@@ -149,7 +149,7 @@ async function loadModules() {
     import('https://unpkg.com/@jsquash/jpeg@1.6.0?module'),
     import('https://unpkg.com/@jsquash/png@3.1.1?module'),
     import('https://unpkg.com/@jsquash/webp@1.5.0?module'),
-    import('https://unpkg.com/@jsquash/resize@2.1.0?module'),
+    import('https://unpkg.com/@jsquash/resize@2.1.1?module'),
   ])
 
   showSpin.value = false
@@ -161,7 +161,7 @@ async function loadModules() {
     percentage.value = 0
     compressList.value = cloneDeep(defaultCompressList.value)
     for (let index = 0; index < compressList.value.length; index++) {
-      const item = compressList.value[index]
+      const item = compressList.value[index]!
       try {
         const sourceType = item.file.type.replace('image/', '') as OutputType
         item.status = 'processing'
@@ -253,7 +253,7 @@ function handleChange(list: UploadImage[]) {
   defaultCompressList.value = list
   compressList.value = list
   if (!active.value && list.length) {
-    active.value = list[0].id
+    active.value = list[0]!.id
   }
 }
 

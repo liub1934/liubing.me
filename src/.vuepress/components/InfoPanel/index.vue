@@ -40,6 +40,7 @@ import '@theme-hope/styles/blog/info-panel.scss'
   position: relative;
 }
 .vp-blogger-info {
+  overflow: hidden;
   &.node-support {
     padding: 0;
     iframe {

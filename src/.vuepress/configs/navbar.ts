@@ -63,11 +63,6 @@ export const navbarConfig = navbar([
         icon: 'icon-park-solid:compression',
         link: 'compress-image',
       },
-      // {
-      //   text: '短视频去水印',
-      //   icon: 'ic:round-video-library',
-      //   link: 'short-video-remove-watermark',
-      // },
     ],
   },
   {
@@ -85,6 +80,11 @@ export const navbarConfig = navbar([
     icon: 'mdi:dots-horizontal-circle',
     children: [
       {
+        text: '随语',
+        icon: 'solar:notes-bold',
+        link: 'https://moment.liubing.me',
+      },
+      {
         text: '私有图床',
         icon: 'material-symbols:image-rounded',
         link: 'https://image.liubing.me',
@@ -92,7 +92,7 @@ export const navbarConfig = navbar([
       {
         text: '服务状态',
         icon: 'icon-park-solid:server',
-        link: 'https://status.liubing.me/',
+        link: 'https://status.liubing.me',
       },
     ],
   },
