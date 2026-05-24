@@ -6,7 +6,7 @@
     "paths": {
       "@/*": ["src/.vuepress/*"],
       "@websites/*": ["src/.vuepress/public/assets/websites/*"],
-      "@theme-hope/*": ["node_modules/vuepress-theme-hope/lib/client/*"]
+      "@theme-hope/*": ["node_modules/vuepress-theme-hope/dist/client/*"]
     },
     "noEmit": true
   },

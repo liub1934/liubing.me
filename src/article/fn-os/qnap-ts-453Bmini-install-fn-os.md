@@ -164,6 +164,7 @@ containerClass: article-container
    ```sh
     sudo systemctl daemon-reload
     sudo systemctl enable --now qnap8528-load.service
+    sudo systemctl status qnap8528-load.service
    ```
 
    如果有显示`active`即正常。

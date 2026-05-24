@@ -1,6 +1,8 @@
 import { defineClientConfig } from 'vuepress/client'
 import APlayerButton from './components/APlayer/APlayerButton.vue'
 import APlayer from './components/APlayer/index.vue'
+import CompressImage from './components/tools/CompressImage/index.vue'
+import CssTriangleGenerator from './components/tools/CssTriangleGenerator/index.vue'
 import TravellingLink from './components/TravellingLink/index.vue'
 import { injectNaiveTheme, injectPlayer } from './hooks'
 import ArticleLayout from './layouts/ArticleLayout/index.vue'
@@ -28,6 +30,8 @@ export default defineClientConfig({
     injectPlayer(app)
     app.component('TravellingLink', TravellingLink)
     app.component('APlayerButton', APlayerButton)
+    app.component('CompressImage', CompressImage)
+    app.component('CssTriangleGenerator', CssTriangleGenerator)
   },
   rootComponents: [APlayer],
 })

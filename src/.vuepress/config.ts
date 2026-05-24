@@ -28,7 +28,7 @@ export default defineUserConfig({
     '@websites': path.resolve(__dirname, './public/assets/websites'),
     '@theme-hope': path.resolve(
       __dirname,
-      '../../node_modules/vuepress-theme-hope/lib/client',
+      '../../node_modules/vuepress-theme-hope/dist/client',
     ),
     // 替换内置组件
     '@theme-hope/components/blog/InfoPanel': InfoPanel,

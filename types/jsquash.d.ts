@@ -7,7 +7,7 @@ declare module 'https://unpkg.com/@jsquash/jpeg@1.6.0?module' {
 declare module 'https://unpkg.com/@jsquash/png@3.1.1?module' {
   export * from '@jsquash/png'
 }
-declare module 'https://unpkg.com/@jsquash/resize@2.1.0?module' {
+declare module 'https://unpkg.com/@jsquash/resize@2.1.1?module' {
   export default function resize(data: ImageData, overrideOptions: {
     width: number
     height: number

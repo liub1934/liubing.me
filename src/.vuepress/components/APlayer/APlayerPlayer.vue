@@ -22,7 +22,9 @@
 </template>
 
 <script lang="ts" setup>
+import type APlayerClass from 'aplayer'
 import type { APlayerAudio, APlayerOptions } from 'aplayer'
+import type { Ref } from 'vue'
 import { useDarkMode } from '@vuepress/helper/client'
 import { useBroadcastChannel } from '@vueuse/core'
 import { watch } from 'vue'
@@ -33,6 +35,8 @@ interface PlayerPlayMessage {
   id: string
   play: boolean
 }
+
+type PlayerInstance = Ref<InstanceType<typeof APlayerClass> | null>
 
 const props = defineProps<{
   audio: APlayerAudio[]
@@ -86,7 +90,7 @@ watch(data, () => {
 })
 
 defineExpose({
-  player,
+  player: player as PlayerInstance,
   initPlayer,
 })
 </script>
