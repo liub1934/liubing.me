@@ -30,12 +30,12 @@ jobs:
           name: Install pnpm package manager
           command: |
             corepack enable
-            corepack prepare pnpm@8.15.8 --activate
+            corepack prepare pnpm@10.12.4 --activate
 
       # 安装依赖
       - run:
           name: Install Dependencies
-          command: pnpm install
+          command: pnpm install --frozen-lockfile
 
       # 保存缓存
       - save_cache:
