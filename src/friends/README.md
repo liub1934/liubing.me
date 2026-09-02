@@ -103,6 +103,11 @@ link: 网站链接
   name: undz
   desc: Protect What You Love
   link: https://undz.cn/
+
+- icon: https://itreshub.com/favicon.svg
+  name: 云评网
+  desc: 云服务商真实评价与用户投票评分平台，收录200+家国内外云服务商
+  link: https://itreshub.com/
 ```
 
 :::
