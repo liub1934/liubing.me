@@ -1,6 +1,7 @@
 {
   "name": "liubing.me",
   "type": "module",
+  "packageManager": "pnpm@10.12.4",
   "description": "A project of vuepress-theme-hope",
   "license": "MIT",
   "scripts": {
