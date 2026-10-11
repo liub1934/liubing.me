@@ -234,6 +234,10 @@ sudo docker run -d \
 
 ![image](https://image.liubing.me/i/2026/02/07/69872012d3f16.png)
 
+## 系统更新后驱动失效
+
+每次更新系统后风扇的驱动都会失效，让AI整理了一篇[fnOS 更新内核后恢复 qnap8528 驱动](./qnap8528-fnos-kernel-update.md)文章，照着做就能重新加载驱动，然后重启`coolcontrol`的容器即可。
+
 ## 相关教程参考
 
 <https://sspai.com/post/104298>  
