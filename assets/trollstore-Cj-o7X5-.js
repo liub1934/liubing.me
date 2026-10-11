@@ -1,0 +1,1 @@
+var e=`/assets/trollstore-71k_f7JG.webp`;export{e as t};
