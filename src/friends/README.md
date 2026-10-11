@@ -59,20 +59,10 @@ link: 网站链接
   desc: VuePress Theme Hope 主题作者。
   link: https://mrhope.site/
 
-- icon: https://file.mo7.cc/static/lxh_gif/lxh_71.gif
-  name: 墨七
-  desc: 简单快乐，理应如此。
-  link: https://blog.mo7.cc/
-
 - icon: https://blog.xxwhite.com/assets/img/avatar.jpg
   name: 叉叉白
   desc: MonoLogueChi
   link: https://blog.xxwhite.com/
-
-- icon: https://blog.sherry4869.com/logo.svg
-  name: MW
-  desc: 过往不恋 未来不迎
-  link: https://blog.sherry4869.com/
 
 - icon: https://wiki.eryajf.net/img/logo.png
   name: 二丫讲梵
@@ -88,11 +78,6 @@ link: 网站链接
   name: 运维开发绿皮书
   desc: 放置我的笔记、搜集、摘录、实践，保持好奇心。看文需谨慎，后果很严重!
   link: https://geekery.cn/
-
-- icon: https://woolyun.com/wp-content/uploads/2025/05/yyl-e1746698677584.jpg
-  name: 天海博客
-  desc: 建站经验记录，实用工具推荐，免费资源分享。
-  link: https://woolyun.com/
 
 - icon: https://blog.ooliver.cn/wp-content/uploads/2025/08/1755862991-%E5%A4%B4%E5%83%8F.jpg
   name: ooliver的博客
