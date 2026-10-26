@@ -79,10 +79,10 @@ link: 网站链接
   desc: 放置我的笔记、搜集、摘录、实践，保持好奇心。看文需谨慎，后果很严重!
   link: https://geekery.cn/
 
-- icon: https://blog.ooliver.cn/wp-content/uploads/2025/08/1755862991-%E5%A4%B4%E5%83%8F.jpg
-  name: ooliver的博客
-  desc: 分OI笔记分享，个人闲话记录
-  link: https://blog.ooliver.cn/
+- icon: https://www.ooliver.cn/images/avatar.jpg
+  name: ooliver
+  desc: The Show Must Go On!
+  link: https://www.ooliver.cn/
 
 - icon: https://undz.cn/logo.png
   name: undz
