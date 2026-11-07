@@ -307,3 +307,375 @@ sudo dkms status
 # 下面的qnap8528/1.18 -k 6.18.18.c1032-trim按你实际的替换
 sudo dkms remove qnap8528/1.18 -k 6.18.18.c1032-trim
 ```
+
+## 一键脚本
+
+让AI帮我整理并写了个脚本，下次飞牛更新好后直接执行脚本即可。
+
+::: warning 免责声明
+本脚本由 AI 辅助编写，未经全面测试，不保证其安全性、准确性及适用性。本人仅在自己的设备上进行过测试，确认目前运行正常，但不保证在其他设备或环境中能够正常运行。  
+使用本脚本前，请自行评估风险并做好数据备份。因使用、修改或执行本脚本而产生的任何问题或损失，均由使用者自行承担，本人不承担相关责任。
+:::
+
+:::: details 点击查看脚本
+
+```sh title="qnap8528-recover.sh"
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+# ==========================================
+# 基本配置
+# ==========================================
+
+MODULE_NAME="qnap8528"
+MODULE_VERSION="1.18"
+
+# 当前运行的内核版本
+KERNEL_VERSION="$(uname -r)"
+
+# qnap8528 驱动源码目录
+SOURCE_DIR="/qnap8528"
+
+# CoolerControl Docker 容器名称
+# 请根据 docker ps -a 的实际结果修改
+COOLCONTROL_CONTAINER="coolcontrol"
+
+# 驱动加载参数
+MODULE_OPTIONS="skip_hw_check=true"
+
+# 日志文件
+LOG_FILE="/var/log/qnap8528-recover.log"
+
+
+# ==========================================
+# 日志初始化
+# ==========================================
+
+exec > >(tee -a "$LOG_FILE") 2>&1
+
+echo
+echo "=========================================="
+echo "qnap8528 驱动检查与恢复"
+echo "时间：$(date '+%F %T')"
+echo "当前内核：${KERNEL_VERSION}"
+echo "=========================================="
+
+
+# ==========================================
+# 基础检查
+# ==========================================
+
+if [[ "$EUID" -ne 0 ]]; then
+    echo "[错误] 请使用 sudo 执行此脚本。"
+    exit 1
+fi
+
+for cmd in dkms depmod modprobe uname sensors; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "[错误] 缺少必要命令：${cmd}"
+        exit 1
+    fi
+done
+
+
+# ==========================================
+# 检查当前内核 DKMS 驱动状态
+# ==========================================
+
+is_dkms_installed() {
+    dkms status \
+        -m "$MODULE_NAME" \
+        -v "$MODULE_VERSION" \
+        -k "$KERNEL_VERSION" 2>/dev/null |
+        grep -q 'installed'
+}
+
+
+# ==========================================
+# 检查驱动是否已加载
+# ==========================================
+
+is_module_loaded() {
+    grep -q "^${MODULE_NAME} " /proc/modules
+}
+
+
+# ==========================================
+# 检查 qnap8528 传感器
+# ==========================================
+
+is_sensor_ok() {
+    sensors 2>/dev/null | grep -q '^qnap8528-'
+}
+
+
+# ==========================================
+# 清理旧内核对应的 DKMS 驱动
+# ==========================================
+
+cleanup_old_kernels() {
+    echo
+    echo "[清理] 检查旧内核驱动"
+
+    while IFS= read -r entry; do
+        [[ -z "$entry" ]] && continue
+
+        # 仅处理 qnap8528/1.18 的记录
+        if [[ "$entry" =~ ^qnap8528/1\.18,\ ([^,]+), ]]; then
+            OLD_KERNEL="${BASH_REMATCH[1]}"
+
+            # 保留当前正在运行的内核
+            if [[ "$OLD_KERNEL" == "$KERNEL_VERSION" ]]; then
+                continue
+            fi
+
+            echo "[信息] 发现旧内核驱动：${OLD_KERNEL}"
+
+            if dkms remove \
+                "${MODULE_NAME}/${MODULE_VERSION}" \
+                -k "$OLD_KERNEL"; then
+                echo "[成功] 已移除旧内核驱动：${OLD_KERNEL}"
+            else
+                echo "[警告] 移除旧内核驱动失败：${OLD_KERNEL}"
+            fi
+        fi
+    done < <(
+        dkms status \
+            -m "$MODULE_NAME" \
+            -v "$MODULE_VERSION" 2>/dev/null || true
+    )
+
+    echo "[完成] 旧内核驱动检查结束。"
+}
+
+
+# ==========================================
+# 重启 CoolerControl Docker 容器
+# ==========================================
+
+restart_coolcontrol() {
+    echo
+    echo "[Docker] 准备重启 CoolerControl"
+
+    if ! command -v docker >/dev/null 2>&1; then
+        echo "[错误] 未找到 docker 命令。"
+        return 1
+    fi
+
+    if ! docker inspect "$COOLCONTROL_CONTAINER" >/dev/null 2>&1; then
+        echo "[错误] 找不到 Docker 容器：${COOLCONTROL_CONTAINER}"
+        echo "[提示] 请检查 COOLCONTROL_CONTAINER 配置。"
+        return 1
+    fi
+
+    echo "[Docker] 重启容器：${COOLCONTROL_CONTAINER}"
+
+    if docker restart "$COOLCONTROL_CONTAINER"; then
+        echo "[成功] CoolerControl 容器已重启。"
+        return 0
+    else
+        echo "[错误] CoolerControl 容器重启失败。"
+        return 1
+    fi
+}
+
+
+# ==========================================
+# 检查驱动是否完全正常
+# ==========================================
+
+if is_dkms_installed && is_module_loaded && is_sensor_ok; then
+
+    echo
+    echo "[正常] 当前内核驱动已安装、已加载，传感器数据正常。"
+    echo "[跳过] 不重新安装、不重新加载驱动。"
+
+    # 仅清理旧内核驱动
+    cleanup_old_kernels
+
+    # 即使驱动已经正常，也重启 CoolerControl
+    if ! restart_coolcontrol; then
+        echo "[警告] 驱动正常，但 CoolerControl 重启失败。"
+        exit 1
+    fi
+
+    echo
+    echo "[完成] 驱动正常，CoolerControl 已重启。"
+    echo "日志：${LOG_FILE}"
+    echo "=========================================="
+
+    exit 0
+fi
+
+
+# ==========================================
+# 驱动异常，开始恢复
+# ==========================================
+
+echo
+echo "[异常] 当前驱动未完全正常，开始恢复。"
+
+
+# 检查源码目录
+if [[ ! -d "$SOURCE_DIR" ]]; then
+    echo "[错误] 驱动源码目录不存在：${SOURCE_DIR}"
+    exit 1
+fi
+
+# 检查 DKMS 源码目录
+if [[ ! -d "/usr/src/${MODULE_NAME}-${MODULE_VERSION}" ]]; then
+    echo "[错误] DKMS 源码目录不存在："
+    echo "/usr/src/${MODULE_NAME}-${MODULE_VERSION}"
+    exit 1
+fi
+
+
+# ==========================================
+# 为当前内核安装驱动
+# ==========================================
+
+if ! is_dkms_installed; then
+
+    echo
+    echo "[恢复] 为当前内核安装 DKMS 驱动。"
+
+    dkms install \
+        "${MODULE_NAME}/${MODULE_VERSION}" \
+        -k "$KERNEL_VERSION" \
+        --force
+
+else
+    echo "[信息] 当前内核已有 DKMS 安装记录。"
+fi
+
+
+# ==========================================
+# 更新内核模块依赖
+# ==========================================
+
+echo
+echo "[恢复] 更新内核模块依赖。"
+
+depmod -a "$KERNEL_VERSION"
+
+
+# ==========================================
+# 加载驱动
+# ==========================================
+
+if ! is_module_loaded; then
+
+    echo
+    echo "[恢复] 加载 qnap8528 驱动。"
+
+    modprobe "$MODULE_NAME" "$MODULE_OPTIONS"
+
+else
+    echo "[信息] qnap8528 已经加载。"
+fi
+
+
+# ==========================================
+# 验证恢复结果
+# ==========================================
+
+echo
+echo "[检查] 验证当前驱动状态。"
+
+if ! is_dkms_installed; then
+    echo "[错误] 当前内核的 DKMS 驱动未安装。"
+    exit 1
+fi
+
+if ! is_module_loaded; then
+    echo "[错误] qnap8528 模块未成功加载。"
+    exit 1
+fi
+
+if ! is_sensor_ok; then
+    echo "[错误] 未检测到 qnap8528 传感器数据。"
+    echo "[提示] 请检查驱动日志、hwmon 设备及硬件检测情况。"
+    exit 1
+fi
+
+echo "[成功] 当前内核驱动已恢复，传感器数据正常。"
+
+
+# ==========================================
+# 清理旧内核驱动
+# ==========================================
+
+cleanup_old_kernels
+
+
+# ==========================================
+# 重启 CoolerControl
+# ==========================================
+
+if ! restart_coolcontrol; then
+    echo "[警告] 驱动恢复成功，但 CoolerControl 重启失败。"
+    exit 1
+fi
+
+
+# ==========================================
+# 输出最终状态
+# ==========================================
+
+echo
+echo "=========================================="
+echo "最终 DKMS 状态"
+echo "=========================================="
+
+dkms status \
+    -m "$MODULE_NAME" \
+    -v "$MODULE_VERSION" || true
+
+echo
+echo "=========================================="
+echo "[完成] qnap8528 驱动恢复成功。"
+echo "[完成] CoolerControl 容器已重启。"
+echo "日志：${LOG_FILE}"
+echo "=========================================="
+```
+
+::::
+
+### 创建脚本
+
+将上面的脚本内容复制进去并保存
+
+```sh
+sudo vim /usr/local/sbin/qnap8528-recover.sh
+```
+
+### 设置执行权限
+
+```sh
+sudo chmod +x /usr/local/sbin/qnap8528-recover.sh
+```
+
+### 确认 CoolerControl 容器名称
+
+```sh
+sudo docker ps -a --format 'table {{.Names}}\t{{.Status}}\t{{.Image}}'
+```
+
+如果容器名称不是 `coolcontrol`，修改脚本中的：
+
+```
+COOLCONTROL_CONTAINER="实际容器名称"
+```
+
+### 手动执行脚本
+
+```sh
+sudo /usr/local/sbin/qnap8528-recover.sh
+```
+
+查看运行日志：
+
+```sh
+sudo tail -n 100 /var/log/qnap8528-recover.log
+```
